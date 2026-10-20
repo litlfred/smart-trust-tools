@@ -1285,13 +1285,7 @@
           "citation": "library",
           "cites": "arxiv-2607.25032v1#sec-004-writing-the-description",
           "pages": "4-5",
-          "quote": "State both what the skill does and when it should be used, and include the concrete terms a relevant task would contain.",
-          "links": {
-            "viewer": "en/cat-harness/library/cat-harness/#cat-harness%2Farxiv-2607.25032v1",
-            "entry": "en/cat-harness/library/cat-harness/arxiv-2607.25032v1/",
-            "readme": "https://github.com/litlfred/cat-harness/blob/main/library/arxiv-2607.25032v1/README.md",
-            "source": "https://arxiv.org/abs/2607.25032v1"
-          }
+          "quote": "State both what the skill does and when it should be used, and include the concrete terms a relevant task would contain."
         },
         {
           "id": "as-description-third-person",
@@ -1305,13 +1299,7 @@
           "citation": "library",
           "cites": "arxiv-2607.25032v1#sec-004-writing-the-description",
           "pages": "4-5",
-          "quote": "Write it in the third person, since it is read by the model as part of its own context, and a first or second person voice can degrade matching.",
-          "links": {
-            "viewer": "en/cat-harness/library/cat-harness/#cat-harness%2Farxiv-2607.25032v1",
-            "entry": "en/cat-harness/library/cat-harness/arxiv-2607.25032v1/",
-            "readme": "https://github.com/litlfred/cat-harness/blob/main/library/arxiv-2607.25032v1/README.md",
-            "source": "https://arxiv.org/abs/2607.25032v1"
-          }
+          "quote": "Write it in the third person, since it is read by the model as part of its own context, and a first or second person voice can degrade matching."
         },
         {
           "id": "as-body-under-500-lines",
@@ -1325,13 +1313,7 @@
           "citation": "library",
           "cites": "arxiv-2607.25032v1#sec-003-staged-loading",
           "pages": "4",
-          "quote": "The body should stay under about five hundred lines, a few thousand tokens, so that once loaded it does not crowd out the conversation and other context",
-          "links": {
-            "viewer": "en/cat-harness/library/cat-harness/#cat-harness%2Farxiv-2607.25032v1",
-            "entry": "en/cat-harness/library/cat-harness/arxiv-2607.25032v1/",
-            "readme": "https://github.com/litlfred/cat-harness/blob/main/library/arxiv-2607.25032v1/README.md",
-            "source": "https://arxiv.org/abs/2607.25032v1"
-          }
+          "quote": "The body should stay under about five hundred lines, a few thousand tokens, so that once loaded it does not crowd out the conversation and other context"
         },
         {
           "id": "as-assume-general-knowledge",
@@ -1345,13 +1327,7 @@
           "citation": "library",
           "cites": "arxiv-2607.25032v1#sec-005-anatomy-of-a-well-formed-skill",
           "pages": "5",
-          "quote": "Assume the model already holds general knowledge, and add only what it does not have: project conventions, non-obvious procedures, specific file locations, rules that must hold.",
-          "links": {
-            "viewer": "en/cat-harness/library/cat-harness/#cat-harness%2Farxiv-2607.25032v1",
-            "entry": "en/cat-harness/library/cat-harness/arxiv-2607.25032v1/",
-            "readme": "https://github.com/litlfred/cat-harness/blob/main/library/arxiv-2607.25032v1/README.md",
-            "source": "https://arxiv.org/abs/2607.25032v1"
-          }
+          "quote": "Assume the model already holds general knowledge, and add only what it does not have: project conventions, non-obvious procedures, specific file locations, rules that must hold."
         },
         {
           "id": "as-references-one-level-deep",
@@ -1365,13 +1341,7 @@
           "citation": "library",
           "cites": "arxiv-2607.25032v1#sec-005-anatomy-of-a-well-formed-skill",
           "pages": "5",
-          "quote": "those files should not chain onward to further files, because the model may preview a deeply linked file with a partial read and then act on incomplete information",
-          "links": {
-            "viewer": "en/cat-harness/library/cat-harness/#cat-harness%2Farxiv-2607.25032v1",
-            "entry": "en/cat-harness/library/cat-harness/arxiv-2607.25032v1/",
-            "readme": "https://github.com/litlfred/cat-harness/blob/main/library/arxiv-2607.25032v1/README.md",
-            "source": "https://arxiv.org/abs/2607.25032v1"
-          }
+          "quote": "those files should not chain onward to further files, because the model may preview a deeply linked file with a partial read and then act on incomplete information"
         },
         {
           "id": "as-reference-toc-over-100-lines",
@@ -1385,13 +1355,7 @@
           "citation": "library",
           "cites": "arxiv-2607.25032v1#sec-005-anatomy-of-a-well-formed-skill",
           "pages": "5",
-          "quote": "For any reference file longer than about one hundred lines, place a short table of contents at the top so the model can see the full scope even on a partial read",
-          "links": {
-            "viewer": "en/cat-harness/library/cat-harness/#cat-harness%2Farxiv-2607.25032v1",
-            "entry": "en/cat-harness/library/cat-harness/arxiv-2607.25032v1/",
-            "readme": "https://github.com/litlfred/cat-harness/blob/main/library/arxiv-2607.25032v1/README.md",
-            "source": "https://arxiv.org/abs/2607.25032v1"
-          }
+          "quote": "For any reference file longer than about one hundred lines, place a short table of contents at the top so the model can see the full scope even on a partial read"
         },
         {
           "id": "as-one-default-name-the-exception",
@@ -1405,13 +1369,7 @@
           "citation": "library",
           "cites": "arxiv-2607.25032v1#sec-009-patterns-and-faults",
           "pages": "8",
-          "quote": "Offering many alternatives leaves the model to choose without grounds, so give one default and name the exception.",
-          "links": {
-            "viewer": "en/cat-harness/library/cat-harness/#cat-harness%2Farxiv-2607.25032v1",
-            "entry": "en/cat-harness/library/cat-harness/arxiv-2607.25032v1/",
-            "readme": "https://github.com/litlfred/cat-harness/blob/main/library/arxiv-2607.25032v1/README.md",
-            "source": "https://arxiv.org/abs/2607.25032v1"
-          }
+          "quote": "Offering many alternatives leaves the model to choose without grounds, so give one default and name the exception."
         },
         {
           "id": "as-state-dependencies",
@@ -1425,13 +1383,7 @@
           "citation": "library",
           "cites": "arxiv-2607.25032v1#sec-009-patterns-and-faults",
           "pages": "8",
-          "quote": "Assuming a package is installed fails when it is not, so state dependencies explicitly.",
-          "links": {
-            "viewer": "en/cat-harness/library/cat-harness/#cat-harness%2Farxiv-2607.25032v1",
-            "entry": "en/cat-harness/library/cat-harness/arxiv-2607.25032v1/",
-            "readme": "https://github.com/litlfred/cat-harness/blob/main/library/arxiv-2607.25032v1/README.md",
-            "source": "https://arxiv.org/abs/2607.25032v1"
-          }
+          "quote": "Assuming a package is installed fails when it is not, so state dependencies explicitly."
         },
         {
           "id": "as-evaluations-before-instructions",
@@ -1445,13 +1397,7 @@
           "citation": "library",
           "cites": "arxiv-2607.25032v1#sec-008-an-evaluation-driven-authoring-process",
           "pages": "8",
-          "quote": "Write evaluations before writing the skill.",
-          "links": {
-            "viewer": "en/cat-harness/library/cat-harness/#cat-harness%2Farxiv-2607.25032v1",
-            "entry": "en/cat-harness/library/cat-harness/arxiv-2607.25032v1/",
-            "readme": "https://github.com/litlfred/cat-harness/blob/main/library/arxiv-2607.25032v1/README.md",
-            "source": "https://arxiv.org/abs/2607.25032v1"
-          }
+          "quote": "Write evaluations before writing the skill."
         },
         {
           "id": "as-read-third-party-skills-in-full",
@@ -1465,13 +1411,7 @@
           "citation": "library",
           "cites": "arxiv-2607.25032v1#sec-011-summary-of-guidance",
           "pages": "9",
-          "quote": "a skill from a third party should be read in full before it is used.",
-          "links": {
-            "viewer": "en/cat-harness/library/cat-harness/#cat-harness%2Farxiv-2607.25032v1",
-            "entry": "en/cat-harness/library/cat-harness/arxiv-2607.25032v1/",
-            "readme": "https://github.com/litlfred/cat-harness/blob/main/library/arxiv-2607.25032v1/README.md",
-            "source": "https://arxiv.org/abs/2607.25032v1"
-          }
+          "quote": "a skill from a third party should be read in full before it is used."
         },
         {
           "id": "as-no-name-as-heading",
@@ -1485,13 +1425,7 @@
           "citation": "library",
           "cites": "arxiv-2608.08453v1#sec-012-42-rq1-what-reusability-defects-are-prevalent-in",
           "pages": "4",
-          "quote": "The three most prevalent individual defects are all spec violations: R1.3 miss- ing trigger guidance (52.3%), R2.4 name-as-heading dupli- cation (44.3%), and R3.2 too many inline examples (32.1%).",
-          "links": {
-            "viewer": "en/cat-harness/library/cat-harness/#cat-harness%2Farxiv-2608.08453v1",
-            "entry": "en/cat-harness/library/cat-harness/arxiv-2608.08453v1/",
-            "readme": "https://github.com/litlfred/cat-harness/blob/main/library/arxiv-2608.08453v1/README.md",
-            "source": "https://arxiv.org/abs/2608.08453v1"
-          }
+          "quote": "The three most prevalent individual defects are all spec violations: R1.3 miss- ing trigger guidance (52.3%), R2.4 name-as-heading dupli- cation (44.3%), and R3.2 too many inline examples (32.1%)."
         },
         {
           "id": "as-examples-move-to-references",
@@ -1505,13 +1439,7 @@
           "citation": "library",
           "cites": "arxiv-2608.08453v1#sec-012-42-rq1-what-reusability-defects-are-prevalent-in",
           "pages": "4",
-          "quote": "The three most prevalent individual defects are all spec violations: R1.3 miss- ing trigger guidance (52.3%), R2.4 name-as-heading dupli- cation (44.3%), and R3.2 too many inline examples (32.1%).",
-          "links": {
-            "viewer": "en/cat-harness/library/cat-harness/#cat-harness%2Farxiv-2608.08453v1",
-            "entry": "en/cat-harness/library/cat-harness/arxiv-2608.08453v1/",
-            "readme": "https://github.com/litlfred/cat-harness/blob/main/library/arxiv-2608.08453v1/README.md",
-            "source": "https://arxiv.org/abs/2608.08453v1"
-          }
+          "quote": "The three most prevalent individual defects are all spec violations: R1.3 miss- ing trigger guidance (52.3%), R2.4 name-as-heading dupli- cation (44.3%), and R3.2 too many inline examples (32.1%)."
         }
       ]
     },
@@ -1545,12 +1473,7 @@
           "citation": "library",
           "cites": "skill-authoring-best-practices---claude-platform-docs#page-029",
           "pages": "29",
-          "quote": "The SKILL.md frontmatter requires name and description fields with specific validation rules: name : Maximum 64 characters, lowercase letters/numbers/hyphens only, no XML tags, no reserved words description : Maximum 1,024 characters, non-empty, no XML tags",
-          "links": {
-            "viewer": "en/cat-harness/library/cat-harness/#cat-harness%2Fskill-authoring-best-practices---claude-platform-docs",
-            "entry": "en/cat-harness/library/cat-harness/skill-authoring-best-practices---claude-platform-docs/",
-            "readme": "https://github.com/litlfred/cat-harness/blob/main/library/skill-authoring-best-practices---claude-platform-docs/README.md"
-          }
+          "quote": "The SKILL.md frontmatter requires name and description fields with specific validation rules: name : Maximum 64 characters, lowercase letters/numbers/hyphens only, no XML tags, no reserved words description : Maximum 1,024 characters, non-empty, no XML tags"
         },
         {
           "id": "cl-name-gerund-form",
@@ -1564,12 +1487,7 @@
           "citation": "library",
           "cites": "skill-authoring-best-practices---claude-platform-docs#page-005",
           "pages": "5",
-          "quote": "Remember that the name field must use lowercase letters, numbers, and hyphens only. Good naming examples (gerund form): processing-pdfs analyzing-spreadsheets managing-databases testing-code writing-documentation Acceptable alternatives: Noun phrases: pdf-processing , spreadsheet-analysis Action-oriented: process-pdfs , analyze-spreadsheets",
-          "links": {
-            "viewer": "en/cat-harness/library/cat-harness/#cat-harness%2Fskill-authoring-best-practices---claude-platform-docs",
-            "entry": "en/cat-harness/library/cat-harness/skill-authoring-best-practices---claude-platform-docs/",
-            "readme": "https://github.com/litlfred/cat-harness/blob/main/library/skill-authoring-best-practices---claude-platform-docs/README.md"
-          }
+          "quote": "Remember that the name field must use lowercase letters, numbers, and hyphens only. Good naming examples (gerund form): processing-pdfs analyzing-spreadsheets managing-databases testing-code writing-documentation Acceptable alternatives: Noun phrases: pdf-processing , spreadsheet-analysis Action-oriented: process-pdfs , analyze-spreadsheets"
         },
         {
           "id": "cl-no-vague-or-reserved-names",
@@ -1583,12 +1501,7 @@
           "citation": "library",
           "cites": "skill-authoring-best-practices---claude-platform-docs#page-005",
           "pages": "5",
-          "quote": "Avoid: Vague names: helper , utils , tools Overly generic: documents , data , files Reserved words: anthropic-helper , claude-tools Inconsistent patterns within your skill collection",
-          "links": {
-            "viewer": "en/cat-harness/library/cat-harness/#cat-harness%2Fskill-authoring-best-practices---claude-platform-docs",
-            "entry": "en/cat-harness/library/cat-harness/skill-authoring-best-practices---claude-platform-docs/",
-            "readme": "https://github.com/litlfred/cat-harness/blob/main/library/skill-authoring-best-practices---claude-platform-docs/README.md"
-          }
+          "quote": "Avoid: Vague names: helper , utils , tools Overly generic: documents , data , files Reserved words: anthropic-helper , claude-tools Inconsistent patterns within your skill collection"
         },
         {
           "id": "cl-forward-slash-paths",
@@ -1602,12 +1515,7 @@
           "citation": "library",
           "cites": "skill-authoring-best-practices---claude-platform-docs#page-021",
           "pages": "21",
-          "quote": "Always use forward slashes in file paths, even on Windows: ✓ Good: scripts/helper.py , reference/guide.md ✗ Avoid: scripts\\helper.py , reference\\guide.md Unix-style paths work across all platforms, while Windows-style paths cause errors on Unix systems.",
-          "links": {
-            "viewer": "en/cat-harness/library/cat-harness/#cat-harness%2Fskill-authoring-best-practices---claude-platform-docs",
-            "entry": "en/cat-harness/library/cat-harness/skill-authoring-best-practices---claude-platform-docs/",
-            "readme": "https://github.com/litlfred/cat-harness/blob/main/library/skill-authoring-best-practices---claude-platform-docs/README.md"
-          }
+          "quote": "Always use forward slashes in file paths, even on Windows: ✓ Good: scripts/helper.py , reference/guide.md ✗ Avoid: scripts\\helper.py , reference\\guide.md Unix-style paths work across all platforms, while Windows-style paths cause errors on Unix systems."
         },
         {
           "id": "cl-no-voodoo-constants",
@@ -1621,12 +1529,7 @@
           "citation": "library",
           "cites": "skill-authoring-best-practices---claude-platform-docs#page-023",
           "pages": "23",
-          "quote": "Configuration parameters should also be justified and documented to avoid \"voodoo constants\" (Ousterhout's law). If you don't know the right value, how will Claude determine it?",
-          "links": {
-            "viewer": "en/cat-harness/library/cat-harness/#cat-harness%2Fskill-authoring-best-practices---claude-platform-docs",
-            "entry": "en/cat-harness/library/cat-harness/skill-authoring-best-practices---claude-platform-docs/",
-            "readme": "https://github.com/litlfred/cat-harness/blob/main/library/skill-authoring-best-practices---claude-platform-docs/README.md"
-          }
+          "quote": "Configuration parameters should also be justified and documented to avoid \"voodoo constants\" (Ousterhout's law). If you don't know the right value, how will Claude determine it?"
         },
         {
           "id": "cl-plan-validate-execute",
@@ -1640,12 +1543,7 @@
           "citation": "library",
           "cites": "skill-authoring-best-practices---claude-platform-docs#page-026",
           "pages": "26",
-          "quote": "When Claude performs complex, open-ended tasks, it can make mistakes. The \"plan-validate- execute\" pattern catches errors early by having Claude first create a plan in a structured format, then validate that plan with a script before executing it.",
-          "links": {
-            "viewer": "en/cat-harness/library/cat-harness/#cat-harness%2Fskill-authoring-best-practices---claude-platform-docs",
-            "entry": "en/cat-harness/library/cat-harness/skill-authoring-best-practices---claude-platform-docs/",
-            "readme": "https://github.com/litlfred/cat-harness/blob/main/library/skill-authoring-best-practices---claude-platform-docs/README.md"
-          }
+          "quote": "When Claude performs complex, open-ended tasks, it can make mistakes. The \"plan-validate- execute\" pattern catches errors early by having Claude first create a plan in a structured format, then validate that plan with a script before executing it."
         },
         {
           "id": "cl-consistent-terminology",
@@ -1659,12 +1557,7 @@
           "citation": "library",
           "cites": "skill-authoring-best-practices---claude-platform-docs#page-015",
           "pages": "15",
-          "quote": "Use consistent terminology Choose one term and use it throughout the Skill: Good - Consistent: Always \"API endpoint\" Always \"field\" Always \"extract\"",
-          "links": {
-            "viewer": "en/cat-harness/library/cat-harness/#cat-harness%2Fskill-authoring-best-practices---claude-platform-docs",
-            "entry": "en/cat-harness/library/cat-harness/skill-authoring-best-practices---claude-platform-docs/",
-            "readme": "https://github.com/litlfred/cat-harness/blob/main/library/skill-authoring-best-practices---claude-platform-docs/README.md"
-          }
+          "quote": "Use consistent terminology Choose one term and use it throughout the Skill: Good - Consistent: Always \"API endpoint\" Always \"field\" Always \"extract\""
         },
         {
           "id": "cl-author-with-one-claude-test-with-another",
@@ -1678,12 +1571,7 @@
           "citation": "library",
           "cites": "skill-authoring-best-practices---claude-platform-docs#page-019",
           "pages": "19",
-          "quote": "Claude (\"Claude A\") to create a Skill that is used by other instances (\"Claude B\"). Claude A helps you design and refine instructions, while Claude B tests them in real tasks.",
-          "links": {
-            "viewer": "en/cat-harness/library/cat-harness/#cat-harness%2Fskill-authoring-best-practices---claude-platform-docs",
-            "entry": "en/cat-harness/library/cat-harness/skill-authoring-best-practices---claude-platform-docs/",
-            "readme": "https://github.com/litlfred/cat-harness/blob/main/library/skill-authoring-best-practices---claude-platform-docs/README.md"
-          }
+          "quote": "Claude (\"Claude A\") to create a Skill that is used by other instances (\"Claude B\"). Claude A helps you design and refine instructions, while Claude B tests them in real tasks."
         }
       ]
     },
@@ -1717,12 +1605,7 @@
           "citation": "library",
           "cites": "agent-skill-best-practices---gemini-cli#page-001",
           "pages": "1",
-          "quote": "Avoid overlap: Ensure your skill descriptions are distinct from one another and from the general capabilities of the model.",
-          "links": {
-            "viewer": "en/cat-harness/library/cat-harness/#cat-harness%2Fagent-skill-best-practices---gemini-cli",
-            "entry": "en/cat-harness/library/cat-harness/agent-skill-best-practices---gemini-cli/",
-            "readme": "https://github.com/litlfred/cat-harness/blob/main/library/agent-skill-best-practices---gemini-cli/README.md"
-          }
+          "quote": "Avoid overlap: Ensure your skill descriptions are distinct from one another and from the general capabilities of the model."
         },
         {
           "id": "gc-context-budget-in-words",
@@ -1736,12 +1619,7 @@
           "citation": "library",
           "cites": "agent-skill-best-practices---gemini-cli#page-001",
           "pages": "1",
-          "quote": "1. Metadata (name + description): Always in context (~100 words). 2. SKILL.md body: Loaded only after the skill triggers (<5k words). 3. Bundled resources: Loaded only as needed by the model.",
-          "links": {
-            "viewer": "en/cat-harness/library/cat-harness/#cat-harness%2Fagent-skill-best-practices---gemini-cli",
-            "entry": "en/cat-harness/library/cat-harness/agent-skill-best-practices---gemini-cli/",
-            "readme": "https://github.com/litlfred/cat-harness/blob/main/library/agent-skill-best-practices---gemini-cli/README.md"
-          }
+          "quote": "1. Metadata (name + description): Always in context (~100 words). 2. SKILL.md body: Loaded only after the skill triggers (<5k words). 3. Bundled resources: Loaded only as needed by the model."
         },
         {
           "id": "gc-degrees-of-freedom",
@@ -1755,12 +1633,7 @@
           "citation": "library",
           "cites": "agent-skill-best-practices---gemini-cli#page-002",
           "pages": "2",
-          "quote": "Degrees of freedom Match the level of instruction specificity to the task’s fragility. High freedom (text-based instructions): Use when multiple approaches are valid or decisions depend heavily on context. Medium freedom (pseudocode or scripts with parameters): Use when a preferred pattern exists but some variation is acceptable. Low freedom (specific scripts, few parameters): Use when operations are fragile and error-prone, or a specific sequence MUST be followed.",
-          "links": {
-            "viewer": "en/cat-harness/library/cat-harness/#cat-harness%2Fagent-skill-best-practices---gemini-cli",
-            "entry": "en/cat-harness/library/cat-harness/agent-skill-best-practices---gemini-cli/",
-            "readme": "https://github.com/litlfred/cat-harness/blob/main/library/agent-skill-best-practices---gemini-cli/README.md"
-          }
+          "quote": "Degrees of freedom Match the level of instruction specificity to the task’s fragility. High freedom (text-based instructions): Use when multiple approaches are valid or decisions depend heavily on context. Medium freedom (pseudocode or scripts with parameters): Use when a preferred pattern exists but some variation is acceptable. Low freedom (specific scripts, few parameters): Use when operations are fragile and error-prone, or a specific sequence MUST be followed."
         },
         {
           "id": "gc-scripts-for-deterministic-tasks",
@@ -1774,12 +1647,7 @@
           "citation": "library",
           "cites": "agent-skill-best-practices---gemini-cli#page-002",
           "pages": "2",
-          "quote": "Use scripts for deterministic tasks: If a task can be automated with a script (for example, running a linter, fetching data from an API), bundle it in the scripts/ folder.",
-          "links": {
-            "viewer": "en/cat-harness/library/cat-harness/#cat-harness%2Fagent-skill-best-practices---gemini-cli",
-            "entry": "en/cat-harness/library/cat-harness/agent-skill-best-practices---gemini-cli/",
-            "readme": "https://github.com/litlfred/cat-harness/blob/main/library/agent-skill-best-practices---gemini-cli/README.md"
-          }
+          "quote": "Use scripts for deterministic tasks: If a task can be automated with a script (for example, running a linter, fetching data from an API), bundle it in the scripts/ folder."
         },
         {
           "id": "gc-llm-friendly-script-output",
@@ -1793,12 +1661,7 @@
           "citation": "library",
           "cites": "agent-skill-best-practices---gemini-cli#page-002",
           "pages": "2",
-          "quote": "Agentic ergonomics: Ensure scripts output LLM-friendly stdout. Suppress verbose tracebacks and provide clear, concise success/failure messages.",
-          "links": {
-            "viewer": "en/cat-harness/library/cat-harness/#cat-harness%2Fagent-skill-best-practices---gemini-cli",
-            "entry": "en/cat-harness/library/cat-harness/agent-skill-best-practices---gemini-cli/",
-            "readme": "https://github.com/litlfred/cat-harness/blob/main/library/agent-skill-best-practices---gemini-cli/README.md"
-          }
+          "quote": "Agentic ergonomics: Ensure scripts output LLM-friendly stdout. Suppress verbose tracebacks and provide clear, concise success/failure messages."
         },
         {
           "id": "gc-templates-in-assets",
@@ -1812,12 +1675,7 @@
           "citation": "library",
           "cites": "agent-skill-best-practices---gemini-cli#page-002",
           "pages": "2",
-          "quote": "Provide templates: Include common file headers or boilerplate code in the assets/ folder to ensure the agent produces consistent output.",
-          "links": {
-            "viewer": "en/cat-harness/library/cat-harness/#cat-harness%2Fagent-skill-best-practices---gemini-cli",
-            "entry": "en/cat-harness/library/cat-harness/agent-skill-best-practices---gemini-cli/",
-            "readme": "https://github.com/litlfred/cat-harness/blob/main/library/agent-skill-best-practices---gemini-cli/README.md"
-          }
+          "quote": "Provide templates: Include common file headers or boilerplate code in the assets/ folder to ensure the agent produces consistent output."
         },
         {
           "id": "gc-skill-directory-anatomy",
@@ -1831,12 +1689,7 @@
           "citation": "library",
           "cites": "agent-skill-best-practices---gemini-cli#page-002",
           "pages": "2",
-          "quote": "my-skill/ ├── SKILL.md (Required) Core instructions and metadata ├── scripts/ (Optional) Executable logic (Node.js, Python, etc.) ├── references/ (Optional) Documentation to be loaded as needed └── assets/ (Optional) Templates and non-executable resources",
-          "links": {
-            "viewer": "en/cat-harness/library/cat-harness/#cat-harness%2Fagent-skill-best-practices---gemini-cli",
-            "entry": "en/cat-harness/library/cat-harness/agent-skill-best-practices---gemini-cli/",
-            "readme": "https://github.com/litlfred/cat-harness/blob/main/library/agent-skill-best-practices---gemini-cli/README.md"
-          }
+          "quote": "my-skill/ ├── SKILL.md (Required) Core instructions and metadata ├── scripts/ (Optional) Executable logic (Node.js, Python, etc.) ├── references/ (Optional) Documentation to be loaded as needed └── assets/ (Optional) Templates and non-executable resources"
         },
         {
           "id": "gc-reference-material-out-of-the-body",
@@ -1850,12 +1703,7 @@
           "citation": "library",
           "cites": "agent-skill-best-practices---gemini-cli#page-002",
           "pages": "2",
-          "quote": "Best practice: Keep the SKILL.md body focused on core procedural instructions. Move detailed reference material, schemas, and examples into separate files in a references/ directory.",
-          "links": {
-            "viewer": "en/cat-harness/library/cat-harness/#cat-harness%2Fagent-skill-best-practices---gemini-cli",
-            "entry": "en/cat-harness/library/cat-harness/agent-skill-best-practices---gemini-cli/",
-            "readme": "https://github.com/litlfred/cat-harness/blob/main/library/agent-skill-best-practices---gemini-cli/README.md"
-          }
+          "quote": "Best practice: Keep the SKILL.md body focused on core procedural instructions. Move detailed reference material, schemas, and examples into separate files in a references/ directory."
         },
         {
           "id": "gc-no-hardcoded-secrets",
@@ -1869,12 +1717,7 @@
           "citation": "library",
           "cites": "agent-skill-best-practices---gemini-cli#page-003",
           "pages": "3",
-          "quote": "Avoid hardcoded secrets: Never include API keys or passwords in your skill’s scripts or documentation.",
-          "links": {
-            "viewer": "en/cat-harness/library/cat-harness/#cat-harness%2Fagent-skill-best-practices---gemini-cli",
-            "entry": "en/cat-harness/library/cat-harness/agent-skill-best-practices---gemini-cli/",
-            "readme": "https://github.com/litlfred/cat-harness/blob/main/library/agent-skill-best-practices---gemini-cli/README.md"
-          }
+          "quote": "Avoid hardcoded secrets: Never include API keys or passwords in your skill’s scripts or documentation."
         },
         {
           "id": "gc-limit-scope",
@@ -1888,12 +1731,7 @@
           "citation": "library",
           "cites": "agent-skill-best-practices---gemini-cli#page-003",
           "pages": "3",
-          "quote": "Limit scope: Design skills to be as focused as possible to minimize the potential impact of errors.",
-          "links": {
-            "viewer": "en/cat-harness/library/cat-harness/#cat-harness%2Fagent-skill-best-practices---gemini-cli",
-            "entry": "en/cat-harness/library/cat-harness/agent-skill-best-practices---gemini-cli/",
-            "readme": "https://github.com/litlfred/cat-harness/blob/main/library/agent-skill-best-practices---gemini-cli/README.md"
-          }
+          "quote": "Limit scope: Design skills to be as focused as possible to minimize the potential impact of errors."
         }
       ]
     },
@@ -1926,12 +1764,7 @@
           "judgementOnly": false,
           "citation": "library",
           "cites": "skills-in-openai-api-notebook#s007-skill-md-frontmatter",
-          "quote": "OpenAI models expect names and descriptions to come from frontmatter (important for discovery and routing).",
-          "links": {
-            "viewer": "en/cat-harness/library/cat-harness/#cat-harness%2Fskills-in-openai-api-notebook",
-            "entry": "en/cat-harness/library/cat-harness/skills-in-openai-api-notebook/",
-            "readme": "https://github.com/litlfred/cat-harness/blob/main/library/skills-in-openai-api-notebook/README.md"
-          }
+          "quote": "OpenAI models expect names and descriptions to come from frontmatter (important for discovery and routing)."
         },
         {
           "id": "oa-routing-use-when-dont-use-when",
@@ -1944,12 +1777,7 @@
           "judgementOnly": false,
           "citation": "library",
           "cites": "skills-in-openai-api-notebook#s011-operational-best-practices",
-          "quote": "Add explicit routing guidance: “Use when…” vs. “Don’t use when…”, and a few key edge cases, all in `SKILL.md`.",
-          "links": {
-            "viewer": "en/cat-harness/library/cat-harness/#cat-harness%2Fskills-in-openai-api-notebook",
-            "entry": "en/cat-harness/library/cat-harness/skills-in-openai-api-notebook/",
-            "readme": "https://github.com/litlfred/cat-harness/blob/main/library/skills-in-openai-api-notebook/README.md"
-          }
+          "quote": "Add explicit routing guidance: “Use when…” vs. “Don’t use when…”, and a few key edge cases, all in `SKILL.md`."
         },
         {
           "id": "oa-negative-examples",
@@ -1962,12 +1790,7 @@
           "judgementOnly": false,
           "citation": "library",
           "cites": "skills-in-openai-api-notebook#s011-operational-best-practices",
-          "quote": "Include negative examples (when the skill should *not* be triggered) alongside positive examples to improve routing accuracy.",
-          "links": {
-            "viewer": "en/cat-harness/library/cat-harness/#cat-harness%2Fskills-in-openai-api-notebook",
-            "entry": "en/cat-harness/library/cat-harness/skills-in-openai-api-notebook/",
-            "readme": "https://github.com/litlfred/cat-harness/blob/main/library/skills-in-openai-api-notebook/README.md"
-          }
+          "quote": "Include negative examples (when the skill should *not* be triggered) alongside positive examples to improve routing accuracy."
         },
         {
           "id": "oa-fix-routing-in-words-first",
@@ -1980,12 +1803,7 @@
           "judgementOnly": false,
           "citation": "library",
           "cites": "skills-in-openai-api-notebook#s011-operational-best-practices",
-          "quote": "If routing feels inconsistent, iterate on name, description, and examples before changing code.",
-          "links": {
-            "viewer": "en/cat-harness/library/cat-harness/#cat-harness%2Fskills-in-openai-api-notebook",
-            "entry": "en/cat-harness/library/cat-harness/skills-in-openai-api-notebook/",
-            "readme": "https://github.com/litlfred/cat-harness/blob/main/library/skills-in-openai-api-notebook/README.md"
-          }
+          "quote": "If routing feels inconsistent, iterate on name, description, and examples before changing code."
         },
         {
           "id": "oa-scripts-as-tiny-clis",
@@ -1998,12 +1816,7 @@
           "judgementOnly": false,
           "citation": "library",
           "cites": "skills-in-openai-api-notebook#s011-operational-best-practices",
-          "quote": "Prints deterministic stdout",
-          "links": {
-            "viewer": "en/cat-harness/library/cat-harness/#cat-harness%2Fskills-in-openai-api-notebook",
-            "entry": "en/cat-harness/library/cat-harness/skills-in-openai-api-notebook/",
-            "readme": "https://github.com/litlfred/cat-harness/blob/main/library/skills-in-openai-api-notebook/README.md"
-          }
+          "quote": "Prints deterministic stdout"
         },
         {
           "id": "oa-worked-examples-inside",
@@ -2016,12 +1829,7 @@
           "judgementOnly": false,
           "citation": "library",
           "cites": "skills-in-openai-api-notebook#s011-operational-best-practices",
-          "quote": "Add concrete templates and worked examples inside the skill (inputs → commands → expected outputs)",
-          "links": {
-            "viewer": "en/cat-harness/library/cat-harness/#cat-harness%2Fskills-in-openai-api-notebook",
-            "entry": "en/cat-harness/library/cat-harness/skills-in-openai-api-notebook/",
-            "readme": "https://github.com/litlfred/cat-harness/blob/main/library/skills-in-openai-api-notebook/README.md"
-          }
+          "quote": "Add concrete templates and worked examples inside the skill (inputs → commands → expected outputs)"
         },
         {
           "id": "oa-verification-in-skill-md",
@@ -2034,12 +1842,7 @@
           "judgementOnly": false,
           "citation": "library",
           "cites": "skills-in-openai-api-notebook#s011-operational-best-practices",
-          "quote": "add explicit verification steps and output checks in `SKILL.md`.",
-          "links": {
-            "viewer": "en/cat-harness/library/cat-harness/#cat-harness%2Fskills-in-openai-api-notebook",
-            "entry": "en/cat-harness/library/cat-harness/skills-in-openai-api-notebook/",
-            "readme": "https://github.com/litlfred/cat-harness/blob/main/library/skills-in-openai-api-notebook/README.md"
-          }
+          "quote": "add explicit verification steps and output checks in `SKILL.md`."
         },
         {
           "id": "oa-no-procedure-in-system-prompt",
@@ -2052,12 +1855,7 @@
           "judgementOnly": false,
           "citation": "library",
           "cites": "skills-in-openai-api-notebook#s011-operational-best-practices",
-          "quote": "If the system prompt repeats the entire procedure, people will:",
-          "links": {
-            "viewer": "en/cat-harness/library/cat-harness/#cat-harness%2Fskills-in-openai-api-notebook",
-            "entry": "en/cat-harness/library/cat-harness/skills-in-openai-api-notebook/",
-            "readme": "https://github.com/litlfred/cat-harness/blob/main/library/skills-in-openai-api-notebook/README.md"
-          }
+          "quote": "If the system prompt repeats the entire procedure, people will:"
         },
         {
           "id": "oa-network-states-what-may-leave",
@@ -2070,12 +1868,7 @@
           "judgementOnly": false,
           "citation": "library",
           "cites": "skills-in-openai-api-notebook#s011-operational-best-practices",
-          "quote": "If network access is required, pair allowlists with explicit “what data is allowed to leave” guidance.",
-          "links": {
-            "viewer": "en/cat-harness/library/cat-harness/#cat-harness%2Fskills-in-openai-api-notebook",
-            "entry": "en/cat-harness/library/cat-harness/skills-in-openai-api-notebook/",
-            "readme": "https://github.com/litlfred/cat-harness/blob/main/library/skills-in-openai-api-notebook/README.md"
-          }
+          "quote": "If network access is required, pair allowlists with explicit “what data is allowed to leave” guidance."
         },
         {
           "id": "oa-pin-versions",
@@ -2088,12 +1881,7 @@
           "judgementOnly": false,
           "citation": "library",
           "cites": "skills-in-openai-api-notebook#s011-operational-best-practices",
-          "quote": "Consider pinning the model and skill version together for reproducible behavior across deployments.",
-          "links": {
-            "viewer": "en/cat-harness/library/cat-harness/#cat-harness%2Fskills-in-openai-api-notebook",
-            "entry": "en/cat-harness/library/cat-harness/skills-in-openai-api-notebook/",
-            "readme": "https://github.com/litlfred/cat-harness/blob/main/library/skills-in-openai-api-notebook/README.md"
-          }
+          "quote": "Consider pinning the model and skill version together for reproducible behavior across deployments."
         },
         {
           "id": "oa-platform-limits",
@@ -2106,12 +1894,7 @@
           "judgementOnly": false,
           "citation": "library",
           "cites": "skills-in-openai-api-notebook#s011-operational-best-practices",
-          "quote": "Exactly one manifest file allowed (`skill.md`/`SKILL.md`)",
-          "links": {
-            "viewer": "en/cat-harness/library/cat-harness/#cat-harness%2Fskills-in-openai-api-notebook",
-            "entry": "en/cat-harness/library/cat-harness/skills-in-openai-api-notebook/",
-            "readme": "https://github.com/litlfred/cat-harness/blob/main/library/skills-in-openai-api-notebook/README.md"
-          }
+          "quote": "Exactly one manifest file allowed (`skill.md`/`SKILL.md`)"
         },
         {
           "id": "oa-skill-for-stable-procedures",
@@ -2124,12 +1907,7 @@
           "judgementOnly": false,
           "citation": "library",
           "cites": "skills-in-openai-api-notebook#s003-when-to-use-skills",
-          "quote": "The procedure changes every day (skills shine when the workflow stabilizes).",
-          "links": {
-            "viewer": "en/cat-harness/library/cat-harness/#cat-harness%2Fskills-in-openai-api-notebook",
-            "entry": "en/cat-harness/library/cat-harness/skills-in-openai-api-notebook/",
-            "readme": "https://github.com/litlfred/cat-harness/blob/main/library/skills-in-openai-api-notebook/README.md"
-          }
+          "quote": "The procedure changes every day (skills shine when the workflow stabilizes)."
         }
       ]
     },
@@ -2337,12 +2115,7 @@
           "citation": "library",
           "cites": "github-docs-actions-secure-use-reference#page-003",
           "pages": "3",
-          "quote": "For inline scripts, the preferred approach to handling untrusted input is to set the value of the expression to an intermediate environment variable.",
-          "links": {
-            "viewer": "en/cat-harness/library/cat-harness/#cat-harness%2Fgithub-docs-actions-secure-use-reference",
-            "entry": "en/cat-harness/library/cat-harness/github-docs-actions-secure-use-reference/",
-            "readme": "https://github.com/litlfred/cat-harness/blob/main/library/github-docs-actions-secure-use-reference/README.md"
-          }
+          "quote": "For inline scripts, the preferred approach to handling untrusted input is to set the value of the expression to an intermediate environment variable."
         },
         {
           "id": "scz-handover-carries-no-authority",
@@ -2356,12 +2129,7 @@
           "citation": "library",
           "cites": "github-docs-actions-secure-use-reference#page-006",
           "pages": "6",
-          "quote": "The individual jobs in a workflow can interact with (and compromise) other jobs.",
-          "links": {
-            "viewer": "en/cat-harness/library/cat-harness/#cat-harness%2Fgithub-docs-actions-secure-use-reference",
-            "entry": "en/cat-harness/library/cat-harness/github-docs-actions-secure-use-reference/",
-            "readme": "https://github.com/litlfred/cat-harness/blob/main/library/github-docs-actions-secure-use-reference/README.md"
-          }
+          "quote": "The individual jobs in a workflow can interact with (and compromise) other jobs."
         },
         {
           "id": "scz-screen-handover-fields",
@@ -2375,13 +2143,7 @@
           "citation": "library",
           "cites": "arxiv-2510.19207v2#sec-014-handling-structured-data",
           "pages": "6-7",
-          "quote": "we parse this JSON input, and recursively filter each key and each value in the JSON object.",
-          "links": {
-            "viewer": "en/cat-harness/library/cat-harness/#cat-harness%2Farxiv-2510.19207v2",
-            "entry": "en/cat-harness/library/cat-harness/arxiv-2510.19207v2/",
-            "readme": "https://github.com/litlfred/cat-harness/blob/main/library/arxiv-2510.19207v2/README.md",
-            "source": "https://arxiv.org/abs/2510.19207v2"
-          }
+          "quote": "we parse this JSON input, and recursively filter each key and each value in the JSON object."
         },
         {
           "id": "scz-report-never-extends-the-plan",
@@ -2395,13 +2157,7 @@
           "citation": "library",
           "cites": "arxiv-2503.18813v2#sec-007-the-privileged-and-quarantined-llms",
           "pages": "7-9",
-          "quote": "the Q-LLM cannot communicate to the P-LLM what information it needs, as this could be a vector for prompt injections",
-          "links": {
-            "viewer": "en/cat-harness/library/cat-harness/#cat-harness%2Farxiv-2503.18813v2",
-            "entry": "en/cat-harness/library/cat-harness/arxiv-2503.18813v2/",
-            "readme": "https://github.com/litlfred/cat-harness/blob/main/library/arxiv-2503.18813v2/README.md",
-            "source": "https://arxiv.org/abs/2503.18813v2"
-          }
+          "quote": "the Q-LLM cannot communicate to the P-LLM what information it needs, as this could be a vector for prompt injections"
         },
         {
           "id": "scz-least-privilege",
@@ -2415,12 +2171,7 @@
           "citation": "library",
           "cites": "github-docs-actions-secure-use-reference#page-001",
           "pages": "1",
-          "quote": "It's good security practice to set the default permission for the GITHUB_TOKEN to read access only for repository contents.",
-          "links": {
-            "viewer": "en/cat-harness/library/cat-harness/#cat-harness%2Fgithub-docs-actions-secure-use-reference",
-            "entry": "en/cat-harness/library/cat-harness/github-docs-actions-secure-use-reference/",
-            "readme": "https://github.com/litlfred/cat-harness/blob/main/library/github-docs-actions-secure-use-reference/README.md"
-          }
+          "quote": "It's good security practice to set the default permission for the GITHUB_TOKEN to read access only for repository contents."
         },
         {
           "id": "scz-pin-third-party-by-full-sha",
@@ -2434,12 +2185,7 @@
           "citation": "library",
           "cites": "github-docs-actions-secure-use-reference#page-006",
           "pages": "6",
-          "quote": "Pinning an action to a full-length commit SHA is currently the only way to use an action as an immutable release.",
-          "links": {
-            "viewer": "en/cat-harness/library/cat-harness/#cat-harness%2Fgithub-docs-actions-secure-use-reference",
-            "entry": "en/cat-harness/library/cat-harness/github-docs-actions-secure-use-reference/",
-            "readme": "https://github.com/litlfred/cat-harness/blob/main/library/github-docs-actions-secure-use-reference/README.md"
-          }
+          "quote": "Pinning an action to a full-length commit SHA is currently the only way to use an action as an immutable release."
         },
         {
           "id": "scz-audit-what-you-run",
@@ -2453,12 +2199,7 @@
           "citation": "library",
           "cites": "github-docs-actions-secure-use-reference#page-006",
           "pages": "6",
-          "quote": "Ensure that the action is handling the content of your repository and secrets as expected.",
-          "links": {
-            "viewer": "en/cat-harness/library/cat-harness/#cat-harness%2Fgithub-docs-actions-secure-use-reference",
-            "entry": "en/cat-harness/library/cat-harness/github-docs-actions-secure-use-reference/",
-            "readme": "https://github.com/litlfred/cat-harness/blob/main/library/github-docs-actions-secure-use-reference/README.md"
-          }
+          "quote": "Ensure that the action is handling the content of your repository and secrets as expected."
         },
         {
           "id": "scz-no-privileged-untrusted-checkout",
@@ -2472,12 +2213,7 @@
           "citation": "library",
           "cites": "github-docs-actions-secure-use-reference#page-005",
           "pages": "5",
-          "quote": "Workflows that use these triggers must not explicitly check out untrusted code, including from pull request forks or from repositories that are not under your control.",
-          "links": {
-            "viewer": "en/cat-harness/library/cat-harness/#cat-harness%2Fgithub-docs-actions-secure-use-reference",
-            "entry": "en/cat-harness/library/cat-harness/github-docs-actions-secure-use-reference/",
-            "readme": "https://github.com/litlfred/cat-harness/blob/main/library/github-docs-actions-secure-use-reference/README.md"
-          }
+          "quote": "Workflows that use these triggers must not explicitly check out untrusted code, including from pull request forks or from repositories that are not under your control."
         },
         {
           "id": "scz-secrets-never-in-text",
@@ -2491,12 +2227,7 @@
           "citation": "library",
           "cites": "github-docs-actions-secure-use-reference#page-002",
           "pages": "2",
-          "quote": "Structured data can cause secret redaction within logs to fail, because redaction largely relies on finding an exact match for the specific secret value.",
-          "links": {
-            "viewer": "en/cat-harness/library/cat-harness/#cat-harness%2Fgithub-docs-actions-secure-use-reference",
-            "entry": "en/cat-harness/library/cat-harness/github-docs-actions-secure-use-reference/",
-            "readme": "https://github.com/litlfred/cat-harness/blob/main/library/github-docs-actions-secure-use-reference/README.md"
-          }
+          "quote": "Structured data can cause secret redaction within logs to fail, because redaction largely relies on finding an exact match for the specific secret value."
         },
         {
           "id": "scz-review-dependency-changes",
@@ -2510,12 +2241,7 @@
           "citation": "library",
           "cites": "github-docs-actions-secure-use-reference#page-014",
           "pages": "14",
-          "quote": "When you open pull requests to update your workflows, it is good practice to use dependency review to understand the security impact of changes you've made to the actions you use.",
-          "links": {
-            "viewer": "en/cat-harness/library/cat-harness/#cat-harness%2Fgithub-docs-actions-secure-use-reference",
-            "entry": "en/cat-harness/library/cat-harness/github-docs-actions-secure-use-reference/",
-            "readme": "https://github.com/litlfred/cat-harness/blob/main/library/github-docs-actions-secure-use-reference/README.md"
-          }
+          "quote": "When you open pull requests to update your workflows, it is good practice to use dependency review to understand the security impact of changes you've made to the actions you use."
         },
         {
           "id": "scz-automation-does-not-approve-itself",
@@ -2529,12 +2255,7 @@
           "citation": "library",
           "cites": "github-docs-actions-secure-use-reference#page-008",
           "pages": "8",
-          "quote": "Allowing workflows, or any other automation, to create or approve pull requests could be a security risk if the pull request is merged without proper oversight.",
-          "links": {
-            "viewer": "en/cat-harness/library/cat-harness/#cat-harness%2Fgithub-docs-actions-secure-use-reference",
-            "entry": "en/cat-harness/library/cat-harness/github-docs-actions-secure-use-reference/",
-            "readme": "https://github.com/litlfred/cat-harness/blob/main/library/github-docs-actions-secure-use-reference/README.md"
-          }
+          "quote": "Allowing workflows, or any other automation, to create or approve pull requests could be a security risk if the pull request is merged without proper oversight."
         },
         {
           "id": "scz-no-self-hosted-runner-on-public",
@@ -2548,12 +2269,7 @@
           "citation": "library",
           "cites": "github-docs-actions-secure-use-reference#page-009",
           "pages": "9",
-          "quote": "As a result, self-hosted runners should almost never be used for public repositories on GitHub, because any user can open pull requests against the repository and compromise the environment.",
-          "links": {
-            "viewer": "en/cat-harness/library/cat-harness/#cat-harness%2Fgithub-docs-actions-secure-use-reference",
-            "entry": "en/cat-harness/library/cat-harness/github-docs-actions-secure-use-reference/",
-            "readme": "https://github.com/litlfred/cat-harness/blob/main/library/github-docs-actions-secure-use-reference/README.md"
-          }
+          "quote": "As a result, self-hosted runners should almost never be used for public repositories on GitHub, because any user can open pull requests against the repository and compromise the environment."
         },
         {
           "id": "scz-guard-outbound-requests",
@@ -2580,12 +2296,7 @@
           "citation": "library",
           "cites": "github-docs-actions-secure-use-reference#page-007",
           "pages": "7",
-          "quote": "You can use the CODEOWNERS feature to control how changes are made to your workflow files.",
-          "links": {
-            "viewer": "en/cat-harness/library/cat-harness/#cat-harness%2Fgithub-docs-actions-secure-use-reference",
-            "entry": "en/cat-harness/library/cat-harness/github-docs-actions-secure-use-reference/",
-            "readme": "https://github.com/litlfred/cat-harness/blob/main/library/github-docs-actions-secure-use-reference/README.md"
-          }
+          "quote": "You can use the CODEOWNERS feature to control how changes are made to your workflow files."
         }
       ]
     },

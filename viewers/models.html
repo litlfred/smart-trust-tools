@@ -11,8 +11,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&family=JetBrains+Mono:wght@400;600&family=Public+Sans:wght@400;550;650;700&display=swap">
 <link rel="stylesheet" href="assets/site.css">
-<link rel="stylesheet" href="../assets/css/navbar.css"><script src="../assets/navbar/rail-14igmenm3w3.js" defer></script><script src="../assets/js/navbar.js" defer></script><script src="../assets/navbar/row-cpzi87n6zz.js" defer></script><link rel="stylesheet" href="../assets/css/navbar-row.css"><script src="../assets/js/navbar-row.js" defer></script><script src="../assets/js/vendor/lunr.min.js" defer></script><script src="../assets/js/just-the-docs.js" defer></script><link rel="stylesheet" href="../assets/page-layout.css" data-fa-page-layout><script src="../assets/page-layout.js" defer data-fa-page-layout></script><meta name="fa-platform-base" content="https://litlfred.github.io/folio-assistant" data-fa-platform-ui><link rel="stylesheet" href="../assets/css/docs-ui.css" data-fa-platform-ui><script src="../assets/js/docs-ui.js" defer data-fa-platform-ui></script><meta name="fa-pinned-data" content=".."></head>
-<body><script type="application/json" id="fa-navbar-row" data-fa-root=".." data-fa-row-src="row-cpzi87n6zz"></script><script type="application/json" id="fa-rail" data-fa-root="https://litlfred.github.io/folio-assistant" data-fa-to-root="..">{"data":"rail-14igmenm3w3","here":"/viewers/models.html"}</script><nav class="fa-nav" aria-label="folio-assistant" data-fa-rail="pending"><a href="../">SMART Trust HCERT library tools</a></nav><div id="main-header" class="main-header fa-site-bar fa-page-bar"><a class="fa-page-bar-home" href="../">SMART Trust HCERT library tools</a><div class="search" role="search"><div class="search-input-wrap"><input type="text" id="search-input" class="search-input" tabindex="0" placeholder="Search this site" autocomplete="off"><label for="search-input" class="search-label"><span class="sr-only">Search this site</span></label></div><div id="search-results" class="search-results"></div></div><span class="fa-page-bar-locale" data-fa-slot="locale"></span></div>
+<link rel="stylesheet" href="../assets/css/navbar.css"><script src="../assets/navbar/rail-etm31o4dk5.js" defer></script><script src="../assets/js/navbar.js" defer></script><script src="../assets/navbar/row-cpzi87n6zz.js" defer></script><link rel="stylesheet" href="../assets/css/navbar-row.css"><script src="../assets/js/navbar-row.js" defer></script><script src="../assets/js/vendor/lunr.min.js" defer></script><script src="../assets/js/just-the-docs.js" defer></script><link rel="stylesheet" href="../assets/page-layout.css" data-fa-page-layout><script src="../assets/page-layout.js" defer data-fa-page-layout></script><meta name="fa-platform-base" content="https://litlfred.github.io/folio-assistant" data-fa-platform-ui><link rel="stylesheet" href="../assets/css/docs-ui.css" data-fa-platform-ui><script src="../assets/js/docs-ui.js" defer data-fa-platform-ui></script><meta name="fa-pinned-data" content=".."></head>
+<body><script type="application/json" id="fa-navbar-row" data-fa-root=".." data-fa-row-src="row-cpzi87n6zz"></script><script type="application/json" id="fa-rail" data-fa-root="https://litlfred.github.io/folio-assistant" data-fa-to-root="..">{"data":"rail-etm31o4dk5","here":"/viewers/models.html"}</script><nav class="fa-nav" aria-label="folio-assistant" data-fa-rail="pending"><a href="../">SMART Trust HCERT library tools</a></nav><div id="main-header" class="main-header fa-site-bar fa-page-bar"><a class="fa-page-bar-home" href="../">SMART Trust HCERT library tools</a><div class="search" role="search"><div class="search-input-wrap"><input type="text" id="search-input" class="search-input" tabindex="0" placeholder="Search this site" autocomplete="off"><label for="search-input" class="search-label"><span class="sr-only">Search this site</span></label></div><div id="search-results" class="search-results"></div></div><span class="fa-page-bar-locale" data-fa-slot="locale"></span></div>
 <header class="topbar"><div class="topbar-inner"><a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span>SMART Trust Tools</a><nav class="nav" aria-label="Viewers"><a href="index.html">Overview</a><a href="explorer.html">Graph explorer</a><a href="trace.html">Traceability</a><a href="requirements.html">Requirements</a><a href="api.html">API (WIT)</a><a href="api/typedoc/index.html">API reference (TS)</a><a href="kotlin.html">Kotlin API</a><a href="models.html" aria-current="page">Wire &amp; payload models</a><a href="vocabulary.html">Vocabulary</a></nav></div></header>
 
 <main class="page">
@@ -95,11 +95,24 @@
 <span class="tok-name" id="cddl-hcert-dcc">hcert-dcc</span> = { 1 =&gt; any }               <span class="tok-comment">; HCertDCC (EU DCC core data set)</span>
 <span class="tok-name" id="cddl-hcert-ddcc-vs">hcert-ddcc-vs</span> = { 3 =&gt; any }           <span class="tok-comment">; DDCCCoreDataSetVS (proposed)</span>
 <span class="tok-name" id="cddl-hcert-ddcc-tr">hcert-ddcc-tr</span> = { 4 =&gt; any }           <span class="tok-comment">; DDCCCoreDataSetTR (proposed)</span>
-<span class="tok-name" id="cddl-hcert-vhl">hcert-vhl</span> = { 5 =&gt; vhl-uri }           <span class="tok-comment">; Verifiable Health Link URI (<a href="explorer.html#OI-06">OI-06</a>)</span>
+<span class="tok-name" id="cddl-hcert-vhl">hcert-vhl</span> = { 5 =&gt; vhl-payload / vhl-uri } <span class="tok-comment">; Verifiable Health Link [<a href="explorer.html#STT-VHL-002">STT-VHL-002</a>]</span>
 <span class="tok-name" id="cddl-hcert-dvc">hcert-dvc</span> = { -6 =&gt; dvc-min }          <span class="tok-comment">; DVCMin, development range (<a href="explorer.html#OI-09">OI-09</a>, <a href="explorer.html#OI-17">OI-17</a>)</span>
 <span class="tok-name" id="cddl-hcert-mtl">hcert-mtl</span> = { -7 =&gt; any }              <span class="tok-comment">; MedicationTreatmentLineMin, development range</span>
 
-<span class="tok-name" id="cddl-vhl-uri">vhl-uri</span> = tstr
+<span class="tok-comment">; The SMART Health Links payload format that IHE VHL reuses, as a CBOR map:</span>
+<span class="tok-comment">; the primary form at key 5. [<a href="explorer.html#STT-VHL-001">STT-VHL-001</a>, <a href="explorer.html#STT-VHL-002">STT-VHL-002</a>] (<a href="explorer.html#OI-21">OI-21</a>, <a href="explorer.html#OI-23">OI-23</a>)</span>
+<span class="tok-name" id="cddl-vhl-payload">vhl-payload</span> = {
+  url: tstr,               <span class="tok-comment">; https manifest URL (a FHIR List search)</span>
+  key: tstr <span class="tok-key">.size</span> 43,      <span class="tok-comment">; 32 random bytes, base64url</span>
+  ? exp: int,              <span class="tok-comment">; epoch seconds</span>
+  ? flag: tstr <span class="tok-key">.regexp</span> <span class="tok-str">&quot;L?P?&quot;</span>,
+  ? label: tstr <span class="tok-key">.size</span> (0..80),
+  ? v: int,
+  ? extension: { ? fhirBaseUrl: tstr, * tstr =&gt; any },
+}
+
+<span class="tok-comment">; IHE ITI-YY3&#x27;s text form, still accepted on decode. [<a href="explorer.html#STT-VHL-003">STT-VHL-003</a>]</span>
+<span class="tok-name" id="cddl-vhl-uri">vhl-uri</span> = tstr <span class="tok-key">.regexp</span> <span class="tok-str">&quot;vhlink:/[A-Za-z0-9_-]+&quot;</span>
 
 <span class="tok-comment">; Context identifier and Base45 text (step 8). [<a href="explorer.html#STT-HC1-001">STT-HC1-001</a>, <a href="explorer.html#STT-B45-001">STT-B45-001</a>]</span>
 <span class="tok-name" id="cddl-hc1-string">hc1-string</span> = tstr <span class="tok-key">.regexp</span> <span class="tok-str">&quot;HC1:[0-9A-Z $%*+./:-]+&quot;</span>
@@ -223,19 +236,19 @@
   &quot;dob&quot;: &quot;2026-09-28&quot;
 }</code></pre>
     <h3>Resulting triples (N-Triples)</h3>
-    <pre><code>_:N124f601524bb471eb41877f835732a39 &lt;http://smart.who.int/trust-phw/StructureDefinition/DVCMin#dob&gt; &quot;2026-09-28&quot; .
-_:N124f601524bb471eb41877f835732a39 &lt;http://smart.who.int/trust-phw/StructureDefinition/DVCMin#gn&gt; &quot;Mali SOUVANNALATH&quot; .
-_:N124f601524bb471eb41877f835732a39 &lt;http://smart.who.int/trust-phw/StructureDefinition/DVCMin#n&gt; &quot;Chanthala SOUVANNALATH&quot; .
-_:N124f601524bb471eb41877f835732a39 &lt;http://smart.who.int/trust-phw/StructureDefinition/DVCMin#nt&gt; &quot;LAO&quot; .
-_:N124f601524bb471eb41877f835732a39 &lt;http://smart.who.int/trust-phw/StructureDefinition/DVCMin#s&gt; &quot;female&quot; .
-_:N124f601524bb471eb41877f835732a39 &lt;http://smart.who.int/trust-phw/StructureDefinition/DVCMin#v&gt; &quot;1.0.0&quot; .
-_:N124f601524bb471eb41877f835732a39 &lt;http://smart.who.int/trust-phw/StructureDefinition/DVCMin#vx&gt; _:Nb1346d5982d2490189e6421de8b9b365 .
-_:N124f601524bb471eb41877f835732a39 &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#type&gt; &lt;http://smart.who.int/trust-phw/StructureDefinition/DVCMin&gt; .
-_:Nb1346d5982d2490189e6421de8b9b365 &lt;http://smart.who.int/trust-phw/StructureDefinition/DVCMinVaccineDetails#bo&gt; &quot;HEPB-2026-0914&quot; .
-_:Nb1346d5982d2490189e6421de8b9b365 &lt;http://smart.who.int/trust-phw/StructureDefinition/DVCMinVaccineDetails#cn&gt; &quot;Dr Pimchanok WATTANA&quot; .
-_:Nb1346d5982d2490189e6421de8b9b365 &lt;http://smart.who.int/trust-phw/StructureDefinition/DVCMinVaccineDetails#dv&gt; &quot;2026-09-28&quot; .
-_:Nb1346d5982d2490189e6421de8b9b365 &lt;http://smart.who.int/trust-phw/StructureDefinition/DVCMinVaccineDetails#is&gt; &quot;org-xxa-provincial-hospital&quot; .
-_:Nb1346d5982d2490189e6421de8b9b365 &lt;http://smart.who.int/trust-phw/StructureDefinition/DVCMinVaccineDetails#vp&gt; &quot;XM9V38&quot; .</code></pre>
+    <pre><code>_:N132b14c0a6cc4b679bb463d4f74591f6 &lt;http://smart.who.int/trust-phw/StructureDefinition/DVCMinVaccineDetails#bo&gt; &quot;HEPB-2026-0914&quot; .
+_:N132b14c0a6cc4b679bb463d4f74591f6 &lt;http://smart.who.int/trust-phw/StructureDefinition/DVCMinVaccineDetails#cn&gt; &quot;Dr Pimchanok WATTANA&quot; .
+_:N132b14c0a6cc4b679bb463d4f74591f6 &lt;http://smart.who.int/trust-phw/StructureDefinition/DVCMinVaccineDetails#dv&gt; &quot;2026-09-28&quot; .
+_:N132b14c0a6cc4b679bb463d4f74591f6 &lt;http://smart.who.int/trust-phw/StructureDefinition/DVCMinVaccineDetails#is&gt; &quot;org-xxa-provincial-hospital&quot; .
+_:N132b14c0a6cc4b679bb463d4f74591f6 &lt;http://smart.who.int/trust-phw/StructureDefinition/DVCMinVaccineDetails#vp&gt; &quot;XM9V38&quot; .
+_:N6c24c8f871114fd39890c3b14f5cff9d &lt;http://smart.who.int/trust-phw/StructureDefinition/DVCMin#dob&gt; &quot;2026-09-28&quot; .
+_:N6c24c8f871114fd39890c3b14f5cff9d &lt;http://smart.who.int/trust-phw/StructureDefinition/DVCMin#gn&gt; &quot;Mali SOUVANNALATH&quot; .
+_:N6c24c8f871114fd39890c3b14f5cff9d &lt;http://smart.who.int/trust-phw/StructureDefinition/DVCMin#n&gt; &quot;Chanthala SOUVANNALATH&quot; .
+_:N6c24c8f871114fd39890c3b14f5cff9d &lt;http://smart.who.int/trust-phw/StructureDefinition/DVCMin#nt&gt; &quot;LAO&quot; .
+_:N6c24c8f871114fd39890c3b14f5cff9d &lt;http://smart.who.int/trust-phw/StructureDefinition/DVCMin#s&gt; &quot;female&quot; .
+_:N6c24c8f871114fd39890c3b14f5cff9d &lt;http://smart.who.int/trust-phw/StructureDefinition/DVCMin#v&gt; &quot;1.0.0&quot; .
+_:N6c24c8f871114fd39890c3b14f5cff9d &lt;http://smart.who.int/trust-phw/StructureDefinition/DVCMin#vx&gt; _:N132b14c0a6cc4b679bb463d4f74591f6 .
+_:N6c24c8f871114fd39890c3b14f5cff9d &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#type&gt; &lt;http://smart.who.int/trust-phw/StructureDefinition/DVCMin&gt; .</code></pre>
     <details><summary class="small">Generated context (<a href="https://github.com/litlfred/smart-trust-tools/blob/main/models/generated/trust-phw.context.jsonld">trust-phw.context.jsonld</a>)</summary>
       <pre><code>{
   &quot;@context&quot;: {
