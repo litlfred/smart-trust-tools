@@ -11,7 +11,7 @@
 <link rel="stylesheet" href="assets/site.css">
 </head>
 <body>
-<header class="topbar"><div class="topbar-inner"><a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span>SMART Trust Tools</a><nav class="nav" aria-label="Viewers"><a href="index.html">Overview</a><a href="explorer.html">Graph explorer</a><a href="trace.html">Traceability</a><a href="requirements.html">Requirements</a><a href="api.html">API (WIT)</a><a href="api/typedoc/index.html">API reference (TS)</a><a href="models.html" aria-current="page">Wire &amp; payload models</a><a href="vocabulary.html">Vocabulary</a></nav></div></header>
+<header class="topbar"><div class="topbar-inner"><a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span>SMART Trust Tools</a><nav class="nav" aria-label="Viewers"><a href="index.html">Overview</a><a href="explorer.html">Graph explorer</a><a href="trace.html">Traceability</a><a href="requirements.html">Requirements</a><a href="api.html">API (WIT)</a><a href="api/typedoc/index.html">API reference (TS)</a><a href="kotlin.html">Kotlin API</a><a href="models.html" aria-current="page">Wire &amp; payload models</a><a href="vocabulary.html">Vocabulary</a></nav></div></header>
 
 <main class="page">
   <section class="section prose">
@@ -221,19 +221,19 @@
   &quot;dob&quot;: &quot;2026-09-28&quot;
 }</code></pre>
     <h3>Resulting triples (N-Triples)</h3>
-    <pre><code>_:N440e19e6f6a64c11a6b68b49ba7e7991 &lt;http://smart.who.int/trust-phw/StructureDefinition/DVCMin#dob&gt; &quot;2026-09-28&quot; .
-_:N440e19e6f6a64c11a6b68b49ba7e7991 &lt;http://smart.who.int/trust-phw/StructureDefinition/DVCMin#gn&gt; &quot;Mali SOUVANNALATH&quot; .
-_:N440e19e6f6a64c11a6b68b49ba7e7991 &lt;http://smart.who.int/trust-phw/StructureDefinition/DVCMin#n&gt; &quot;Chanthala SOUVANNALATH&quot; .
-_:N440e19e6f6a64c11a6b68b49ba7e7991 &lt;http://smart.who.int/trust-phw/StructureDefinition/DVCMin#nt&gt; &quot;LAO&quot; .
-_:N440e19e6f6a64c11a6b68b49ba7e7991 &lt;http://smart.who.int/trust-phw/StructureDefinition/DVCMin#s&gt; &quot;female&quot; .
-_:N440e19e6f6a64c11a6b68b49ba7e7991 &lt;http://smart.who.int/trust-phw/StructureDefinition/DVCMin#v&gt; &quot;1.0.0&quot; .
-_:N440e19e6f6a64c11a6b68b49ba7e7991 &lt;http://smart.who.int/trust-phw/StructureDefinition/DVCMin#vx&gt; _:N9013d039118d4855ab10fe66be661baf .
-_:N440e19e6f6a64c11a6b68b49ba7e7991 &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#type&gt; &lt;http://smart.who.int/trust-phw/StructureDefinition/DVCMin&gt; .
-_:N9013d039118d4855ab10fe66be661baf &lt;http://smart.who.int/trust-phw/StructureDefinition/DVCMinVaccineDetails#bo&gt; &quot;HEPB-2026-0914&quot; .
-_:N9013d039118d4855ab10fe66be661baf &lt;http://smart.who.int/trust-phw/StructureDefinition/DVCMinVaccineDetails#cn&gt; &quot;Dr Pimchanok WATTANA&quot; .
-_:N9013d039118d4855ab10fe66be661baf &lt;http://smart.who.int/trust-phw/StructureDefinition/DVCMinVaccineDetails#dv&gt; &quot;2026-09-28&quot; .
-_:N9013d039118d4855ab10fe66be661baf &lt;http://smart.who.int/trust-phw/StructureDefinition/DVCMinVaccineDetails#is&gt; &quot;org-xxa-provincial-hospital&quot; .
-_:N9013d039118d4855ab10fe66be661baf &lt;http://smart.who.int/trust-phw/StructureDefinition/DVCMinVaccineDetails#vp&gt; &quot;XM9V38&quot; .</code></pre>
+    <pre><code>_:N4a8703e958ef48a3b0eafaaf032f9d04 &lt;http://smart.who.int/trust-phw/StructureDefinition/DVCMin#dob&gt; &quot;2026-09-28&quot; .
+_:N4a8703e958ef48a3b0eafaaf032f9d04 &lt;http://smart.who.int/trust-phw/StructureDefinition/DVCMin#gn&gt; &quot;Mali SOUVANNALATH&quot; .
+_:N4a8703e958ef48a3b0eafaaf032f9d04 &lt;http://smart.who.int/trust-phw/StructureDefinition/DVCMin#n&gt; &quot;Chanthala SOUVANNALATH&quot; .
+_:N4a8703e958ef48a3b0eafaaf032f9d04 &lt;http://smart.who.int/trust-phw/StructureDefinition/DVCMin#nt&gt; &quot;LAO&quot; .
+_:N4a8703e958ef48a3b0eafaaf032f9d04 &lt;http://smart.who.int/trust-phw/StructureDefinition/DVCMin#s&gt; &quot;female&quot; .
+_:N4a8703e958ef48a3b0eafaaf032f9d04 &lt;http://smart.who.int/trust-phw/StructureDefinition/DVCMin#v&gt; &quot;1.0.0&quot; .
+_:N4a8703e958ef48a3b0eafaaf032f9d04 &lt;http://smart.who.int/trust-phw/StructureDefinition/DVCMin#vx&gt; _:N9ee57d05f83945a4a023e0118af987c1 .
+_:N4a8703e958ef48a3b0eafaaf032f9d04 &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#type&gt; &lt;http://smart.who.int/trust-phw/StructureDefinition/DVCMin&gt; .
+_:N9ee57d05f83945a4a023e0118af987c1 &lt;http://smart.who.int/trust-phw/StructureDefinition/DVCMinVaccineDetails#bo&gt; &quot;HEPB-2026-0914&quot; .
+_:N9ee57d05f83945a4a023e0118af987c1 &lt;http://smart.who.int/trust-phw/StructureDefinition/DVCMinVaccineDetails#cn&gt; &quot;Dr Pimchanok WATTANA&quot; .
+_:N9ee57d05f83945a4a023e0118af987c1 &lt;http://smart.who.int/trust-phw/StructureDefinition/DVCMinVaccineDetails#dv&gt; &quot;2026-09-28&quot; .
+_:N9ee57d05f83945a4a023e0118af987c1 &lt;http://smart.who.int/trust-phw/StructureDefinition/DVCMinVaccineDetails#is&gt; &quot;org-xxa-provincial-hospital&quot; .
+_:N9ee57d05f83945a4a023e0118af987c1 &lt;http://smart.who.int/trust-phw/StructureDefinition/DVCMinVaccineDetails#vp&gt; &quot;XM9V38&quot; .</code></pre>
     <details><summary class="small">Generated context (<a href="https://github.com/litlfred/smart-trust-tools/blob/claude/sharp-galileo-rg1hb3/models/generated/trust-phw.context.jsonld">trust-phw.context.jsonld</a>)</summary>
       <pre><code>{
   &quot;@context&quot;: {
