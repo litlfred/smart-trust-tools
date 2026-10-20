@@ -1,0 +1,1 @@
+(function(n){if(n&&n.getAttribute("data-fa-row-src")==="row-cpzi87n6zz"&&!n.textContent){n.textContent="{\"icons\":[\"close\",\"todos\",\"beans\",\"fsh-guts\",\"qr\",\"launcher\"],\"hrefs\":{},\"notes\":{},\"folders\":[{\"kind\":\"skills\",\"label\":\"Skills\",\"note\":\"no viewer yet\"}]}";n.removeAttribute("data-fa-row-src")}})(document.getElementById("fa-navbar-row"));
