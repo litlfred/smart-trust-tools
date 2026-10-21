@@ -81,6 +81,16 @@
       "dcterms:title": "MedicationTreatmentLineMin logical model (ph4h)",
       "dcterms:publisher": "World Health Organization",
       "dcterms:identifier": "http://smart.who.int/ph4h/StructureDefinition-MedicationTreatmentLineMin.html"
+    },
+    {
+      "@id": "references/who-itb",
+      "@type": [
+        "fabio:Work",
+        "bibo:Document"
+      ],
+      "dcterms:title": "WHO-ITB: Interoperability Test Bed with HCERT validation (GDHCN Trust Network)",
+      "dcterms:publisher": "World Health Organization",
+      "dcterms:identifier": "https://github.com/WorldHealthOrganization/WHO-ITB/tree/883291d51e206719c1417cf95393a5cd8b20dc4b"
     }
   ]
 }

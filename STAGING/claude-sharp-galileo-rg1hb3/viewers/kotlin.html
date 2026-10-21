@@ -5,13 +5,13 @@
 
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Kotlin API Skeleton</title>
+<title>Kotlin API</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&family=JetBrains+Mono:wght@400;600&family=Public+Sans:wght@400;550;650;700&display=swap">
 <link rel="stylesheet" href="assets/site.css">
-<link rel="stylesheet" href="../assets/css/navbar.css"><script src="../assets/navbar/rail-26au969el1p.js" defer></script><script src="../assets/js/navbar.js" defer></script><script src="../assets/navbar/row-afo8l5iwne.js" defer></script><link rel="stylesheet" href="../assets/css/navbar-row.css"><script src="../assets/js/navbar-row.js" defer></script><script src="../assets/js/vendor/lunr.min.js" defer></script><script src="../assets/js/just-the-docs.js" defer></script><link rel="stylesheet" href="../assets/page-layout.css" data-fa-page-layout><script src="../assets/page-layout.js" defer data-fa-page-layout></script><meta name="fa-platform-base" content="https://litlfred.github.io/folio-assistant" data-fa-platform-ui><link rel="stylesheet" href="../assets/css/docs-ui.css" data-fa-platform-ui><script src="../assets/js/docs-ui.js" defer data-fa-platform-ui></script><meta name="fa-pinned-data" content=".."></head>
+<link rel="stylesheet" href="../assets/css/navbar.css"><script src="../assets/navbar/rail-21plfny9x1u.js" defer></script><script src="../assets/js/navbar.js" defer></script><script src="../assets/navbar/row-irn935tcg5.js" defer></script><link rel="stylesheet" href="../assets/css/navbar-row.css"><script src="../assets/js/navbar-row.js" defer></script><script src="../assets/js/vendor/lunr.min.js" defer></script><script src="../assets/js/just-the-docs.js" defer></script><link rel="stylesheet" href="../assets/page-layout.css" data-fa-page-layout><script src="../assets/page-layout.js" defer data-fa-page-layout></script><meta name="fa-platform-base" content="https://litlfred.github.io/folio-assistant" data-fa-platform-ui><link rel="stylesheet" href="../assets/css/docs-ui.css" data-fa-platform-ui><script src="../assets/js/docs-ui.js" defer data-fa-platform-ui></script><meta name="fa-pinned-data" content=".."></head>
 <body><div data-fa-staging-banner lang="en" dir="ltr" style="background:#4F6F52;color:#fff;padding:8px 16px;font-size:14px;text-align:center;position:fixed;top:0;left:0;right:0;box-sizing:border-box;z-index:2147483001;font-family:system-ui">🔀 <b>FEATURE BRANCH</b> <span data-fa-staging-detail>— loading build details…</span></div><style>:root{--fa-staging-offset:0px}body{margin:0}.side-bar,.fa-nav{top:var(--fa-staging-offset,0px)!important}html{padding-top:var(--fa-staging-offset,0px)}</style><script>(function(){
 function el(t,a,x){var e=document.createElement(t);if(a)for(var k in a)e.setAttribute(k,a[k]);if(x!=null)e.textContent=x;return e;}
 function link(href,text,extra){var a=el('a',{href:href,style:'color:#fff;text-decoration:underline'},text);if(extra)a.setAttribute('style',a.getAttribute('style')+';'+extra);return a;}
@@ -62,107 +62,51 @@ function go(){
 measure();
 if(document.readyState!=='loading')go();else document.addEventListener('DOMContentLoaded',go);
 window.addEventListener('resize',measure);window.addEventListener('load',measure);
-})();</script><script type="application/json" id="fa-navbar-row" data-fa-root=".." data-fa-row-src="row-afo8l5iwne"></script><script type="application/json" id="fa-rail" data-fa-root="https://litlfred.github.io/folio-assistant" data-fa-to-root="..">{"data":"rail-26au969el1p","here":"/viewers/kotlin.html"}</script><nav class="fa-nav" aria-label="folio-assistant" data-fa-rail="pending"><a href="../">SMART Trust HCERT library tools</a></nav><div id="main-header" class="main-header fa-site-bar fa-page-bar"><a class="fa-page-bar-home" href="../">SMART Trust HCERT library tools</a><div class="search" role="search"><div class="search-input-wrap"><input type="text" id="search-input" class="search-input" tabindex="0" placeholder="Search this site" autocomplete="off"><label for="search-input" class="search-label"><span class="sr-only">Search this site</span></label></div><div id="search-results" class="search-results"></div></div><span class="fa-page-bar-locale" data-fa-slot="locale"></span></div>
+})();</script><script type="application/json" id="fa-navbar-row" data-fa-root=".." data-fa-row-src="row-irn935tcg5"></script><script type="application/json" id="fa-rail" data-fa-root="https://litlfred.github.io/folio-assistant" data-fa-to-root="..">{"data":"rail-21plfny9x1u","here":"/viewers/kotlin.html"}</script><nav class="fa-nav" aria-label="folio-assistant" data-fa-rail="pending"><a href="../">SMART Trust HCERT library tools</a></nav><div id="main-header" class="main-header fa-site-bar fa-page-bar"><a class="fa-page-bar-home" href="../">SMART Trust HCERT library tools</a><div class="search" role="search"><div class="search-input-wrap"><input type="text" id="search-input" class="search-input" tabindex="0" placeholder="Search this site" autocomplete="off"><label for="search-input" class="search-label"><span class="sr-only">Search this site</span></label></div><div id="search-results" class="search-results"></div></div><span class="fa-page-bar-locale" data-fa-slot="locale"></span></div>
 <header class="topbar"><div class="topbar-inner"><a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span>SMART Trust Tools</a><nav class="nav" aria-label="Viewers"><a href="index.html">Overview</a><a href="explorer.html">Graph explorer</a><a href="trace.html">Traceability</a><a href="requirements.html">Requirements</a><a href="api.html">API (WIT)</a><a href="api/typedoc/index.html">API reference (TS)</a><a href="kotlin.html" aria-current="page">Kotlin API</a><a href="models.html">Wire &amp; payload models</a><a href="kinds.html">Node kinds</a></nav></div></header>
 
 <main class="page">
   <section class="section prose">
     <span class="eyebrow">Kotlin Multiplatform · generated from the WIT contract</span>
-    <h1>Kotlin API skeleton</h1>
-    <p>Declarations only, with no behaviour. <code>tools/wit2kotlin/wit2kotlin.py</code> generates them from <a href="api.html">the WIT contract</a>
-    using the mapping rules: records become data classes, variants become sealed interfaces, resources become
-    <code>AutoCloseable</code> interfaces, and <code>result&lt;T, E&gt;</code> becomes <code>WitResult&lt;T, E&gt;</code>. Each exported
-    WIT interface becomes a Kotlin interface that the library implements, for example <code>Codec</code> or <code>Verifier</code>.
-    Imported interfaces (<code>Signer</code>, <code>Terminology</code>) are implemented by the host application. Each WIT world becomes
-    a bundle interface, plus a factory that takes the world's imports.</p>
+    <h1>Kotlin API</h1>
+    <p>Declarations only, with no behaviour, implemented by <code>hcert-core</code>. <code>tools/wit2kotlin/wit2kotlin.py</code> generates them from
+    <a href="api.html">the contract</a>, so the Kotlin and Rust libraries cannot drift apart, but the Kotlin API names no WIT: records become
+    data classes, variants sealed interfaces, resources <code>AutoCloseable</code> interfaces, and a call that can fail returns
+    <code>HcertResult&lt;T, E&gt;</code>. Each exported interface becomes a Kotlin interface the library implements, for example
+    <code>Codec</code> or <code>Verifier</code>; imported ones (<code>Signer</code>, <code>Terminology</code>) are implemented by the host
+    application. The entry point is <code>object Hcert</code>: <code>Hcert.verifier</code>, <code>Hcert.issuer</code> and so on.</p>
     <p>The module targets the JVM (Java 11+), which Android uses as-is, and Node.js through Kotlin/JS IR with generated TypeScript
-    declarations. Regenerate with <code>python3 tools/wit2kotlin/wit2kotlin.py</code>; CI fails if the skeleton is out of date with the WIT.</p>
+    declarations. Regenerate with <code>python3 tools/wit2kotlin/wit2kotlin.py</code>; CI fails if the API is out of date with the contract.</p>
   </section>
-  <section class="section"><h2>Files</h2><ul class="small"><li><a href="#kt-file-WitResult"><code>WitResult.kt</code></a> <span class="muted small">WitResult</span></li><li><a href="#kt-file-Worlds"><code>Worlds.kt</code></a> <span class="muted small">HcertCodecWorld, HcertVerifierWorld, HcertIssuerWorld, HcertWorld</span></li><li><a href="#kt-file-codec-Codec"><code>codec/Codec.kt</code></a> <span class="muted small">CodecError, Codec</span></li><li><a href="#kt-file-cose-Cose"><code>cose/Cose.kt</code></a> <span class="muted small">CoseError, Sign1, Base64Alphabet, Cose</span></li><li><a href="#kt-file-dvc-Dvc"><code>dvc/Dvc.kt</code></a> <span class="muted small">DvcMinVaccineDetails, DvcMin, Dvc</span></li><li><a href="#kt-file-issuer-Issuer"><code>issuer/Issuer.kt</code></a> <span class="muted small">Validity, IssueRequest, IssueError, IssuedHcert, PendingSignature, Issuer</span></li><li><a href="#kt-file-payloads-Payloads"><code>payloads/Payloads.kt</code></a> <span class="muted small">RawPayload, Payload</span></li><li><a href="#kt-file-subclaims-Subclaims"><code>subclaims/Subclaims.kt</code></a> <span class="muted small">PayloadKind, Registry, Subclaims</span></li><li><a href="#kt-file-trust-Trust"><code>trust/Trust.kt</code></a> <span class="muted small">TrustError, TrustedDsc, TrustStore, Trust</span></li><li><a href="#kt-file-types-Types"><code>types/Types.kt</code></a> <span class="muted small">CoseAlgorithm, Kid, NumericDate, CborBytes, Subclaim, DecodeLimits, Severity, ValidationIssue …</span></li><li><a href="#kt-file-verifier-Verifier"><code>verifier/Verifier.kt</code></a> <span class="muted small">VerifierOptions, VerifiedHcert, VerificationFailure, VerificationResult, UnverifiedHcert, Verifier</span></li><li><a href="#kt-file-vhl-Vhl"><code>vhl/Vhl.kt</code></a> <span class="muted small">VhlPayload, VhlError, ManifestRequest, ManifestDocument, Decrypted, SignatureRequest, SignatureBase, Vhl</span></li></ul></section>
-  <section class="section" id="kt-file-WitResult"><div class="section-head"><h2><code>WitResult.kt</code></h2><a class="small" href="https://github.com/litlfred/smart-trust-tools/blob/claude/sharp-galileo-rg1hb3/tools/hcert-kotlin/hcert-api/src/commonMain/kotlin/who/smart/trust/WitResult.kt">source</a></div><pre><code><span class="tok-comment">// GENERATED by tools/wit2kotlin/wit2kotlin.py. Do not edit.</span>
+  <section class="section"><h2>Files</h2><ul class="small"><li><a href="#kt-file-HcertResult"><code>HcertResult.kt</code></a> <span class="muted small">HcertResult</span></li><li><a href="#kt-file-codec-Codec"><code>codec/Codec.kt</code></a> <span class="muted small">CodecError, Codec</span></li><li><a href="#kt-file-cose-Cose"><code>cose/Cose.kt</code></a> <span class="muted small">CoseError, Sign1, Base64Alphabet, Cose</span></li><li><a href="#kt-file-dvc-Dvc"><code>dvc/Dvc.kt</code></a> <span class="muted small">DvcMinVaccineDetails, DvcMin, Dvc</span></li><li><a href="#kt-file-issuer-Issuer"><code>issuer/Issuer.kt</code></a> <span class="muted small">Validity, IssueRequest, IssueError, IssuedHcert, PendingSignature, Issuer</span></li><li><a href="#kt-file-payloads-Payloads"><code>payloads/Payloads.kt</code></a> <span class="muted small">RawPayload, Payload</span></li><li><a href="#kt-file-subclaims-Subclaims"><code>subclaims/Subclaims.kt</code></a> <span class="muted small">PayloadKind, Registry, Subclaims</span></li><li><a href="#kt-file-trust-Trust"><code>trust/Trust.kt</code></a> <span class="muted small">TrustError, TrustedDsc, TrustStore, Trust</span></li><li><a href="#kt-file-types-Types"><code>types/Types.kt</code></a> <span class="muted small">CoseAlgorithm, Kid, NumericDate, CborBytes, Subclaim, DecodeLimits, Severity, ValidationIssue …</span></li><li><a href="#kt-file-verifier-Verifier"><code>verifier/Verifier.kt</code></a> <span class="muted small">VerifierOptions, VerifiedHcert, VerificationFailure, VerificationResult, UnverifiedHcert, Verifier</span></li><li><a href="#kt-file-vhl-Vhl"><code>vhl/Vhl.kt</code></a> <span class="muted small">VhlPayload, VhlError, ManifestRequest, ManifestDocument, Decrypted, SignatureRequest, SignatureBase, Vhl</span></li></ul></section>
+  <section class="section" id="kt-file-HcertResult"><div class="section-head"><h2><code>HcertResult.kt</code></h2><a class="small" href="https://github.com/litlfred/smart-trust-tools/blob/claude/sharp-galileo-rg1hb3/tools/hcert-kotlin/hcert-api/src/commonMain/kotlin/who/smart/trust/HcertResult.kt">source</a></div><pre><code><span class="tok-comment">// GENERATED by tools/wit2kotlin/wit2kotlin.py. Do not edit.</span>
 <span class="tok-key">package</span> who.smart.trust
 
 <span class="tok-comment">/**</span>
-<span class="tok-comment"> * Kotlin form of WIT `result&lt;T, E&gt;`.</span>
+<span class="tok-comment"> * The outcome of a call that can fail in an expected way: the value, or an</span>
+<span class="tok-comment"> * error saying which step failed and why.</span>
 <span class="tok-comment"> *</span>
 <span class="tok-comment"> * Expected failures are values, not exceptions [<a href="explorer.html#STT-VER-008">STT-VER-008</a>], so the JVM and</span>
-<span class="tok-comment"> * Android API returns this instead of throwing. The Kotlin/JS facade may throw</span>
-<span class="tok-comment"> * like jco does, to keep one TypeScript surface [<a href="explorer.html#STT-GEN-011">STT-GEN-011</a>].</span>
+<span class="tok-comment"> * Android API returns this instead of throwing. Kotlin&#x27;s own `Result` cannot</span>
+<span class="tok-comment"> * carry a typed error, hence this type. The Kotlin/JS facade may throw, to keep</span>
+<span class="tok-comment"> * one TypeScript surface [<a href="explorer.html#STT-GEN-011">STT-GEN-011</a>].</span>
 <span class="tok-comment"> */</span>
-<span class="tok-key">sealed</span> <span class="tok-key">interface</span> <span class="tok-name" id="kt-WitResult">WitResult</span>&lt;out T, out E&gt; {
-    <span class="tok-key">data</span> <span class="tok-key">class</span> <span class="tok-name" id="kt-Ok">Ok</span>&lt;out T&gt;(<span class="tok-key">val</span> value: T) : WitResult&lt;T, Nothing&gt;
+<span class="tok-key">sealed</span> <span class="tok-key">interface</span> <span class="tok-name" id="kt-HcertResult">HcertResult</span>&lt;out T, out E&gt; {
+    <span class="tok-key">data</span> <span class="tok-key">class</span> <span class="tok-name" id="kt-Ok">Ok</span>&lt;out T&gt;(<span class="tok-key">val</span> value: T) : HcertResult&lt;T, Nothing&gt;
 
-    <span class="tok-key">data</span> <span class="tok-key">class</span> <span class="tok-name" id="kt-Err">Err</span>&lt;out E&gt;(<span class="tok-key">val</span> error: E) : WitResult&lt;Nothing, E&gt;
+    <span class="tok-key">data</span> <span class="tok-key">class</span> <span class="tok-name" id="kt-Err">Err</span>&lt;out E&gt;(<span class="tok-key">val</span> error: E) : HcertResult&lt;Nothing, E&gt;
 }
 
-<span class="tok-key">inline</span> <span class="tok-key">fun</span> &lt;T, E, R&gt; WitResult&lt;T, E&gt;.fold(onOk: (T) -&gt; R, onErr: (E) -&gt; R): R = <span class="tok-key">when</span> (this) {
-    <span class="tok-key">is</span> WitResult.Ok -&gt; onOk(value)
-    <span class="tok-key">is</span> WitResult.Err -&gt; onErr(error)
+<span class="tok-key">inline</span> <span class="tok-key">fun</span> &lt;T, E, R&gt; HcertResult&lt;T, E&gt;.fold(onOk: (T) -&gt; R, onErr: (E) -&gt; R): R = <span class="tok-key">when</span> (this) {
+    <span class="tok-key">is</span> HcertResult.Ok -&gt; onOk(value)
+    <span class="tok-key">is</span> HcertResult.Err -&gt; onErr(error)
 }
 
-<span class="tok-key">fun</span> &lt;T, E&gt; WitResult&lt;T, E&gt;.getOrNull(): T? = (this <span class="tok-key">as</span>? WitResult.Ok)?.value
-</code></pre></section><section class="section" id="kt-file-Worlds"><div class="section-head"><h2><code>Worlds.kt</code></h2><a class="small" href="https://github.com/litlfred/smart-trust-tools/blob/claude/sharp-galileo-rg1hb3/tools/hcert-kotlin/hcert-api/src/commonMain/kotlin/who/smart/trust/Worlds.kt">source</a></div><pre><code><span class="tok-comment">// GENERATED by tools/wit2kotlin/wit2kotlin.py from api/wit/worlds.wit. Do not edit.</span>
-<span class="tok-key">package</span> who.smart.trust
-
-<span class="tok-key">import</span> who.smart.trust.codec.Codec
-<span class="tok-key">import</span> who.smart.trust.cose.Cose
-<span class="tok-key">import</span> who.smart.trust.dvc.Dvc
-<span class="tok-key">import</span> who.smart.trust.issuer.Issuer
-<span class="tok-key">import</span> who.smart.trust.subclaims.Subclaims
-<span class="tok-key">import</span> who.smart.trust.trust.Trust
-<span class="tok-key">import</span> who.smart.trust.verifier.Verifier
-<span class="tok-key">import</span> who.smart.trust.vhl.Vhl
-
-<span class="tok-comment">/**</span>
-<span class="tok-comment"> * Pure encoding and decoding: the pipeline steps on their own. No host</span>
-<span class="tok-comment"> * imports. [<a href="explorer.html#STT-GEN-002">STT-GEN-002</a>]</span>
-<span class="tok-comment"> *</span>
-<span class="tok-comment"> * WIT world `hcert-codec`. Exports: types, codec, cose.</span>
-<span class="tok-comment"> */</span>
-<span class="tok-key">interface</span> <span class="tok-name" id="kt-HcertCodecWorld">HcertCodecWorld</span> {
-    <span class="tok-key">val</span> codec: Codec
-    <span class="tok-key">val</span> cose: Cose
-}
-
-<span class="tok-comment">/**</span>
-<span class="tok-comment"> * Verifier: what a scanning app or border system embeds.</span>
-<span class="tok-comment"> *</span>
-<span class="tok-comment"> * WIT world `hcert-verifier`. Exports: types, codec, cose, subclaims, dvc, vhl, payloads, trust, verifier.</span>
-<span class="tok-comment"> */</span>
-<span class="tok-key">interface</span> <span class="tok-name" id="kt-HcertVerifierWorld">HcertVerifierWorld</span> {
-    <span class="tok-key">val</span> codec: Codec
-    <span class="tok-key">val</span> cose: Cose
-    <span class="tok-key">val</span> subclaims: Subclaims
-    <span class="tok-key">val</span> dvc: Dvc
-    <span class="tok-key">val</span> vhl: Vhl
-    <span class="tok-key">val</span> trust: Trust
-    <span class="tok-key">val</span> verifier: Verifier
-}
-
-<span class="tok-comment">/**</span>
-<span class="tok-comment"> * Issuer: what a clinic or national issuance service embeds.</span>
-<span class="tok-comment"> *</span>
-<span class="tok-comment"> * WIT world `hcert-issuer`. Exports: types, codec, cose, subclaims, dvc, vhl, payloads, issuer.</span>
-<span class="tok-comment"> */</span>
-<span class="tok-key">interface</span> <span class="tok-name" id="kt-HcertIssuerWorld">HcertIssuerWorld</span> {
-    <span class="tok-key">val</span> codec: Codec
-    <span class="tok-key">val</span> cose: Cose
-    <span class="tok-key">val</span> subclaims: Subclaims
-    <span class="tok-key">val</span> dvc: Dvc
-    <span class="tok-key">val</span> vhl: Vhl
-    <span class="tok-key">val</span> issuer: Issuer
-}
-
-<span class="tok-comment">/**</span>
-<span class="tok-comment"> * Everything.</span>
-<span class="tok-comment"> *</span>
-<span class="tok-comment"> * WIT world `hcert`. Exports: via hcert-verifier, hcert-issuer.</span>
-<span class="tok-comment"> */</span>
-<span class="tok-key">interface</span> <span class="tok-name" id="kt-HcertWorld">HcertWorld</span> : HcertVerifierWorld, HcertIssuerWorld
+<span class="tok-key">fun</span> &lt;T, E&gt; HcertResult&lt;T, E&gt;.getOrNull(): T? = (this <span class="tok-key">as</span>? HcertResult.Ok)?.value
 </code></pre></section><section class="section" id="kt-file-codec-Codec"><div class="section-head"><h2><code>codec/Codec.kt</code></h2><a class="small" href="https://github.com/litlfred/smart-trust-tools/blob/claude/sharp-galileo-rg1hb3/tools/hcert-kotlin/hcert-api/src/commonMain/kotlin/who/smart/trust/codec/Codec.kt">source</a></div><pre><code><span class="tok-comment">// GENERATED by tools/wit2kotlin/wit2kotlin.py from api/wit/codec.wit (interface codec). Do not edit.</span>
 <span class="tok-key">package</span> who.smart.trust.codec
 
-<span class="tok-key">import</span> who.smart.trust.WitResult
+<span class="tok-key">import</span> who.smart.trust.HcertResult
 <span class="tok-key">import</span> who.smart.trust.types.CborBytes
 <span class="tok-key">import</span> who.smart.trust.types.DecodeLimits
 
@@ -191,24 +135,24 @@ window.addEventListener('resize',measure);window.addEventListener('load',measure
 <span class="tok-comment"> * Steps 4, 6, 7, 8: CBOR, ZLIB, Base45 and the HC1 context identifier.</span>
 <span class="tok-comment"> * Pure functions: no crypto, no I/O, no clock.</span>
 <span class="tok-comment"> *</span>
-<span class="tok-comment"> * Implemented by the library (Kotlin and Rust) for the `codec` WIT interface.</span>
+<span class="tok-comment"> * Implemented by the library.</span>
 <span class="tok-comment"> */</span>
 <span class="tok-key">interface</span> <span class="tok-name" id="kt-Codec">Codec</span> {
 <span class="tok-comment">    /** RFC 9285 Base45. [<a href="explorer.html#STT-B45-001">STT-B45-001</a>] */</span>
     <span class="tok-key">fun</span> base45Encode(<span class="tok-key">data</span>: ByteArray): String
 
-    <span class="tok-key">fun</span> base45Decode(text: String): WitResult&lt;ByteArray, CodecError&gt;
+    <span class="tok-key">fun</span> base45Decode(text: String): HcertResult&lt;ByteArray, CodecError&gt;
 
 <span class="tok-comment">    /** ZLIB (RFC 1950) wrapping DEFLATE (RFC 1951). [<a href="explorer.html#STT-ZIP-001">STT-ZIP-001</a>] */</span>
     <span class="tok-key">fun</span> zlibCompress(<span class="tok-key">data</span>: ByteArray, level: Int): ByteArray
 
-    <span class="tok-key">fun</span> zlibInflate(<span class="tok-key">data</span>: ByteArray, maxOut: Int): WitResult&lt;ByteArray, CodecError&gt;
+    <span class="tok-key">fun</span> zlibInflate(<span class="tok-key">data</span>: ByteArray, maxOut: Int): HcertResult&lt;ByteArray, CodecError&gt;
 
 <span class="tok-comment">    /**</span>
 <span class="tok-comment">     * Returns the context identifier version character (e.g. &quot;1&quot;) and</span>
 <span class="tok-comment">     * the remainder after the colon. [<a href="explorer.html#STT-HC1-001">STT-HC1-001</a>]</span>
 <span class="tok-comment">     */</span>
-    <span class="tok-key">fun</span> detectContext(text: String): WitResult&lt;Pair&lt;String, String&gt;, CodecError&gt;
+    <span class="tok-key">fun</span> detectContext(text: String): HcertResult&lt;Pair&lt;String, String&gt;, CodecError&gt;
 
 <span class="tok-comment">    /**</span>
 <span class="tok-comment">     * Steps 6 to 8: COSE bytes to &quot;HC1:...&quot; string. The result uses only</span>
@@ -217,18 +161,18 @@ window.addEventListener('resize',measure);window.addEventListener('load',measure
     <span class="tok-key">fun</span> toHc1(cose: ByteArray): String
 
 <span class="tok-comment">    /** Steps 8 to 6 reversed: &quot;HC1:...&quot; string to COSE bytes. */</span>
-    <span class="tok-key">fun</span> fromHc1(text: String, limits: DecodeLimits): WitResult&lt;ByteArray, CodecError&gt;
+    <span class="tok-key">fun</span> fromHc1(text: String, limits: DecodeLimits): HcertResult&lt;ByteArray, CodecError&gt;
 
 <span class="tok-comment">    /**</span>
 <span class="tok-comment">     * Re-encode CBOR using RFC 8949 core deterministic encoding.</span>
 <span class="tok-comment">     * [<a href="explorer.html#STT-CBR-001">STT-CBR-001</a>]</span>
 <span class="tok-comment">     */</span>
-    <span class="tok-key">fun</span> cborDeterministic(cbor: CborBytes, limits: DecodeLimits): WitResult&lt;CborBytes, CodecError&gt;
+    <span class="tok-key">fun</span> cborDeterministic(cbor: CborBytes, limits: DecodeLimits): HcertResult&lt;CborBytes, CodecError&gt;
 }
 </code></pre></section><section class="section" id="kt-file-cose-Cose"><div class="section-head"><h2><code>cose/Cose.kt</code></h2><a class="small" href="https://github.com/litlfred/smart-trust-tools/blob/claude/sharp-galileo-rg1hb3/tools/hcert-kotlin/hcert-api/src/commonMain/kotlin/who/smart/trust/cose/Cose.kt">source</a></div><pre><code><span class="tok-comment">// GENERATED by tools/wit2kotlin/wit2kotlin.py from api/wit/cose.wit (interface cose). Do not edit.</span>
 <span class="tok-key">package</span> who.smart.trust.cose
 
-<span class="tok-key">import</span> who.smart.trust.WitResult
+<span class="tok-key">import</span> who.smart.trust.HcertResult
 <span class="tok-key">import</span> who.smart.trust.types.CoseAlgorithm
 <span class="tok-key">import</span> who.smart.trust.types.DecodeLimits
 <span class="tok-key">import</span> who.smart.trust.types.Kid
@@ -276,7 +220,7 @@ window.addEventListener('resize',measure);window.addEventListener('load',measure
 <span class="tok-comment">/**</span>
 <span class="tok-comment"> * Step 5: COSE_Sign1, key identifiers and signature formats.</span>
 <span class="tok-comment"> *</span>
-<span class="tok-comment"> * Implemented by the library (Kotlin and Rust) for the `cose` WIT interface.</span>
+<span class="tok-comment"> * Implemented by the library.</span>
 <span class="tok-comment"> */</span>
 <span class="tok-key">interface</span> <span class="tok-name" id="kt-Cose">Cose</span> {
 <span class="tok-comment">    /** First 8 bytes of SHA-256 over the DER-encoded DSC. [<a href="explorer.html#STT-KID-001">STT-KID-001</a>] */</span>
@@ -285,9 +229,9 @@ window.addEventListener('resize',measure);window.addEventListener('load',measure
 <span class="tok-comment">    /** [<a href="explorer.html#STT-KID-003">STT-KID-003</a>] */</span>
     <span class="tok-key">fun</span> kidToBase64(k: Kid, alphabet: Base64Alphabet): String
 
-    <span class="tok-key">fun</span> kidFromBase64(text: String): WitResult&lt;Kid, CoseError&gt;
+    <span class="tok-key">fun</span> kidFromBase64(text: String): HcertResult&lt;Kid, CoseError&gt;
 
-    <span class="tok-key">fun</span> parseSign1(bytes: ByteArray, limits: DecodeLimits): WitResult&lt;Sign1, CoseError&gt;
+    <span class="tok-key">fun</span> parseSign1(bytes: ByteArray, limits: DecodeLimits): HcertResult&lt;Sign1, CoseError&gt;
 
 <span class="tok-comment">    /** CBOR of [&quot;Signature1&quot;, protected, h&#x27;&#x27;, payload]. */</span>
     <span class="tok-key">fun</span> sigStructure(protected: ByteArray, payload: ByteArray): ByteArray
@@ -296,17 +240,17 @@ window.addEventListener('resize',measure);window.addEventListener('load',measure
 <span class="tok-comment">     * Verify a parsed COSE_Sign1 against one DSC. Low level: does not</span>
 <span class="tok-comment">     * check EKU, time or trust. [<a href="explorer.html#STT-COS-002">STT-COS-002</a>]</span>
 <span class="tok-comment">     */</span>
-    <span class="tok-key">fun</span> verifySign1(s: Sign1, dscDer: ByteArray): WitResult&lt;Unit, CoseError&gt;
+    <span class="tok-key">fun</span> verifySign1(s: Sign1, dscDer: ByteArray): HcertResult&lt;Unit, CoseError&gt;
 
 <span class="tok-comment">    /** ASN.1 DER ECDSA-Sig-Value &lt;-&gt; fixed-width r||s. [<a href="explorer.html#STT-COS-005">STT-COS-005</a>] */</span>
-    <span class="tok-key">fun</span> ecdsaDerToRaw(der: ByteArray): WitResult&lt;ByteArray, CoseError&gt;
+    <span class="tok-key">fun</span> ecdsaDerToRaw(der: ByteArray): HcertResult&lt;ByteArray, CoseError&gt;
 
-    <span class="tok-key">fun</span> ecdsaRawToDer(raw: ByteArray): WitResult&lt;ByteArray, CoseError&gt;
+    <span class="tok-key">fun</span> ecdsaRawToDer(raw: ByteArray): HcertResult&lt;ByteArray, CoseError&gt;
 }
 </code></pre></section><section class="section" id="kt-file-dvc-Dvc"><div class="section-head"><h2><code>dvc/Dvc.kt</code></h2><a class="small" href="https://github.com/litlfred/smart-trust-tools/blob/claude/sharp-galileo-rg1hb3/tools/hcert-kotlin/hcert-api/src/commonMain/kotlin/who/smart/trust/dvc/Dvc.kt">source</a></div><pre><code><span class="tok-comment">// GENERATED by tools/wit2kotlin/wit2kotlin.py from api/wit/payload.wit (interface dvc). Do not edit.</span>
 <span class="tok-key">package</span> who.smart.trust.dvc
 
-<span class="tok-key">import</span> who.smart.trust.WitResult
+<span class="tok-key">import</span> who.smart.trust.HcertResult
 <span class="tok-key">import</span> who.smart.trust.types.CborBytes
 <span class="tok-key">import</span> who.smart.trust.types.DecodeLimits
 <span class="tok-key">import</span> who.smart.trust.types.ValidationIssue
@@ -350,7 +294,7 @@ window.addEventListener('resize',measure);window.addEventListener('load',measure
 <span class="tok-comment">/**</span>
 <span class="tok-comment"> * Step 2: the DVCMin payload (trust-phw DVCMin). [<a href="explorer.html#STT-PAY-010">STT-PAY-010</a>]</span>
 <span class="tok-comment"> *</span>
-<span class="tok-comment"> * Implemented by the library (Kotlin and Rust) for the `dvc` WIT interface.</span>
+<span class="tok-comment"> * Implemented by the library.</span>
 <span class="tok-comment"> */</span>
 <span class="tok-key">interface</span> <span class="tok-name" id="kt-Dvc">Dvc</span> {
 <span class="tok-comment">    /**</span>
@@ -361,12 +305,12 @@ window.addEventListener('resize',measure);window.addEventListener('load',measure
 
     <span class="tok-key">fun</span> toCbor(p: DvcMin): CborBytes
 
-    <span class="tok-key">fun</span> fromCbor(cbor: CborBytes, limits: DecodeLimits): WitResult&lt;DvcMin, List&lt;ValidationIssue&gt;&gt;
+    <span class="tok-key">fun</span> fromCbor(cbor: CborBytes, limits: DecodeLimits): HcertResult&lt;DvcMin, List&lt;ValidationIssue&gt;&gt;
 }
 </code></pre></section><section class="section" id="kt-file-issuer-Issuer"><div class="section-head"><h2><code>issuer/Issuer.kt</code></h2><a class="small" href="https://github.com/litlfred/smart-trust-tools/blob/claude/sharp-galileo-rg1hb3/tools/hcert-kotlin/hcert-api/src/commonMain/kotlin/who/smart/trust/issuer/Issuer.kt">source</a></div><pre><code><span class="tok-comment">// GENERATED by tools/wit2kotlin/wit2kotlin.py from api/wit/pipeline.wit (interface issuer). Do not edit.</span>
 <span class="tok-key">package</span> who.smart.trust.issuer
 
-<span class="tok-key">import</span> who.smart.trust.WitResult
+<span class="tok-key">import</span> who.smart.trust.HcertResult
 <span class="tok-key">import</span> who.smart.trust.payloads.Payload
 <span class="tok-key">import</span> who.smart.trust.subclaims.Registry
 <span class="tok-key">import</span> who.smart.trust.types.CoseAlgorithm
@@ -431,17 +375,17 @@ window.addEventListener('resize',measure);window.addEventListener('load',measure
 <span class="tok-comment"> * the caller signs them with an HSM, KMS, Android Keystore or WebCrypto,</span>
 <span class="tok-comment"> * and finish() assembles the certificate. [<a href="explorer.html#STT-ISS-004">STT-ISS-004</a>, <a href="explorer.html#STT-COS-006">STT-COS-006</a>]</span>
 <span class="tok-comment"> *</span>
-<span class="tok-comment"> * Implemented by the library (Kotlin and Rust) for the `issuer` WIT interface.</span>
+<span class="tok-comment"> * Implemented by the library.</span>
 <span class="tok-comment"> */</span>
 <span class="tok-key">interface</span> <span class="tok-name" id="kt-Issuer">Issuer</span> {
 <span class="tok-comment">    /** Phase 1: validate, build CWT, CBOR and protected header. */</span>
-    <span class="tok-key">fun</span> prepare(req: IssueRequest, reg: Registry): WitResult&lt;PendingSignature, IssueError&gt;
+    <span class="tok-key">fun</span> prepare(req: IssueRequest, reg: Registry): HcertResult&lt;PendingSignature, IssueError&gt;
 
 <span class="tok-comment">    /**</span>
 <span class="tok-comment">     * Phase 2: attach the signature. ES256 accepts r||s or DER and always</span>
 <span class="tok-comment">     * emits r||s. [<a href="explorer.html#STT-COS-005">STT-COS-005</a>]</span>
 <span class="tok-comment">     */</span>
-    <span class="tok-key">fun</span> finish(pending: PendingSignature, signature: ByteArray): WitResult&lt;IssuedHcert, IssueError&gt;
+    <span class="tok-key">fun</span> finish(pending: PendingSignature, signature: ByteArray): HcertResult&lt;IssuedHcert, IssueError&gt;
 }
 </code></pre></section><section class="section" id="kt-file-payloads-Payloads"><div class="section-head"><h2><code>payloads/Payloads.kt</code></h2><a class="small" href="https://github.com/litlfred/smart-trust-tools/blob/claude/sharp-galileo-rg1hb3/tools/hcert-kotlin/hcert-api/src/commonMain/kotlin/who/smart/trust/payloads/Payloads.kt">source</a></div><pre><code><span class="tok-comment">// GENERATED by tools/wit2kotlin/wit2kotlin.py from api/wit/payload.wit (interface payloads). Do not edit.</span>
 <span class="tok-key">package</span> who.smart.trust.payloads
@@ -492,7 +436,7 @@ window.addEventListener('resize',measure);window.addEventListener('load',measure
 <span class="tok-comment"> * move from -6 to an assigned number without an API break.</span>
 <span class="tok-comment"> * [<a href="explorer.html#STT-SEL-001">STT-SEL-001</a>, <a href="explorer.html#STT-SEL-002">STT-SEL-002</a>, <a href="explorer.html#STT-SEL-003">STT-SEL-003</a>]</span>
 <span class="tok-comment"> *</span>
-<span class="tok-comment"> * Implemented by the library (Kotlin and Rust) for the `subclaims` WIT interface.</span>
+<span class="tok-comment"> * Implemented by the library.</span>
 <span class="tok-comment"> */</span>
 <span class="tok-key">interface</span> <span class="tok-name" id="kt-Subclaims">Subclaims</span> {
 <span class="tok-comment">    /** Starts with the IG defaults: 1, 3, 4, 5, -6, -7; VHL is 5. [<a href="explorer.html#STT-SEL-001">STT-SEL-001</a>] */</span>
@@ -501,12 +445,18 @@ window.addEventListener('resize',measure);window.addEventListener('load',measure
 </code></pre></section><section class="section" id="kt-file-trust-Trust"><div class="section-head"><h2><code>trust/Trust.kt</code></h2><a class="small" href="https://github.com/litlfred/smart-trust-tools/blob/claude/sharp-galileo-rg1hb3/tools/hcert-kotlin/hcert-api/src/commonMain/kotlin/who/smart/trust/trust/Trust.kt">source</a></div><pre><code><span class="tok-comment">// GENERATED by tools/wit2kotlin/wit2kotlin.py from api/wit/trust.wit (interface trust). Do not edit.</span>
 <span class="tok-key">package</span> who.smart.trust.trust
 
-<span class="tok-key">import</span> who.smart.trust.WitResult
+<span class="tok-key">import</span> who.smart.trust.HcertResult
 <span class="tok-key">import</span> who.smart.trust.types.Kid
 <span class="tok-key">import</span> who.smart.trust.types.NumericDate
 
 <span class="tok-key">sealed</span> <span class="tok-key">interface</span> <span class="tok-name" id="kt-TrustError">TrustError</span> {
     <span class="tok-key">data</span> <span class="tok-key">class</span> <span class="tok-name" id="kt-Parse">Parse</span>(<span class="tok-key">val</span> value: String) : TrustError
+
+<span class="tok-comment">    /**</span>
+<span class="tok-comment">     * A DID document names a trust domain the loaded GDHCN Trust Domain</span>
+<span class="tok-comment">     * code system does not hold. [<a href="explorer.html#STT-SEL-006">STT-SEL-006</a>]</span>
+<span class="tok-comment">     */</span>
+    <span class="tok-key">data</span> <span class="tok-key">class</span> <span class="tok-name" id="kt-UnknownTrustDomain">UnknownTrustDomain</span>(<span class="tok-key">val</span> value: String) : TrustError
 }
 
 <span class="tok-key">data</span> <span class="tok-key">class</span> <span class="tok-name" id="kt-TrustedDsc">TrustedDsc</span>(
@@ -530,15 +480,28 @@ window.addEventListener('resize',measure);window.addEventListener('load',measure
 
 <span class="tok-key">interface</span> <span class="tok-name" id="kt-TrustStore">TrustStore</span> : AutoCloseable {
 <span class="tok-comment">    /** Each add-* returns the number of DSCs added. [<a href="explorer.html#STT-TRU-005">STT-TRU-005</a>] */</span>
-    <span class="tok-key">fun</span> addPem(pem: String): WitResult&lt;Int, TrustError&gt;
+    <span class="tok-key">fun</span> addPem(pem: String): HcertResult&lt;Int, TrustError&gt;
 
-    <span class="tok-key">fun</span> addDer(der: ByteArray): WitResult&lt;Int, TrustError&gt;
+    <span class="tok-key">fun</span> addDer(der: ByteArray): HcertResult&lt;Int, TrustError&gt;
 
 <span class="tok-comment">    /**</span>
 <span class="tok-comment">     * A GDHCN DID trustlist v2 document, embedded or reference</span>
 <span class="tok-comment">     * variant. [<a href="explorer.html#STT-TRU-002">STT-TRU-002</a>]</span>
 <span class="tok-comment">     */</span>
-    <span class="tok-key">fun</span> addDidDocument(json: String): WitResult&lt;Int, TrustError&gt;
+    <span class="tok-key">fun</span> addDidDocument(json: String): HcertResult&lt;Int, TrustError&gt;
+
+<span class="tok-comment">    /**</span>
+<span class="tok-comment">     * The trust domains a DID document may name, read from a GDHCN</span>
+<span class="tok-comment">     * Trust Domain CodeSystem (FHIR JSON) the host fetched. Data, not</span>
+<span class="tok-comment">     * an enum: once loaded, a DID document naming another domain is</span>
+<span class="tok-comment">     * refused whole; before, any domain is kept as given. Loading</span>
+<span class="tok-comment">     * again replaces the set. Returns the number of codes.</span>
+<span class="tok-comment">     * [<a href="explorer.html#STT-SEL-006">STT-SEL-006</a>]</span>
+<span class="tok-comment">     */</span>
+    <span class="tok-key">fun</span> loadTrustDomains(codesystemJson: String): HcertResult&lt;Int, TrustError&gt;
+
+<span class="tok-comment">    /** The loaded trust domain codes; empty when none are loaded. */</span>
+    <span class="tok-key">fun</span> trustDomains(): List&lt;String&gt;
 
 <span class="tok-comment">    /** Every DSC with this kid (kids are not unique). [<a href="explorer.html#STT-KID-002">STT-KID-002</a>] */</span>
     <span class="tok-key">fun</span> candidates(k: Kid): List&lt;TrustedDsc&gt;
@@ -553,7 +516,7 @@ window.addEventListener('resize',measure);window.addEventListener('load',measure
 <span class="tok-comment"> * and fills the store, so the core never does network I/O and stays</span>
 <span class="tok-comment"> * synchronous. [<a href="explorer.html#STT-TRU-001">STT-TRU-001</a>, <a href="explorer.html#STT-GEN-012">STT-GEN-012</a>]</span>
 <span class="tok-comment"> *</span>
-<span class="tok-comment"> * Implemented by the library (Kotlin and Rust) for the `trust` WIT interface.</span>
+<span class="tok-comment"> * Implemented by the library.</span>
 <span class="tok-comment"> */</span>
 <span class="tok-key">interface</span> <span class="tok-name" id="kt-Trust">Trust</span> {
 <span class="tok-comment">    /** Creates a new [TrustStore]. */</span>
@@ -665,7 +628,7 @@ window.addEventListener('resize',measure);window.addEventListener('load',measure
 </code></pre></section><section class="section" id="kt-file-verifier-Verifier"><div class="section-head"><h2><code>verifier/Verifier.kt</code></h2><a class="small" href="https://github.com/litlfred/smart-trust-tools/blob/claude/sharp-galileo-rg1hb3/tools/hcert-kotlin/hcert-api/src/commonMain/kotlin/who/smart/trust/verifier/Verifier.kt">source</a></div><pre><code><span class="tok-comment">// GENERATED by tools/wit2kotlin/wit2kotlin.py from api/wit/pipeline.wit (interface verifier). Do not edit.</span>
 <span class="tok-key">package</span> who.smart.trust.verifier
 
-<span class="tok-key">import</span> who.smart.trust.WitResult
+<span class="tok-key">import</span> who.smart.trust.HcertResult
 <span class="tok-key">import</span> who.smart.trust.payloads.Payload
 <span class="tok-key">import</span> who.smart.trust.subclaims.Registry
 <span class="tok-key">import</span> who.smart.trust.trust.TrustStore
@@ -738,7 +701,7 @@ window.addEventListener('resize',measure);window.addEventListener('load',measure
 <span class="tok-comment"> * entry [<a href="explorer.html#STT-SEL-004">STT-SEL-004</a>]; trust-list presence is the DSC validity check</span>
 <span class="tok-comment"> * [<a href="explorer.html#STT-VER-006">STT-VER-006</a>]; EKU is checked against the certificate type [<a href="explorer.html#STT-VER-004">STT-VER-004</a>].</span>
 <span class="tok-comment"> *</span>
-<span class="tok-comment"> * Implemented by the library (Kotlin and Rust) for the `verifier` WIT interface.</span>
+<span class="tok-comment"> * Implemented by the library.</span>
 <span class="tok-comment"> */</span>
 <span class="tok-key">interface</span> <span class="tok-name" id="kt-Verifier">Verifier</span> {
 <span class="tok-comment">    /** `now` is passed in: no ambient clock. [<a href="explorer.html#STT-VER-005">STT-VER-005</a>] */</span>
@@ -748,12 +711,12 @@ window.addEventListener('resize',measure);window.addEventListener('load',measure
     <span class="tok-key">fun</span> verifyCose(cose: ByteArray, store: TrustStore, reg: Registry, now: NumericDate, options: VerifierOptions): VerificationResult
 
 <span class="tok-comment">    /** [<a href="explorer.html#STT-VER-011">STT-VER-011</a>] */</span>
-    <span class="tok-key">fun</span> readUnverified(hc1: String, reg: Registry, limits: DecodeLimits): WitResult&lt;UnverifiedHcert, VerificationFailure&gt;
+    <span class="tok-key">fun</span> readUnverified(hc1: String, reg: Registry, limits: DecodeLimits): HcertResult&lt;UnverifiedHcert, VerificationFailure&gt;
 }
 </code></pre></section><section class="section" id="kt-file-vhl-Vhl"><div class="section-head"><h2><code>vhl/Vhl.kt</code></h2><a class="small" href="https://github.com/litlfred/smart-trust-tools/blob/claude/sharp-galileo-rg1hb3/tools/hcert-kotlin/hcert-api/src/commonMain/kotlin/who/smart/trust/vhl/Vhl.kt">source</a></div><pre><code><span class="tok-comment">// GENERATED by tools/wit2kotlin/wit2kotlin.py from api/wit/vhl.wit (interface vhl). Do not edit.</span>
 <span class="tok-key">package</span> who.smart.trust.vhl
 
-<span class="tok-key">import</span> who.smart.trust.WitResult
+<span class="tok-key">import</span> who.smart.trust.HcertResult
 <span class="tok-key">import</span> who.smart.trust.types.NumericDate
 <span class="tok-key">import</span> who.smart.trust.types.ValidationIssue
 
@@ -854,7 +817,7 @@ window.addEventListener('resize',measure);window.addEventListener('load',measure
 <span class="tok-comment"> * HTTP (ITI-YY5 manifest search, ITI-68 document GETs) over mutual TLS, holds</span>
 <span class="tok-comment"> * the receiver&#x27;s signing key and logs audit events. [<a href="explorer.html#STT-VHL-010">STT-VHL-010</a>]</span>
 <span class="tok-comment"> *</span>
-<span class="tok-comment"> * Implemented by the library (Kotlin and Rust) for the `vhl` WIT interface.</span>
+<span class="tok-comment"> * Implemented by the library.</span>
 <span class="tok-comment"> */</span>
 <span class="tok-key">interface</span> <span class="tok-name" id="kt-Vhl">Vhl</span> {
 <span class="tok-comment">    /**</span>
@@ -866,21 +829,21 @@ window.addEventListener('resize',measure);window.addEventListener('load',measure
 <span class="tok-comment">    /** [<a href="explorer.html#STT-VHL-003">STT-VHL-003</a>] */</span>
     <span class="tok-key">fun</span> toVhlink(p: VhlPayload): String
 
-    <span class="tok-key">fun</span> fromVhlink(text: String): WitResult&lt;VhlPayload, VhlError&gt;
+    <span class="tok-key">fun</span> fromVhlink(text: String): HcertResult&lt;VhlPayload, VhlError&gt;
 
 <span class="tok-comment">    /** A new key from the platform&#x27;s secure random generator. [<a href="explorer.html#STT-VHL-004">STT-VHL-004</a>] */</span>
     <span class="tok-key">fun</span> newKey(): String
 
 <span class="tok-comment">    /** [<a href="explorer.html#STT-VHL-005">STT-VHL-005</a>] */</span>
-    <span class="tok-key">fun</span> buildManifestRequest(p: VhlPayload, recipient: String, passcode: String?, embeddedLengthMax: Int?): WitResult&lt;ManifestRequest, VhlError&gt;
+    <span class="tok-key">fun</span> buildManifestRequest(p: VhlPayload, recipient: String, passcode: String?, embeddedLengthMax: Int?): HcertResult&lt;ManifestRequest, VhlError&gt;
 
 <span class="tok-comment">    /** The ITI-YY5 searchset Bundle. [<a href="explorer.html#STT-VHL-006">STT-VHL-006</a>] */</span>
-    <span class="tok-key">fun</span> parseManifest(bundleJson: String): WitResult&lt;List&lt;ManifestDocument&gt;, VhlError&gt;
+    <span class="tok-key">fun</span> parseManifest(bundleJson: String): HcertResult&lt;List&lt;ManifestDocument&gt;, VhlError&gt;
 
 <span class="tok-comment">    /** JWE Compact, dir / A256GCM, the payload key. [<a href="explorer.html#STT-VHL-007">STT-VHL-007</a>] */</span>
-    <span class="tok-key">fun</span> encrypt(content: ByteArray, contentType: String, key: String): WitResult&lt;String, VhlError&gt;
+    <span class="tok-key">fun</span> encrypt(content: ByteArray, contentType: String, key: String): HcertResult&lt;String, VhlError&gt;
 
-    <span class="tok-key">fun</span> decrypt(jwe: String, key: String): WitResult&lt;Decrypted, VhlError&gt;
+    <span class="tok-key">fun</span> decrypt(jwe: String, key: String): HcertResult&lt;Decrypted, VhlError&gt;
 
 <span class="tok-comment">    /** [<a href="explorer.html#STT-VHL-008">STT-VHL-008</a>] */</span>
     <span class="tok-key">fun</span> buildSignatureBase(r: SignatureRequest): SignatureBase
@@ -889,7 +852,7 @@ window.addEventListener('resize',measure);window.addEventListener('load',measure
 <span class="tok-comment">     * The Signature header value. An ecdsa-p256-sha256 DER signature is</span>
 <span class="tok-comment">     * converted to r||s.</span>
 <span class="tok-comment">     */</span>
-    <span class="tok-key">fun</span> signatureHeader(signature: ByteArray, alg: String): WitResult&lt;String, VhlError&gt;
+    <span class="tok-key">fun</span> signatureHeader(signature: ByteArray, alg: String): HcertResult&lt;String, VhlError&gt;
 }
 </code></pre></section>
 </main></body>

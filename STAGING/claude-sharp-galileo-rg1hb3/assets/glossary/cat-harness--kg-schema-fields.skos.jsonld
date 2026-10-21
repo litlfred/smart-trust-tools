@@ -29274,6 +29274,25 @@
       "skos:note": "candidate"
     },
     {
+      "@id": "https://litlfred.github.io/cat-harness/0.1.0/ns#glossary/kg-schema-fields/site-indexes.translationstatusschema.page",
+      "@type": "skos:Concept",
+      "skos:inScheme": {
+        "@id": "https://litlfred.github.io/cat-harness/0.1.0/ns#glossary/kg-schema-fields"
+      },
+      "skos:prefLabel": [
+        {
+          "@value": "TranslationStatusSchema.page"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@value": "The status page, site-relative, which the translation drawer links as \"Full translation status\" (bean `cat-tools-bbnd`). Optional: an index written before the drawer existed has none."
+        }
+      ],
+      "dcterms:source": "cat-harness/schemas/site-indexes.ts#TranslationStatusSchema.page",
+      "skos:note": "candidate"
+    },
+    {
       "@id": "https://litlfred.github.io/cat-harness/0.1.0/ns#glossary/kg-schema-fields/site-indexes.translationstatusschema.scope",
       "@type": "skos:Concept",
       "skos:inScheme": {
