@@ -1,0 +1,34 @@
+{
+  "$schema": "folio-library-document/v1",
+  "id": "ihe-iti-vhl-actors",
+  "title": "IHE ITI VHL ActorDefinitions (FSH)",
+  "variant": "text",
+  "pages": null,
+  "tocSource": "files",
+  "tocMethod": null,
+  "toc": [],
+  "sections": [
+    {
+      "id": "s001-actors-fsh",
+      "number": null,
+      "title": "actors.fsh",
+      "level": 1,
+      "pageStart": null,
+      "pageEnd": null,
+      "labelStart": null,
+      "labelEnd": null,
+      "words": 277,
+      "summary": null,
+      "keywords": [],
+      "extract": "```text Instance: TrustAnchor InstanceOf: ActorDefinition Usage: #definition * name = \"TrustAnchor\" * title = \"Trust Anchor\" * description = \"An authorized organization in the trust framework that manages and distributes PKI material—such as public key certificates and revocation lists—to participants in the network. It ensures that this material is trustworthy and available, enabling VHL Sharers and VHL Receivers",
+      "extractCut": true
+    }
+  ],
+  "checks": {},
+  "withheld": false,
+  "links": {
+    "repo": "litlfred/smart-trust-tools",
+    "branch": "main",
+    "dir": "library/ihe-iti-vhl-actors"
+  }
+}
