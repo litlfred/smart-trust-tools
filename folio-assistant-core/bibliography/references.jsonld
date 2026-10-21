@@ -1,0 +1,86 @@
+{
+  "@context": {
+    "@base": "https://litlfred.github.io/folio/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "bibo": "http://purl.org/ontology/bibo/",
+    "fabio": "http://purl.org/spar/fabio/",
+    "dcterms:source": {
+      "@type": "@id"
+    },
+    "dcterms:hasVersion": {
+      "@type": "@id"
+    }
+  },
+  "@graph": [
+    {
+      "@id": "references/who-ddcc-ig",
+      "@type": [
+        "fabio:Work",
+        "bibo:Webpage"
+      ],
+      "dcterms:title": "DDCC Implementation Guide",
+      "dcterms:publisher": "World Health Organization",
+      "dcterms:identifier": "https://smart.who.int/ddcc/"
+    },
+    {
+      "@id": "references/who-trust-phw-dvc-vaccines-vs",
+      "@type": [
+        "fabio:Work",
+        "bibo:Webpage"
+      ],
+      "dcterms:title": "DVC - Vaccines value set (trust-phw)",
+      "dcterms:publisher": "World Health Organization",
+      "dcterms:identifier": "http://smart.who.int/trust-phw/ValueSet-DVCVaccines.html"
+    },
+    {
+      "@id": "references/who-trust-gdhcn-key-usage-vs",
+      "@type": [
+        "fabio:Work",
+        "bibo:Webpage"
+      ],
+      "dcterms:title": "GDHCN Key Usage value set",
+      "dcterms:publisher": "World Health Organization",
+      "dcterms:identifier": "https://smart.who.int/trust/ValueSet-KeyUsage.html"
+    },
+    {
+      "@id": "references/who-trust-gdhcn-participants-vs",
+      "@type": [
+        "fabio:Work",
+        "bibo:Webpage"
+      ],
+      "dcterms:title": "GDHCN Participants value set",
+      "dcterms:publisher": "World Health Organization",
+      "dcterms:identifier": "https://smart.who.int/trust/ValueSet-Participants.html"
+    },
+    {
+      "@id": "references/who-trust-gdhcn-trust-domain-vs",
+      "@type": [
+        "fabio:Work",
+        "bibo:Webpage"
+      ],
+      "dcterms:title": "GDHCN Trust Domain value set",
+      "dcterms:publisher": "World Health Organization",
+      "dcterms:identifier": "https://smart.who.int/trust/ValueSet-Domains.html"
+    },
+    {
+      "@id": "references/who-icvp-ig",
+      "@type": [
+        "fabio:Work",
+        "bibo:Webpage"
+      ],
+      "dcterms:title": "ICVP Implementation Guide",
+      "dcterms:publisher": "World Health Organization",
+      "dcterms:identifier": "https://smart.who.int/icvp"
+    },
+    {
+      "@id": "references/who-ph4h-medication-treatment-line-min",
+      "@type": [
+        "fabio:Work",
+        "bibo:Webpage"
+      ],
+      "dcterms:title": "MedicationTreatmentLineMin logical model (ph4h)",
+      "dcterms:publisher": "World Health Organization",
+      "dcterms:identifier": "http://smart.who.int/ph4h/StructureDefinition-MedicationTreatmentLineMin.html"
+    }
+  ]
+}

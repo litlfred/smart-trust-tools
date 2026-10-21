@@ -36,8 +36,8 @@
 <meta name="generator" content="Jekyll v4.4.1" />
 <meta property="og:title" content="Skills · auto-docs" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Requirements, API contract (WIT), wire format (CDDL) and payload models for the Kotlin and Rust HCERT libraries, derived from the WHO SMART Trust implementation guide." />
-<meta name="twitter:description" property="og:description" content="Requirements, API contract (WIT), wire format (CDDL) and payload models for the Kotlin and Rust HCERT libraries, derived from the WHO SMART Trust implementation guide." />
+<meta name="description" content="Requirements, API contract (WIT), wire format (CDDL), payload models and the Kotlin library for HCERT and Verifiable Health Links, derived from the WHO SMART Trust implementation guide and IHE ITI VHL." />
+<meta name="twitter:description" property="og:description" content="Requirements, API contract (WIT), wire format (CDDL), payload models and the Kotlin library for HCERT and Verifiable Health Links, derived from the WHO SMART Trust implementation guide and IHE ITI VHL." />
 <link rel="canonical" href="https://litlfred.github.io/smart-trust-tools/cat-harness/auto-docs/index/skills/" />
 <meta property="og:url" content="https://litlfred.github.io/smart-trust-tools/cat-harness/auto-docs/index/skills/" />
 <meta property="og:site_name" content="SMART Trust HCERT library tools" />
@@ -45,7 +45,7 @@
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:title" content="Skills · auto-docs" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","description":"Requirements, API contract (WIT), wire format (CDDL) and payload models for the Kotlin and Rust HCERT libraries, derived from the WHO SMART Trust implementation guide.","headline":"Skills · auto-docs","url":"https://litlfred.github.io/smart-trust-tools/cat-harness/auto-docs/index/skills/"}</script>
+{"@context":"https://schema.org","@type":"WebPage","description":"Requirements, API contract (WIT), wire format (CDDL), payload models and the Kotlin library for HCERT and Verifiable Health Links, derived from the WHO SMART Trust implementation guide and IHE ITI VHL.","headline":"Skills · auto-docs","url":"https://litlfred.github.io/smart-trust-tools/cat-harness/auto-docs/index/skills/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -323,7 +323,7 @@
   visualisations plus `siteLinks`. Nothing about the row is decided in Liquid
   or in JavaScript.
 -->
-<script type="application/json" id="fa-navbar-row">{"icons":["close","todos","beans","fsh-guts","qr","launcher"],"hrefs":{},"notes":{},"folders":[{"kind":"skills","label":"Skills","note":"no viewer yet"}]}</script><!-- NOT MOVED, deliberately. Measured, with the reason and the condition for
+<script type="application/json" id="fa-navbar-row">{"icons":["close","todos","beans","fsh-guts","qr","launcher"],"hrefs":{},"notes":{"beans":"no viewer yet"},"folders":[{"kind":"beans","label":"Beans","note":"no viewer yet"},{"kind":"code","label":"Code","note":"no viewer yet"},{"kind":"external-schema","label":"External schemas","note":"no viewer yet"},{"kind":"fhir-logical-models","label":"FHIR logical models","note":"no viewer yet"},{"kind":"hcert-contract","label":"HCERT library contract","note":"no viewer yet"},{"kind":"hcert-generated-contract","label":"Generated contract views","note":"no viewer yet"},{"kind":"hcert-test-vectors","label":"HCERT test vectors","note":"no viewer yet"},{"kind":"library","label":"Library","path":"https://litlfred.github.io/folio-assistant/en/cat-harness/library/smart-trust-tools/"},{"kind":"memory","label":"Memory","path":"https://litlfred.github.io/folio-assistant/en/cat-harness/memory/smart-trust-tools/"},{"kind":"payload-models","label":"Derived payload models","note":"no viewer yet"},{"kind":"processes","label":"Processes","path":"https://litlfred.github.io/folio-assistant/en/cat-harness/processes/"},{"kind":"references","label":"References","note":"no viewer yet"},{"kind":"scenarios","label":"Scenarios","path":"https://litlfred.github.io/folio-assistant/en/cat-harness/scenarios/smart-trust-tools/"},{"kind":"skills","label":"Skills","note":"no viewer yet"},{"kind":"tools","label":"Tools","path":"https://litlfred.github.io/folio-assistant/en/cat-harness/tools/smart-trust-tools/"},{"kind":"typologies","label":"Graph typologies","path":"https://litlfred.github.io/folio-assistant/en/cat-harness/graph-typologies/smart-trust-tools/"},{"kind":"upstream-patches","label":"Upstream patches","note":"no viewer yet"}]}</script><!-- NOT MOVED, deliberately. Measured, with the reason and the condition for
      moving it, in assets/harness/site.json's front matter. -->
 <script type="application/json" id="fa-site-links">{"kg":"https://litlfred.github.io/folio-assistant/smart-trust-tools/","jsonld":"https://litlfred.github.io/folio-assistant/smart-trust-tools.jsonld","source":"https://github.com/litlfred/smart-trust-tools"}</script>
 
@@ -393,14 +393,14 @@
   otherwise close the attribute, and the quoting rule is Liquid's rather than
   something this comment has to be right about.
 -->
-<meta name="fa-tiles" content="[]">
+<meta name="fa-tiles" content="[{&quot;id&quot;:&quot;library&quot;,&quot;directory&quot;:&quot;library&quot;,&quot;title&quot;:&quot;Library&quot;,&quot;qualifier&quot;:&quot;SMART Trust HCERT library tools&quot;,&quot;ref&quot;:&quot;cat-harness/docs/en/cat-harness/library/smart-trust-tools/index.html&quot;,&quot;surfaces&quot;:[&quot;navbar&quot;,&quot;board&quot;,&quot;glass&quot;],&quot;hidden&quot;:false,&quot;icon&quot;:&quot;library&quot;,&quot;href&quot;:&quot;https://litlfred.github.io/folio-assistant/en/cat-harness/library/smart-trust-tools/&quot;,&quot;showQualifier&quot;:true},{&quot;id&quot;:&quot;memory&quot;,&quot;directory&quot;:&quot;memory&quot;,&quot;title&quot;:&quot;Memory&quot;,&quot;qualifier&quot;:&quot;SMART Trust HCERT library tools&quot;,&quot;ref&quot;:&quot;cat-harness/docs/en/cat-harness/memory/smart-trust-tools/index.html&quot;,&quot;surfaces&quot;:[&quot;navbar&quot;,&quot;board&quot;,&quot;glass&quot;],&quot;hidden&quot;:false,&quot;href&quot;:&quot;https://litlfred.github.io/folio-assistant/en/cat-harness/memory/smart-trust-tools/&quot;,&quot;showQualifier&quot;:true},{&quot;id&quot;:&quot;processes&quot;,&quot;directory&quot;:&quot;processes&quot;,&quot;title&quot;:&quot;Processes&quot;,&quot;qualifier&quot;:&quot;SMART Trust HCERT library tools&quot;,&quot;ref&quot;:&quot;cat-harness/docs/en/cat-harness/processes/index.html&quot;,&quot;surfaces&quot;:[&quot;navbar&quot;,&quot;board&quot;,&quot;glass&quot;],&quot;hidden&quot;:false,&quot;icon&quot;:&quot;processes&quot;,&quot;href&quot;:&quot;https://litlfred.github.io/folio-assistant/en/cat-harness/processes/&quot;,&quot;showQualifier&quot;:true},{&quot;id&quot;:&quot;scenarios&quot;,&quot;directory&quot;:&quot;scenarios&quot;,&quot;title&quot;:&quot;Scenarios&quot;,&quot;qualifier&quot;:&quot;SMART Trust HCERT library tools&quot;,&quot;ref&quot;:&quot;cat-harness/docs/en/cat-harness/scenarios/smart-trust-tools/index.html&quot;,&quot;surfaces&quot;:[&quot;navbar&quot;,&quot;board&quot;,&quot;glass&quot;],&quot;hidden&quot;:false,&quot;href&quot;:&quot;https://litlfred.github.io/folio-assistant/en/cat-harness/scenarios/smart-trust-tools/&quot;,&quot;showQualifier&quot;:true},{&quot;id&quot;:&quot;smart-trust-tools-typologies&quot;,&quot;directory&quot;:&quot;smart-trust-tools-typologies&quot;,&quot;title&quot;:&quot;Graph typologies&quot;,&quot;qualifier&quot;:&quot;SMART Trust HCERT library tools&quot;,&quot;ref&quot;:&quot;cat-harness/docs/en/cat-harness/graph-typologies/smart-trust-tools/index.html&quot;,&quot;surfaces&quot;:[&quot;navbar&quot;,&quot;board&quot;,&quot;glass&quot;],&quot;hidden&quot;:false,&quot;href&quot;:&quot;https://litlfred.github.io/folio-assistant/en/cat-harness/graph-typologies/smart-trust-tools/&quot;,&quot;showQualifier&quot;:true},{&quot;id&quot;:&quot;tools&quot;,&quot;directory&quot;:&quot;tools&quot;,&quot;title&quot;:&quot;Tools&quot;,&quot;qualifier&quot;:&quot;SMART Trust HCERT library tools&quot;,&quot;ref&quot;:&quot;cat-harness/docs/en/cat-harness/tools/smart-trust-tools/index.html&quot;,&quot;surfaces&quot;:[&quot;navbar&quot;,&quot;board&quot;,&quot;glass&quot;],&quot;hidden&quot;:false,&quot;icon&quot;:&quot;tools&quot;,&quot;href&quot;:&quot;https://litlfred.github.io/folio-assistant/en/cat-harness/tools/smart-trust-tools/&quot;,&quot;showQualifier&quot;:true}]">
 <!--
   THE GLASS STRIP'S PINNED TILES, in order (owner, 2026-10-01, bean `ob3m`
   finding 10: "Pinned tiles first, plus '+N more'"). Resolved from the
   instance's `glassStrip` declaration by `sync-docs-harness.ts`; absent when
   nothing declared one. Replica pages read `assets/harness/glass-strip.json`.
 -->
-<meta name="fa-glass-strip" content="[&quot;glass-todos&quot;,&quot;glass-settings&quot;]">
+<meta name="fa-glass-strip" content="[&quot;glass-todos&quot;,&quot;glass-settings&quot;,&quot;library&quot;,&quot;processes&quot;,&quot;tools&quot;]">
 
 <!--
   THE SITE'S BASEURL, for the tiles above.
@@ -561,33 +561,33 @@
   them: those are versioned in their own URLs already.
 -->
 <!-- The harness icon row's own style, which railed pages load without docs-ui.css (beans `lhvt`, `9rq1`). -->
-<link rel="stylesheet" href="/smart-trust-tools/assets/css/navbar-row.css?v=1792523751">
-<link rel="stylesheet" href="/smart-trust-tools/assets/css/docs-ui.css?v=1792523751">
+<link rel="stylesheet" href="/smart-trust-tools/assets/css/navbar-row.css?v=1792563962">
+<link rel="stylesheet" href="/smart-trust-tools/assets/css/docs-ui.css?v=1792563962">
 <!-- Narrow viewports: wide content scrolls in its own box, never the page
      (bean `2r2n`). The standalone viewers inline the same file through
      `withViewerNav`, so both kinds of page read one set of rules. -->
-<link rel="stylesheet" href="/smart-trust-tools/assets/css/narrow-viewport.css?v=1792523751">
+<link rel="stylesheet" href="/smart-trust-tools/assets/css/narrow-viewport.css?v=1792563962">
 
 <!--
   The work-plan dashboard's styles, split from docs-ui.css so that
   `state-visualizer.ts` can inline exactly these bytes into the generated
   `<base>/<stub>/state-visualizer/` pages. One rule, two surfaces.
 -->
-<link rel="stylesheet" href="/smart-trust-tools/assets/css/work-plan.css?v=1792523751">
+<link rel="stylesheet" href="/smart-trust-tools/assets/css/work-plan.css?v=1792563962">
 <!-- Sticky themes. GENERATED from the theme nodes in `schemas/themes.ts` by
      `bun run cat themes:css`; `themes:css:check` fails the build when it is stale.
      Loaded AFTER docs-ui.css deliberately: it supplies the `--fa-sticky-*`
      roles that docs-ui.css consumes, and a custom property has to be set on a
      matching element before the rule reading it takes effect. -->
-<link rel="stylesheet" href="/smart-trust-tools/assets/css/themes.css?v=1792523751">
+<link rel="stylesheet" href="/smart-trust-tools/assets/css/themes.css?v=1792563962">
 <!-- UML overview colours: one class per graph typology, set on the Mermaid nodes
      that `scripts/gen-uml-overview.ts` writes into docs/uml/overview/. -->
-<link rel="stylesheet" href="/smart-trust-tools/assets/css/uml.css?v=1792523751">
+<link rel="stylesheet" href="/smart-trust-tools/assets/css/uml.css?v=1792563962">
 <!-- Kind avatars. GENERATED from `schemas/avatars.ts` by `bun run cat avatars:css`;
      `avatars:css:check` fails the build when it is stale. One stylesheet
      rather than 68 assets: the glyph is a mask and the colour is a property,
      so a scheme swap is a custom property and the trash state is a selector. -->
-<link rel="stylesheet" href="/smart-trust-tools/assets/css/avatars.css?v=1792523751">
+<link rel="stylesheet" href="/smart-trust-tools/assets/css/avatars.css?v=1792563962">
 
 <!--
   The kinds THIS INSTANCE DECLARES, for the avatar fan.
@@ -602,18 +602,18 @@
   all, and a fetch for that would put a spinner in front of a badge.
 -->
 <!-- NOT MOVED: same reason as fa-site-links above. -->
-<script type="application/json" id="fa-declared-kinds">["skills"]</script>
+<script type="application/json" id="fa-declared-kinds">["beans","code","external-schema","fhir-logical-models","hcert-contract","hcert-generated-contract","hcert-test-vectors","library","memory","payload-models","processes","references","scenarios","skills","tools","typologies","upstream-patches"]</script>
 <script src="/smart-trust-tools/assets/js/vendor/qrcode.js" defer></script>
 <script src="/smart-trust-tools/assets/js/vendor/qrcode_UTF8.js" defer></script>
 <!-- BEFORE docs-ui.js and work-plan.js: both read window.faRender. -->
 <script src="/smart-trust-tools/assets/js/kg-render.js" defer></script>
 <!-- BEFORE docs-ui.js, which calls it: the one drawing of the harness icon row (beans `lhvt`, `9rq1`). -->
-<script src="/smart-trust-tools/assets/js/navbar-row.js?v=1792523751" defer></script>
-<script src="/smart-trust-tools/assets/js/docs-ui.js?v=1792523751" defer></script>
+<script src="/smart-trust-tools/assets/js/navbar-row.js?v=1792563962" defer></script>
+<script src="/smart-trust-tools/assets/js/docs-ui.js?v=1792563962" defer></script>
 <!-- The edit, source and feedback links of every page, from the platform's one
   recipe (cat-harness-tools/src/core/edit-links.ts, bean v433): links carry their
   facts and this builds the hrefs. -->
-<script src="/smart-trust-tools/assets/js/edit-links.js?v=1792523751" defer></script>
+<script src="/smart-trust-tools/assets/js/edit-links.js?v=1792563962" defer></script>
 
 <!--
   The work-plan dashboard. SELF-MOUNTING on any page carrying
@@ -698,9 +698,9 @@
   is broken when it is doing exactly what it can.
 -->
 
-<link rel="stylesheet" href="../../../../assets/css/navbar.css"><script src="../../../../assets/navbar/rail-etm31o4dk5.js" defer></script><script src="../../../../assets/js/navbar.js" defer></script><link rel="stylesheet" href="../../../../assets/page-layout.css" data-fa-page-layout><script src="../../../../assets/page-layout.js" defer data-fa-page-layout></script><meta name="fa-platform-base" content="https://litlfred.github.io/folio-assistant" data-fa-platform-ui><link rel="stylesheet" href="../../../../assets/css/docs-ui.css" data-fa-platform-ui><script src="../../../../assets/js/docs-ui.js" defer data-fa-platform-ui></script><meta name="fa-pinned-data" content="../../../.."></head>
+<link rel="stylesheet" href="../../../../assets/css/navbar.css"><script src="../../../../assets/navbar/rail-26au969el1p.js" defer></script><script src="../../../../assets/js/navbar.js" defer></script><link rel="stylesheet" href="../../../../assets/page-layout.css" data-fa-page-layout><script src="../../../../assets/page-layout.js" defer data-fa-page-layout></script><meta name="fa-pinned-data" content="../../../.."></head>
 
-<body><script type="application/json" id="fa-rail" data-fa-root="https://litlfred.github.io/folio-assistant" data-fa-to-root="../../../..">{"data":"rail-etm31o4dk5","here":"/cat-harness/auto-docs/index/skills/"}</script><nav class="fa-nav" aria-label="folio-assistant" data-fa-rail="pending"><a href="../../../../">SMART Trust HCERT library tools</a></nav>
+<body><script type="application/json" id="fa-rail" data-fa-root="https://litlfred.github.io/folio-assistant" data-fa-to-root="../../../..">{"data":"rail-26au969el1p","here":"/cat-harness/auto-docs/index/skills/"}</script><nav class="fa-nav" aria-label="folio-assistant" data-fa-rail="pending"><a href="../../../../">SMART Trust HCERT library tools</a></nav>
   <a class="skip-to-main" href="#main-content">Skip to main content</a>
   <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
   <symbol id="svg-link" viewBox="0 0 24 24">
@@ -882,6 +882,7 @@
 <li><a href="core-skills/">core-skills</a> <span class="p">folio-assistant-core/skills</span> <span class="n">28</span></li>
 <li><a href="fhir-ig-skills/">fhir-ig-skills</a> <span class="p">fhir-harness/skills</span> <span class="n">16</span></li>
 <li><a href="skills/">skills</a> <span class="p">cat-harness/skills</span> <span class="n">246</span></li>
+<li><a href="stt-skills/">stt-skills</a> <span class="p">skills</span> <span class="n">16</span></li>
 </ul>
 
 <div class="fa-table-filter">
@@ -2051,6 +2052,70 @@
 <tr>
   <td><a href="https://github.com/litlfred/folio-assistant-core/blob/main/skills/review/review.md"><code>review</code></a><br><span class="p">folio-assistant-core/skills/review/review.md</span></td>
   <td>Where to start when a person or an agent reviews a document folio larger than one chapter, such as a DAK or an L1 digital transformation handbook.</td>
+</tr>
+<tr>
+  <td><a href="https://github.com/litlfred/folio-assistant/blob/main/skills/hcert-library/hcert-conformance-testing.md"><code>hcert-conformance-testing</code></a><br><span class="p">skills/hcert-library/hcert-conformance-testing.md</span></td>
+  <td>Test an implementation against the shared vectors: the PR 129 DVC example, negative vectors, cross-implementation checks and schema checks.</td>
+</tr>
+<tr>
+  <td><a href="https://github.com/litlfred/folio-assistant/blob/main/skills/hcert-library/hcert-contract-maintenance.md"><code>hcert-contract-maintenance</code></a><br><span class="p">skills/hcert-library/hcert-contract-maintenance.md</span></td>
+  <td>Keep the contract and everything generated from it current: the WIT, its TypeScript view and Kotlin skeleton, the CDDL, and the payload models derived from the FHIR logical models.</td>
+</tr>
+<tr>
+  <td><a href="https://github.com/litlfred/folio-assistant/blob/main/skills/hcert-library/hcert-kg-publication.md"><code>hcert-kg-publication</code></a><br><span class="p">skills/hcert-library/hcert-kg-publication.md</span></td>
+  <td>Check the requirement graph and publish the site that renders it.</td>
+</tr>
+<tr>
+  <td><a href="https://github.com/litlfred/folio-assistant/blob/main/skills/hcert-library/hcert-library-architecture.md"><code>hcert-library-architecture</code></a><br><span class="p">skills/hcert-library/hcert-library-architecture.md</span></td>
+  <td>The rules every implementation follows: Kotlin first, Rust second, one contract, a synchronous core with no I/O, open standards, no payload in logs.</td>
+</tr>
+<tr>
+  <td><a href="https://github.com/litlfred/folio-assistant/blob/main/skills/hcert/hcert-assemble-payload.md"><code>hcert-assemble-payload</code></a><br><span class="p">skills/hcert/hcert-assemble-payload.md</span></td>
+  <td>Step 2: build and validate the payload against its logical model (DVCMin, or a VHL payload), keeping unknown elements.</td>
+</tr>
+<tr>
+  <td><a href="https://github.com/litlfred/folio-assistant/blob/main/skills/hcert/hcert-build-cwt.md"><code>hcert-build-cwt</code></a><br><span class="p">skills/hcert/hcert-build-cwt.md</span></td>
+  <td>Step 3: wrap the payload in a CWT claim set (iss, iat, exp, hcert -260) inside the DSC's validity.</td>
+</tr>
+<tr>
+  <td><a href="https://github.com/litlfred/folio-assistant/blob/main/skills/hcert/hcert-compress.md"><code>hcert-compress</code></a><br><span class="p">skills/hcert/hcert-compress.md</span></td>
+  <td>Step 6: ZLIB/DEFLATE after signing, and bounded inflation.</td>
+</tr>
+<tr>
+  <td><a href="https://github.com/litlfred/folio-assistant/blob/main/skills/hcert/hcert-encode-base45.md"><code>hcert-encode-base45</code></a><br><span class="p">skills/hcert/hcert-encode-base45.md</span></td>
+  <td>Step 7: RFC 9285 Base45, decoded strictly.</td>
+</tr>
+<tr>
+  <td><a href="https://github.com/litlfred/folio-assistant/blob/main/skills/hcert/hcert-encode-cbor.md"><code>hcert-encode-cbor</code></a><br><span class="p">skills/hcert/hcert-encode-cbor.md</span></td>
+  <td>Step 4: serialise as RFC 8949 deterministic CBOR, and decode untrusted CBOR within limits.</td>
+</tr>
+<tr>
+  <td><a href="https://github.com/litlfred/folio-assistant/blob/main/skills/hcert/hcert-prefix-context.md"><code>hcert-prefix-context</code></a><br><span class="p">skills/hcert/hcert-prefix-context.md</span></td>
+  <td>Steps 8 and 9: the HC1: context identifier, giving a QR-ready string the application renders with its own QR encoder.</td>
+</tr>
+<tr>
+  <td><a href="https://github.com/litlfred/folio-assistant/blob/main/skills/hcert/hcert-select-payload.md"><code>hcert-select-payload</code></a><br><span class="p">skills/hcert/hcert-select-payload.md</span></td>
+  <td>Step 1: choose the logical model and hcert subclaim for a use case, from the registry the IG defines.</td>
+</tr>
+<tr>
+  <td><a href="https://github.com/litlfred/folio-assistant/blob/main/skills/hcert/hcert-sign-cose.md"><code>hcert-sign-cose</code></a><br><span class="p">skills/hcert/hcert-sign-cose.md</span></td>
+  <td>Step 5: sign as COSE_Sign1 (ES256 or PS256) in two phases, the private key staying with its holder.</td>
+</tr>
+<tr>
+  <td><a href="https://github.com/litlfred/folio-assistant/blob/main/skills/hcert/hcert-trust-list.md"><code>hcert-trust-list</code></a><br><span class="p">skills/hcert/hcert-trust-list.md</span></td>
+  <td>Hold the trusted DSCs the host obtained (PEM, DER, GDHCN DID trustlist v2) and find every candidate for a kid.</td>
+</tr>
+<tr>
+  <td><a href="https://github.com/litlfred/folio-assistant/blob/main/skills/hcert/hcert-verify.md"><code>hcert-verify</code></a><br><span class="p">skills/hcert/hcert-verify.md</span></td>
+  <td>Verify an HC1 string or raw COSE: the steps upwards, trust lookup by kid, signature, key usage, time and payload; or read it explicitly unverified for triage.</td>
+</tr>
+<tr>
+  <td><a href="https://github.com/litlfred/folio-assistant/blob/main/skills/vhl/vhl-receive.md"><code>vhl-receive</code></a><br><span class="p">skills/vhl/vhl-receive.md</span></td>
+  <td>Use a VHL: verify it, build the ITI-YY5 manifest request with its HTTP Message Signature, read the manifest Bundle and decrypt each document (journey J4.1).</td>
+</tr>
+<tr>
+  <td><a href="https://github.com/litlfred/folio-assistant/blob/main/skills/vhl/vhl-share.md"><code>vhl-share</code></a><br><span class="p">skills/vhl/vhl-share.md</span></td>
+  <td>Issue a VHL: a key, documents encrypted as JWE dir / A256GCM, and the payload as a CBOR map at HCERT key 5 (journey J4.0).</td>
 </tr>
 </tbody>
 </table></div>
