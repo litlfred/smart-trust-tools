@@ -561,33 +561,33 @@
   them: those are versioned in their own URLs already.
 -->
 <!-- The harness icon row's own style, which railed pages load without docs-ui.css (beans `lhvt`, `9rq1`). -->
-<link rel="stylesheet" href="/smart-trust-tools/STAGING/claude-sharp-galileo-rg1hb3/assets/css/navbar-row.css?v=1792563672">
-<link rel="stylesheet" href="/smart-trust-tools/STAGING/claude-sharp-galileo-rg1hb3/assets/css/docs-ui.css?v=1792563672">
+<link rel="stylesheet" href="/smart-trust-tools/STAGING/claude-sharp-galileo-rg1hb3/assets/css/navbar-row.css?v=1792565065">
+<link rel="stylesheet" href="/smart-trust-tools/STAGING/claude-sharp-galileo-rg1hb3/assets/css/docs-ui.css?v=1792565065">
 <!-- Narrow viewports: wide content scrolls in its own box, never the page
      (bean `2r2n`). The standalone viewers inline the same file through
      `withViewerNav`, so both kinds of page read one set of rules. -->
-<link rel="stylesheet" href="/smart-trust-tools/STAGING/claude-sharp-galileo-rg1hb3/assets/css/narrow-viewport.css?v=1792563672">
+<link rel="stylesheet" href="/smart-trust-tools/STAGING/claude-sharp-galileo-rg1hb3/assets/css/narrow-viewport.css?v=1792565065">
 
 <!--
   The work-plan dashboard's styles, split from docs-ui.css so that
   `state-visualizer.ts` can inline exactly these bytes into the generated
   `<base>/<stub>/state-visualizer/` pages. One rule, two surfaces.
 -->
-<link rel="stylesheet" href="/smart-trust-tools/STAGING/claude-sharp-galileo-rg1hb3/assets/css/work-plan.css?v=1792563672">
+<link rel="stylesheet" href="/smart-trust-tools/STAGING/claude-sharp-galileo-rg1hb3/assets/css/work-plan.css?v=1792565065">
 <!-- Sticky themes. GENERATED from the theme nodes in `schemas/themes.ts` by
      `bun run cat themes:css`; `themes:css:check` fails the build when it is stale.
      Loaded AFTER docs-ui.css deliberately: it supplies the `--fa-sticky-*`
      roles that docs-ui.css consumes, and a custom property has to be set on a
      matching element before the rule reading it takes effect. -->
-<link rel="stylesheet" href="/smart-trust-tools/STAGING/claude-sharp-galileo-rg1hb3/assets/css/themes.css?v=1792563672">
+<link rel="stylesheet" href="/smart-trust-tools/STAGING/claude-sharp-galileo-rg1hb3/assets/css/themes.css?v=1792565065">
 <!-- UML overview colours: one class per graph typology, set on the Mermaid nodes
      that `scripts/gen-uml-overview.ts` writes into docs/uml/overview/. -->
-<link rel="stylesheet" href="/smart-trust-tools/STAGING/claude-sharp-galileo-rg1hb3/assets/css/uml.css?v=1792563672">
+<link rel="stylesheet" href="/smart-trust-tools/STAGING/claude-sharp-galileo-rg1hb3/assets/css/uml.css?v=1792565065">
 <!-- Kind avatars. GENERATED from `schemas/avatars.ts` by `bun run cat avatars:css`;
      `avatars:css:check` fails the build when it is stale. One stylesheet
      rather than 68 assets: the glyph is a mask and the colour is a property,
      so a scheme swap is a custom property and the trash state is a selector. -->
-<link rel="stylesheet" href="/smart-trust-tools/STAGING/claude-sharp-galileo-rg1hb3/assets/css/avatars.css?v=1792563672">
+<link rel="stylesheet" href="/smart-trust-tools/STAGING/claude-sharp-galileo-rg1hb3/assets/css/avatars.css?v=1792565065">
 
 <!--
   The kinds THIS INSTANCE DECLARES, for the avatar fan.
@@ -608,12 +608,12 @@
 <!-- BEFORE docs-ui.js and work-plan.js: both read window.faRender. -->
 <script src="/smart-trust-tools/STAGING/claude-sharp-galileo-rg1hb3/assets/js/kg-render.js" defer></script>
 <!-- BEFORE docs-ui.js, which calls it: the one drawing of the harness icon row (beans `lhvt`, `9rq1`). -->
-<script src="/smart-trust-tools/STAGING/claude-sharp-galileo-rg1hb3/assets/js/navbar-row.js?v=1792563672" defer></script>
-<script src="/smart-trust-tools/STAGING/claude-sharp-galileo-rg1hb3/assets/js/docs-ui.js?v=1792563672" defer></script>
+<script src="/smart-trust-tools/STAGING/claude-sharp-galileo-rg1hb3/assets/js/navbar-row.js?v=1792565065" defer></script>
+<script src="/smart-trust-tools/STAGING/claude-sharp-galileo-rg1hb3/assets/js/docs-ui.js?v=1792565065" defer></script>
 <!-- The edit, source and feedback links of every page, from the platform's one
   recipe (cat-harness-tools/src/core/edit-links.ts, bean v433): links carry their
   facts and this builds the hrefs. -->
-<script src="/smart-trust-tools/STAGING/claude-sharp-galileo-rg1hb3/assets/js/edit-links.js?v=1792563672" defer></script>
+<script src="/smart-trust-tools/STAGING/claude-sharp-galileo-rg1hb3/assets/js/edit-links.js?v=1792565065" defer></script>
 
 <!--
   The work-plan dashboard. SELF-MOUNTING on any page carrying
@@ -902,10 +902,12 @@ window.addEventListener('resize',measure);window.addEventListener('load',measure
 <p class="note">The published files this page is a rendering of.</p>
 <ul>
 <li><a href="../../../../assets/library/index.json">index.json</a> <span class="note">library projection (JSON)</span></li>
+<li><a href="../../../../assets/library/jsonld/smart-trust-tools/ihe-iti-vhl-actors/manifest.jsonld">ihe-iti-vhl-actors/manifest.jsonld</a> <span class="note">entry JSON-LD</span></li>
 <li><a href="../../../../assets/library/jsonld/smart-trust-tools/ihe-iti-vhl-iti-yy3/manifest.jsonld">ihe-iti-vhl-iti-yy3/manifest.jsonld</a> <span class="note">entry JSON-LD</span></li>
 <li><a href="../../../../assets/library/jsonld/smart-trust-tools/ihe-iti-vhl-iti-yy4/manifest.jsonld">ihe-iti-vhl-iti-yy4/manifest.jsonld</a> <span class="note">entry JSON-LD</span></li>
 <li><a href="../../../../assets/library/jsonld/smart-trust-tools/ihe-iti-vhl-iti-yy5/manifest.jsonld">ihe-iti-vhl-iti-yy5/manifest.jsonld</a> <span class="note">entry JSON-LD</span></li>
 <li><a href="../../../../assets/library/jsonld/smart-trust-tools/ihe-iti-vhl-volume-1/manifest.jsonld">ihe-iti-vhl-volume-1/manifest.jsonld</a> <span class="note">entry JSON-LD</span></li>
+<li><a href="../../../../assets/library/jsonld/smart-trust-tools/who-smart-trust-actors/manifest.jsonld">who-smart-trust-actors/manifest.jsonld</a> <span class="note">entry JSON-LD</span></li>
 <li><a href="../../../../assets/library/jsonld/smart-trust-tools/who-smart-trust-changes/manifest.jsonld">who-smart-trust-changes/manifest.jsonld</a> <span class="note">entry JSON-LD</span></li>
 <li><a href="../../../../assets/library/jsonld/smart-trust-tools/who-smart-trust-cwt-payload-model/manifest.jsonld">who-smart-trust-cwt-payload-model/manifest.jsonld</a> <span class="note">entry JSON-LD</span></li>
 <li><a href="../../../../assets/library/jsonld/smart-trust-tools/who-smart-trust-data-exchange/manifest.jsonld">who-smart-trust-data-exchange/manifest.jsonld</a> <span class="note">entry JSON-LD</span></li>
