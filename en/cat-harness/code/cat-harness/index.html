@@ -561,33 +561,33 @@
   them: those are versioned in their own URLs already.
 -->
 <!-- The harness icon row's own style, which railed pages load without docs-ui.css (beans `lhvt`, `9rq1`). -->
-<link rel="stylesheet" href="/smart-trust-tools/assets/css/navbar-row.css?v=1792565217">
-<link rel="stylesheet" href="/smart-trust-tools/assets/css/docs-ui.css?v=1792565217">
+<link rel="stylesheet" href="/smart-trust-tools/assets/css/navbar-row.css?v=1792567659">
+<link rel="stylesheet" href="/smart-trust-tools/assets/css/docs-ui.css?v=1792567659">
 <!-- Narrow viewports: wide content scrolls in its own box, never the page
      (bean `2r2n`). The standalone viewers inline the same file through
      `withViewerNav`, so both kinds of page read one set of rules. -->
-<link rel="stylesheet" href="/smart-trust-tools/assets/css/narrow-viewport.css?v=1792565217">
+<link rel="stylesheet" href="/smart-trust-tools/assets/css/narrow-viewport.css?v=1792567659">
 
 <!--
   The work-plan dashboard's styles, split from docs-ui.css so that
   `state-visualizer.ts` can inline exactly these bytes into the generated
   `<base>/<stub>/state-visualizer/` pages. One rule, two surfaces.
 -->
-<link rel="stylesheet" href="/smart-trust-tools/assets/css/work-plan.css?v=1792565217">
+<link rel="stylesheet" href="/smart-trust-tools/assets/css/work-plan.css?v=1792567659">
 <!-- Sticky themes. GENERATED from the theme nodes in `schemas/themes.ts` by
      `bun run cat themes:css`; `themes:css:check` fails the build when it is stale.
      Loaded AFTER docs-ui.css deliberately: it supplies the `--fa-sticky-*`
      roles that docs-ui.css consumes, and a custom property has to be set on a
      matching element before the rule reading it takes effect. -->
-<link rel="stylesheet" href="/smart-trust-tools/assets/css/themes.css?v=1792565217">
+<link rel="stylesheet" href="/smart-trust-tools/assets/css/themes.css?v=1792567659">
 <!-- UML overview colours: one class per graph typology, set on the Mermaid nodes
      that `scripts/gen-uml-overview.ts` writes into docs/uml/overview/. -->
-<link rel="stylesheet" href="/smart-trust-tools/assets/css/uml.css?v=1792565217">
+<link rel="stylesheet" href="/smart-trust-tools/assets/css/uml.css?v=1792567659">
 <!-- Kind avatars. GENERATED from `schemas/avatars.ts` by `bun run cat avatars:css`;
      `avatars:css:check` fails the build when it is stale. One stylesheet
      rather than 68 assets: the glyph is a mask and the colour is a property,
      so a scheme swap is a custom property and the trash state is a selector. -->
-<link rel="stylesheet" href="/smart-trust-tools/assets/css/avatars.css?v=1792565217">
+<link rel="stylesheet" href="/smart-trust-tools/assets/css/avatars.css?v=1792567659">
 
 <!--
   The kinds THIS INSTANCE DECLARES, for the avatar fan.
@@ -608,12 +608,12 @@
 <!-- BEFORE docs-ui.js and work-plan.js: both read window.faRender. -->
 <script src="/smart-trust-tools/assets/js/kg-render.js" defer></script>
 <!-- BEFORE docs-ui.js, which calls it: the one drawing of the harness icon row (beans `lhvt`, `9rq1`). -->
-<script src="/smart-trust-tools/assets/js/navbar-row.js?v=1792565217" defer></script>
-<script src="/smart-trust-tools/assets/js/docs-ui.js?v=1792565217" defer></script>
+<script src="/smart-trust-tools/assets/js/navbar-row.js?v=1792567659" defer></script>
+<script src="/smart-trust-tools/assets/js/docs-ui.js?v=1792567659" defer></script>
 <!-- The edit, source and feedback links of every page, from the platform's one
   recipe (cat-harness-tools/src/core/edit-links.ts, bean v433): links carry their
   facts and this builds the hrefs. -->
-<script src="/smart-trust-tools/assets/js/edit-links.js?v=1792565217" defer></script>
+<script src="/smart-trust-tools/assets/js/edit-links.js?v=1792567659" defer></script>
 
 <!--
   The work-plan dashboard. SELF-MOUNTING on any page carrying
@@ -837,7 +837,7 @@
   
   
 </h3>
-    <p class="sv-sub">The harness's own minimal folio renderer (bean ohx6, owner ruling 2026-10-10): `file-list.ts`, which renders the folio as the list of files it holds into `folio/index.md`, and the skill that says when to run it. Code and a skill, not folio content: the folio reader reads only `folio/*.json`, and the renderer skips this directory.</p><p class="sv-sub">4 files</p><ul><li><a href="https://github.com/litlfred/cat-harness/blob/be2f3cfb2d9203e3bb9a71e320a31cd602b937ae/folio-render/README.md"><code>README.md</code></a></li><li><a href="https://github.com/litlfred/cat-harness/blob/be2f3cfb2d9203e3bb9a71e320a31cd602b937ae/folio-render/file-list.test.ts"><code>file-list.test.ts</code></a></li><li><a href="https://github.com/litlfred/cat-harness/blob/be2f3cfb2d9203e3bb9a71e320a31cd602b937ae/folio-render/file-list.ts"><code>file-list.ts</code></a></li><li><a href="https://github.com/litlfred/cat-harness/blob/be2f3cfb2d9203e3bb9a71e320a31cd602b937ae/folio-render/folio-file-list.md"><code>folio-file-list.md</code></a></li></ul></section>
+    <p class="sv-sub">The harness's own minimal folio renderer (bean ohx6, owner ruling 2026-10-10): `file-list.ts`, which renders the folio as the list of files it holds into `folio/index.md`, and the skill that says when to run it. Code and a skill, not folio content: the folio reader reads only `folio/*.json`, and the renderer skips this directory.</p><p class="sv-sub">4 files</p><ul><li><a href="https://github.com/litlfred/cat-harness/blob/643c7880812bd499d9f1a9dc17ef97937ddb0c59/folio-render/README.md"><code>README.md</code></a></li><li><a href="https://github.com/litlfred/cat-harness/blob/643c7880812bd499d9f1a9dc17ef97937ddb0c59/folio-render/file-list.test.ts"><code>file-list.test.ts</code></a></li><li><a href="https://github.com/litlfred/cat-harness/blob/643c7880812bd499d9f1a9dc17ef97937ddb0c59/folio-render/file-list.ts"><code>file-list.ts</code></a></li><li><a href="https://github.com/litlfred/cat-harness/blob/643c7880812bd499d9f1a9dc17ef97937ddb0c59/folio-render/folio-file-list.md"><code>folio-file-list.md</code></a></li></ul></section>
 <section class="sv-item">
 <h3>
   
@@ -846,7 +846,7 @@
   
   
 </h3>
-    <p class="sv-sub">The pinned-upstream registry, `upstream-pins.json` (`&quot;$schema&quot;: &quot;folio-upstream-pins/v1&quot;`): one row per upstream dependency the build pins — the just-the-docs theme, the Bun runtime, the pdf.js viewer — naming the file the pin is READ from (`pinnedIn`, resolved against this instance's root), the pattern that reads it, what of ours binds to the dependency and the MVP that must pass before it moves. It deliberately holds no version: that lives in the file the build reads. Read by `bun run cat check:upstream-pins` (weekly, `.github/workflows/upstream-pins.yml`) and worked by the `upstream-pin-watch` / `upstream-version-adoption` processes and skill this instance owns. Moved here from the repository root on 2026-10-06 (bean `ar1s`, phase 3: tooling leaves the root before the repo split). HERE rather than in the tool layer because this instance's processes, skills and scripts name it, and a harness file naming a file in the layer above is a wrong-direction reference (`check:reference-direction`). `code`: the checker's input table, authored beside the processes that read it, not content any reader renders.</p><p class="sv-sub">2 files</p><ul><li><a href="https://github.com/litlfred/cat-harness/blob/be2f3cfb2d9203e3bb9a71e320a31cd602b937ae/upstream/README.md"><code>README.md</code></a></li><li><a href="https://github.com/litlfred/cat-harness/blob/be2f3cfb2d9203e3bb9a71e320a31cd602b937ae/upstream/upstream-pins.json"><code>upstream-pins.json</code></a></li></ul></section>
+    <p class="sv-sub">The pinned-upstream registry, `upstream-pins.json` (`&quot;$schema&quot;: &quot;folio-upstream-pins/v1&quot;`): one row per upstream dependency the build pins — the just-the-docs theme, the Bun runtime, the pdf.js viewer — naming the file the pin is READ from (`pinnedIn`, resolved against this instance's root), the pattern that reads it, what of ours binds to the dependency and the MVP that must pass before it moves. It deliberately holds no version: that lives in the file the build reads. Read by `bun run cat check:upstream-pins` (weekly, `.github/workflows/upstream-pins.yml`) and worked by the `upstream-pin-watch` / `upstream-version-adoption` processes and skill this instance owns. Moved here from the repository root on 2026-10-06 (bean `ar1s`, phase 3: tooling leaves the root before the repo split). HERE rather than in the tool layer because this instance's processes, skills and scripts name it, and a harness file naming a file in the layer above is a wrong-direction reference (`check:reference-direction`). `code`: the checker's input table, authored beside the processes that read it, not content any reader renders.</p><p class="sv-sub">2 files</p><ul><li><a href="https://github.com/litlfred/cat-harness/blob/643c7880812bd499d9f1a9dc17ef97937ddb0c59/upstream/README.md"><code>README.md</code></a></li><li><a href="https://github.com/litlfred/cat-harness/blob/643c7880812bd499d9f1a9dc17ef97937ddb0c59/upstream/upstream-pins.json"><code>upstream-pins.json</code></a></li></ul></section>
 <h2 class="sv-h2">
   
   

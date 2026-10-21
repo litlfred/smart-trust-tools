@@ -577,33 +577,33 @@
   them: those are versioned in their own URLs already.
 -->
 <!-- The harness icon row's own style, which railed pages load without docs-ui.css (beans `lhvt`, `9rq1`). -->
-<link rel="stylesheet" href="/smart-trust-tools/assets/css/navbar-row.css?v=1792565217">
-<link rel="stylesheet" href="/smart-trust-tools/assets/css/docs-ui.css?v=1792565217">
+<link rel="stylesheet" href="/smart-trust-tools/assets/css/navbar-row.css?v=1792567659">
+<link rel="stylesheet" href="/smart-trust-tools/assets/css/docs-ui.css?v=1792567659">
 <!-- Narrow viewports: wide content scrolls in its own box, never the page
      (bean `2r2n`). The standalone viewers inline the same file through
      `withViewerNav`, so both kinds of page read one set of rules. -->
-<link rel="stylesheet" href="/smart-trust-tools/assets/css/narrow-viewport.css?v=1792565217">
+<link rel="stylesheet" href="/smart-trust-tools/assets/css/narrow-viewport.css?v=1792567659">
 
 <!--
   The work-plan dashboard's styles, split from docs-ui.css so that
   `state-visualizer.ts` can inline exactly these bytes into the generated
   `<base>/<stub>/state-visualizer/` pages. One rule, two surfaces.
 -->
-<link rel="stylesheet" href="/smart-trust-tools/assets/css/work-plan.css?v=1792565217">
+<link rel="stylesheet" href="/smart-trust-tools/assets/css/work-plan.css?v=1792567659">
 <!-- Sticky themes. GENERATED from the theme nodes in `schemas/themes.ts` by
      `bun run cat themes:css`; `themes:css:check` fails the build when it is stale.
      Loaded AFTER docs-ui.css deliberately: it supplies the `--fa-sticky-*`
      roles that docs-ui.css consumes, and a custom property has to be set on a
      matching element before the rule reading it takes effect. -->
-<link rel="stylesheet" href="/smart-trust-tools/assets/css/themes.css?v=1792565217">
+<link rel="stylesheet" href="/smart-trust-tools/assets/css/themes.css?v=1792567659">
 <!-- UML overview colours: one class per graph typology, set on the Mermaid nodes
      that `scripts/gen-uml-overview.ts` writes into docs/uml/overview/. -->
-<link rel="stylesheet" href="/smart-trust-tools/assets/css/uml.css?v=1792565217">
+<link rel="stylesheet" href="/smart-trust-tools/assets/css/uml.css?v=1792567659">
 <!-- Kind avatars. GENERATED from `schemas/avatars.ts` by `bun run cat avatars:css`;
      `avatars:css:check` fails the build when it is stale. One stylesheet
      rather than 68 assets: the glyph is a mask and the colour is a property,
      so a scheme swap is a custom property and the trash state is a selector. -->
-<link rel="stylesheet" href="/smart-trust-tools/assets/css/avatars.css?v=1792565217">
+<link rel="stylesheet" href="/smart-trust-tools/assets/css/avatars.css?v=1792567659">
 
 <!--
   The kinds THIS INSTANCE DECLARES, for the avatar fan.
@@ -624,12 +624,12 @@
 <!-- BEFORE docs-ui.js and work-plan.js: both read window.faRender. -->
 <script src="/smart-trust-tools/assets/js/kg-render.js" defer></script>
 <!-- BEFORE docs-ui.js, which calls it: the one drawing of the harness icon row (beans `lhvt`, `9rq1`). -->
-<script src="/smart-trust-tools/assets/js/navbar-row.js?v=1792565217" defer></script>
-<script src="/smart-trust-tools/assets/js/docs-ui.js?v=1792565217" defer></script>
+<script src="/smart-trust-tools/assets/js/navbar-row.js?v=1792567659" defer></script>
+<script src="/smart-trust-tools/assets/js/docs-ui.js?v=1792567659" defer></script>
 <!-- The edit, source and feedback links of every page, from the platform's one
   recipe (cat-harness-tools/src/core/edit-links.ts, bean v433): links carry their
   facts and this builds the hrefs. -->
-<script src="/smart-trust-tools/assets/js/edit-links.js?v=1792565217" defer></script>
+<script src="/smart-trust-tools/assets/js/edit-links.js?v=1792567659" defer></script>
 
 <!--
   The work-plan dashboard. SELF-MOUNTING on any page carrying
@@ -872,9 +872,9 @@ is <code class="language-plaintext highlighter-rouge">satisfies</code>, and it r
 to do that</em>, never <em>this skill is a tool</em>.</p>
 
 <div class="tg-grid">
-<a class="tg-stat" href="#every-tool"><b>160</b><span>Tool nodes</span></a>
+<a class="tg-stat" href="#every-tool"><b>172</b><span>Tool nodes</span></a>
 <a class="tg-stat" href="#does-every-satisfies-name-a-skill-that-exists"><b>80</b><span>skills satisfied</span></a>
-<a class="tg-stat" href="#how-they-are-invoked-and-installed"><b>134</b><span>invoked as a shell command</span></a>
+<a class="tg-stat" href="#how-they-are-invoked-and-installed"><b>146</b><span>invoked as a shell command</span></a>
 <a class="tg-stat" href="#how-they-are-invoked-and-installed"><b>29</b><span>reachable over MCP</span></a>
 </div>
 
@@ -899,7 +899,7 @@ to do that</em>, never <em>this skill is a tool</em>.</p>
   <tbody>
     <tr>
       <td><span class="tg-tag tg-shell">shell</span></td>
-      <td>134</td>
+      <td>146</td>
     </tr>
     <tr>
       <td><span class="tg-tag tg-inproc">inProcess</span></td>
@@ -930,7 +930,7 @@ to do that</em>, never <em>this skill is a tool</em>.</p>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">cli</code></td>
-      <td>9</td>
+      <td>21</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">container</code></td>
@@ -1294,6 +1294,90 @@ the graph cannot locate.</p>
       <td><span class="tg-tag tg-mcp">mcp</span> <span class="tg-tag tg-shell">shell</span></td>
       <td><code class="language-plaintext highlighter-rouge">coordinate</code><br /><code class="language-plaintext highlighter-rouge">pickup</code><br /><code class="language-plaintext highlighter-rouge">prepare-merge-auto</code><br /><code class="language-plaintext highlighter-rouge">watch</code></td>
       <td>3 in / 1 out</td>
+    </tr>
+    <tr>
+      <td><a id="github-branches"></a><a href="#github-branches"><code class="language-plaintext highlighter-rouge">github-branches</code></a><br />List branches (GitHub)</td>
+      <td>List the branch names of the current checkout’s GitHub project, as the forge reports them.</td>
+      <td><span class="tg-tag tg-shell">shell</span></td>
+      <td><code class="language-plaintext highlighter-rouge">coordinate</code></td>
+      <td>0 in / 1 out</td>
+    </tr>
+    <tr>
+      <td><a id="github-pr-checks"></a><a href="#github-pr-checks"><code class="language-plaintext highlighter-rouge">github-pr-checks</code></a><br />Read a pull request’s checks (GitHub)</td>
+      <td>Read the check runs of one pull request and their state.</td>
+      <td><span class="tg-tag tg-shell">shell</span></td>
+      <td><code class="language-plaintext highlighter-rouge">prepare-merge-auto</code><br /><code class="language-plaintext highlighter-rouge">watch</code></td>
+      <td>1 in / 1 out</td>
+    </tr>
+    <tr>
+      <td><a id="github-pr-comment"></a><a href="#github-pr-comment"><code class="language-plaintext highlighter-rouge">github-pr-comment</code></a><br />Comment on a pull request (GitHub)</td>
+      <td>Add a comment to one pull request. The comment is read from stdin, never from the command line.</td>
+      <td><span class="tg-tag tg-shell">shell</span></td>
+      <td><code class="language-plaintext highlighter-rouge">coordinate</code><br /><code class="language-plaintext highlighter-rouge">prepare-merge-auto</code></td>
+      <td>2 in / 1 out</td>
+    </tr>
+    <tr>
+      <td><a id="github-pr-files"></a><a href="#github-pr-files"><code class="language-plaintext highlighter-rouge">github-pr-files</code></a><br />List a pull request’s changed files (GitHub)</td>
+      <td>List the paths one pull request changes.</td>
+      <td><span class="tg-tag tg-shell">shell</span></td>
+      <td><code class="language-plaintext highlighter-rouge">coordinate</code></td>
+      <td>1 in / 1 out</td>
+    </tr>
+    <tr>
+      <td><a id="github-pr-list"></a><a href="#github-pr-list"><code class="language-plaintext highlighter-rouge">github-pr-list</code></a><br />List pull requests (GitHub)</td>
+      <td>List the open pull requests of the current checkout’s GitHub project, optionally only those from one branch.</td>
+      <td><span class="tg-tag tg-shell">shell</span></td>
+      <td><code class="language-plaintext highlighter-rouge">coordinate</code><br /><code class="language-plaintext highlighter-rouge">pickup</code><br /><code class="language-plaintext highlighter-rouge">prepare-merge-auto</code></td>
+      <td>1 in / 1 out</td>
+    </tr>
+    <tr>
+      <td><a id="github-pr-request-review"></a><a href="#github-pr-request-review"><code class="language-plaintext highlighter-rouge">github-pr-request-review</code></a><br />Request review on a pull request (GitHub)</td>
+      <td>Ask one or more accounts to review a pull request. Adds to the reviewers already requested.</td>
+      <td><span class="tg-tag tg-shell">shell</span></td>
+      <td><code class="language-plaintext highlighter-rouge">pickup</code><br /><code class="language-plaintext highlighter-rouge">prepare-merge-auto</code></td>
+      <td>2 in / 1 out</td>
+    </tr>
+    <tr>
+      <td><a id="github-pr-view"></a><a href="#github-pr-view"><code class="language-plaintext highlighter-rouge">github-pr-view</code></a><br />Read a pull request (GitHub)</td>
+      <td>Read one pull request: title, state, body, and its comments and reviews.</td>
+      <td><span class="tg-tag tg-shell">shell</span></td>
+      <td><code class="language-plaintext highlighter-rouge">coordinate</code><br /><code class="language-plaintext highlighter-rouge">pickup</code><br /><code class="language-plaintext highlighter-rouge">prepare-merge-auto</code><br /><code class="language-plaintext highlighter-rouge">watch</code></td>
+      <td>1 in / 1 out</td>
+    </tr>
+    <tr>
+      <td><a id="gitlab-branches"></a><a href="#gitlab-branches"><code class="language-plaintext highlighter-rouge">gitlab-branches</code></a><br />List branches (GitLab)</td>
+      <td>List the branch names of the current checkout’s GitLab project, as the forge reports them.</td>
+      <td><span class="tg-tag tg-shell">shell</span></td>
+      <td><code class="language-plaintext highlighter-rouge">coordinate</code></td>
+      <td>0 in / 1 out</td>
+    </tr>
+    <tr>
+      <td><a id="gitlab-mr-comment"></a><a href="#gitlab-mr-comment"><code class="language-plaintext highlighter-rouge">gitlab-mr-comment</code></a><br />Comment on a merge request (GitLab)</td>
+      <td>Add a comment to one merge request. The comment is read from stdin, never from the command line.</td>
+      <td><span class="tg-tag tg-shell">shell</span></td>
+      <td><code class="language-plaintext highlighter-rouge">coordinate</code><br /><code class="language-plaintext highlighter-rouge">prepare-merge-auto</code></td>
+      <td>2 in / 1 out</td>
+    </tr>
+    <tr>
+      <td><a id="gitlab-mr-list"></a><a href="#gitlab-mr-list"><code class="language-plaintext highlighter-rouge">gitlab-mr-list</code></a><br />List merge requests (GitLab)</td>
+      <td>List the open merge requests of the current checkout’s GitLab project, optionally only those from one branch.</td>
+      <td><span class="tg-tag tg-shell">shell</span></td>
+      <td><code class="language-plaintext highlighter-rouge">coordinate</code><br /><code class="language-plaintext highlighter-rouge">pickup</code><br /><code class="language-plaintext highlighter-rouge">prepare-merge-auto</code></td>
+      <td>1 in / 1 out</td>
+    </tr>
+    <tr>
+      <td><a id="gitlab-mr-resolve-thread"></a><a href="#gitlab-mr-resolve-thread"><code class="language-plaintext highlighter-rouge">gitlab-mr-resolve-thread</code></a><br />Resolve a review thread on a merge request (GitLab)</td>
+      <td>Mark one discussion on a merge request as resolved.</td>
+      <td><span class="tg-tag tg-shell">shell</span></td>
+      <td><code class="language-plaintext highlighter-rouge">coordinate</code></td>
+      <td>2 in / 0 out</td>
+    </tr>
+    <tr>
+      <td><a id="gitlab-mr-view"></a><a href="#gitlab-mr-view"><code class="language-plaintext highlighter-rouge">gitlab-mr-view</code></a><br />Read a merge request (GitLab)</td>
+      <td>Read one merge request: title, state, body, and its comments and reviews.</td>
+      <td><span class="tg-tag tg-shell">shell</span></td>
+      <td><code class="language-plaintext highlighter-rouge">coordinate</code><br /><code class="language-plaintext highlighter-rouge">pickup</code><br /><code class="language-plaintext highlighter-rouge">prepare-merge-auto</code><br /><code class="language-plaintext highlighter-rouge">watch</code></td>
+      <td>1 in / 1 out</td>
     </tr>
     <tr>
       <td><a id="handover-screen"></a><a href="#handover-screen"><code class="language-plaintext highlighter-rouge">handover-screen</code></a><br />Screen a hand-over for injected instructions, field by field</td>
