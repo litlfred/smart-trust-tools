@@ -401,6 +401,12 @@
 
 <span class="tok-key">sealed</span> <span class="tok-key">interface</span> <span class="tok-name" id="kt-TrustError">TrustError</span> {
     <span class="tok-key">data</span> <span class="tok-key">class</span> <span class="tok-name" id="kt-Parse">Parse</span>(<span class="tok-key">val</span> value: String) : TrustError
+
+<span class="tok-comment">    /**</span>
+<span class="tok-comment">     * A DID document names a trust domain the loaded GDHCN Trust Domain</span>
+<span class="tok-comment">     * code system does not hold. [<a href="explorer.html#STT-SEL-006">STT-SEL-006</a>]</span>
+<span class="tok-comment">     */</span>
+    <span class="tok-key">data</span> <span class="tok-key">class</span> <span class="tok-name" id="kt-UnknownTrustDomain">UnknownTrustDomain</span>(<span class="tok-key">val</span> value: String) : TrustError
 }
 
 <span class="tok-key">data</span> <span class="tok-key">class</span> <span class="tok-name" id="kt-TrustedDsc">TrustedDsc</span>(
@@ -433,6 +439,19 @@
 <span class="tok-comment">     * variant. [<a href="explorer.html#STT-TRU-002">STT-TRU-002</a>]</span>
 <span class="tok-comment">     */</span>
     <span class="tok-key">fun</span> addDidDocument(json: String): HcertResult&lt;Int, TrustError&gt;
+
+<span class="tok-comment">    /**</span>
+<span class="tok-comment">     * The trust domains a DID document may name, read from a GDHCN</span>
+<span class="tok-comment">     * Trust Domain CodeSystem (FHIR JSON) the host fetched. Data, not</span>
+<span class="tok-comment">     * an enum: once loaded, a DID document naming another domain is</span>
+<span class="tok-comment">     * refused whole; before, any domain is kept as given. Loading</span>
+<span class="tok-comment">     * again replaces the set. Returns the number of codes.</span>
+<span class="tok-comment">     * [<a href="explorer.html#STT-SEL-006">STT-SEL-006</a>]</span>
+<span class="tok-comment">     */</span>
+    <span class="tok-key">fun</span> loadTrustDomains(codesystemJson: String): HcertResult&lt;Int, TrustError&gt;
+
+<span class="tok-comment">    /** The loaded trust domain codes; empty when none are loaded. */</span>
+    <span class="tok-key">fun</span> trustDomains(): List&lt;String&gt;
 
 <span class="tok-comment">    /** Every DSC with this kid (kids are not unique). [<a href="explorer.html#STT-KID-002">STT-KID-002</a>] */</span>
     <span class="tok-key">fun</span> candidates(k: Kid): List&lt;TrustedDsc&gt;

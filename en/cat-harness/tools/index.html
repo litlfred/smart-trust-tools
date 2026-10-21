@@ -577,33 +577,33 @@
   them: those are versioned in their own URLs already.
 -->
 <!-- The harness icon row's own style, which railed pages load without docs-ui.css (beans `lhvt`, `9rq1`). -->
-<link rel="stylesheet" href="/smart-trust-tools/assets/css/navbar-row.css?v=1792586353">
-<link rel="stylesheet" href="/smart-trust-tools/assets/css/docs-ui.css?v=1792586353">
+<link rel="stylesheet" href="/smart-trust-tools/assets/css/navbar-row.css?v=1792589044">
+<link rel="stylesheet" href="/smart-trust-tools/assets/css/docs-ui.css?v=1792589044">
 <!-- Narrow viewports: wide content scrolls in its own box, never the page
      (bean `2r2n`). The standalone viewers inline the same file through
      `withViewerNav`, so both kinds of page read one set of rules. -->
-<link rel="stylesheet" href="/smart-trust-tools/assets/css/narrow-viewport.css?v=1792586353">
+<link rel="stylesheet" href="/smart-trust-tools/assets/css/narrow-viewport.css?v=1792589044">
 
 <!--
   The work-plan dashboard's styles, split from docs-ui.css so that
   `state-visualizer.ts` can inline exactly these bytes into the generated
   `<base>/<stub>/state-visualizer/` pages. One rule, two surfaces.
 -->
-<link rel="stylesheet" href="/smart-trust-tools/assets/css/work-plan.css?v=1792586353">
+<link rel="stylesheet" href="/smart-trust-tools/assets/css/work-plan.css?v=1792589044">
 <!-- Sticky themes. GENERATED from the theme nodes in `schemas/themes.ts` by
      `bun run cat themes:css`; `themes:css:check` fails the build when it is stale.
      Loaded AFTER docs-ui.css deliberately: it supplies the `--fa-sticky-*`
      roles that docs-ui.css consumes, and a custom property has to be set on a
      matching element before the rule reading it takes effect. -->
-<link rel="stylesheet" href="/smart-trust-tools/assets/css/themes.css?v=1792586353">
+<link rel="stylesheet" href="/smart-trust-tools/assets/css/themes.css?v=1792589044">
 <!-- UML overview colours: one class per graph typology, set on the Mermaid nodes
      that `scripts/gen-uml-overview.ts` writes into docs/uml/overview/. -->
-<link rel="stylesheet" href="/smart-trust-tools/assets/css/uml.css?v=1792586353">
+<link rel="stylesheet" href="/smart-trust-tools/assets/css/uml.css?v=1792589044">
 <!-- Kind avatars. GENERATED from `schemas/avatars.ts` by `bun run cat avatars:css`;
      `avatars:css:check` fails the build when it is stale. One stylesheet
      rather than 68 assets: the glyph is a mask and the colour is a property,
      so a scheme swap is a custom property and the trash state is a selector. -->
-<link rel="stylesheet" href="/smart-trust-tools/assets/css/avatars.css?v=1792586353">
+<link rel="stylesheet" href="/smart-trust-tools/assets/css/avatars.css?v=1792589044">
 
 <!--
   The kinds THIS INSTANCE DECLARES, for the avatar fan.
@@ -624,12 +624,12 @@
 <!-- BEFORE docs-ui.js and work-plan.js: both read window.faRender. -->
 <script src="/smart-trust-tools/assets/js/kg-render.js" defer></script>
 <!-- BEFORE docs-ui.js, which calls it: the one drawing of the harness icon row (beans `lhvt`, `9rq1`). -->
-<script src="/smart-trust-tools/assets/js/navbar-row.js?v=1792586353" defer></script>
-<script src="/smart-trust-tools/assets/js/docs-ui.js?v=1792586353" defer></script>
+<script src="/smart-trust-tools/assets/js/navbar-row.js?v=1792589044" defer></script>
+<script src="/smart-trust-tools/assets/js/docs-ui.js?v=1792589044" defer></script>
 <!-- The edit, source and feedback links of every page, from the platform's one
   recipe (cat-harness-tools/src/core/edit-links.ts, bean v433): links carry their
   facts and this builds the hrefs. -->
-<script src="/smart-trust-tools/assets/js/edit-links.js?v=1792586353" defer></script>
+<script src="/smart-trust-tools/assets/js/edit-links.js?v=1792589044" defer></script>
 
 <!--
   The work-plan dashboard. SELF-MOUNTING on any page carrying
@@ -870,9 +870,9 @@ is <code class="language-plaintext highlighter-rouge">satisfies</code>, and it r
 to do that</em>, never <em>this skill is a tool</em>.</p>
 
 <div class="tg-grid">
-<a class="tg-stat" href="#every-tool"><b>226</b><span>Tool nodes</span></a>
+<a class="tg-stat" href="#every-tool"><b>227</b><span>Tool nodes</span></a>
 <a class="tg-stat" href="#does-every-satisfies-name-a-skill-that-exists"><b>110</b><span>skills satisfied</span></a>
-<a class="tg-stat" href="#how-they-are-invoked-and-installed"><b>199</b><span>invoked as a shell command</span></a>
+<a class="tg-stat" href="#how-they-are-invoked-and-installed"><b>200</b><span>invoked as a shell command</span></a>
 <a class="tg-stat" href="#how-they-are-invoked-and-installed"><b>30</b><span>reachable over MCP</span></a>
 </div>
 
@@ -897,7 +897,7 @@ to do that</em>, never <em>this skill is a tool</em>.</p>
   <tbody>
     <tr>
       <td><a href="smart-trust-tools/">smart-trust-tools</a></td>
-      <td>9</td>
+      <td>10</td>
     </tr>
     <tr>
       <td><a href="cat-harness/">cat-harness</a></td>
@@ -938,7 +938,7 @@ to do that</em>, never <em>this skill is a tool</em>.</p>
   <tbody>
     <tr>
       <td><span class="tg-tag tg-shell">shell</span></td>
-      <td>199</td>
+      <td>200</td>
     </tr>
     <tr>
       <td><span class="tg-tag tg-inproc">inProcess</span></td>
@@ -965,7 +965,7 @@ to do that</em>, never <em>this skill is a tool</em>.</p>
   <tbody>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">none</code></td>
-      <td>199</td>
+      <td>200</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">cli</code></td>
@@ -1949,6 +1949,13 @@ the graph cannot locate.</p>
       <td><span class="tg-tag tg-shell">shell</span></td>
       <td><code class="language-plaintext highlighter-rouge">harness-tiles</code></td>
       <td>5 in / 1 out</td>
+    </tr>
+    <tr>
+      <td><a id="negative-vectors"></a><a href="#negative-vectors"><code class="language-plaintext highlighter-rouge">negative-vectors</code></a><br />Shared negative test vectors</td>
+      <td>Derive vectors/negative/negative-vectors.json from the smart-trust PR 129 certificates: one language-neutral file of inputs a conforming verifier must refuse, each with the step and reason it must stop at. The Kotlin suite, the Node smoke test and the Rust suite load the same file. Nothing is newly signed: each case changes a byte, a prefix, the clock or the trust list.</td>
+      <td><span class="tg-tag tg-shell">shell</span></td>
+      <td><code class="language-plaintext highlighter-rouge">hcert-conformance-testing</code></td>
+      <td>0 in / 1 out</td>
     </tr>
     <tr>
       <td><a id="node-kind-pages"></a><a href="#node-kind-pages"><code class="language-plaintext highlighter-rouge">node-kind-pages</code></a><br />Node kind pages</td>

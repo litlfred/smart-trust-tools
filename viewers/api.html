@@ -317,6 +317,9 @@
 
     <span class="tok-key">variant</span> <span class="tok-name" id="wit-trust-error">trust-error</span> {
         parse(string),
+        <span class="tok-comment">/// A DID document names a trust domain the loaded GDHCN Trust Domain</span>
+        <span class="tok-comment">/// code system does not hold. [<a href="explorer.html#STT-SEL-006">STT-SEL-006</a>]</span>
+        unknown-trust-domain(string),
     }
 
     <span class="tok-key">record</span> <span class="tok-name" id="wit-trusted-dsc">trusted-dsc</span> {
@@ -342,6 +345,15 @@
         <span class="tok-comment">/// A GDHCN DID trustlist v2 document, embedded or reference</span>
         <span class="tok-comment">/// variant. [<a href="explorer.html#STT-TRU-002">STT-TRU-002</a>]</span>
         <span class="tok-name">add-did-document</span>: <span class="tok-key">func</span>(json: string) -&gt; result&lt;u32, trust-error&gt;;
+        <span class="tok-comment">/// The trust domains a DID document may name, read from a GDHCN</span>
+        <span class="tok-comment">/// Trust Domain CodeSystem (FHIR JSON) the host fetched. Data, not</span>
+        <span class="tok-comment">/// an enum: once loaded, a DID document naming another domain is</span>
+        <span class="tok-comment">/// refused whole; before, any domain is kept as given. Loading</span>
+        <span class="tok-comment">/// again replaces the set. Returns the number of codes.</span>
+        <span class="tok-comment">/// [<a href="explorer.html#STT-SEL-006">STT-SEL-006</a>]</span>
+        <span class="tok-name">load-trust-domains</span>: <span class="tok-key">func</span>(codesystem-json: string) -&gt; result&lt;u32, trust-error&gt;;
+        <span class="tok-comment">/// The loaded trust domain codes; empty when none are loaded.</span>
+        <span class="tok-name">trust-domains</span>: <span class="tok-key">func</span>() -&gt; list&lt;string&gt;;
         <span class="tok-comment">/// Every DSC with this kid (kids are not unique). [<a href="explorer.html#STT-KID-002">STT-KID-002</a>]</span>
         <span class="tok-name">candidates</span>: <span class="tok-key">func</span>(k: kid) -&gt; list&lt;trusted-dsc&gt;;
         <span class="tok-name">size</span>: <span class="tok-key">func</span>() -&gt; u32;
