@@ -4,8 +4,9 @@
 
   var KIND_LABEL = {
     requirement: "Requirement", section: "Source section", document: "Source document",
-    standard: "Standard", directive: "Stakeholder directive", upstream: "smart-trust requirement",
-    step: "Pipeline step", api: "API element", issue: "Open issue"
+    standard: "Standard", directive: "Owner directive", upstream: "smart-trust requirement",
+    skill: "Skill", api: "WIT item", tool: "Tool", process: "Process (BPMN)", role: "Role",
+    issue: "Open issue (bean)"
   };
   var URL_LABEL = {
     pinned: "Source (pinned commit)", preview: "PR preview build", main: "Source on main",

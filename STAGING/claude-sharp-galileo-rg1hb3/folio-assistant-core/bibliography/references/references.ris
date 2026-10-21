@@ -1,0 +1,48 @@
+TY  - ELEC
+ID  - who-ddcc-ig
+TI  - DDCC Implementation Guide
+PB  - World Health Organization
+UR  - https://smart.who.int/ddcc/
+ER  - 
+
+TY  - ELEC
+ID  - who-trust-phw-dvc-vaccines-vs
+TI  - DVC - Vaccines value set (trust-phw)
+PB  - World Health Organization
+UR  - http://smart.who.int/trust-phw/ValueSet-DVCVaccines.html
+ER  - 
+
+TY  - ELEC
+ID  - who-trust-gdhcn-key-usage-vs
+TI  - GDHCN Key Usage value set
+PB  - World Health Organization
+UR  - https://smart.who.int/trust/ValueSet-KeyUsage.html
+ER  - 
+
+TY  - ELEC
+ID  - who-trust-gdhcn-participants-vs
+TI  - GDHCN Participants value set
+PB  - World Health Organization
+UR  - https://smart.who.int/trust/ValueSet-Participants.html
+ER  - 
+
+TY  - ELEC
+ID  - who-trust-gdhcn-trust-domain-vs
+TI  - GDHCN Trust Domain value set
+PB  - World Health Organization
+UR  - https://smart.who.int/trust/ValueSet-Domains.html
+ER  - 
+
+TY  - ELEC
+ID  - who-icvp-ig
+TI  - ICVP Implementation Guide
+PB  - World Health Organization
+UR  - https://smart.who.int/icvp
+ER  - 
+
+TY  - ELEC
+ID  - who-ph4h-medication-treatment-line-min
+TI  - MedicationTreatmentLineMin logical model (ph4h)
+PB  - World Health Organization
+UR  - http://smart.who.int/ph4h/StructureDefinition-MedicationTreatmentLineMin.html
+ER  - 

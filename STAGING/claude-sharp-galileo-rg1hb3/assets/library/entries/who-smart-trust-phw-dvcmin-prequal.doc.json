@@ -1,0 +1,34 @@
+{
+  "$schema": "folio-library-document/v1",
+  "id": "who-smart-trust-phw-dvcmin-prequal",
+  "title": "DVCMinPreQual profile (FSH)",
+  "variant": "text",
+  "pages": null,
+  "tocSource": "files",
+  "tocMethod": null,
+  "toc": [],
+  "sections": [
+    {
+      "id": "s001-input-fsh-models-dvcminprequal-fsh",
+      "number": null,
+      "title": "input/fsh/models/DVCMinPreQual.fsh",
+      "level": 1,
+      "pageStart": null,
+      "pageEnd": null,
+      "labelStart": null,
+      "labelEnd": null,
+      "words": 30,
+      "summary": null,
+      "keywords": [],
+      "extract": "```text Logical: DVCMinPreQual Parent: DVCMin Description: \"DVC payload minimized for use within an HCERT Payload with the WHO PreQual Vaccine Database\" * ^abstract = false * vx only DVCMinVaccineDetailsPreQual ```",
+      "extractCut": false
+    }
+  ],
+  "checks": {},
+  "withheld": false,
+  "links": {
+    "repo": "litlfred/smart-trust-tools",
+    "branch": "main",
+    "dir": "library/who-smart-trust-phw-dvcmin-prequal"
+  }
+}

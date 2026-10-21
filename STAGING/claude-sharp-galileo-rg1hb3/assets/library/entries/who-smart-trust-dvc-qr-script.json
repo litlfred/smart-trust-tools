@@ -1,0 +1,25 @@
+{
+  "$schema": "folio-library-entry/v1",
+  "id": "who-smart-trust-dvc-qr-script",
+  "blocks": [
+    {
+      "id": "library/who-smart-trust-dvc-qr-script/blocks/prose-s001-input-scripts-generate-dvc-qr-py",
+      "types": [
+        "folio-assistant-core:Prose",
+        "doco:Section"
+      ],
+      "kind": "prose",
+      "title": "input/scripts/generate_dvc_qr.py",
+      "pageStart": null,
+      "pageEnd": null,
+      "target": "../sections/s001-input-scripts-generate-dvc-qr-py.md",
+      "narrative": null,
+      "content": "```text\n#!/usr/bin/env python3\n\"\"\"Generate a signed DVC HCERT QR code for the WHO SMART Trust test scenario.\n\nThis reproduces, end to end, the pipeline documented in\ninput/pagecontent/qr_code_generation.md:\n\n    DVC payload -> HCERT claim -> CWT -> CBOR -> COSE_Sign1 -> zlib -> Base45\n                -> \"HC1:\" prefix -> QR\n\nThe scenario is the newborn birth-dose example: a Lao infant born while the\nfamily is visiting Thailand receives the Hepatitis B birth dose and BCG under\nthe host country's routine childhood immunization schedule, and the clinic\nissues a generic Digital Vaccine Certificate",
+      "truncated": true,
+      "provenance": "ingested",
+      "summary": {
+        "status": "not-summarised"
+      }
+    }
+  ]
+}

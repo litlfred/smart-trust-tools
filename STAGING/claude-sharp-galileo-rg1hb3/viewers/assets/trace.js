@@ -7,7 +7,7 @@
     if (!items.length) return '<span class="gap">—</span>';
     return '<div class="chips">' + items.map(function (x) {
       var n = x.node, label = n.kind === "api" && n.wit ? n.wit : n.label;
-      if (n.kind === "step") label = n.order <= 9 ? String(n.order) : n.title.split(" (")[0];
+      if (n.kind === "skill") label = n.label.replace(/^hcert-/, "");
       return '<a class="chip ' + (cls || "") + '" href="explorer.html#' + esc(n.id) + '" title="' + esc(n.title) + '">' + esc(label) + "</a>";
     }).join("") + "</div>";
   }
@@ -16,7 +16,7 @@
     var out = function (rel) { return S.related(G, n.id, rel, "out"); };
     var verified = out("verifiedBy");
     return {
-      n: n, satisfies: out("satisfies"), steps: out("implementsStep"), api: out("constrainsApi"),
+      n: n, satisfies: out("satisfies"), steps: out("realizedBy"), api: out("constrainsApi"),
       verified: verified, issues: out("affectedBy"), sources: out("derivedFrom"),
       tested: verified.length > 0 || n.category === "test"
     };
@@ -68,16 +68,18 @@
   function summary() {
     var ups = G.nodes.filter(function (n) { return n.kind === "upstream" && n.parent; });
     var upCovered = ups.filter(function (n) { return S.related(G, n.id, "satisfies", "in").length; }).length;
-    var steps = G.nodes.filter(function (n) { return n.kind === "step"; });
-    var stepsCovered = steps.filter(function (n) { return S.related(G, n.id, "implementsStep", "in").length; }).length;
+    var steps = G.nodes.filter(function (n) { return n.kind === "skill"; });
+    var stepsCovered = steps.filter(function (n) { return S.related(G, n.id, "implementedBy", "out").length; }).length;
+    var realized = ALL.filter(function (r) { return r.steps.length; }).length;
     var tested = ALL.filter(function (r) { return r.tested; }).length;
     var issues = G.nodes.filter(function (n) { return n.kind === "issue"; });
     var upIssues = issues.filter(function (n) { return n.upstream; }).length;
     var cards = [
-      [upCovered + "/" + ups.length, "smart-trust statements covered", "statements of the FHIR Requirements resources"],
-      [stepsCovered + "/" + steps.length, "pipeline steps covered", "issuance, verification and trust-list steps"],
+      [upCovered + "/" + ups.length, "smart-trust statements cited", "statements of the FHIR Requirements resources"],
+      [realized + "/" + ALL.length, "requirements realized by a skill", "a skill's satisfies names them"],
+      [stepsCovered + "/" + steps.length, "skills with a Tool", "a Tool's satisfies names them"],
       [tested + "/" + ALL.length, "requirements with explicit verification", "verified by a test requirement, or a test itself"],
-      [issues.length, "open issues", upIssues + " to be fixed upstream"]
+      [issues.length, "open issues (beans)", upIssues + " to be fixed upstream"]
     ];
     document.getElementById("trace-summary").innerHTML = cards.map(function (c) {
       return '<div class="card"><strong>' + esc(c[0]) + '</strong><span>' + esc(c[1]) + '</span><span class="small muted">' + esc(c[2]) + "</span></div>";

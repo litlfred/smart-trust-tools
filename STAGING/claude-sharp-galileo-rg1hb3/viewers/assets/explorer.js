@@ -7,40 +7,50 @@
   var FAMILIES = [
     { id: "requirement", label: "Requirements", color: "--fam-requirement" },
     { id: "source", label: "Sources & smart-trust", color: "--fam-source" },
-    { id: "realization", label: "Steps & API", color: "--fam-realization" },
+    { id: "realization", label: "Skills, Tools & WIT", color: "--fam-realization" },
     { id: "issue", label: "Open issues", color: "--status-warning" }
   ];
   var SHAPE = {
     requirement: "round-rectangle", section: "rectangle", document: "cut-rectangle", standard: "cut-rectangle",
-    directive: "star", upstream: "diamond", step: "hexagon", api: "ellipse", issue: "triangle"
+    directive: "star", upstream: "diamond", skill: "hexagon", api: "ellipse", tool: "barrel",
+    process: "round-tag", role: "vee", issue: "triangle"
   };
   var SHAPE_NOTE = [
     ["round-rectangle", "requirement"], ["rectangle", "source section"], ["cut-rectangle", "document or standard"],
-    ["star", "stakeholder directive"], ["diamond", "smart-trust FHIR requirement"], ["hexagon", "pipeline step"],
-    ["ellipse", "API element or module"], ["triangle", "open issue"]
+    ["star", "owner directive"], ["diamond", "smart-trust FHIR requirement"], ["hexagon", "skill"],
+    ["barrel", "Tool"], ["round-tag", "process (BPMN)"], ["vee", "role"],
+    ["ellipse", "WIT item or interface"], ["triangle", "open issue (bean)"]
   ];
-  var COLUMN = { directive: 0, standard: 0, document: 0, section: 0, upstream: 0, requirement: 1, step: 2, api: 2, issue: 2 };
-  var KIND_ORDER = { directive: 0, document: 1, section: 1, standard: 2, upstream: 3, requirement: 0, step: 0, api: 1, issue: 2 };
-  var COLUMN_TITLE = ["Sources and smart-trust requirements", "Library requirements", "Pipeline steps · API · open issues"];
+  var COLUMN = { directive: 0, standard: 0, document: 0, section: 0, upstream: 0, requirement: 1,
+    skill: 2, api: 2, issue: 2, tool: 3, process: 3, role: 3 };
+  var KIND_ORDER = { directive: 0, document: 1, section: 1, standard: 2, upstream: 3, requirement: 0,
+    skill: 0, api: 1, issue: 2, tool: 0, process: 1, role: 2 };
+  var COLUMN_TITLE = ["Sources and smart-trust requirements", "Library requirements", "Skills · WIT · open issues",
+    "Tools · processes · roles"];
   var CARD_W = 230, COL_GAP = 300;
   var REL_LABEL = {
     derivedFrom: ["Derived from", "Source for"], satisfies: ["Satisfies (smart-trust)", "Satisfied by"],
     refines: ["Refines", "Refined by"], verifiedBy: ["Verified by", "Verifies"],
-    implementsStep: ["Pipeline steps", "Requirements"], constrainsApi: ["API elements", "Constrained by"],
+    realizedBy: ["Skills", "Realizes"], constrainsApi: ["WIT items", "Constrained by"],
+    implementedBy: ["Tools", "Skills"], usedIn: ["Processes", "Skills"], performedBy: ["Roles", "Skills"],
     affectedBy: ["Open issues", "Affects"], concerns: ["Concerns", "Raised by"], partOf: ["Part of", "Contains"]
   };
-  var DOC_GROUPS = {
-    "ext-dvcmin": "grp:phw", "ext-dvcmin-vx": "grp:phw", "ext-dvcmin-prequal": "grp:phw", "ext-phw-aliases": "grp:phw",
-    "ext-dvc-vaccines-vs": "grp:other-igs", "ext-mtl-min": "grp:other-igs", "ext-ddcc": "grp:other-igs", "ext-icvp": "grp:other-igs",
-    "doc-qr-example-json": "grp:pr129-artefacts", "doc-qr-example-pem": "grp:pr129-artefacts", "doc-qr-script": "grp:pr129-artefacts",
-    "doc-sd-hcert": "grp:st-artefacts", "doc-sd-cwtpayload": "grp:st-artefacts", "doc-vs-domains": "grp:st-artefacts",
-    "doc-vs-keyusage": "grp:st-artefacts", "doc-vs-participants": "grp:st-artefacts", "doc-fhir-requirements": "grp:st-artefacts"
-  };
+  /* Library entries and other sources that read better as one group. */
+  var DOC_GROUPS = {};
+  function docGroupOf(n) {
+    if (n.origin === "reference") return "grp:other-igs";
+    if (n.origin === "vector") return "grp:vectors";
+    var id = n.doc || n.id;
+    if (/^library\/who-smart-trust-phw-/.test(id)) return "grp:phw";
+    if (/^library\/who-smart-trust-(hcert-model|cwt-payload-model|requirements-fsh|dvc-qr-script)$/.test(id)) return "grp:st-artefacts";
+    return DOC_GROUPS[id] || "doc:" + id;
+  }
   var GROUP_LABEL = {
-    "grp:standards": "Standards (IETF, W3C, ITU-T, HL7)", "grp:directives": "Stakeholder directives",
+    "grp:standards": "Standards (IETF, W3C, ITU-T, HL7, IHE, WHO)", "grp:directives": "Owner directives",
     "grp:phw": "smart-trust-phw logical models", "grp:other-igs": "Other WHO SMART IGs",
-    "grp:st-artefacts": "smart-trust logical models & value sets", "grp:pr129-artefacts": "PR 129 example & script",
-    "grp:issues-up": "Open issues to fix upstream", "grp:issues-local": "Open issues in this project"
+    "grp:st-artefacts": "smart-trust models, Requirements & script", "grp:vectors": "Test vectors",
+    "grp:issues-up": "Open issues to fix upstream", "grp:issues-local": "Open issues in this project",
+    "grp:tools": "Tools", "grp:processes": "Processes (BPMN)", "grp:roles": "Roles"
   };
 
   var G, cy, groups = {}, groupOf = {}, hidden = {}, stack = [], view = null;
@@ -50,19 +60,20 @@
   function groupKey(n) {
     switch (n.kind) {
       case "requirement": return "area:" + n.area;
-      case "section": return docGroupKey(n.doc);
-      case "document": return docGroupKey(n.id);
+      case "section": return docGroupOf(n);
+      case "document": return docGroupOf(n);
       case "standard": return "grp:standards";
       case "directive": return "grp:directives";
-      case "upstream": return "up:" + (n.parent || n.id);
-      case "step": return "step:" + n.id;
+      case "upstream": return "up:" + (n.parent || n.label);
+      case "skill": return n.order < 100 ? "skill:" + n.id : "pkg:" + n.package;
       case "api": return "mod:" + n.module;
+      case "tool": return "grp:tools";
+      case "process": return "grp:processes";
+      case "role": return "grp:roles";
       case "issue": return n.upstream ? "grp:issues-up" : "grp:issues-local";
     }
     return "grp:other";
   }
-
-  function docGroupKey(docId) { return DOC_GROUPS[docId] || "doc:" + docId; }
 
   function areaTitle(a) {
     for (var i = 0; i < G.areas.length; i++) if (G.areas[i][0] === a) return G.areas[i][1];
@@ -92,12 +103,16 @@
         g.label = d ? d.title : rest; g.shape = "cut-rectangle"; g.col = 0; g.order = 10;
       } else if (kind === "up") {
         g.label = rest + " (smart-trust)"; g.shape = "diamond"; g.col = 0; g.order = 30;
-      } else if (kind === "step") {
-        g.label = first.label; g.shape = "hexagon"; g.col = 2; g.order = first.order;
+      } else if (kind === "skill") {
+        g.label = first.order + ". " + first.label; g.shape = "hexagon"; g.col = 2; g.order = first.order;
+      } else if (kind === "pkg") {
+        g.label = "Skills: " + rest; g.shape = "hexagon"; g.col = 2; g.order = 50;
       } else if (kind === "mod") {
         g.label = "API module: " + rest; g.shape = "ellipse"; g.col = 2; g.order = 100;
       } else {
+        var right = { "grp:tools": [3, 0, "barrel"], "grp:processes": [3, 1, "round-tag"], "grp:roles": [3, 2, "vee"] }[k];
         g.label = GROUP_LABEL[k] || rest;
+        if (right) { g.col = right[0]; g.order = right[1]; g.shape = right[2]; return; }
         g.shape = k.indexOf("issues") >= 0 ? "triangle" : (k === "grp:directives" ? "star" : "cut-rectangle");
         g.col = k.indexOf("issues") >= 0 ? 2 : 0;
         g.order = k.indexOf("issues") >= 0 ? 200 : (k === "grp:directives" ? 0 : (k === "grp:standards" ? 20 : 15));
@@ -116,7 +131,10 @@
       "diamond": '<path d="M7 1l6 6-6 6-6-6z"/>',
       "hexagon": '<path d="M4 2h6l3 5-3 5H4L1 7z"/>',
       "ellipse": '<ellipse cx="7" cy="7" rx="6" ry="4.5"/>',
-      "triangle": '<path d="M7 1.5l6 11H1z"/>'
+      "triangle": '<path d="M7 1.5l6 11H1z"/>',
+      "barrel": '<path d="M3 2h8q2 5 0 10H3q-2-5 0-10z"/>',
+      "round-tag": '<path d="M2 3h7l4 4-4 4H2z"/>',
+      "vee": '<path d="M1 2l6 3 6-3-6 10z"/>'
     }[shape];
     return '<svg class="glyph" viewBox="0 0 14 14" aria-hidden="true" fill="' + color + '">' + p + "</svg>";
   }
@@ -172,6 +190,7 @@
     if (n.kind === "issue") return n.id + "\n" + trunc(n.title, 38);
     if (n.kind === "api") return n.label + (n.wit ? "\n" + n.wit : "");
     if (n.kind === "upstream") return n.label + "\n" + trunc(n.title, 34);
+    if (n.kind === "skill" || n.kind === "tool") return n.label + "\n" + trunc(n.title, 38);
     return trunc(n.title || n.label, 44);
   }
 
@@ -227,7 +246,7 @@
     var k = KIND_ORDER[n.kind];
     if (n.kind === "requirement") return [k, areaRank(n.area), n.id];
     if (n.kind === "section") return [k, n.doc, n.label];
-    if (n.kind === "step") return [k, "", ("0" + n.order).slice(-2)];
+    if (n.kind === "skill") return [k, n.package, ("00" + n.order).slice(-3), n.label];
     if (n.kind === "api") return [k, n.module, n.label];
     return [k, n.kind, n.id];
   }
@@ -457,6 +476,12 @@
     return '<div class="d-sec"><h4>' + esc(title) + " (" + items.length + ')</h4><ul class="d-list">' + lis + "</ul></div>";
   }
 
+  /* The committed node a graph node was read from. */
+  function fileLink(n) {
+    if (!n.file) return "";
+    return '<p class="small muted">Node: <a href="https://github.com/litlfred/smart-trust-tools/blob/main/' + esc(n.file) + '"><code>' + esc(n.file) + "</code></a></p>";
+  }
+
   function badge(text, cls) { return '<span class="badge ' + (cls || "") + '">' + esc(text) + "</span>"; }
 
   function wireLinks(el) {
@@ -490,29 +515,35 @@
         '<span class="chip">' + esc(n.category) + '</span><span class="chip">' + esc(n.derivation) + "</span>" +
         n.targets.map(function (t) { return '<span class="chip">' + esc(t) + "</span>"; }).join("") + "</div>");
       h.push('<p class="d-statement">' + esc(n.statement) + "</p>");
+      h.push(fileLink(n));
       h.push('<div class="d-actions small"><a href="requirements.html#' + esc(n.id.toLowerCase()) + '">In the requirements document</a> · <a href="trace.html#' + esc(n.id) + '">In the matrix</a></div>');
-      ["derivedFrom", "satisfies", "implementsStep", "constrainsApi", "refines", "verifiedBy", "affectedBy"].forEach(function (r) { h.push(relSection(id, r, "out")); });
+      ["derivedFrom", "satisfies", "realizedBy", "constrainsApi", "refines", "verifiedBy", "affectedBy"].forEach(function (r) { h.push(relSection(id, r, "out")); });
       h.push(relSection(id, "refines", "in"));
       h.push(relSection(id, "verifiedBy", "in"));
     } else if (n.kind === "issue") {
       h.push('<div class="chips"><span class="issue-mark">open</span>' + (n.upstream ? '<span class="chip">fix upstream</span>' : '<span class="chip">this project</span>') + "</div>");
       h.push('<p class="small">' + esc(n.text) + "</p>");
       if (n.hint) h.push('<p class="small"><strong>Suggested resolution:</strong> ' + esc(n.hint) + "</p>");
+      h.push(fileLink(n));
       h.push(relSection(id, "affectedBy", "in"));
       h.push(relSection(id, "concerns", "out"));
     } else if (n.kind === "api") {
       h.push('<div class="chips"><span class="chip">' + esc(n.apiKind) + '</span><span class="chip">module ' + esc(n.module) + "</span></div>");
-      if (n.wit) h.push('<p class="small">WIT: <a href="api.html#wit-' + esc(n.wit.split(".")[1]) + '"><code>' + esc(n.wit) + "</code></a></p>");
-      if (n.witNote) h.push('<p class="small muted">Not in WIT: ' + esc(n.witNote) + "</p>");
-      h.push('<div class="d-sec"><h4>Kotlin sketch</h4><pre class="d-code"><code>' + esc(n.kotlin) + "</code></pre></div>");
-      h.push('<div class="d-sec"><h4>Rust sketch</h4><pre class="d-code"><code>' + esc(n.rust) + "</code></pre></div>");
+      h.push('<p class="small">WIT: <a href="api.html#file-' + esc(n.witFile.replace(/\.wit$/, "")) + '"><code>' + esc(n.wit) + "</code></a> in <code>" + esc(n.witFile) + "</code></p>");
       h.push(relSection(id, "constrainsApi", "in"));
-    } else if (n.kind === "step") {
-      h.push('<p class="small">Output: <code>' + esc(n.output) + "</code></p>");
-      h.push(relSection(id, "derivedFrom", "out"));
-      h.push(relSection(id, "implementsStep", "in"));
+      h.push(relSection(id, "partOf", "out"));
+      h.push(relSection(id, "partOf", "in"));
+    } else if (n.kind === "skill") {
+      h.push('<div class="chips"><span class="chip">package ' + esc(n.package) + '</span></div>');
+      h.push(fileLink(n));
+      h.push(relSection(id, "realizedBy", "in"));
+      ["implementedBy", "usedIn", "performedBy"].forEach(function (r) { h.push(relSection(id, r, "out")); });
+    } else if (n.kind === "tool" || n.kind === "process" || n.kind === "role") {
+      if (n.text) h.push('<p class="small">' + esc(n.text) + "</p>");
+      if (n.actorKinds) h.push('<div class="chips">' + n.actorKinds.map(function (a) { return '<span class="chip">' + esc(a) + "</span>"; }).join("") + "</div>");
+      h.push(fileLink(n));
+      h.push(relSection(id, { tool: "implementedBy", process: "usedIn", role: "performedBy" }[n.kind], "in"));
     } else {
-      if (n.status === "pending-merge") h.push('<div class="chips"><span class="chip">in smart-trust PR 129, not yet merged</span></div>');
       if (n.note) h.push('<p class="small muted">' + esc(n.note) + "</p>");
       if (n.urls) h.push('<p class="d-urls">' + S.urlList(n.urls) + "</p>");
       ["partOf"].forEach(function (r) { h.push(relSection(id, r, "out")); h.push(relSection(id, r, "in")); });
@@ -618,7 +649,7 @@
     var restyle = function () { cy.style(style()); };
     var mq = window.matchMedia("(prefers-color-scheme: dark)");
     if (mq.addEventListener) mq.addEventListener("change", restyle);
-    new MutationObserver(restyle).observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
+    new MutationObserver(restyle).observe(document.documentElement, { attributes: true, attributeFilter: ["data-fa-scheme"] });
     fromHash();
   }
 
