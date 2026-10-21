@@ -46,3 +46,10 @@ TI  - MedicationTreatmentLineMin logical model (ph4h)
 PB  - World Health Organization
 UR  - http://smart.who.int/ph4h/StructureDefinition-MedicationTreatmentLineMin.html
 ER  - 
+
+TY  - GEN
+ID  - who-itb
+TI  - WHO-ITB: Interoperability Test Bed with HCERT validation (GDHCN Trust Network)
+PB  - World Health Organization
+UR  - https://github.com/WorldHealthOrganization/WHO-ITB/tree/883291d51e206719c1417cf95393a5cd8b20dc4b
+ER  - 
