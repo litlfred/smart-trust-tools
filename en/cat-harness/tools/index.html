@@ -577,33 +577,33 @@
   them: those are versioned in their own URLs already.
 -->
 <!-- The harness icon row's own style, which railed pages load without docs-ui.css (beans `lhvt`, `9rq1`). -->
-<link rel="stylesheet" href="/smart-trust-tools/assets/css/navbar-row.css?v=1792601841">
-<link rel="stylesheet" href="/smart-trust-tools/assets/css/docs-ui.css?v=1792601841">
+<link rel="stylesheet" href="/smart-trust-tools/assets/css/navbar-row.css?v=1792663812">
+<link rel="stylesheet" href="/smart-trust-tools/assets/css/docs-ui.css?v=1792663812">
 <!-- Narrow viewports: wide content scrolls in its own box, never the page
      (bean `2r2n`). The standalone viewers inline the same file through
      `withViewerNav`, so both kinds of page read one set of rules. -->
-<link rel="stylesheet" href="/smart-trust-tools/assets/css/narrow-viewport.css?v=1792601841">
+<link rel="stylesheet" href="/smart-trust-tools/assets/css/narrow-viewport.css?v=1792663812">
 
 <!--
   The work-plan dashboard's styles, split from docs-ui.css so that
   `state-visualizer.ts` can inline exactly these bytes into the generated
   `<base>/<stub>/state-visualizer/` pages. One rule, two surfaces.
 -->
-<link rel="stylesheet" href="/smart-trust-tools/assets/css/work-plan.css?v=1792601841">
+<link rel="stylesheet" href="/smart-trust-tools/assets/css/work-plan.css?v=1792663812">
 <!-- Sticky themes. GENERATED from the theme nodes in `schemas/themes.ts` by
      `bun run cat themes:css`; `themes:css:check` fails the build when it is stale.
      Loaded AFTER docs-ui.css deliberately: it supplies the `--fa-sticky-*`
      roles that docs-ui.css consumes, and a custom property has to be set on a
      matching element before the rule reading it takes effect. -->
-<link rel="stylesheet" href="/smart-trust-tools/assets/css/themes.css?v=1792601841">
+<link rel="stylesheet" href="/smart-trust-tools/assets/css/themes.css?v=1792663812">
 <!-- UML overview colours: one class per graph typology, set on the Mermaid nodes
      that `scripts/gen-uml-overview.ts` writes into docs/uml/overview/. -->
-<link rel="stylesheet" href="/smart-trust-tools/assets/css/uml.css?v=1792601841">
+<link rel="stylesheet" href="/smart-trust-tools/assets/css/uml.css?v=1792663812">
 <!-- Kind avatars. GENERATED from `schemas/avatars.ts` by `bun run cat avatars:css`;
      `avatars:css:check` fails the build when it is stale. One stylesheet
      rather than 68 assets: the glyph is a mask and the colour is a property,
      so a scheme swap is a custom property and the trash state is a selector. -->
-<link rel="stylesheet" href="/smart-trust-tools/assets/css/avatars.css?v=1792601841">
+<link rel="stylesheet" href="/smart-trust-tools/assets/css/avatars.css?v=1792663812">
 
 <!--
   The kinds THIS INSTANCE DECLARES, for the avatar fan.
@@ -624,12 +624,12 @@
 <!-- BEFORE docs-ui.js and work-plan.js: both read window.faRender. -->
 <script src="/smart-trust-tools/assets/js/kg-render.js" defer></script>
 <!-- BEFORE docs-ui.js, which calls it: the one drawing of the harness icon row (beans `lhvt`, `9rq1`). -->
-<script src="/smart-trust-tools/assets/js/navbar-row.js?v=1792601841" defer></script>
-<script src="/smart-trust-tools/assets/js/docs-ui.js?v=1792601841" defer></script>
+<script src="/smart-trust-tools/assets/js/navbar-row.js?v=1792663812" defer></script>
+<script src="/smart-trust-tools/assets/js/docs-ui.js?v=1792663812" defer></script>
 <!-- The edit, source and feedback links of every page, from the platform's one
   recipe (cat-harness-tools/src/core/edit-links.ts, bean v433): links carry their
   facts and this builds the hrefs. -->
-<script src="/smart-trust-tools/assets/js/edit-links.js?v=1792601841" defer></script>
+<script src="/smart-trust-tools/assets/js/edit-links.js?v=1792663812" defer></script>
 
 <!--
   The work-plan dashboard. SELF-MOUNTING on any page carrying
@@ -1574,7 +1574,7 @@ the graph cannot locate.</p>
     </tr>
     <tr>
       <td><a id="hcert-rust"></a><a href="#hcert-rust"><code class="language-plaintext highlighter-rouge">hcert-rust</code></a><br />HCERT library (Rust, native and WebAssembly)</td>
-      <td>The Rust implementation of the HCERT pipeline: Base45, ZLIB, deterministic CBOR, COSE_Sign1 ES256/PS256 (RustCrypto p256, rsa, sha2), CWT, the DVCMin payload, the trust store (PEM, DER, GDHCN DID trustlist v2, trust domains), the section 11 verifier and two-phase issuance. It builds natively and for wasm32-unknown-unknown as a module with no imports; js/hcert.mjs loads it in a browser or Node and signs with WebCrypto, and a TEST ONLY builder makes a self-signed DSC around a key pair the page generates. Every crate is pinned in Cargo.lock (DEPENDENCIES.md).</td>
+      <td>The Rust implementation of the HCERT pipeline: Base45, ZLIB, deterministic CBOR, COSE_Sign1 ES256/PS256 (RustCrypto p256, rsa, sha2), CWT, the DVCMin payload, the trust store (PEM, DER, GDHCN DID trustlist v2, trust domains), the section 11 verifier, two-phase issuance and Verifiable Health Links (payload, vhlink:/, the ITI-YY5 manifest, JWE dir/A256GCM with aes-gcm, the RFC 9421 signature base). It builds natively; as the WebAssembly component of the <code class="language-plaintext highlighter-rouge">hcert</code> world in api/wit (feature component, wit-bindgen; build-component.sh componentises and transpiles it with the pinned jco into an ES module for browsers and Node, whose only import, wasi:random, maps to crypto.getRandomValues); and as an import-free module with a JSON call surface for the live demos (js/hcert.mjs, with a TEST ONLY builder of self-signed DSCs). Every crate is pinned in Cargo.lock (DEPENDENCIES.md).</td>
       <td><span class="tg-tag tg-shell">shell</span></td>
       <td><code class="language-plaintext highlighter-rouge">hcert-assemble-payload</code><br /><code class="language-plaintext highlighter-rouge">hcert-build-cwt</code><br /><code class="language-plaintext highlighter-rouge">hcert-compress</code><br /><code class="language-plaintext highlighter-rouge">hcert-conformance-testing</code><br /><code class="language-plaintext highlighter-rouge">hcert-encode-base45</code><br /><code class="language-plaintext highlighter-rouge">hcert-encode-cbor</code><br /><code class="language-plaintext highlighter-rouge">hcert-prefix-context</code><br /><code class="language-plaintext highlighter-rouge">hcert-select-payload</code><br /><code class="language-plaintext highlighter-rouge">hcert-sign-cose</code><br /><code class="language-plaintext highlighter-rouge">hcert-trust-list</code><br /><code class="language-plaintext highlighter-rouge">hcert-verify</code></td>
       <td>1 in / 1 out</td>

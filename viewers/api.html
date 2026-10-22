@@ -27,7 +27,7 @@
   <section class="section">
     <h2>Worlds: the WebAssembly components the Rust build ships</h2>
     <div class="table-wrap"><table><thead><tr><th>World</th><th>Imports (host provides)</th><th>Exports</th></tr></thead>
-    <tbody><tr><td><code>hcert-codec</code></td><td>—</td><td><span class="chip">types</span> <span class="chip">codec</span> <span class="chip">cose</span></td></tr><tr><td><code>hcert-verifier</code></td><td>—</td><td><span class="chip">types</span> <span class="chip">codec</span> <span class="chip">cose</span> <span class="chip">subclaims</span> <span class="chip">dvc</span> <span class="chip">vhl</span> <span class="chip">payloads</span> <span class="chip">trust</span> <span class="chip">verifier</span></td></tr><tr><td><code>hcert-issuer</code></td><td>—</td><td><span class="chip">types</span> <span class="chip">codec</span> <span class="chip">cose</span> <span class="chip">subclaims</span> <span class="chip">dvc</span> <span class="chip">vhl</span> <span class="chip">payloads</span> <span class="chip">issuer</span></td></tr><tr><td><code>hcert</code></td><td>—</td><td>includes <code>hcert-verifier</code>, <code>hcert-issuer</code></td></tr></tbody></table></div>
+    <tbody><tr><td><code>hcert-codec</code></td><td>—</td><td><span class="chip">types</span> <span class="chip">codec</span> <span class="chip">cose</span></td></tr><tr><td><code>hcert-verifier</code></td><td><span class="chip">wasi</span></td><td><span class="chip">types</span> <span class="chip">codec</span> <span class="chip">cose</span> <span class="chip">subclaims</span> <span class="chip">dvc</span> <span class="chip">vhl</span> <span class="chip">payloads</span> <span class="chip">trust</span> <span class="chip">verifier</span></td></tr><tr><td><code>hcert-issuer</code></td><td><span class="chip">wasi</span></td><td><span class="chip">types</span> <span class="chip">codec</span> <span class="chip">cose</span> <span class="chip">subclaims</span> <span class="chip">dvc</span> <span class="chip">vhl</span> <span class="chip">payloads</span> <span class="chip">issuer</span></td></tr><tr><td><code>hcert</code></td><td>—</td><td>includes <code>hcert-verifier</code>, <code>hcert-issuer</code></td></tr></tbody></table></div>
   </section>
   <section class="section"><h2>Files</h2><ul class="small"><li><a href="#file-types"><code>types.wit</code></a> <span class="muted small">types</span></li><li><a href="#file-codec"><code>codec.wit</code></a> <span class="muted small">codec</span></li><li><a href="#file-cose"><code>cose.wit</code></a> <span class="muted small">cose</span></li><li><a href="#file-payload"><code>payload.wit</code></a> <span class="muted small">subclaims, dvc, payloads</span></li><li><a href="#file-trust"><code>trust.wit</code></a> <span class="muted small">trust</span></li><li><a href="#file-pipeline"><code>pipeline.wit</code></a> <span class="muted small">issuer, verifier</span></li><li><a href="#file-worlds"><code>worlds.wit</code></a> <span class="muted small">hcert-codec, hcert-verifier, hcert-issuer, hcert</span></li><li><a href="#file-vhl"><code>vhl.wit</code></a> <span class="muted small">vhl</span></li></ul></section>
   <section class="section" id="file-types"><div class="section-head"><h2><code>types.wit</code></h2><a class="small" href="https://github.com/litlfred/smart-trust-tools/blob/main/api/wit/types.wit">source</a></div><pre class="wit"><code><span class="tok-key">package</span> who:smart-trust@0.1.0;
@@ -499,8 +499,11 @@
     <span class="tok-key">export</span> cose;
 }
 
-<span class="tok-comment">/// Verifier: what a scanning app or border system embeds.</span>
+<span class="tok-comment">/// Verifier: what a scanning app or border system embeds. The host supplies</span>
+<span class="tok-comment">/// secure random bytes (wasi:random), which VHL keys and JWE IVs need; the</span>
+<span class="tok-comment">/// verifier itself draws none. [<a href="explorer.html#STT-VHL-004">STT-VHL-004</a>, <a href="explorer.html#STT-VHL-007">STT-VHL-007</a>]</span>
 <span class="tok-key">world</span> <span class="tok-name" id="wit-hcert-verifier">hcert-verifier</span> {
+    <span class="tok-key">import</span> wasi:random/random@0.2.6;
     <span class="tok-key">export</span> types;
     <span class="tok-key">export</span> codec;
     <span class="tok-key">export</span> cose;
@@ -512,8 +515,10 @@
     <span class="tok-key">export</span> verifier;
 }
 
-<span class="tok-comment">/// Issuer: what a clinic or national issuance service embeds.</span>
+<span class="tok-comment">/// Issuer: what a clinic or national issuance service embeds. Randomness</span>
+<span class="tok-comment">/// as for the verifier; signing stays two-phase, so no key enters.</span>
 <span class="tok-key">world</span> <span class="tok-name" id="wit-hcert-issuer">hcert-issuer</span> {
+    <span class="tok-key">import</span> wasi:random/random@0.2.6;
     <span class="tok-key">export</span> types;
     <span class="tok-key">export</span> codec;
     <span class="tok-key">export</span> cose;
