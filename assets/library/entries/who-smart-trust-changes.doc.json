@@ -272,11 +272,11 @@
       "pageEnd": null,
       "labelStart": null,
       "labelEnd": null,
-      "words": 49,
+      "words": 89,
       "summary": null,
       "keywords": [],
-      "extract": "QR Code Generation page added, with step-by-step HCERT encoding, signing and decoding instructions and use-case driven selection of the payload logical model (DVC, VHL, DDCC, ICVP) Worked DVC example and reference generation script added, covering a newborn birth-dose certificate issued by GDHCN test participant XXA",
-      "extractCut": false
+      "extract": "QR Code Generation page added, with step-by-step HCERT encoding, signing and decoding instructions, worked through with a DVC payload Worked DVC example added, covering a newborn birth-dose certificate issued by GDHCN DEV participant XXR and signed with a key onboarded to the DEV trust network, using WHO PreQual product identifiers CWT Payload logical model updated to allow more than one health certificate under the",
+      "extractCut": true
     }
   ],
   "checks": {},
