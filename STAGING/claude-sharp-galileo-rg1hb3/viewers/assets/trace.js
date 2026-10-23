@@ -6,7 +6,7 @@
   function chipLinks(items, cls) {
     if (!items.length) return '<span class="gap">—</span>';
     return '<div class="chips">' + items.map(function (x) {
-      var n = x.node, label = n.kind === "api" && n.wit ? n.wit : n.label;
+      var n = x.node, label = n.kind === "api" && n.qname ? n.qname : n.label;
       if (n.kind === "test") label = "test: " + n.label;
       if (n.kind === "skill") label = n.label.replace(/^hcert-/, "");
       return '<a class="chip ' + (cls || "") + '" href="explorer.html#' + esc(n.id) + '" title="' + esc(n.title) + '">' + esc(label) + "</a>";
@@ -18,7 +18,7 @@
     var verified = S.related(G, n.id, "verifies", "in");
     return {
       n: n, satisfies: out("satisfies"), steps: out("realizedBy"), api: out("constrainsApi"),
-      verified: verified, issues: out("affectedBy"), sources: out("derivedFrom"),
+      verified: verified, issues: out("affectedBy"), sources: out("references"),
       tested: verified.length > 0
     };
   }
