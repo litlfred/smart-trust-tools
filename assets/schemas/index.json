@@ -81218,7 +81218,7 @@
       "subclasses": [],
       "typologies": [],
       "page": "en/cat-harness/cat-harness-declaration/",
-      "note": "cat-harness/schemas/cat-harness.ts#CatHarnessDeclarationKind — an export this reader does not model as a declaration"
+      "note": "../../../tmp/claude-0/-home-user/0e7bb212-4103-5735-9f28-65efa5939c3e/scratchpad/wt-graph/cat-harness/schemas/cat-harness.ts#CatHarnessDeclarationKind — an export this reader does not model as a declaration"
     },
     {
       "id": "cat-harness-payload/v1",
