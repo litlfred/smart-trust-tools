@@ -3981,6 +3981,30 @@
     }
   ],
   "refScan": {
-    "unreadable": []
+    "unreadable": [
+      "toolchain/node/node_modules/@tybys/wasm-util/dist/tsdoc-metadata.json",
+      "toolchain/node/node_modules/available-typed-arrays/tsconfig.json",
+      "toolchain/node/node_modules/call-bind-apply-helpers/tsconfig.json",
+      "toolchain/node/node_modules/call-bound/tsconfig.json",
+      "toolchain/node/node_modules/define-data-property/tsconfig.json",
+      "toolchain/node/node_modules/dunder-proto/tsconfig.json",
+      "toolchain/node/node_modules/es-define-property/tsconfig.json",
+      "toolchain/node/node_modules/es-errors/tsconfig.json",
+      "toolchain/node/node_modules/es-object-atoms/tsconfig.json",
+      "toolchain/node/node_modules/es-set-tostringtag/tsconfig.json",
+      "toolchain/node/node_modules/for-each/tsconfig.json",
+      "toolchain/node/node_modules/get-proto/tsconfig.json",
+      "toolchain/node/node_modules/gopd/tsconfig.json",
+      "toolchain/node/node_modules/has-symbols/tsconfig.json",
+      "toolchain/node/node_modules/has-tostringtag/tsconfig.json",
+      "toolchain/node/node_modules/hasown/tsconfig.json",
+      "toolchain/node/node_modules/is-typed-array/tsconfig.json",
+      "toolchain/node/node_modules/math-intrinsics/tsconfig.json",
+      "toolchain/node/node_modules/possible-typed-array-names/tsconfig.json",
+      "toolchain/node/node_modules/set-function-length/tsconfig.json",
+      "toolchain/node/node_modules/typed-array-buffer/tsconfig.json",
+      "toolchain/node/node_modules/typedoc/tsdoc.json",
+      "toolchain/node/node_modules/which-typed-array/tsconfig.json"
+    ]
   }
 }

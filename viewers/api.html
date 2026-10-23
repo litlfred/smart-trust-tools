@@ -11,8 +11,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&family=JetBrains+Mono:wght@400;600&family=Public+Sans:wght@400;550;650;700&display=swap">
 <link rel="stylesheet" href="assets/site.css">
-<link rel="stylesheet" href="../assets/css/navbar.css"><script src="../assets/navbar/rail-21plfny9x1u.js" defer></script><script src="../assets/js/navbar.js" defer></script><script src="../assets/navbar/row-irn935tcg5.js" defer></script><link rel="stylesheet" href="../assets/css/navbar-row.css"><script src="../assets/js/navbar-row.js" defer></script><script src="../assets/js/vendor/lunr.min.js" defer></script><script src="../assets/js/just-the-docs.js" defer></script><link rel="stylesheet" href="../assets/page-layout.css" data-fa-page-layout><script src="../assets/page-layout.js" defer data-fa-page-layout></script><meta name="fa-platform-base" content="https://litlfred.github.io/folio-assistant" data-fa-platform-ui><link rel="stylesheet" href="../assets/css/docs-ui.css" data-fa-platform-ui><script src="../assets/js/docs-ui.js" defer data-fa-platform-ui></script><meta name="fa-pinned-data" content=".."></head>
-<body><script type="application/json" id="fa-navbar-row" data-fa-root=".." data-fa-row-src="row-irn935tcg5"></script><script type="application/json" id="fa-rail" data-fa-root="https://litlfred.github.io/folio-assistant" data-fa-to-root="..">{"data":"rail-21plfny9x1u","here":"/viewers/api.html"}</script><nav class="fa-nav" aria-label="folio-assistant" data-fa-rail="pending"><a href="../">SMART Trust HCERT library tools</a></nav><div id="main-header" class="main-header fa-site-bar fa-page-bar"><a class="fa-page-bar-home" href="../">SMART Trust HCERT library tools</a><div class="search" role="search"><div class="search-input-wrap"><input type="text" id="search-input" class="search-input" tabindex="0" placeholder="Search this site" autocomplete="off"><label for="search-input" class="search-label"><span class="sr-only">Search this site</span></label></div><div id="search-results" class="search-results"></div></div><span class="fa-page-bar-locale" data-fa-slot="locale"></span></div>
+<link rel="stylesheet" href="../assets/css/navbar.css"><script src="../assets/navbar/rail-1h6871t3mwn.js" defer></script><script src="../assets/js/navbar.js" defer></script><script src="../assets/navbar/row-irn935tcg5.js" defer></script><link rel="stylesheet" href="../assets/css/navbar-row.css"><script src="../assets/js/navbar-row.js" defer></script><script src="../assets/js/vendor/lunr.min.js" defer></script><script src="../assets/js/just-the-docs.js" defer></script><link rel="stylesheet" href="../assets/page-layout.css" data-fa-page-layout><script src="../assets/page-layout.js" defer data-fa-page-layout></script><meta name="fa-platform-base" content="https://litlfred.github.io/folio-assistant" data-fa-platform-ui><link rel="stylesheet" href="../assets/css/docs-ui.css" data-fa-platform-ui><script src="../assets/js/docs-ui.js" defer data-fa-platform-ui></script><meta name="fa-pinned-data" content=".."></head>
+<body><script type="application/json" id="fa-navbar-row" data-fa-root=".." data-fa-row-src="row-irn935tcg5"></script><script type="application/json" id="fa-rail" data-fa-root="https://litlfred.github.io/folio-assistant" data-fa-to-root="..">{"data":"rail-1h6871t3mwn","here":"/viewers/api.html"}</script><nav class="fa-nav" aria-label="folio-assistant" data-fa-rail="pending"><a href="../">SMART Trust HCERT library tools</a></nav><div id="main-header" class="main-header fa-site-bar fa-page-bar"><a class="fa-page-bar-home" href="../">SMART Trust HCERT library tools</a><div class="search" role="search"><div class="search-input-wrap"><input type="text" id="search-input" class="search-input" tabindex="0" placeholder="Search this site" autocomplete="off"><label for="search-input" class="search-label"><span class="sr-only">Search this site</span></label></div><div id="search-results" class="search-results"></div></div><span class="fa-page-bar-locale" data-fa-slot="locale"></span></div>
 <header class="topbar"><div class="topbar-inner"><a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span>SMART Trust Tools</a><nav class="nav" aria-label="Viewers"><a href="index.html">Overview</a><a href="explorer.html">Graph explorer</a><a href="trace.html">Traceability</a><a href="requirements.html">Requirements</a><a href="api.html" aria-current="page">API (WIT)</a><a href="api/typedoc/index.html">API reference (TS)</a><a href="kotlin.html">Kotlin API</a><a href="models.html">Wire &amp; payload models</a><a href="kinds.html">Node kinds</a></nav></div></header>
 
 <main class="page">
@@ -320,6 +320,9 @@
         <span class="tok-comment">/// A DID document names a trust domain the loaded GDHCN Trust Domain</span>
         <span class="tok-comment">/// code system does not hold. [<a href="explorer.html#STT-SEL-006">STT-SEL-006</a>]</span>
         unknown-trust-domain(string),
+        <span class="tok-comment">/// A DID document&#x27;s proof does not verify, or the document is not</span>
+        <span class="tok-comment">/// one the proof profile models. [<a href="explorer.html#STT-TRU-006">STT-TRU-006</a>]</span>
+        proof-invalid(string),
     }
 
     <span class="tok-key">record</span> <span class="tok-name" id="wit-trusted-dsc">trusted-dsc</span> {
@@ -345,6 +348,11 @@
         <span class="tok-comment">/// A GDHCN DID trustlist v2 document, embedded or reference</span>
         <span class="tok-comment">/// variant. [<a href="explorer.html#STT-TRU-002">STT-TRU-002</a>]</span>
         <span class="tok-name">add-did-document</span>: <span class="tok-key">func</span>(json: string) -&gt; result&lt;u32, trust-error&gt;;
+        <span class="tok-comment">/// Same, but only after the document&#x27;s proof verifies against</span>
+        <span class="tok-comment">/// `signer`, the did:web document of the proof&#x27;s verificationMethod,</span>
+        <span class="tok-comment">/// which the host fetched; on any failure nothing is added.</span>
+        <span class="tok-comment">/// [<a href="explorer.html#STT-TRU-006">STT-TRU-006</a>]</span>
+        <span class="tok-name">add-verified-did-document</span>: <span class="tok-key">func</span>(json: string, signer: string) -&gt; result&lt;u32, trust-error&gt;;
         <span class="tok-comment">/// The trust domains a DID document may name, read from a GDHCN</span>
         <span class="tok-comment">/// Trust Domain CodeSystem (FHIR JSON) the host fetched. Data, not</span>
         <span class="tok-comment">/// an enum: once loaded, a DID document naming another domain is</span>
@@ -359,6 +367,14 @@
         <span class="tok-name">size</span>: <span class="tok-key">func</span>() -&gt; u32;
         <span class="tok-name">clear</span>: <span class="tok-key">func</span>();
     }
+
+    <span class="tok-comment">/// Verify a GDHCN trust list DID document&#x27;s JsonWebSignature2020 proof,</span>
+    <span class="tok-comment">/// as the TNG key distribution service makes it: URDNA2015 over the</span>
+    <span class="tok-comment">/// document and the proof options with pinned contexts, a detached</span>
+    <span class="tok-comment">/// b64:false ES256 JWS whose signature may be DER or r||s. `signer` is</span>
+    <span class="tok-comment">/// the did:web document of the proof&#x27;s verificationMethod. Fails closed</span>
+    <span class="tok-comment">/// on any term the profile does not model. [<a href="explorer.html#STT-TRU-006">STT-TRU-006</a>]</span>
+    <span class="tok-name">verify-did-proof</span>: <span class="tok-key">func</span>(document: string, signer: string) -&gt; result&lt;_, trust-error&gt;;
 }
 </code></pre></section><section class="section" id="file-pipeline"><div class="section-head"><h2><code>pipeline.wit</code></h2><a class="small" href="https://github.com/litlfred/smart-trust-tools/blob/main/api/wit/pipeline.wit">source</a></div><pre class="wit"><code><span class="tok-key">package</span> who:smart-trust@0.1.0;
 
