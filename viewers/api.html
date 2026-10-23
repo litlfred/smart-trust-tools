@@ -380,7 +380,9 @@
     }
 
     <span class="tok-key">record</span> <span class="tok-name" id="wit-issue-request">issue-request</span> {
-        payload: payload,
+        <span class="tok-comment">/// One or more payloads, each under its own subclaim in the hcert</span>
+        <span class="tok-comment">/// claim, in subclaim-key order on the wire. [<a href="explorer.html#STT-SEL-004">STT-SEL-004</a>]</span>
+        payloads: list&lt;payload&gt;,
         <span class="tok-comment">/// CWT iss, alpha-2. [<a href="explorer.html#STT-CWT-005">STT-CWT-005</a>]</span>
         iss: option&lt;string&gt;,
         validity: validity,
@@ -393,6 +395,10 @@
 
     <span class="tok-key">variant</span> <span class="tok-name" id="wit-issue-error">issue-error</span> {
         payload-invalid(list&lt;validation-issue&gt;),
+        <span class="tok-comment">/// The request carries no payload.</span>
+        no-payload,
+        <span class="tok-comment">/// Two payloads map to the same subclaim. [<a href="explorer.html#STT-SEL-004">STT-SEL-004</a>]</span>
+        duplicate-subclaim(s32),
         development-subclaim-not-allowed(s32),
         unknown-subclaim(s32),
         <span class="tok-comment">/// iat before or exp after the DSC validity. [<a href="explorer.html#STT-CWT-004">STT-CWT-004</a>]</span>
@@ -424,9 +430,10 @@
 }
 
 <span class="tok-comment">/// Verification (QR Code Generation section 11): the steps in STT-VER-001</span>
-<span class="tok-comment">/// order, each fixed by the IG rather than a policy switch. Exactly one hcert</span>
-<span class="tok-comment">/// entry [<a href="explorer.html#STT-SEL-004">STT-SEL-004</a>]; trust-list presence is the DSC validity check</span>
-<span class="tok-comment">/// [<a href="explorer.html#STT-VER-006">STT-VER-006</a>]; EKU is checked against the certificate type [<a href="explorer.html#STT-VER-004">STT-VER-004</a>].</span>
+<span class="tok-comment">/// order, each fixed by the IG rather than a policy switch. The hcert claim</span>
+<span class="tok-comment">/// may carry several entries (HCERT 3.2.7) [<a href="explorer.html#STT-SEL-004">STT-SEL-004</a>]; trust-list presence</span>
+<span class="tok-comment">/// is the DSC validity check [<a href="explorer.html#STT-VER-006">STT-VER-006</a>]; EKU is checked against each</span>
+<span class="tok-comment">/// entry&#x27;s certificate type [<a href="explorer.html#STT-VER-004">STT-VER-004</a>].</span>
 <span class="tok-key">interface</span> <span class="tok-name" id="wit-verifier">verifier</span> {
     <span class="tok-key">use</span> types.{kid, numeric-date, decode-limits, cbor-bytes, step, failure-reason, diagnostic};
     <span class="tok-key">use</span> payloads.{payload};
@@ -436,14 +443,32 @@
     <span class="tok-key">record</span> <span class="tok-name" id="wit-verifier-options">verifier-options</span> {
         limits: decode-limits,
         clock-skew-seconds: u32,
+        <span class="tok-comment">/// Refuse an hcert claim with more entries than this</span>
+        <span class="tok-comment">/// (multiple-subclaims): a deployment&#x27;s strict profile. None: any</span>
+        <span class="tok-comment">/// number. [<a href="explorer.html#STT-SEL-004">STT-SEL-004</a>]</span>
+        max-payloads: option&lt;u32&gt;,
+    }
+
+    <span class="tok-comment">/// One entry of the hcert claim. [<a href="explorer.html#STT-SEL-004">STT-SEL-004</a>]</span>
+    <span class="tok-key">record</span> <span class="tok-name" id="wit-hcert-entry">hcert-entry</span> {
+        subclaim: s32,
+        <span class="tok-comment">/// Raw CBOR for a subclaim the registry does not know. [<a href="explorer.html#STT-SEL-002">STT-SEL-002</a>]</span>
+        payload: payload,
+        <span class="tok-comment">/// False when the DSC&#x27;s EKU does not permit this entry&#x27;s</span>
+        <span class="tok-comment">/// certificate type; the entry is returned, marked, and a</span>
+        <span class="tok-comment">/// diagnostic says so. [<a href="explorer.html#STT-VER-004">STT-VER-004</a>]</span>
+        key-usage-authorised: bool,
     }
 
     <span class="tok-key">record</span> <span class="tok-name" id="wit-verified-hcert">verified-hcert</span> {
         iss: option&lt;string&gt;,
         iat: numeric-date,
         exp: numeric-date,
-        subclaim: s32,
-        payload: payload,
+        <span class="tok-comment">/// The valid entries, in subclaim-key order. An entry whose payload</span>
+        <span class="tok-comment">/// fails its model check is left out and reported as a diagnostic;</span>
+        <span class="tok-comment">/// verification fails at payload only when none is left, and at</span>
+        <span class="tok-comment">/// key-usage only when no entry is authorised. [<a href="explorer.html#STT-SEL-004">STT-SEL-004</a>]</span>
+        entries: list&lt;hcert-entry&gt;,
         <span class="tok-comment">/// The DSC that verified the signature.</span>
         dsc: trusted-dsc,
         <span class="tok-comment">/// Unknown CWT claims, as (encoded key, encoded value).</span>
@@ -469,14 +494,20 @@
     <span class="tok-comment">/// Decoded, NOT verified: no trust lookup, no signature check. For</span>
     <span class="tok-comment">/// display and triage where verification is impossible (an offline</span>
     <span class="tok-comment">/// household visit, journey J2); never a basis for trust. [<a href="explorer.html#STT-VER-011">STT-VER-011</a>]</span>
+    <span class="tok-comment">/// One entry of an unverified hcert claim.</span>
+    <span class="tok-key">record</span> <span class="tok-name" id="wit-unverified-entry">unverified-entry</span> {
+        subclaim: s32,
+        <span class="tok-comment">/// The payload, when it decoded and met its model.</span>
+        payload: option&lt;payload&gt;,
+    }
+
     <span class="tok-key">record</span> <span class="tok-name" id="wit-unverified-hcert">unverified-hcert</span> {
         kid: option&lt;kid&gt;,
         iss: option&lt;string&gt;,
         iat: option&lt;numeric-date&gt;,
         exp: option&lt;numeric-date&gt;,
-        subclaim: option&lt;s32&gt;,
-        <span class="tok-comment">/// The payload, when it decoded.</span>
-        payload: option&lt;payload&gt;,
+        <span class="tok-comment">/// Every entry of the hcert claim, in subclaim-key order.</span>
+        entries: list&lt;unverified-entry&gt;,
         diagnostics: list&lt;diagnostic&gt;,
     }
 

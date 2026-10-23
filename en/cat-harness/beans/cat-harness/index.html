@@ -561,33 +561,33 @@
   them: those are versioned in their own URLs already.
 -->
 <!-- The harness icon row's own style, which railed pages load without docs-ui.css (beans `lhvt`, `9rq1`). -->
-<link rel="stylesheet" href="/smart-trust-tools/assets/css/navbar-row.css?v=1792690481">
-<link rel="stylesheet" href="/smart-trust-tools/assets/css/docs-ui.css?v=1792690481">
+<link rel="stylesheet" href="/smart-trust-tools/assets/css/navbar-row.css?v=1792741217">
+<link rel="stylesheet" href="/smart-trust-tools/assets/css/docs-ui.css?v=1792741217">
 <!-- Narrow viewports: wide content scrolls in its own box, never the page
      (bean `2r2n`). The standalone viewers inline the same file through
      `withViewerNav`, so both kinds of page read one set of rules. -->
-<link rel="stylesheet" href="/smart-trust-tools/assets/css/narrow-viewport.css?v=1792690481">
+<link rel="stylesheet" href="/smart-trust-tools/assets/css/narrow-viewport.css?v=1792741217">
 
 <!--
   The work-plan dashboard's styles, split from docs-ui.css so that
   `state-visualizer.ts` can inline exactly these bytes into the generated
   `<base>/<stub>/state-visualizer/` pages. One rule, two surfaces.
 -->
-<link rel="stylesheet" href="/smart-trust-tools/assets/css/work-plan.css?v=1792690481">
+<link rel="stylesheet" href="/smart-trust-tools/assets/css/work-plan.css?v=1792741217">
 <!-- Sticky themes. GENERATED from the theme nodes in `schemas/themes.ts` by
      `bun run cat themes:css`; `themes:css:check` fails the build when it is stale.
      Loaded AFTER docs-ui.css deliberately: it supplies the `--fa-sticky-*`
      roles that docs-ui.css consumes, and a custom property has to be set on a
      matching element before the rule reading it takes effect. -->
-<link rel="stylesheet" href="/smart-trust-tools/assets/css/themes.css?v=1792690481">
+<link rel="stylesheet" href="/smart-trust-tools/assets/css/themes.css?v=1792741217">
 <!-- UML overview colours: one class per graph typology, set on the Mermaid nodes
      that `scripts/gen-uml-overview.ts` writes into docs/uml/overview/. -->
-<link rel="stylesheet" href="/smart-trust-tools/assets/css/uml.css?v=1792690481">
+<link rel="stylesheet" href="/smart-trust-tools/assets/css/uml.css?v=1792741217">
 <!-- Kind avatars. GENERATED from `schemas/avatars.ts` by `bun run cat avatars:css`;
      `avatars:css:check` fails the build when it is stale. One stylesheet
      rather than 68 assets: the glyph is a mask and the colour is a property,
      so a scheme swap is a custom property and the trash state is a selector. -->
-<link rel="stylesheet" href="/smart-trust-tools/assets/css/avatars.css?v=1792690481">
+<link rel="stylesheet" href="/smart-trust-tools/assets/css/avatars.css?v=1792741217">
 
 <!--
   The kinds THIS INSTANCE DECLARES, for the avatar fan.
@@ -608,12 +608,12 @@
 <!-- BEFORE docs-ui.js and work-plan.js: both read window.faRender. -->
 <script src="/smart-trust-tools/assets/js/kg-render.js" defer></script>
 <!-- BEFORE docs-ui.js, which calls it: the one drawing of the harness icon row (beans `lhvt`, `9rq1`). -->
-<script src="/smart-trust-tools/assets/js/navbar-row.js?v=1792690481" defer></script>
-<script src="/smart-trust-tools/assets/js/docs-ui.js?v=1792690481" defer></script>
+<script src="/smart-trust-tools/assets/js/navbar-row.js?v=1792741217" defer></script>
+<script src="/smart-trust-tools/assets/js/docs-ui.js?v=1792741217" defer></script>
 <!-- The edit, source and feedback links of every page, from the platform's one
   recipe (cat-harness-tools/src/core/edit-links.ts, bean v433): links carry their
   facts and this builds the hrefs. -->
-<script src="/smart-trust-tools/assets/js/edit-links.js?v=1792690481" defer></script>
+<script src="/smart-trust-tools/assets/js/edit-links.js?v=1792741217" defer></script>
 
 <!--
   The work-plan dashboard. SELF-MOUNTING on any page carrying
@@ -833,11 +833,11 @@
 <h2 class="sv-h2">
   
   
-    <a href="#beans-cat-harness" class="anchor-heading" aria-labelledby="beans-cat-harness"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Open — 28 of 32 bean(s)
+    <a href="#beans-cat-harness" class="anchor-heading" aria-labelledby="beans-cat-harness"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Open — 30 of 33 bean(s)
   
   
 </h2>
-    <div class="table-wrapper"><table><thead><tr><th>id</th><th>title</th><th>status</th><th>type</th><th>priority</th></tr></thead><tbody><tr><td><code>smart-trust-tools-oi03</code></td><td>OI-03: EKU certificate type for non-DCC payloads is undefined</td><td>todo</td><td>bug</td><td>normal</td></tr><tr><td><code>smart-trust-tools-oi04</code></td><td>OI-04: Base45 reference points at an expired Internet-Draft</td><td>todo</td><td>bug</td><td>normal</td></tr><tr><td><code>smart-trust-tools-oi05</code></td><td>OI-05: CBOR reference RFC 7049 is obsoleted by RFC 8949</td><td>todo</td><td>bug</td><td>normal</td></tr><tr><td><code>smart-trust-tools-oi06</code></td><td>OI-06: Subclaim 5 is called VHL in one place and SHL in another</td><td>todo</td><td>bug</td><td>normal</td></tr><tr><td><code>smart-trust-tools-oi07</code></td><td>OI-07: iss is a string in the spec but a Coding in the logical model</td><td>todo</td><td>bug</td><td>normal</td></tr><tr><td><code>smart-trust-tools-oi08</code></td><td>OI-08: Logical model link in hcert_spec uses a different case</td><td>todo</td><td>bug</td><td>normal</td></tr><tr><td><code>smart-trust-tools-oi09</code></td><td>OI-09: DVC subclaim -6 is in the development range</td><td>todo</td><td>task</td><td>normal</td></tr><tr><td><code>smart-trust-tools-oi12</code></td><td>OI-12: Base64 variant of kid in the DID trustlist is unspecified</td><td>todo</td><td>bug</td><td>normal</td></tr><tr><td><code>smart-trust-tools-oi13</code></td><td>OI-13: Mapping between GDHCN participant codes (alpha-3) and iss (alpha-2)</td><td>todo</td><td>bug</td><td>normal</td></tr><tr><td><code>smart-trust-tools-oi14</code></td><td>OI-14: Package coordinates and licence for the libraries</td><td>todo</td><td>task</td><td>normal</td></tr><tr><td><code>smart-trust-tools-oi15</code></td><td>OI-15: Asynchronous crypto and I/O across the WIT boundary</td><td>todo</td><td>task</td><td>normal</td></tr><tr><td><code>smart-trust-tools-oi16</code></td><td>OI-16: WIT type-system limits</td><td>todo</td><td>task</td><td>normal</td></tr><tr><td><code>smart-trust-tools-oi17</code></td><td>OI-17: The example issues an abstract logical model</td><td>todo</td><td>bug</td><td>normal</td></tr><tr><td><code>smart-trust-tools-oi18</code></td><td>OI-18: Sex binding in DVCMin points at a CodeSystem, not a ValueSet</td><td>todo</td><td>bug</td><td>normal</td></tr><tr><td><code>smart-trust-tools-oi19</code></td><td>OI-19: Upstream home for the CDDL and JSON-LD artefacts</td><td>todo</td><td>bug</td><td>normal</td></tr><tr><td><code>smart-trust-tools-oi20</code></td><td>OI-20: CDDL validator deviations (cddl-rs / pycddl)</td><td>todo</td><td>task</td><td>normal</td></tr><tr><td><code>smart-trust-tools-oi21</code></td><td>OI-21: IHE ITI-YY3 puts a vhlink:/ string at HCERT key 5; ITI-YY4 reads an object</td><td>todo</td><td>bug</td><td>normal</td></tr><tr><td><code>smart-trust-tools-oi22</code></td><td>OI-22: IHE VHL examples break their own rules</td><td>todo</td><td>bug</td><td>normal</td></tr><tr><td><code>smart-trust-tools-oi23</code></td><td>OI-23: trust-phw Health Link payload types exp and v as strings and requires type</td><td>todo</td><td>bug</td><td>normal</td></tr><tr><td><code>smart-trust-tools-oi24</code></td><td>OI-24: IHE VHL leaves JWE alg/enc non-normative</td><td>todo</td><td>bug</td><td>normal</td></tr><tr><td><code>smart-trust-tools-oi25</code></td><td>OI-25: Manifest URL is List? in one place and List/_search? in another</td><td>todo</td><td>bug</td><td>normal</td></tr><tr><td><code>smart-trust-tools-oi26</code></td><td>OI-26: IHE's Content-Digest example is not RFC 9530 syntax</td><td>todo</td><td>bug</td><td>normal</td></tr><tr><td><code>smart-trust-tools-oi27</code></td><td>OI-27: No signed manifest in IHE VHL or SMART Health Links</td><td>todo</td><td>bug</td><td>normal</td></tr><tr><td><code>smart-trust-tools-oi28</code></td><td>OI-28: How a receiver's keyid, and a DID trust list entry, map to keys</td><td>todo</td><td>bug</td><td>normal</td></tr><tr><td><code>smart-trust-tools-oi29</code></td><td>OI-29: $generate-vhl sends the passcode in a GET query string</td><td>todo</td><td>bug</td><td>normal</td></tr><tr><td><code>smart-trust-tools-oi30</code></td><td>OI-30: smart-trust states two different licences</td><td>todo</td><td>bug</td><td>normal</td></tr><tr><td><code>smart-trust-tools-oi32</code></td><td>OI-32: Requirements no test verifies yet</td><td>todo</td><td>task</td><td>normal</td></tr><tr><td><code>smart-trust-tools-oi33</code></td><td>OI-33: WHO-ITB track data is not held as vectors</td><td>todo</td><td>task</td><td>normal</td></tr></tbody></table></div>
+    <div class="table-wrapper"><table><thead><tr><th>id</th><th>title</th><th>status</th><th>type</th><th>priority</th></tr></thead><tbody><tr><td><code>smart-trust-tools-oi02</code></td><td>OI-02: One payload per hcert, or several?</td><td>todo</td><td>bug</td><td>normal</td></tr><tr><td><code>smart-trust-tools-oi03</code></td><td>OI-03: EKU certificate type for non-DCC payloads is undefined</td><td>todo</td><td>bug</td><td>normal</td></tr><tr><td><code>smart-trust-tools-oi04</code></td><td>OI-04: Base45 reference points at an expired Internet-Draft</td><td>todo</td><td>bug</td><td>normal</td></tr><tr><td><code>smart-trust-tools-oi05</code></td><td>OI-05: CBOR reference RFC 7049 is obsoleted by RFC 8949</td><td>todo</td><td>bug</td><td>normal</td></tr><tr><td><code>smart-trust-tools-oi06</code></td><td>OI-06: Subclaim 5 is called VHL in one place and SHL in another</td><td>todo</td><td>bug</td><td>normal</td></tr><tr><td><code>smart-trust-tools-oi07</code></td><td>OI-07: iss is a string in the spec but a Coding in the logical model</td><td>todo</td><td>bug</td><td>normal</td></tr><tr><td><code>smart-trust-tools-oi08</code></td><td>OI-08: Logical model link in hcert_spec uses a different case</td><td>todo</td><td>bug</td><td>normal</td></tr><tr><td><code>smart-trust-tools-oi09</code></td><td>OI-09: DVC subclaim -6 is in the development range</td><td>todo</td><td>task</td><td>normal</td></tr><tr><td><code>smart-trust-tools-oi12</code></td><td>OI-12: Base64 variant of kid in the DID trustlist is unspecified</td><td>todo</td><td>bug</td><td>normal</td></tr><tr><td><code>smart-trust-tools-oi13</code></td><td>OI-13: Mapping between GDHCN participant codes (alpha-3) and iss (alpha-2)</td><td>todo</td><td>bug</td><td>normal</td></tr><tr><td><code>smart-trust-tools-oi14</code></td><td>OI-14: Package coordinates and licence for the libraries</td><td>todo</td><td>task</td><td>normal</td></tr><tr><td><code>smart-trust-tools-oi15</code></td><td>OI-15: Asynchronous crypto and I/O across the WIT boundary</td><td>todo</td><td>task</td><td>normal</td></tr><tr><td><code>smart-trust-tools-oi16</code></td><td>OI-16: WIT type-system limits</td><td>todo</td><td>task</td><td>normal</td></tr><tr><td><code>smart-trust-tools-oi17</code></td><td>OI-17: The example issues an abstract logical model</td><td>todo</td><td>bug</td><td>normal</td></tr><tr><td><code>smart-trust-tools-oi18</code></td><td>OI-18: Sex binding in DVCMin points at a CodeSystem, not a ValueSet</td><td>todo</td><td>bug</td><td>normal</td></tr><tr><td><code>smart-trust-tools-oi19</code></td><td>OI-19: Upstream home for the CDDL and JSON-LD artefacts</td><td>todo</td><td>bug</td><td>normal</td></tr><tr><td><code>smart-trust-tools-oi20</code></td><td>OI-20: CDDL validator deviations (cddl-rs / pycddl)</td><td>todo</td><td>task</td><td>normal</td></tr><tr><td><code>smart-trust-tools-oi21</code></td><td>OI-21: IHE ITI-YY3 puts a vhlink:/ string at HCERT key 5; ITI-YY4 reads an object</td><td>todo</td><td>bug</td><td>normal</td></tr><tr><td><code>smart-trust-tools-oi22</code></td><td>OI-22: IHE VHL examples break their own rules</td><td>todo</td><td>bug</td><td>normal</td></tr><tr><td><code>smart-trust-tools-oi23</code></td><td>OI-23: trust-phw Health Link payload types exp and v as strings and requires type</td><td>todo</td><td>bug</td><td>normal</td></tr><tr><td><code>smart-trust-tools-oi24</code></td><td>OI-24: IHE VHL leaves JWE alg/enc non-normative</td><td>todo</td><td>bug</td><td>normal</td></tr><tr><td><code>smart-trust-tools-oi25</code></td><td>OI-25: Manifest URL is List? in one place and List/_search? in another</td><td>todo</td><td>bug</td><td>normal</td></tr><tr><td><code>smart-trust-tools-oi26</code></td><td>OI-26: IHE's Content-Digest example is not RFC 9530 syntax</td><td>todo</td><td>bug</td><td>normal</td></tr><tr><td><code>smart-trust-tools-oi27</code></td><td>OI-27: No signed manifest in IHE VHL or SMART Health Links</td><td>todo</td><td>bug</td><td>normal</td></tr><tr><td><code>smart-trust-tools-oi28</code></td><td>OI-28: How a receiver's keyid, and a DID trust list entry, map to keys</td><td>todo</td><td>bug</td><td>normal</td></tr><tr><td><code>smart-trust-tools-oi29</code></td><td>OI-29: $generate-vhl sends the passcode in a GET query string</td><td>todo</td><td>bug</td><td>normal</td></tr><tr><td><code>smart-trust-tools-oi30</code></td><td>OI-30: smart-trust states two different licences</td><td>todo</td><td>bug</td><td>normal</td></tr><tr><td><code>smart-trust-tools-oi32</code></td><td>OI-32: Requirements no test verifies yet</td><td>todo</td><td>task</td><td>normal</td></tr><tr><td><code>smart-trust-tools-oi33</code></td><td>OI-33: WHO-ITB track data is not held as vectors</td><td>todo</td><td>task</td><td>normal</td></tr><tr><td><code>smart-trust-tools-oi34</code></td><td>OI-34: The DEV trust list DIDs name a different host from the guide</td><td>todo</td><td>bug</td><td>normal</td></tr></tbody></table></div>
 <h2 class="sv-h2" id="bean-notes">
   
   
