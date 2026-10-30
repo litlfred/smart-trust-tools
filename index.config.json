@@ -11,7 +11,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/fhir-harness",
-          "ref": "a46e9f017a22cb6ec319c7bb9951acac9f2ba273",
+          "ref": "5545d6b5f803f9b4e38b9d0d55f38da82e2f8c93",
           "overrides": {
             "fhir-harness": {
               "whole": true
@@ -20,9 +20,9 @@
           "trust": {
             "consent": {
               "by": "litlfred",
-              "on": "2026-10-20",
-              "ref": "a46e9f017a22cb6ec319c7bb9951acac9f2ba273",
-              "evidence": "Owner (litlfred), 2026-10-20, in the session that set up this repository: \"A, needs fhir-harness, main to root, branches STAGING\" (adopt cat-harness fully, need fhir-harness). The ref is the one litlfred/folio-assistant index.config.json pins at bb61e9b, adopted unchanged."
+              "on": "2026-10-30",
+              "ref": "5545d6b5f803f9b4e38b9d0d55f38da82e2f8c93",
+              "evidence": "Owner (litlfred), 2026-10-20, in the session that set up this repository: \"A, needs fhir-harness, main to root, branches STAGING\" (adopt cat-harness fully, need fhir-harness). The ref is the one litlfred/folio-assistant index.config.json pins at bb61e9b, adopted unchanged; main tip 5545d6b (IG pages #214, CI #217 #221, direction #224, schemas move #215). Window: litlfred 2026-10-30 11:13Z 'merge and repin window open for 4 horus', extended 16:37Z 'merge window +3 hrs' (to ~19:38Z)."
             }
           }
         }
@@ -33,7 +33,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/folio-assistant-core",
-          "ref": "651c1ead3608db36014a7a960cefa60ac7b9830d",
+          "ref": "be4e571d8dad29db098542ede6d0979c24c0ea13",
           "overrides": {
             "folio-assistant-core": {
               "whole": true
@@ -48,9 +48,9 @@
           "trust": {
             "consent": {
               "by": "litlfred",
-              "on": "2026-10-20",
-              "ref": "651c1ead3608db36014a7a960cefa60ac7b9830d",
-              "evidence": "Owner (litlfred), 2026-10-20, in the session that set up this repository: \"A, needs fhir-harness, main to root, branches STAGING\" (adopt cat-harness fully, need fhir-harness). The ref is the one litlfred/folio-assistant index.config.json pins at bb61e9b, adopted unchanged."
+              "on": "2026-10-30",
+              "ref": "be4e571d8dad29db098542ede6d0979c24c0ea13",
+              "evidence": "Owner (litlfred), 2026-10-20, in the session that set up this repository: \"A, needs fhir-harness, main to root, branches STAGING\" (adopt cat-harness fully, need fhir-harness). The ref is the one litlfred/folio-assistant index.config.json pins at bb61e9b, adopted unchanged; main tip be4e571 (BCP 47 #257, CI #267 #270, schemas move #265). Window: litlfred 2026-10-30 11:13Z 'merge and repin window open for 4 horus', extended 16:37Z 'merge window +3 hrs' (to ~19:38Z)."
             }
           }
         }
@@ -61,7 +61,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/cat-harness",
-          "ref": "643c7880812bd499d9f1a9dc17ef97937ddb0c59",
+          "ref": "ad64a09a7f060cf350b8b4ed7c4d163435120c30",
           "overrides": {
             "cat-harness": {
               "whole": true
@@ -76,9 +76,9 @@
           "trust": {
             "consent": {
               "by": "litlfred",
-              "on": "2026-10-21",
-              "ref": "643c7880812bd499d9f1a9dc17ef97937ddb0c59",
-              "evidence": "Owner (litlfred), 2026-10-21: \"It really needs to look at all of the actors and the dependency of the loaded harness\" and \"Merge when green\". Repinned to main after merging litlfred/cat-harness#391 (neededActors: the actors an instance may name are the platform's, every needed instance's and its own)."
+              "on": "2026-10-30",
+              "ref": "ad64a09a7f060cf350b8b4ed7c4d163435120c30",
+              "evidence": "Owner (litlfred), 2026-10-21: \"It really needs to look at all of the actors and the dependency of the loaded harness\" and \"Merge when green\". Repinned to main after merging litlfred/cat-harness#391 (neededActors: the actors an instance may name are the platform's, every needed instance's and its own); main tip ad64a09 (schemas move #773, direction #784, attestations #786, CI #775 #778 #780). Window: litlfred 2026-10-30 11:13Z 'merge and repin window open for 4 horus', extended 16:37Z 'merge window +3 hrs' (to ~19:38Z)."
             }
           }
         }
@@ -89,7 +89,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/cat-harness-tools",
-          "ref": "137a56a9028446cd24ba02b237b84109c8c4622b",
+          "ref": "eaf4e03d99fcea9915afdb091fdf98a56ecf27b9",
           "overrides": {
             "cat-harness-tools": {
               "whole": true
@@ -101,9 +101,9 @@
           "trust": {
             "consent": {
               "by": "litlfred",
-              "on": "2026-10-21",
-              "ref": "137a56a9028446cd24ba02b237b84109c8c4622b",
-              "evidence": "Owner (litlfred), 2026-10-21: \"It really needs to look at all of the actors and the dependency of the loaded harness\" and \"Merge when green\". Repinned to main after merging litlfred/cat-harness-tools#507 (kg-audit --instance resolves actors with neededActors)."
+              "on": "2026-10-30",
+              "ref": "eaf4e03d99fcea9915afdb091fdf98a56ecf27b9",
+              "evidence": "Owner (litlfred), 2026-10-21: \"It really needs to look at all of the actors and the dependency of the loaded harness\" and \"Merge when green\". Repinned to main after merging litlfred/cat-harness-tools#507 (kg-audit --instance resolves actors with neededActors); main tip eaf4e03 (schemas move #952, uml/readme gates #897, direction #968, CI #951 #957 #964). Window: litlfred 2026-10-30 11:13Z 'merge and repin window open for 4 horus', extended 16:37Z 'merge window +3 hrs' (to ~19:38Z)."
             }
           }
         }
@@ -114,7 +114,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/bootstrap",
-          "ref": "0d442b3811991e5a0c19d8f619848fb4a5f8aa5f",
+          "ref": "3ce2b5d641779ca78432971abb919e6e3afdc60a",
           "overrides": {
             "bootstrap": {
               "whole": true
@@ -123,9 +123,9 @@
           "trust": {
             "consent": {
               "by": "litlfred",
-              "on": "2026-10-20",
-              "ref": "0d442b3811991e5a0c19d8f619848fb4a5f8aa5f",
-              "evidence": "Owner (litlfred), 2026-10-20, in the session that set up this repository: \"A, needs fhir-harness, main to root, branches STAGING\" (adopt cat-harness fully, need fhir-harness). The ref is the one litlfred/folio-assistant index.config.json pins at bb61e9b, adopted unchanged."
+              "on": "2026-10-30",
+              "ref": "3ce2b5d641779ca78432971abb919e6e3afdc60a",
+              "evidence": "Owner (litlfred), 2026-10-20, in the session that set up this repository: \"A, needs fhir-harness, main to root, branches STAGING\" (adopt cat-harness fully, need fhir-harness). The ref is the one litlfred/folio-assistant index.config.json pins at bb61e9b, adopted unchanged; main tip 3ce2b5d (main, matches cat-harness-tools). Window: litlfred 2026-10-30 11:13Z 'merge and repin window open for 4 horus', extended 16:37Z 'merge window +3 hrs' (to ~19:38Z)."
             }
           }
         }
@@ -136,7 +136,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/bootstrap-tools",
-          "ref": "157dacf74b6fc3e86c28e123904d4b2d4a16ae61",
+          "ref": "b7fb762ba968a6868bbe5004144ddf78023eb9c7",
           "overrides": {
             "bootstrap-tools": {
               "whole": true
@@ -148,9 +148,9 @@
           "trust": {
             "consent": {
               "by": "litlfred",
-              "on": "2026-10-20",
-              "ref": "157dacf74b6fc3e86c28e123904d4b2d4a16ae61",
-              "evidence": "Owner (litlfred), 2026-10-20, in the session that set up this repository: \"A, needs fhir-harness, main to root, branches STAGING\" (adopt cat-harness fully, need fhir-harness). The ref is the one litlfred/folio-assistant index.config.json pins at bb61e9b, adopted unchanged."
+              "on": "2026-10-30",
+              "ref": "b7fb762ba968a6868bbe5004144ddf78023eb9c7",
+              "evidence": "Owner (litlfred), 2026-10-20, in the session that set up this repository: \"A, needs fhir-harness, main to root, branches STAGING\" (adopt cat-harness fully, need fhir-harness). The ref is the one litlfred/folio-assistant index.config.json pins at bb61e9b, adopted unchanged; main tip b7fb762 (main, exports importClosure that cat-harness-tools needs). Window: litlfred 2026-10-30 11:13Z 'merge and repin window open for 4 horus', extended 16:37Z 'merge window +3 hrs' (to ~19:38Z)."
             }
           }
         }
