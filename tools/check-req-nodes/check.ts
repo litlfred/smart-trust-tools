@@ -45,7 +45,7 @@ import { basename, join } from "node:path";
 
 import { RequirementSchema } from "@litlfred/bootstrap-tools/schemas/requirement.ts";
 
-import { TestPlanSchema } from "@litlfred/cat-harness/schemas/test-plan.ts";
+import { TestPlanSchema } from "@litlfred/cat-harness-tools/schemas/test-plan.ts";
 
 const ROOT = join(import.meta.dir, "..", "..");
 const REQ_DIR = join(ROOT, "skills", "requirements");
@@ -160,7 +160,7 @@ for (const f of beans) {
 // The source nodes a `reference` names, against the schemas their typologies
 // (external-schema, references) declare. Loaded here rather than at the top so
 // the module's static imports stay those the Tool loader shares.
-const { ExternalSchemaSchema } = await import("@litlfred/cat-harness/schemas/external-schema.ts");
+const { ExternalSchemaSchema } = await import("@litlfred/cat-harness-tools/schemas/external-schema.ts");
 const { ReferenceNodeSchema } = await import("@litlfred/folio-assistant-core/schemas/reference.ts");
 let sourceNodes = 0;
 for (const [dir, schema, idOf] of [
@@ -179,7 +179,7 @@ for (const [dir, schema, idOf] of [
 }
 
 // The code lists, against the harness's schema; the requirement areas resolve in theirs.
-const { parseCodeList, activeCodes } = await import("@litlfred/cat-harness/schemas/code-list.ts");
+const { parseCodeList, activeCodes } = await import("@litlfred/cat-harness-tools/schemas/code-list.ts");
 const codeListDir = join(ROOT, "code-lists");
 const codeLists = new Map<string, string[]>();
 for (const f of existsSync(codeListDir) ? readdirSync(codeListDir).filter((n) => n.endsWith(".json")).sort() : []) {
