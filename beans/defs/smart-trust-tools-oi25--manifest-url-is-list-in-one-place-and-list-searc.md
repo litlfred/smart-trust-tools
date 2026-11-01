@@ -8,7 +8,7 @@ tags:
     - open-issue
     - upstream
 created_at: 2026-10-20T00:00:00Z
-updated_at: 2026-10-24T14:54:54Z
+updated_at: 2026-11-01T10:00:00Z
 ---
 
 ITI-YY3 builds the manifest URL as .../List/_search?...; ITI-YY5 shows .../List?... and says the receiver POSTs the parameters to _search. The library accepts both and always POSTs to <base>/List/_search (STT-VHL-005).
@@ -25,6 +25,10 @@ Reported 2026-10-24 to IHE as point 2 of a comment on IHE/ITI.VHL#48, the July 2
 
 - library/ihe-iti-vhl-iti-yy3/sections/s010-2-3-yy3-4-1-3-expected-actions
 - library/ihe-iti-vhl-iti-yy5/sections/s008-2-3-yy5-4-1-2-message-semantics
+
+## Status 2026-11-01
+
+No change upstream: IHE/ITI.VHL main is still 4820147 (2026-06-14), and the July update, IHE/ITI.VHL#48, is still open.
 
 ## Done when
 

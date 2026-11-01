@@ -8,7 +8,7 @@ tags:
     - open-issue
     - upstream
 created_at: 2026-10-23T09:00:00Z
-updated_at: 2026-10-23T10:00:00Z
+updated_at: 2026-11-01T10:00:00Z
 ---
 
 Verifying the GDHCN DID trust list proofs (STT-TRU-006) meant reproducing what WHO's signer, tng-key-distribution 021a9d2 with ld-signatures-java 1.11.0, actually does. In three places that differs from the open standards the proofs name:
@@ -39,9 +39,13 @@ The verifier's profile is drafted for the guide's DID trust list page as WorldHe
 
 - vectors/gdhcn-dev-trustlist/XXR-DSC-did-2026-10-23.json
 
+## Status 2026-11-01
+
+WorldHealthOrganization/smart-trust#136 is merged (main 422b043): concepts_did_gdhcn.md documents the contexts, the JWS form and the DER transition rule, so the last box is met by "or the guide documents the profile". The signer is unchanged: tng-key-distribution main is still 021a9d2 (2026-07-09). Still open: the DER rule leaves the guide once the signer is fixed (smart-trust#137).
+
 ## Done when
 
 - [x] the libraries verify the published proofs (STT-TRU-006)
 - [x] the guide states the verifier profile (WorldHealthOrganization/smart-trust#136)
 - [ ] the guide's DER transition rule is removed once the signer is fixed (WorldHealthOrganization/smart-trust#137)
-- [ ] the signer emits r||s, publishes its contexts and encodes JWKs per RFC 7518, or the guide documents the profile
+- [x] the signer emits r||s, publishes its contexts and encodes JWKs per RFC 7518, or the guide documents the profile

@@ -1,14 +1,14 @@
 ---
 # smart-trust-tools-oi06
 title: 'OI-06: Subclaim 5 is called VHL in one place and SHL in another'
-status: todo
+status: completed
 type: bug
 priority: normal
 tags:
     - open-issue
     - upstream
 created_at: 2026-10-20T00:00:00Z
-updated_at: 2026-10-20T20:00:00Z
+updated_at: 2026-11-01T10:00:00Z
 ---
 
 QR Code Generation 2.1 and the HCert logical model describe subclaim 5 as the URI of a Verifiable Health Link. HCERT Specification 3.2.7.1.5, which is the authoritative list, describes it as Smart Health Link (SHL) and links the SMART Health Links spec. The two define different URI schemes and payloads.
@@ -29,6 +29,10 @@ Raised as WorldHealthOrganization/smart-trust#130: 3.2.7.1.5 becomes Verifiable 
 - library/who-smart-trust-hcert-spec/sections/s013-3-2-7-health-certificate-claim
 - library/who-smart-trust-hcert-model
 
+## Status 2026-11-01
+
+Fixed upstream: WorldHealthOrganization/smart-trust#130 merged on 2026-10-26 (main 4a5ac54). HCERT Specification 3.2.7.1.5 is now "Verifiable Health Link (VHL)", and claim key 5 holds the VHL payload as a CBOR map, as STT-VHL-002 already assumes.
+
 ## Done when
 
-- [ ] the upstream source is corrected, or the requirement no longer depends on it
+- [x] the upstream source is corrected, or the requirement no longer depends on it

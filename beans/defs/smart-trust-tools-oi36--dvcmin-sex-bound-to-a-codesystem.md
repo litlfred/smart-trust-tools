@@ -8,7 +8,7 @@ tags:
     - open-issue
     - upstream
 created_at: 2026-10-23T13:00:00Z
-updated_at: 2026-10-23T13:00:00Z
+updated_at: 2026-11-01T10:00:00Z
 ---
 
 The HL7 FHIR Validator, now run on the logical models before main publishes (tools/fhir-validate), reports one error in the upstream DVCMin model: "The valueSet reference http://hl7.org/fhir/administrative-gender on element DVCMin.s points to something that is not a value set (CodeSystem)". The cause is smart-trust-phw's Aliases.fsh: $GENDER names the CodeSystem, which is right for the ICVP.Core ConceptMap but wrong for the bindings DVCMin.s and DVC.sex.
@@ -26,6 +26,10 @@ Reported as WorldHealthOrganization/smart-trust-phw#20 (https://github.com/World
 ## Sources
 
 - library/who-smart-trust-phw-dvcmin
+
+## Status 2026-11-01
+
+Not merged yet: smart-trust-phw main is still 73b3c64 (2026-10-23), so the fix in #21 is not on main and the known-errors entry stays.
 
 ## Done when
 

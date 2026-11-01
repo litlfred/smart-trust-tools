@@ -8,7 +8,7 @@ tags:
     - open-issue
     - upstream
 created_at: 2026-10-20T00:00:00Z
-updated_at: 2026-10-24T14:54:54Z
+updated_at: 2026-11-01T10:00:00Z
 ---
 
 Participant codes are ISO 3166-1 alpha-3, while iss and the X.509 C attribute use alpha-2. The test pair XXA/XX is user-assigned and not a formal ISO mapping. A verifier narrowing trust-list lookups by iss needs an authoritative mapping.
@@ -26,6 +26,10 @@ Reported 2026-10-24 to WHO as point 6 of WorldHealthOrganization/smart-trust#138
 - library/who-smart-trust-qr-code-generation/sections/s016-12-3-issuer
 - library/who-smart-trust-hcert-spec/sections/s010-3-2-4-issuer
 - references/who-trust-gdhcn-participants-vs
+
+## Status 2026-11-01
+
+smart-trust#139 (open, commit 04bb7a8) covers part of point 6 of #138: it tells a verifier that cannot resolve iss to search the whole trust list by kid, and qualifies the alpha-3 claim. It gives no alpha-3 to alpha-2 mapping, so this stays open after #139 merges unless the requirement drops the narrowing.
 
 ## Done when
 

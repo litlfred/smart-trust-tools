@@ -8,7 +8,7 @@ tags:
     - open-issue
     - upstream
 created_at: 2026-10-20T00:00:00Z
-updated_at: 2026-10-20T20:00:00Z
+updated_at: 2026-11-01T10:00:00Z
 ---
 
 The ITI-YY3 example JSON has "extension" but its base64url encodes "extensions". The ITI-YY4 example key is 44 characters and decodes to 33 bytes ("this is a secret key used for enc"), against the 43-character, 32-byte rule stated beside it.
@@ -25,6 +25,10 @@ Fixed in the IHE patch in upstream/ihe-iti-vhl/.
 
 - library/ihe-iti-vhl-iti-yy3/sections/s010-2-3-yy3-4-1-3-expected-actions
 - library/ihe-iti-vhl-iti-yy4
+
+## Status 2026-11-01
+
+No change upstream: IHE/ITI.VHL main is still 4820147 (2026-06-14), and the July update, IHE/ITI.VHL#48, is still open.
 
 ## Done when
 

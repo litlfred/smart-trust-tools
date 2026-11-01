@@ -8,7 +8,7 @@ tags:
     - open-issue
     - upstream
 created_at: 2026-10-20T00:00:00Z
-updated_at: 2026-10-23T00:00:00Z
+updated_at: 2026-11-01T10:00:00Z
 ---
 
 QR Code Generation 2 and 4 say an HCERT carries exactly one payload and that -260 is a "map whose single key is the subclaim". HCERT Specification 3.2.7 says "Several different types of health certificate MAY exist under the same claim", and the HCert logical model makes every subclaim 0..1, so it does not rule out more than one. The verifier behaviour for several entries is not specified.
@@ -50,6 +50,10 @@ Drafted for WHO as WorldHealthOrganization/smart-trust#135 (https://github.com/W
 - library/who-smart-trust-qr-code-generation/sections/s005-4-step-3-build-the-cwt-claim-set
 - library/who-smart-trust-hcert-spec/sections/s013-3-2-7-health-certificate-claim
 - library/who-smart-trust-hcert-model
+
+## Status 2026-11-01
+
+smart-trust#135, which states the five points, is still open. smart-trust main 48e8800 still has only the 3.2.7 sentence. Note: open PR #139 would make -260 1..1 in the CWT payload model (a map key cannot repeat), with several subclaims inside it at 0..1 each; this matches the libraries.
 
 ## Done when
 

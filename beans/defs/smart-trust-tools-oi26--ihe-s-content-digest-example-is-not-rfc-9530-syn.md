@@ -8,7 +8,7 @@ tags:
     - open-issue
     - upstream
 created_at: 2026-10-20T00:00:00Z
-updated_at: 2026-10-24T14:54:54Z
+updated_at: 2026-11-01T10:00:00Z
 ---
 
 The ITI-YY5 example sends "Content-Digest: sha-256=X48E...=", but RFC 9530 makes the value a Structured Field byte sequence, "sha-256=:X48E...=:". A sharer verifying strictly rejects the example form. The library emits RFC 9530 syntax (STT-VHL-008).
@@ -25,6 +25,10 @@ Reported 2026-10-24 to IHE as point 3 of a comment on IHE/ITI.VHL#48, the July 2
 
 - library/ihe-iti-vhl-iti-yy5/sections/s009-2-3-yy5-4-1-3-authentication-option-http-message
 - external-schemas/ietf-rfc9530
+
+## Status 2026-11-01
+
+No change upstream: IHE/ITI.VHL main is still 4820147 (2026-06-14), and the July update, IHE/ITI.VHL#48, is still open.
 
 ## Done when
 

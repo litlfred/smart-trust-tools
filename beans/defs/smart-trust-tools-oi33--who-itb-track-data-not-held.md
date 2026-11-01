@@ -8,7 +8,7 @@ tags:
     - open-issue
     - testing
 created_at: 2026-10-21T00:00:00Z
-updated_at: 2026-10-22T17:10:00Z
+updated_at: 2026-11-01T10:00:00Z
 ---
 
 The who-itb-agreement test plan (test/plans/who-itb-agreement.test-plan.json, STT-TST-009) compares each library with the WHO Interoperability Test Bed on its three HCERT tracks. It cannot run in CI yet, for three reasons.
