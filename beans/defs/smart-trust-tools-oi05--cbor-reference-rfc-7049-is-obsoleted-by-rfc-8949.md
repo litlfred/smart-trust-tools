@@ -8,7 +8,7 @@ tags:
     - open-issue
     - upstream
 created_at: 2026-10-20T00:00:00Z
-updated_at: 2026-10-24T14:54:54Z
+updated_at: 2026-11-01T10:00:00Z
 ---
 
 Neither page says whether issuers should use deterministic encoding, or which rules. The reference script uses length-first canonical ordering (RFC 7049 section 3.9). For the integer and short text keys used here that gives the same order as RFC 8949 core deterministic encoding, but that is luck, not a rule.
@@ -28,6 +28,10 @@ Reported 2026-10-24 to WHO as point 3 of WorldHealthOrganization/smart-trust#138
 - library/who-smart-trust-hcert-spec/sections/s013-3-2-7-health-certificate-claim
 - external-schemas/ietf-rfc7049
 - external-schemas/ietf-rfc8949
+
+## Status 2026-11-01
+
+A fix for point 3 of smart-trust#138 is drafted in WorldHealthOrganization/smart-trust#139 (open, commit 04bb7a8). It is WHO's to review and merge; smart-trust main 48e8800 still has the old text.
 
 ## Done when
 

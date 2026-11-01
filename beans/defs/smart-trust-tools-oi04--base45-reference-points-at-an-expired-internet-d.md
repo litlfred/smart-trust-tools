@@ -8,7 +8,7 @@ tags:
     - open-issue
     - upstream
 created_at: 2026-10-20T00:00:00Z
-updated_at: 2026-10-24T14:54:54Z
+updated_at: 2026-11-01T10:00:00Z
 ---
 
 Both pages cite draft-faltstrom-base45. That draft was published as RFC 9285, which should be the reference.
@@ -27,6 +27,10 @@ Reported 2026-10-24 to WHO as point 2 of WorldHealthOrganization/smart-trust#138
 - library/who-smart-trust-hcert-spec/sections/s018-4-2-2-qr-2d-barcode
 - external-schemas/ietf-draft-faltstrom-base45
 - external-schemas/ietf-rfc9285
+
+## Status 2026-11-01
+
+A fix for point 2 of smart-trust#138 is drafted in WorldHealthOrganization/smart-trust#139 (open, commit 04bb7a8). It is WHO's to review and merge; smart-trust main 48e8800 still has the old text.
 
 ## Done when
 

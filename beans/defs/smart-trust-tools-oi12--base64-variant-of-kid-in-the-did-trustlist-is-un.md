@@ -8,7 +8,7 @@ tags:
     - open-issue
     - upstream
 created_at: 2026-10-20T00:00:00Z
-updated_at: 2026-10-24T14:54:54Z
+updated_at: 2026-11-01T10:00:00Z
 ---
 
 The DID trustlist uses a "base64 encoded key id" as the verification method fragment and as JWK kid. It does not say whether that is standard or URL-safe base64, or whether padding is kept. Standard and URL-safe base64 differ on '+' and '/', and the PR example kid WHM+BYqqZiE= contains '+'.
@@ -26,6 +26,10 @@ Reported 2026-10-24 to WHO as point 5 of WorldHealthOrganization/smart-trust#138
 
 - library/who-smart-trust-did-gdhcn/sections/s004-example-did-documents
 - library/who-smart-trust-hcert-spec/sections/s027-a-1-the-key-identifier-kid-s
+
+## Status 2026-11-01
+
+No change upstream: smart-trust main 48e8800 (2026-10-30) still has the text, and open PR #139 does not cover this point of #138.
 
 ## Done when
 

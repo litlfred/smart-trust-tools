@@ -8,7 +8,7 @@ tags:
     - open-issue
     - upstream
 created_at: 2026-10-20T00:00:00Z
-updated_at: 2026-10-24T14:54:54Z
+updated_at: 2026-11-01T10:00:00Z
 ---
 
 In smart-trust-phw, DVCMin and DVCMinVaccineDetails are declared abstract (^abstract = true). Only DVCMinPreQual and DVCMinVaccineDetailsPreQual are concrete. The HCert logical model puts DVCMin at subclaim -6, and the PR 129 example issues a DVCMin with ICD-11 codes. So no concrete model exists for a non-PreQual DVC: either DVCMin should not be abstract, or a concrete ICD-11 profile is needed.
@@ -28,6 +28,10 @@ Reported 2026-10-24 to WHO as point 7 of WorldHealthOrganization/smart-trust#138
 - library/who-smart-trust-phw-dvcmin-prequal
 - library/who-smart-trust-qr-code-generation/sections/s004-3-step-2-assemble-the-payload
 - library/who-smart-trust-qr-code-generation/sections/s017-12-4-the-payload
+
+## Status 2026-11-01
+
+No change upstream: smart-trust main 48e8800 (2026-10-30) still has the text, and open PR #139 does not cover this point of #138.
 
 ## Done when
 

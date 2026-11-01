@@ -8,7 +8,7 @@ tags:
     - open-issue
     - upstream
 created_at: 2026-10-20T00:00:00Z
-updated_at: 2026-10-24T14:54:54Z
+updated_at: 2026-11-01T10:00:00Z
 ---
 
 The CWTPayload logical model types claim 1 as Coding. HCERT 3.2.4 and RFC 8392 type it as a string.
@@ -25,6 +25,10 @@ Reported 2026-10-24 to WHO as point 4 of WorldHealthOrganization/smart-trust#138
 
 - library/who-smart-trust-hcert-spec/sections/s010-3-2-4-issuer
 - library/who-smart-trust-cwt-payload-model
+
+## Status 2026-11-01
+
+A fix for point 4 of smart-trust#138 is drafted in WorldHealthOrganization/smart-trust#139 (open, commit 04bb7a8). It is WHO's to review and merge; smart-trust main 48e8800 still has the old text.
 
 ## Done when
 

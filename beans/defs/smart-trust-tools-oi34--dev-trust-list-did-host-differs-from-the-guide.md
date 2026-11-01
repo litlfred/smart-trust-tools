@@ -1,14 +1,14 @@
 ---
 # smart-trust-tools-oi34
 title: 'OI-34: The DEV trust list DIDs name a different host from the guide'
-status: todo
+status: completed
 type: bug
 priority: normal
 tags:
     - open-issue
     - upstream
 created_at: 2026-10-22T17:10:00Z
-updated_at: 2026-10-22T17:10:00Z
+updated_at: 2026-11-01T10:00:00Z
 ---
 
 QR Code Generation 12.6 and the DEV endpoints (input/fsh/instances/endpoints-DEV.fsh, WHO af75be2) give XXR's trust list as did:web:tng-cdn.who.int:v2:trustlist:-:XXR:DSC, "resolvable at https://tng-cdn-dev.who.int/v2/trustlist/-/XXR/DSC/did.json". Under the did:web method a DID resolves at the host it names, so did:web:tng-cdn.who.int:... resolves at https://tng-cdn.who.int/..., the production host, not tng-cdn-dev. The document actually served from tng-cdn-dev (retrieved 2026-10-22, vectors/smart-trust-af75be2/XXR-DSC-did.json) gives its own id as did:web:tng-cdn-dev.who.int:v2:trustlist:-:XXR:DSC, which disagrees with the guide.
@@ -31,6 +31,10 @@ Reported upstream as WorldHealthOrganization/smart-trust#133 (https://github.com
 - library/who-smart-trust-qr-code-generation/sections/s019-12-6-the-certificates
 - vectors/smart-trust-af75be2/XXR-DSC-did.json
 
+## Status 2026-11-01
+
+Fixed upstream: WorldHealthOrganization/smart-trust#134 merged on 2026-10-27 (main b2ae303). On main 48e8800, endpoints-DEV.fsh names did:web:tng-cdn-dev.who.int in all 427 places and did:web:tng-cdn.who.int in none, and endpoints-UAT.fsh names tng-cdn-uat. The vectors stay pinned at af75be2, which is a separate re-pin.
+
 ## Done when
 
-- [ ] the upstream source is corrected, or the requirement no longer depends on it
+- [x] the upstream source is corrected, or the requirement no longer depends on it
