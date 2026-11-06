@@ -112,7 +112,7 @@ Feature: Verify an HC1 string or raw COSE, or read it explicitly unverified
   Scenario: Trust-list presence is the validity check (Rust)
     Given the newborn's DVCMin issued with ES256
     When it is verified against an empty trust store
-    Then it fails at step TrustLookup with reason KidNotFound, with no CRL or OCSP asked
+    Then it fails at step TrustLookup with reason KidNotFound
     And verified 11 years later, with the DSC trusted and a clock skew of 20 years, it verifies
     And a TrustLookup diagnostic mentions "X.509 validity"
 
