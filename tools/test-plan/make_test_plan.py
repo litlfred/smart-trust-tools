@@ -5,7 +5,8 @@ The library conformance plan is the skills and the requirements' success
 criteria, laid out as a test-plan/v1: one case per skill, one assertion per
 criterion its requirements verify by test, id req:<id>#<statement>/<criterion>.
 Written from them so it cannot drift: --check fails when the file is stale.
-The test data per case and the plan's prose are set here.
+The test data per case and the plan's prose are set here. Each case's
+feature is test/features/<case>.feature, its Gherkin (tools/test-gherkin).
 
 Usage:
     python3 tools/test-plan/make_test_plan.py [--check]
@@ -51,7 +52,8 @@ for name, s in K.load_skills().items():
                             "type": "informative" if st["conformance"] in ("SHOULD", "MAY", "SHOULD NOT") else "required",
                             "expectation": c["criterion"]})
     if asserts:
-        cases.append({"id": name, "description": s["description"].strip(), "assertions": asserts, "testData": DATA.get(name, [])})
+        cases.append({"id": name, "description": s["description"].strip(), "assertions": asserts, "testData": DATA.get(name, []),
+                      "feature": "test/features/%s.feature" % name})
 plan = {
  "$schema": "test-plan/v1",
  "id": "hcert-library-conformance",

@@ -57,6 +57,22 @@ the tests themselves, the requirement ids each test's name starts with. Its
 unverified. The counts above are therefore computed per system and target,
 not by hand.
 
+## Each case in Gherkin
+
+Each case of both plans has a `feature`, its Gherkin file in
+[`../features/`](../features/): `test/features/<case>.feature`. The feature is
+the specification and the tests are the binding. Each Scenario is one test,
+written from what that test sets up and asserts, and names it in a tag,
+`@test:<path>::<test>`. A Rust or Kotlin test or TypeScript `run(...)` name
+has each run of whitespace written as `_`, since a tag ends at whitespace.
+The WHO-ITB cases have no test yet (bean OI-33), so their Scenarios are
+tagged `@manual` and are written from the plan's assertions.
+
+`python3 tools/test-gherkin/check_test_gherkin.py` (CI runs it) fails when
+a `#[test]`, `@Test` or conformance `run(...)` has no Scenario, a tag names
+no test, or a case's feature is missing. It is a temporary local check until
+cat-harness `check:test-gherkin` is pinned here.
+
 ## Test levels
 
 | Level | What it shows | Kotlin | Rust (to build) | Data | Requirements |
@@ -185,6 +201,8 @@ STT_FUZZ_ITERATIONS=60000 gradle -p tools/hcert-kotlin --no-daemon --init-script
 # The plans resolve, and the library plan is current
 bun run check:req-nodes
 python3 tools/test-plan/make_test_plan.py --check
+# Every test has a Gherkin Scenario (test/features/)
+python3 tools/test-gherkin/check_test_gherkin.py
 # Each system under test's bindings are current with its tests' tags (test/systems/)
 python3 tools/test-systems/make_test_systems.py --check
 ```
