@@ -143,7 +143,7 @@ Feature: Serialise as deterministic CBOR, and decode untrusted CBOR within limit
       | 1c                 |
       | 5a00000005         |
       | 3bffffffffffffffff |
-    Then each gives an Err result, not an exception
+    Then each gives an Err result
 
   @req:stt-cbr-001
   @test:tools/conformance-ts/suite.ts::STT-CBR-001_deterministic_re-encoding:_RFC_8949_Appendix_A,_and_the_PR_129_CWT_byte_for_byte
