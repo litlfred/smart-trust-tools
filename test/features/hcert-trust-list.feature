@@ -69,7 +69,7 @@ Feature: Hold the trusted DSCs the host obtained, and find every candidate for a
 
     Examples:
       | document                          |
-      | the merged guide's XXR-DSC-did.json |
+      | XXR-DSC-did.json (merged guide)   |
       | XXR-DSC-did-2026-10-23.json       |
       | XXR-did.json                      |
       | XXA-did.json                      |
@@ -152,7 +152,8 @@ Feature: Hold the trusted DSCs the host obtained, and find every candidate for a
       | 5. IRIs                   | an https: id, a urn: controller, a space, "<" or "é" in an id   | not an absolute IRI        |
       | 5. IRIs                   | an http: proof verification method                              | not an absolute IRI        |
       | 5. IRIs                   | a referenced verification method that is not a DID URL          | reference                  |
-      | 6. literals               | DEL, U+001F, a tab or DEL in created, nonce, domain, challenge  | control character          |
+      | 6. literals               | DEL in created, U+001F in the nonce, a tab in a domain          | control character          |
+      | 6. literals               | DEL in a challenge                                              | control character          |
       | 6. literals               | DEL in the JWK kid, a newline in an x5c                         | control character          |
       | 6. literals               | a lone high or low surrogate in the nonce                       | surrogate                  |
       | 7. code points            | U+1F600 in the nonce or the kid                                 | above U+FFFF               |
@@ -160,8 +161,11 @@ Feature: Hold the trusted DSCs the host obtained, and find every candidate for a
       | 8. signer                 | the signer key's controller another DID                         | another controller         |
       | 8. signer                 | the signer's method given twice                                 | not exactly one            |
       | 9. signatures             | a DER signature whose INTEGERs are padded                       | does not verify            |
-      | 11. duplicate members     | a duplicate id, code, nonce or JWK kty                          | duplicate key: <name>      |
-      | 11. duplicate members     | a duplicate alg in the JWS header, a duplicate kty in the signer | duplicate key: <name>     |
+      | 11. duplicate members     | a duplicate id                                                  | duplicate key: id          |
+      | 11. duplicate members     | a duplicate participant code                                    | duplicate key: code        |
+      | 11. duplicate members     | a duplicate nonce                                               | duplicate key: nonce       |
+      | 11. duplicate members     | a duplicate kty in the JWK, or in the signer's JWK              | duplicate key: kty         |
+      | 11. duplicate members     | a duplicate alg in the JWS header                               | duplicate key: alg         |
     And proof options without a nonce canonicalise to 4 lines
     And a nonce starting "é" and U+FFFF canonicalises with those characters kept
     And the signer key with alg ES256, or with no controller, verifies

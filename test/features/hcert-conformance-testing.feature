@@ -171,29 +171,12 @@ Feature: Test an implementation against the shared vectors
 
   @req:stt-tst-004 @req:stt-tst-005 @req:stt-ver-008
   @test:tools/conformance-ts/suite.ts::STT-TST-004_STT-TST-005_STT-VER-008_negative_vector_${c.id}_stops_at_${c.expect.step}_${c.expect.reason}
-  Scenario Outline: Negative vector <id> stops at <step> <reason> (TypeScript, either package)
-    Given a trust store of the case's PEMs, or the defaults' when it names none
+  Scenario: Each shared negative vector stops at its named step and reason (TypeScript, either package)
+    Given each case of the shared negative vectors (vectors/negative/negative-vectors.json), run as its own check
+    And a trust store of the case's PEMs, or the defaults' when it names none
     And the case's clock, or the defaults', with the defaults' clock skew of 300 seconds
     When the case's coseHex is verified as COSE bytes, or else its hc1 as an HC1 string
-    Then verification fails at step <step> with reason <reason>, written lower case with "-" for "_"
-
-    Examples:
-      | id                  | step         | reason                      |
-      | prefix-missing      | PREFIX       | BAD_PREFIX                  |
-      | prefix-version      | PREFIX       | UNSUPPORTED_CONTEXT_VERSION |
-      | base45-lower-case   | BASE45       | BASE45_INVALID              |
-      | base45-dangling     | BASE45       | BASE45_INVALID              |
-      | base45-out-of-range | BASE45       | BASE45_INVALID              |
-      | input-too-long      | PREFIX       | LIMIT_EXCEEDED              |
-      | not-zlib            | INFLATE      | INFLATE_FAILED              |
-      | inflate-bomb        | INFLATE      | LIMIT_EXCEEDED              |
-      | cbor-too-deep       | COSE         | LIMIT_EXCEEDED              |
-      | unsupported-alg     | HEADER       | UNSUPPORTED_ALGORITHM       |
-      | signature-tampered  | SIGNATURE    | SIGNATURE_INVALID           |
-      | payload-tampered    | SIGNATURE    | SIGNATURE_INVALID           |
-      | unknown-kid         | TRUST_LOOKUP | KID_NOT_FOUND               |
-      | expired             | TIME         | EXPIRED                     |
-      | not-yet-valid       | TIME         | NOT_YET_VALID               |
+    Then verification fails at the case's expected step with its expected reason, written lower case with "-" for "_"
 
   # --- Fuzzing --------------------------------------------------------------------
   # Each fuzz test mutates seeds taken from the PR 129 vector (both certificates)
