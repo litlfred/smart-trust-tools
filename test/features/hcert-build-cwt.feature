@@ -69,8 +69,8 @@ Feature: Wrap the payload in a CWT claim set inside the DSC's validity
   Scenario: An HCERT without exp is refused on issue and on verify (Kotlin)
     Given an issue request for the newborn's DVCMin whose exp equals its iat
     When it is prepared
-    Then it is refused with PayloadInvalid
-    And a claim set without exp, signed with the ES256 testkit key, fails verification
+    Then it is refused with PayloadInvalid, with the one issue code "exp-not-after-iat"
+    And a claim set without exp, signed with the ES256 testkit key, fails verification at step CWT with reason COSE_MALFORMED
 
   @req:stt-cwt-004
   @test:tools/hcert-kotlin/hcert-core/src/jvmTest/kotlin/who/smart/trust/core/BuildCwtTest.kt::STT-CWT-004_the_validity_must_fit_inside_the_DSC's
@@ -82,11 +82,12 @@ Feature: Wrap the payload in a CWT claim set inside the DSC's validity
   @req:stt-cwt-005
   @test:tools/hcert-kotlin/hcert-core/src/jvmTest/kotlin/who/smart/trust/core/BuildCwtTest.kt::STT-CWT-005_iss_is_optional,_and_alpha-2_when_present
   Scenario: iss is optional, and alpha-2 when present (Kotlin)
-    Given an issue request for the newborn's DVCMin with iss "Xx"
-    When it is prepared
-    Then it is refused with PayloadInvalid
+    Given issue requests for the newborn's DVCMin with iss "Xx", "XXX" and "x"
+    When each is prepared
+    Then each is refused with PayloadInvalid, with the one issue code "not-alpha2"
     And issued with no iss, its claim set has no claim 1
     And that COSE verifies with no iss
+    And the testkit's certificate, issued with iss "XX", verifies with iss "XX"
 
   @req:stt-cwt-006
   @test:tools/hcert-kotlin/hcert-core/src/jvmTest/kotlin/who/smart/trust/core/BuildCwtTest.kt::STT-CWT-006_claims_this_version_does_not_know_are_kept
