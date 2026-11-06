@@ -6,6 +6,8 @@ import kotlin.test.assertIs
 import who.smart.trust.issuer.IssueError
 import who.smart.trust.issuer.Validity
 import who.smart.trust.payloads.Payload
+import who.smart.trust.types.FailureReason
+import who.smart.trust.types.Step
 import who.smart.trust.verifier.VerificationResult
 
 /** Skill `hcert-build-cwt`: QR Code Generation step 3. */
