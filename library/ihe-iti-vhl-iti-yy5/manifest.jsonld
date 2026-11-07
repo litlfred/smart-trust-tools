@@ -42,7 +42,7 @@
     "library/ihe-iti-vhl-iti-yy5/sections/s029-2-3-yy5-5-9-verifiable-credential-option"
   ],
   "provenance": "ingested",
-  "inSubgraph": "https://litlfred.github.io/folio-assistant/cat-harness.jsonld#directory/library",
+  "inSubgraph": "https://litlfred.github.io/folio-assistant/smart-trust-tools/directory/library",
   "license": "CC-BY-4.0",
   "licenceRecord": {
     "status": "stated",
