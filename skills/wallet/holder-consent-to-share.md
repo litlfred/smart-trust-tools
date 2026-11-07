@@ -7,8 +7,8 @@ description: >
   holder's consent, and the sharer issues nothing beyond it. Input is the
   records the sharer offers; output is the share request. Performed by a
   person.
-input: schemas/skills/holder-consent-to-share/input.schema.json
-output: schemas/skills/holder-consent-to-share/output.schema.json
+input: skills/wallet/contracts/holder-consent-to-share/input.schema.json
+output: skills/wallet/contracts/holder-consent-to-share/output.schema.json
 ---
 
 # Consent to share a health link
@@ -22,8 +22,8 @@ holder's, choice.
 
 ## Input and output
 
-The contract is [`input.schema.json`](../../schemas/skills/holder-consent-to-share/input.schema.json)
-and [`output.schema.json`](../../schemas/skills/holder-consent-to-share/output.schema.json).
+The contract is [`input.schema.json`](contracts/holder-consent-to-share/input.schema.json)
+and [`output.schema.json`](contracts/holder-consent-to-share/output.schema.json).
 
 - **In:** the `offer`: the `members` whose records the sharer holds and may
   share, with the documents each has (an IPS, vaccination certificates), and

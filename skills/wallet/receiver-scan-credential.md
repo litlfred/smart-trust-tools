@@ -6,8 +6,8 @@ description: >
   passcode-protected health link, enters the passcode the holder says. Input
   is the QR as shown; output is its text (and passcode) handed to the
   receiving system, which verifies it or follows the link. Performed by a person; never judges authenticity.
-input: schemas/skills/receiver-scan-credential/input.schema.json
-output: schemas/skills/receiver-scan-credential/output.schema.json
+input: skills/wallet/contracts/receiver-scan-credential/input.schema.json
+output: skills/wallet/contracts/receiver-scan-credential/output.schema.json
 ---
 
 # Scan a health credential
@@ -20,8 +20,8 @@ output: schemas/skills/receiver-scan-credential/output.schema.json
 
 ## Input and output
 
-The contract is [`input.schema.json`](../../schemas/skills/receiver-scan-credential/input.schema.json)
-and [`output.schema.json`](../../schemas/skills/receiver-scan-credential/output.schema.json).
+The contract is [`input.schema.json`](contracts/receiver-scan-credential/input.schema.json)
+and [`output.schema.json`](contracts/receiver-scan-credential/output.schema.json).
 
 - **In:** the `shown` QR, its `medium` (paper or a screen), and, for a VHL,
   the `passcode` the holder says.

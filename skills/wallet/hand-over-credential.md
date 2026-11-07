@@ -6,8 +6,8 @@ description: >
   wallet, and says what each is. Input is what was issued and the medium;
   output is what the holder now holds. Performed by a person; the issuing
   system's own steps are the hcert package's.
-input: schemas/skills/hand-over-credential/input.schema.json
-output: schemas/skills/hand-over-credential/output.schema.json
+input: skills/wallet/contracts/hand-over-credential/input.schema.json
+output: skills/wallet/contracts/hand-over-credential/output.schema.json
 ---
 
 # Hand over a health credential
@@ -19,8 +19,8 @@ system (`hcert-prefix-context`, or `vhl-share` for a link).
 
 ## Input and output
 
-The contract is [`input.schema.json`](../../schemas/skills/hand-over-credential/input.schema.json)
-and [`output.schema.json`](../../schemas/skills/hand-over-credential/output.schema.json).
+The contract is [`input.schema.json`](contracts/hand-over-credential/input.schema.json)
+and [`output.schema.json`](contracts/hand-over-credential/output.schema.json).
 
 - **In:** the `issued` credentials, each with its `member`, `kind` (`hcert`,
   `vhl` or `shl`) and `qr` text, and the `medium` (`paper` or `wallet`).

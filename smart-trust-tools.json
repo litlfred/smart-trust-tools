@@ -220,14 +220,6 @@
       ]
     },
     {
-      "id": "stt-skill-contracts",
-      "path": "schemas/",
-      "graphTypologies": [
-        "schemas"
-      ],
-      "description": "Each skill's input and output contracts, `schemas/skills/<skill>/{input,output}.schema.json` (JSON Schema draft-07), named by the skill's `input:` and `output:` front matter. The wallet package's three are the first."
-    },
-    {
       "id": "glossary",
       "path": "glossary/",
       "description": "SMART Trust Tools' generated glossary (`glossary/generated/smart-trust-tools/`): candidate `folio-glossary/v1` schemes extracted from this layer's tools, skills and BPMN activities by core's `glossary:page`. A scheme is keyed by (instance, scheme), and each layer holds its own glossary.",
