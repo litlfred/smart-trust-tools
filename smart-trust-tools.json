@@ -91,7 +91,12 @@
       "graphTypologies": [
         "beans"
       ],
-      "description": "The open issues of this project, one bean each under beans/defs/, each naming the requirements it affects and the sources it concerns; tagged upstream when the fix belongs in a WHO or IHE repository."
+      "source": {
+        "kind": "branch",
+        "branch": "cat/smart-trust-tools/beans",
+        "keyedBy": "tip"
+      },
+      "description": "The open issues of this project, one bean each under beans/defs/, each naming the requirements it affects and the sources it concerns; tagged upstream when the fix belongs in a WHO or IHE repository. Kept on the state branch cat/smart-trust-tools/beans, not on main: `bun run cat state:mount` puts it on disk."
     },
     {
       "id": "processes",
@@ -193,7 +198,12 @@
       "graphTypologies": [
         "upstream-patches"
       ],
-      "description": "Patches proposed to IHE ITI VHL, for its maintainers to apply, and the QR Code Generation live-demo patch for litlfred/smart-trust."
+      "source": {
+        "kind": "branch",
+        "branch": "cat/smart-trust-tools/upstream-patches",
+        "keyedBy": "tip"
+      },
+      "description": "Patches proposed to IHE ITI VHL, for its maintainers to apply, and the QR Code Generation live-demo patch for litlfred/smart-trust. Kept on the state branch cat/smart-trust-tools/upstream-patches, not on main: `bun run cat state:mount` puts it on disk."
     },
     {
       "id": "test-plans",

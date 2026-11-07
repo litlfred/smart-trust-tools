@@ -30,7 +30,7 @@ FHIR record keeping are theirs. Source: stakeholder directive
 Changes raised upstream: WorldHealthOrganization/smart-trust#130 (subclaim 5
 is a VHL, a CBOR map), WorldHealthOrganization/smart-trust-phw#17 (payload
 types match SMART Health Links), and a patch for IHE ITI.VHL in
-[`upstream/ihe-iti-vhl/`](https://github.com/litlfred/smart-trust-tools/tree/main/upstream/ihe-iti-vhl)
+[`upstream/ihe-iti-vhl/`](https://github.com/litlfred/smart-trust-tools/tree/cat/smart-trust-tools/upstream-patches/upstream/ihe-iti-vhl)
 (ITI-YY3 key 5 as a CBOR map, example fixes). Open issues OI-21 to OI-29.
 
 The IHE ITI VHL profile and the WHO `VerifiableHealthLinkPayload` model
