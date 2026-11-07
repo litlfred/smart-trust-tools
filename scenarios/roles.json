@@ -104,7 +104,7 @@
     {
       "id": "vhl-holder",
       "title": "VHL Holder",
-      "description": "IHE ITI VHL VHL Holder (smart-trust Holder): the person who holds certificates or a Verifiable Health Link, presents them as a QR and consents to what a link shares. The library has no operation on this side; the skills are what the person does.",
+      "description": "IHE ITI VHL VHL Holder (smart-trust Holder): the person who holds certificates or a health link (a Verifiable Health Link, or a SMART Health Link: the same holder's work over the HL7 specification VHL profiles), presents them as a QR and consents to what a link shares. The library has no operation on this side; the skills are what the person does.",
       "actorKinds": [
         "person"
       ],

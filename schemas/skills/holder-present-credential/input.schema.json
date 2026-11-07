@@ -15,7 +15,7 @@
           "member",
           "kind",
           "medium",
-          "hc1"
+          "qr"
         ],
         "properties": {
           "member": {
@@ -25,9 +25,10 @@
           "kind": {
             "enum": [
               "hcert",
-              "vhl"
+              "vhl",
+              "shl"
             ],
-            "description": "An HCERT certificate, or the HCERT carrying a Verifiable Health Link at key 5."
+            "description": "An HCERT certificate; the HCERT carrying a Verifiable Health Link at key 5; or a SMART Health Link."
           },
           "medium": {
             "enum": [
@@ -35,9 +36,10 @@
               "wallet"
             ]
           },
-          "hc1": {
+          "qr": {
             "type": "string",
-            "description": "An HC1: string: the QR's text, as the issuing system made it (hcert-prefix-context)."
+            "pattern": "^(HC1:|shlink:/)",
+            "description": "The QR's text: HC1:… for an HCERT or a VHL (hcert-prefix-context), shlink:/… for a SMART Health Link (HL7 SMART Health Links specification)."
           }
         },
         "additionalProperties": false
@@ -55,7 +57,8 @@
         "kind": {
           "enum": [
             "hcert",
-            "vhl"
+            "vhl",
+            "shl"
           ]
         }
       },

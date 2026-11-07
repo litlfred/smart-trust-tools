@@ -19,7 +19,7 @@
     },
     "passcode": {
       "type": "string",
-      "description": "For a VHL: the passcode the holder says."
+      "description": "For a passcode-protected health link: the passcode the holder says."
     }
   },
   "additionalProperties": false
