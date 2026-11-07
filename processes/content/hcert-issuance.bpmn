@@ -11,6 +11,7 @@
     <bpmn:extensionElements><cat-harness.processes:policy enforcement="advisory"/><cat-harness.processes:log capture="off"/></bpmn:extensionElements>
     <bpmn:laneSet id="LaneSet_Process_HcertIssuance">
       <bpmn:lane id="Lane_Issuer" name="HCERT issuing system" partitionElementRef="hcert-issuing-system">
+        <bpmn:documentation>The HCERT side of the VHL Sharer (smart-trust: Issuer): a clinic system or national portal that issues HCERT certificates, embedding the Kotlin or Rust library.</bpmn:documentation>
         <bpmn:flowNodeRef>Start</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Task_SelectPayload</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Task_AssemblePayload</bpmn:flowNodeRef>
@@ -25,6 +26,7 @@
         <bpmn:flowNodeRef>End</bpmn:flowNodeRef>
       </bpmn:lane>
       <bpmn:lane id="Lane_Key" name="Signing key holder" partitionElementRef="hcert-key-holder">
+        <bpmn:documentation>The HSM, KMS, Android Keystore or WebCrypto key of a Trust Network Participant that signs the bytes the issuing system prepares; the library never holds the private key.</bpmn:documentation>
         <bpmn:flowNodeRef>Task_Sign</bpmn:flowNodeRef>
       </bpmn:lane>
     </bpmn:laneSet>
