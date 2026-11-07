@@ -162,6 +162,7 @@ for (const f of beans) {
 // the module's static imports stay those the Tool loader shares.
 const { ExternalSchemaSchema } = await import("@litlfred/cat-harness-tools/schemas/kg/external-schema.ts");
 const { ReferenceNodeSchema } = await import("@litlfred/folio-assistant-core/schemas/reference.ts");
+const { STRUCTURE_FILENAME } = await import("@litlfred/cat-harness-tools/schemas/content/document-structure.ts");
 let sourceNodes = 0;
 for (const [dir, schema, idOf] of [
   ["external-schemas", ExternalSchemaSchema, (n: Record<string, any>) => n.id],
@@ -174,7 +175,7 @@ for (const [dir, schema, idOf] of [
     if (!r.success) for (const i of r.error.issues) problems.push(`${dir}/${f}: ${i.path.join(".") || "(root)"}: ${i.message}`);
     if (idOf(node) !== basename(f, ".json")) problems.push(`${dir}/${f}: id ${idOf(node)} is not its file name`);
     const held = typeof node.heldAt === "string" ? /^library\/([^/]+)$/.exec(node.heldAt) : null;
-    if (held && !existsSync(join(ROOT, "library", held[1]!, "structure.json"))) problems.push(`${dir}/${f}: heldAt ${node.heldAt} names no library entry`);
+    if (held && !existsSync(join(ROOT, "library", held[1]!, STRUCTURE_FILENAME))) problems.push(`${dir}/${f}: heldAt ${node.heldAt} names no library entry`);
   }
 }
 
