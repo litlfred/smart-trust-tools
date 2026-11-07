@@ -7,7 +7,7 @@ export default toolFactory((t) =>
     id: "test-gherkin",
     title: "Every test has a Gherkin Scenario",
     description:
-      "Check test/features/*.feature against the suites: every Rust #[test], Kotlin @Test and TypeScript conformance run(...) has a Scenario tagged @test:<path>::<test>, every such tag names a test, and every test-plan case names its feature file. Temporary, until cat-harness check:test-gherkin is pinned.",
+      "Check test/features/*.feature against the suites: every Rust #[test], Kotlin @Test and TypeScript conformance run(...) has a Scenario tagged @test:<path>::<test>, every such tag names a test, WHO-ITB Scenarios carry @itb:<suite>/<testcase>, and every test-plan case names its feature file. Temporary, until cat-harness check:test-gherkin is pinned.",
     install: { none: true },
     invoke: { shell: "python3 tools/test-gherkin/check_test_gherkin.py" },
     io: {
