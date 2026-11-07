@@ -7,20 +7,22 @@ Feature: Sign the CWT as a COSE_Sign1, in two phases
 
   @req:stt-iss-004 @req:stt-cos-005
   @test:tools/hcert-rust/tests/build_cwt_sign_cose.rs::stt_iss_004_stt_cos_005_two_phase_issuance_with_es256_and_ps256_verifies
-  Scenario: Two-phase issuance with ES256 and PS256 gives an HC1 that the verifier checks (Rust)
-    Given a newborn's DVCMin, prepared for issuance and signed by the testkit key as a host would, once with ES256 and once with PS256
+  Scenario: Two-phase issuance with ES256 and PS256 verifies (Rust)
+    Given under ES256 a newborn's DVCMin, and under PS256 a test certificate (subclaim 4, the map {"t": "x"}), since the PS256 testkit DSC's EKU allows test certificates only
+    And each prepared for issuance and signed by its testkit key as a host would
     When each is finished into an HC1 string and verified against its own testkit DSC at the testkit time
     Then each HC1 string starts with "HC1:"
-    And the ES256 certificate verifies with the newborn's DVCMin as its one payload
-    And the PS256 certificate fails at step KeyUsage with reason KeyUsageMismatch, its DSC's EKU allowing test certificates only
+    And each certificate verifies, with its payload as its one entry
+    And a newborn's DVCMin issued under PS256 fails at step KeyUsage with reason KeyUsageMismatch
 
   @req:stt-cos-006
   @test:tools/hcert-rust/tests/build_cwt_sign_cose.rs::stt_cos_006_finish_refuses_a_signature_from_another_key
-  Scenario: finish refuses a signature that does not verify against the DSC, and accepts DER (Rust)
+  Scenario: finish refuses a signature from another key, and accepts DER (Rust)
     Given a newborn's DVCMin prepared for ES256 issuance
-    And an r||s signature over its to-be-signed bytes with one bit of byte 10 flipped
+    And an r||s signature over its to-be-signed bytes by a P-256 key that is not the DSC's
     When the issuance is finished with that signature
     Then it fails with BadSignatureFormat
+    And finishing with the DSC key's signature with one bit of byte 10 flipped fails with BadSignatureFormat
     And finishing with a correct signature converted to DER, as JCA gives it, succeeds
 
   @req:stt-cos-001
@@ -129,8 +131,8 @@ Feature: Sign the CWT as a COSE_Sign1, in two phases
 
   @req:stt-cos-006
   @test:tools/conformance-ts/suite.ts::STT-COS-006_finish_refuses_a_signature_from_another_key
-  Scenario: finish refuses a signature that is not over the to-be-signed bytes (TypeScript, either package)
+  Scenario: finish refuses a signature from another key (TypeScript, either package)
     Given a newborn's DVCMin prepared for ES256 issuance
-    And a DER signature by the testkit key over the single byte 9, not the to-be-signed bytes
+    And a DER signature over its to-be-signed bytes by a fresh P-256 key that no DSC holds
     When the issuance is finished with that signature
     Then it throws "bad-signature-format"
