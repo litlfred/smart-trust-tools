@@ -1,0 +1,66 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Holder Present Credential Input",
+  "type": "object",
+  "required": [
+    "credentials",
+    "request"
+  ],
+  "properties": {
+    "credentials": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "member",
+          "kind",
+          "medium",
+          "hc1"
+        ],
+        "properties": {
+          "member": {
+            "type": "string",
+            "description": "Who the credential is about, as the holder labels them."
+          },
+          "kind": {
+            "enum": [
+              "hcert",
+              "vhl"
+            ],
+            "description": "An HCERT certificate, or the HCERT carrying a Verifiable Health Link at key 5."
+          },
+          "medium": {
+            "enum": [
+              "paper",
+              "wallet"
+            ]
+          },
+          "hc1": {
+            "type": "string",
+            "description": "An HC1: string: the QR's text, as the issuing system made it (hcert-prefix-context)."
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "request": {
+      "type": "object",
+      "required": [
+        "member"
+      ],
+      "properties": {
+        "member": {
+          "type": "string"
+        },
+        "kind": {
+          "enum": [
+            "hcert",
+            "vhl"
+          ]
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

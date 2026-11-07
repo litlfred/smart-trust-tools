@@ -1,0 +1,44 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Receiver Scan Credential Output",
+  "description": "What the receiving system is handed; it verifies (hcert-verify, vhl-receive).",
+  "type": "object",
+  "required": [
+    "scanned"
+  ],
+  "properties": {
+    "scanned": {
+      "oneOf": [
+        {
+          "type": "object",
+          "required": [
+            "hc1"
+          ],
+          "properties": {
+            "hc1": {
+              "type": "string",
+              "description": "An HC1: string: the QR's text, as the issuing system made it (hcert-prefix-context)."
+            },
+            "passcode": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "required": [
+            "unreadable"
+          ],
+          "properties": {
+            "unreadable": {
+              "const": true
+            }
+          },
+          "additionalProperties": false
+        }
+      ]
+    }
+  },
+  "additionalProperties": false
+}
