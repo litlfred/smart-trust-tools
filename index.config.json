@@ -168,7 +168,7 @@
           "home": "docs/index.md",
           "pre": [
             "check:req-nodes",
-            "check:fhir-validate"
+            "site:fhir-validate"
           ],
           "sourceSteps": [
             "site:docs"
