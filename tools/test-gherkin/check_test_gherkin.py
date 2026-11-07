@@ -14,13 +14,19 @@ in a tag:
 
 where <test> is the Rust function name, the Kotlin backtick name, or the
 TypeScript `run(...)` name, each whitespace run written as `_` (a Gherkin
-tag ends at whitespace). A Scenario no test runs yet is tagged `@manual`
-instead, and says why in a comment.
+tag ends at whitespace). A Scenario that is a WHO-ITB GITB test case (plan
+who-itb-agreement) is tagged instead
+
+    @itb:<suite id>/<testcase id>
+
+as the suite at the commit references/who-itb cites names them. A Scenario
+no test runs yet is tagged `@manual`, and says why in a comment.
 
 Fails when:
   - a test has no Scenario tagged with it;
   - a `@test:` tag names no test;
-  - a Scenario has neither a `@test:` tag nor `@manual`;
+  - a Scenario has none of a `@test:` tag, an `@itb:` tag or `@manual`;
+  - an `@itb:` tag is not <suite id>/<testcase id>;
   - a test-plan case's `feature` names no file, or a feature file is named
     by no case.
 
@@ -44,6 +50,8 @@ RUST = ("tools/hcert-rust/**/*.rs", re.compile(r"#\[test\]\s*(?:#\[[^\]]*\]\s*)*
 KOTLIN = ("tools/hcert-kotlin/**/*.kt", re.compile(r"@Test\s+(?:@\w+(?:\([^)]*\))?\s+)*fun\s+(?:`([^`]+)`|(\w+))"))
 TS = ("tools/conformance-ts/*.ts", re.compile(r"\brun\(\s*[\"`]([^\"`]*)[\"`]"))
 TAG = re.compile(r"@test:(\S+)")
+ITB = re.compile(r"@itb:(\S*)")
+ITB_ID = re.compile(r"[a-z0-9][a-z0-9-]*/[a-z0-9][a-z0-9-]*")
 
 
 def norm(name):
@@ -98,8 +106,12 @@ def main():
         rel = f.relative_to(ROOT).as_posix()
         for line, title, tags in scenarios(f):
             refs = [m.group(1) for t in tags for m in [TAG.match(t)] if m]
-            if not refs and "@manual" not in tags:
-                problems.append("%s:%d: %s has no @test: tag and is not @manual" % (rel, line, title))
+            itbs = [m.group(1) for t in tags for m in [ITB.match(t)] if m]
+            for i in itbs:
+                if not ITB_ID.fullmatch(i):
+                    problems.append("%s:%d: @itb:%s is not <suite id>/<testcase id>" % (rel, line, i))
+            if not refs and not itbs and "@manual" not in tags:
+                problems.append("%s:%d: %s has no @test: or @itb: tag and is not @manual" % (rel, line, title))
             for r in refs:
                 if r not in all_tests:
                     problems.append("%s:%d: @test:%s names no test" % (rel, line, r))

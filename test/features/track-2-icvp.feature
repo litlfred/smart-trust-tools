@@ -1,29 +1,24 @@
 # Test-plan case track-2-icvp (test/plans/who-itb-agreement.test-plan.json).
-# No test runs these Scenarios yet: a tester runs the WHO-ITB beside the
-# library and records a report against the plan (bean OI-33 blocks CI).
-# Written from the plan's assertions.
-@case:track-2-icvp @manual
-Feature: WHO-ITB Track 2, HCERT ICVP: the library agrees with the test bed
-  ITB test case tc-icvp-001: QR to ICVP-IPS conformance. Test data:
-  WHO-ITB test-data/Track2_ICVP_2026.jpg.
-
-  Background:
-    Given the HC1 text read from the Track 2 QR image
-    And the gdhcn-helper's results for the same image
-
-  @req:stt-tst-009
-  Scenario: The decoded COSE_Sign1 is the helper's, byte for byte
-    When the library decodes the HC1 text
-    Then its protected header, payload and signature bytes equal the gdhcn-helper's cose._raw
+# One Scenario per WHO-ITB GITB test case, tagged @itb:<suite>/<testcase>. The
+# steps are the test case's, read from WHO-ITB at commit 883291d
+# (references/who-itb); its test data is cited, not copied (no licence file).
+# The plan compares the library with the decode and verify steps and the claim
+# handed to the transform; a tester runs the ITB beside the library until bean
+# OI-33 lets CI run it.
+@case:track-2-icvp
+Feature: WHO-ITB Track 2, HCERT ICVP: the system uses and validates an HCERT
+  GITB test suite track-2-system-utilizes-and-validates-hcert-icvp. Actors:
+  User, HCertDecoder (the gdhcn-helper service), FHIRValidator (Matchbox).
 
   @req:stt-tst-009
-  Scenario: Verification agrees with the helper on the DEV trust list
-    Given the GDHCN DEV trust list the ITB uses
-    When the library verifies the certificate
-    Then it reports the same kid and issuer as the gdhcn-helper
-    And it fails where the helper reports valid=false
-
-  @req:stt-tst-009
-  Scenario: The ICVP claim is what the ITB hands to its StructureMap
-    When the library returns the ICVP claim
-    Then it equals, byte for byte, the content the ITB passes to the ICVPClaimtoIPS StructureMap
+  @itb:track-2-system-utilizes-and-validates-hcert-icvp/tc-icvp-001-qr-decode-transform-icvp-ips-conformance
+  Scenario: tc-icvp-001 QR, decode, transform, ICVP IPS conformance
+    Given the user uploads a QR code image (test data: Track2_ICVP_2026.jpg)
+    When the HCertDecoder decodes the QR image and the HC1 string
+    And it verifies the COSE signature against the GDHCN DEV trust list
+    Then the response status is 200 and the signature's "valid" is "true"
+    When the validator loads the IGs smart-trust, pcmt, pcmt-vaxprequal, trust-phw and icvp
+    And the decoded claim ("innerContent") is non-empty
+    And it is transformed with the StructureMap http://smart.who.int/icvp/StructureMap/ICVPClaimtoIPS
+    And the result is validated against http://smart.who.int/icvp/StructureDefinition/Bundle-uv-ips-ICVP, downgrading slicing errors
+    Then the bundle conforms: the count of real (non-downgraded) errors, by FHIRPath, is 0

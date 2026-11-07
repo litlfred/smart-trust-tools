@@ -1,32 +1,27 @@
 # Test-plan case track-1-vhl (test/plans/who-itb-agreement.test-plan.json).
-# No test runs these Scenarios yet: a tester runs the WHO-ITB beside the
-# library and records a report against the plan (bean OI-33 blocks CI:
-# no licence on the track images, no pinned QR reader, the GDHCN DEV trust
-# list host unreachable from the build). Written from the plan's assertions.
-@case:track-1-vhl @manual
-Feature: WHO-ITB Track 1, HCERT VHL: the library agrees with the test bed
-  ITB test case tc-vhl-001: QR to a verified LAC IPS bundle. Test data:
-  WHO-ITB test-data/Track1_VHL_1234_2026.jpg; the PIN is 1234.
-
-  Background:
-    Given the HC1 text read from the Track 1 QR image
-    And the gdhcn-helper's results for the same image
+# One Scenario per WHO-ITB GITB test case, tagged @itb:<suite>/<testcase>. The
+# steps are the test case's, read from WHO-ITB at commit 883291d
+# (references/who-itb); its test data is cited, not copied (no licence file).
+# The plan compares the library with the decode, verify and VHL steps; a tester
+# runs the ITB beside the library until bean OI-33 lets CI run it.
+@case:track-1-vhl
+Feature: WHO-ITB Track 1, HCERT VHL: QR to a verified LAC IPS bundle
+  GITB test suite track-1-hcert-vhl-qr-to-verified-lac-ips-bundle. Actors:
+  User, HCertDecoder (the gdhcn-helper service), VHLResponder.
 
   @req:stt-tst-009
-  Scenario: The decoded COSE_Sign1 is the helper's, byte for byte
-    When the library decodes the HC1 text
-    Then its protected header, payload and signature bytes equal the gdhcn-helper's cose._raw
-
-  @req:stt-tst-009
-  Scenario: Verification agrees with the helper on the DEV trust list
-    Given the GDHCN DEV trust list the ITB uses
-    When the library verifies the certificate
-    Then it reports the same kid and issuer as the gdhcn-helper
-    And it fails where the helper reports valid=false
-
-  @req:stt-tst-009
-  Scenario: The VHL link is read, authorised and fetched as the ITB does
-    When the library reads the VHL link from the HCERT
-    Then its url, flags and key are the ones the ITB extracts
-    And with the PIN 1234 it fetches the ITI-YY5 manifest
-    And it decrypts the IPS bundle the ITB retrieves
+  @itb:track-1-hcert-vhl-qr-to-verified-lac-ips-bundle/tc-vhl-001-full-vhl-verification-pipeline
+  Scenario: tc-vhl-001 Full VHL verification pipeline
+    Given the user uploads a QR code image (test data: Track1_VHL_1234_2026.jpg)
+    And the user enters the PIN for retrieving the content
+    When the HCertDecoder decodes the QR image
+    And it decodes the HC1 string and extracts its metadata
+    And it verifies the COSE signature against the GDHCN DEV trust list
+    Then the response status is 200 and the signature's "valid" is "true"
+    When the HCertDecoder extracts the SHL reference from the payload
+    And it authorizes the short link with the PIN
+    And it fetches the FHIR content through the manifest
+    Then each response status is 200 and an IPS bundle is retrieved from the manifest
+    When the validator loads the IG https://ig.racsel.org
+    And it validates the bundle against http://racsel.org/StructureDefinition/LACBundleIPS, downgrading slicing errors
+    Then the bundle conforms: the count of real (non-downgraded) errors, by FHIRPath, is 0

@@ -65,12 +65,14 @@ the specification and the tests are the binding. Each Scenario is one test,
 written from what that test sets up and asserts, and names it in a tag,
 `@test:<path>::<test>`. A Rust or Kotlin test or TypeScript `run(...)` name
 has each run of whitespace written as `_`, since a tag ends at whitespace.
-The WHO-ITB cases have no test yet (bean OI-33), so their Scenarios are
-tagged `@manual` and are written from the plan's assertions.
+The WHO-ITB cases have one Scenario per GITB test case, tagged
+`@itb:<suite>/<testcase>` and written from the suite at the commit
+`references/who-itb` cites; its test data is cited, not copied. No CI job
+runs them yet (bean OI-33).
 
 `python3 tools/test-gherkin/check_test_gherkin.py` (CI runs it) fails when
 a `#[test]`, `@Test` or conformance `run(...)` has no Scenario, a tag names
-no test, or a case's feature is missing. It is a temporary local check until
+no test, an `@itb:` tag is malformed, or a case's feature is missing. It is a temporary local check until
 cat-harness `check:test-gherkin` is pinned here.
 
 ## Test levels
