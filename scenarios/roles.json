@@ -125,6 +125,18 @@
         "receiver-scan-credential"
       ],
       "persona": "Busy, often offline, scanning with the camera of whatever device the system runs on."
+    },
+    {
+      "id": "issuing-health-worker",
+      "title": "Issuing health worker",
+      "description": "The health worker of an issuing participant who hands the holder the credentials the issuing system made: prints them, one QR per certificate, or sends them to the holder's wallet.",
+      "actorKinds": [
+        "person"
+      ],
+      "skills": [
+        "hand-over-credential"
+      ],
+      "persona": "A clinician or clerk with a queue, handing over what the system printed; never holds the signing key."
     }
   ]
 }
