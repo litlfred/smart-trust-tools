@@ -1,17 +1,13 @@
 {
   "$schema": "folio-index-config/v1",
   "_comment": "smart-trust-tools takes the smart-hiv shape, as litlfred/smart-trust does: this file pins the layers it needs (fhir-harness and everything below it) and declares the site agent-run. The mounts are laid down from index.lock.json and gitignored.",
-  "site": {
-    "landing": "smart-trust-tools",
-    "agentRun": true
-  },
   "instances": [
     {
       "name": "fhir-harness",
       "source": {
         "remote": {
           "repository": "litlfred/fhir-harness",
-          "ref": "a5e07932a24c331d20c99203e2ccb94aae13facd",
+          "ref": "5e6f2972eefc01de60d0a455bb676ebeb7aeaf7a",
           "overrides": {
             "fhir-harness": {
               "whole": true
@@ -20,9 +16,9 @@
           "trust": {
             "consent": {
               "by": "litlfred",
-              "on": "2026-11-02",
-              "ref": "a5e07932a24c331d20c99203e2ccb94aae13facd",
-              "evidence": "Owner litlfred, 2026-11-01 (20:41Z, MVP thread cmsg_017WNUkNK8kdDziPK58Pv6G991qa3xg86ZCWdyH2spZ7FS): 'i want to get all functional stuff done, the full repin on harnesses done and stablized as MVP goal.'"
+              "on": "2026-11-07",
+              "ref": "5e6f2972eefc01de60d0a455bb676ebeb7aeaf7a",
+              "evidence": "Owner litlfred, 2026-11-07 (after 05:30Z, this session): 'repin + merge open 12 hrs'."
             }
           }
         }
@@ -33,7 +29,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/folio-assistant-core",
-          "ref": "b2d596676777f8e4481668e04d022ebe15347f69",
+          "ref": "49496b4f3e0f4e8e1ec01c19a20d2f2ca6516230",
           "overrides": {
             "folio-assistant-core": {
               "whole": true
@@ -48,9 +44,9 @@
           "trust": {
             "consent": {
               "by": "litlfred",
-              "on": "2026-11-02",
-              "ref": "b2d596676777f8e4481668e04d022ebe15347f69",
-              "evidence": "Owner litlfred, 2026-11-01 (20:41Z, MVP thread cmsg_017WNUkNK8kdDziPK58Pv6G991qa3xg86ZCWdyH2spZ7FS): 'i want to get all functional stuff done, the full repin on harnesses done and stablized as MVP goal.'"
+              "on": "2026-11-07",
+              "ref": "49496b4f3e0f4e8e1ec01c19a20d2f2ca6516230",
+              "evidence": "Owner litlfred, 2026-11-07 (after 05:30Z, this session): 'repin + merge open 12 hrs'."
             }
           }
         }
@@ -61,7 +57,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/cat-harness",
-          "ref": "9c8fc67c5037d1ca69e261b69b6fe2660dc809cd",
+          "ref": "99fb9499ed712f0adcb1940ba95b711f11a3c48d",
           "overrides": {
             "cat-harness": {
               "whole": true
@@ -76,9 +72,9 @@
           "trust": {
             "consent": {
               "by": "litlfred",
-              "on": "2026-11-02",
-              "ref": "9c8fc67c5037d1ca69e261b69b6fe2660dc809cd",
-              "evidence": "Owner litlfred, 2026-11-01 (20:41Z, MVP thread cmsg_017WNUkNK8kdDziPK58Pv6G991qa3xg86ZCWdyH2spZ7FS): 'i want to get all functional stuff done, the full repin on harnesses done and stablized as MVP goal.'"
+              "on": "2026-11-07",
+              "ref": "99fb9499ed712f0adcb1940ba95b711f11a3c48d",
+              "evidence": "Owner litlfred, 2026-11-07 (after 05:30Z, this session): 'repin + merge open 12 hrs'."
             }
           }
         }
@@ -89,7 +85,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/cat-harness-tools",
-          "ref": "a8f46f0ec211fff5078385254c888067f0e2e74b",
+          "ref": "144f3d31f366958b81c0ca25edfc6db9cfa9646a",
           "overrides": {
             "cat-harness-tools": {
               "whole": true
@@ -101,9 +97,9 @@
           "trust": {
             "consent": {
               "by": "litlfred",
-              "on": "2026-11-02",
-              "ref": "a8f46f0ec211fff5078385254c888067f0e2e74b",
-              "evidence": "Owner litlfred, 2026-11-01 (20:41Z, MVP thread cmsg_017WNUkNK8kdDziPK58Pv6G991qa3xg86ZCWdyH2spZ7FS): 'i want to get all functional stuff done, the full repin on harnesses done and stablized as MVP goal.'"
+              "on": "2026-11-07",
+              "ref": "144f3d31f366958b81c0ca25edfc6db9cfa9646a",
+              "evidence": "Owner litlfred, 2026-11-07 (after 05:30Z, this session): 'repin + merge open 12 hrs'."
             }
           }
         }
@@ -114,7 +110,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/bootstrap",
-          "ref": "0d655b74e9ffd1e246a0bd4df60967e158d665de",
+          "ref": "12fa6d57dfad06ae73e234f116145dfc8d77ad50",
           "overrides": {
             "bootstrap": {
               "whole": true
@@ -123,9 +119,9 @@
           "trust": {
             "consent": {
               "by": "litlfred",
-              "on": "2026-11-02",
-              "ref": "0d655b74e9ffd1e246a0bd4df60967e158d665de",
-              "evidence": "Owner litlfred, 2026-11-01 (20:41Z, MVP thread cmsg_017WNUkNK8kdDziPK58Pv6G991qa3xg86ZCWdyH2spZ7FS): 'i want to get all functional stuff done, the full repin on harnesses done and stablized as MVP goal.'"
+              "on": "2026-11-07",
+              "ref": "12fa6d57dfad06ae73e234f116145dfc8d77ad50",
+              "evidence": "Owner litlfred, 2026-11-07 (after 05:30Z, this session): 'repin + merge open 12 hrs'."
             }
           }
         }
@@ -136,7 +132,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/bootstrap-tools",
-          "ref": "ed547a9ab77e8445f13f52fe2152d6e82776bcaf",
+          "ref": "a668ea1f512b1081ac8f3958f92166f12ce684cb",
           "overrides": {
             "bootstrap-tools": {
               "whole": true
@@ -148,9 +144,9 @@
           "trust": {
             "consent": {
               "by": "litlfred",
-              "on": "2026-11-02",
-              "ref": "ed547a9ab77e8445f13f52fe2152d6e82776bcaf",
-              "evidence": "Owner litlfred, 2026-11-01 (20:41Z, MVP thread cmsg_017WNUkNK8kdDziPK58Pv6G991qa3xg86ZCWdyH2spZ7FS): 'i want to get all functional stuff done, the full repin on harnesses done and stablized as MVP goal.'"
+              "on": "2026-11-07",
+              "ref": "a668ea1f512b1081ac8f3958f92166f12ce684cb",
+              "evidence": "Owner litlfred, 2026-11-07 (after 05:30Z, this session): 'repin + merge open 12 hrs'."
             }
           }
         }
@@ -180,5 +176,9 @@
         }
       }
     }
-  ]
+  ],
+  "site": {
+    "landing": "smart-trust-tools",
+    "agentRun": true
+  }
 }
