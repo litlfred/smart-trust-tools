@@ -867,7 +867,7 @@
     },
     {
       "id": "vhl-receive",
-      "description": "Use a VHL: verify it, build the ITI-YY5 manifest request with its HTTP Message Signature, read the manifest Bundle and decrypt each document (journey J4.1).",
+      "description": "Use a VHL: verify it, build the ITI-YY5 manifest request with its HTTP Message Signature, read the manifest Bundle and decrypt each document (journey J4.1). A plain SMART Health Link is received by the same steps, without the HCERT verification.",
       "assertions": [
         {
           "id": "req:stt-vhl-002#statement/test",
@@ -919,7 +919,7 @@
     },
     {
       "id": "vhl-share",
-      "description": "Issue a VHL: a key, documents encrypted as JWE dir / A256GCM, and the payload as a CBOR map at HCERT key 5 (journey J4.0).",
+      "description": "Issue a VHL: a key, documents encrypted as JWE dir / A256GCM, and the payload as a CBOR map at HCERT key 5 (journey J4.0). A plain SMART Health Link is issued by the same steps with its own carrier.",
       "assertions": [
         {
           "id": "req:stt-vhl-001#statement/test",
