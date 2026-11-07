@@ -59,6 +59,10 @@ jobs:
         run: |
           tools/gen-api-types/gen_api_types.sh
           git diff --exit-code -- api/generated/ts
+      - name: The generated TypeScript view has the contract's shape, and every vector set its provenance
+        run: |
+          bun tools/gen-api-types/check.ts
+          bun tools/check-models/check-sources.ts
       - name: Library test plan is current with the success criteria
         run: python3 tools/test-plan/make_test_plan.py --check
       # Temporary local check until cat-harness check:test-gherkin is pinned.
