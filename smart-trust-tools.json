@@ -35,7 +35,7 @@
       "graphTypologies": [
         "skills"
       ],
-      "description": "The library requirements, one bootstrap req: node per requirement under skills/requirements/, and the skills that satisfy them in four packages: hcert (the pipeline of QR Code Generation, one skill per step, plus verification and the trust list), vhl (sharing and receiving a Verifiable Health Link), wallet (what the holder and the receiving health worker do with a credential) and hcert-library (architecture, contract maintenance, conformance testing, publishing the graph)."
+      "description": "The library requirements, one bootstrap req: node per requirement under skills/requirements/, and the skills that satisfy them in four packages: hcert (the pipeline of QR Code Generation, one skill per step, plus verification and the trust list), vhl (sharing and receiving a Verifiable Health Link), wallet (what the holder, and the health workers who hand a credential over and scan it, do with it) and hcert-library (architecture, contract maintenance, conformance testing, publishing the graph)."
     },
     {
       "id": "library",
