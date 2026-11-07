@@ -6,6 +6,12 @@
   "iriBase": "https://litlfred.github.io/smart-trust-tools/",
   "title": "SMART Trust HCERT library tools",
   "description": "Requirements, API contract (WIT), wire format (CDDL), payload models and the Kotlin library for HCERT and Verifiable Health Links, derived from the WHO SMART Trust implementation guide and IHE ITI VHL.",
+  "avatar": {
+    "glyph": "M7 11V8a5 5 0 0110 0v3M5 11h14v10H5zM12 15v2",
+    "tone": 160,
+    "reads": "a padlock — signed, verifiable health credentials"
+  },
+  "_avatar_comment": "A padlock in a neutral green: the libraries sign and verify health credentials, and the mark claims no organisation's colour or emblem.",
   "needs": [
     "fhir-harness"
   ],
@@ -175,7 +181,7 @@
         "fhir-logical-models"
       ],
       "writer": [
-        "tools/lm-derive/lm_derive.py"
+        "smart-trust-tools/tools/lm-derive/lm_derive.py"
       ],
       "description": "The JSON-LD context, SHACL shapes and CDDL rules lm-derive writes from the logical models."
     },
