@@ -58,6 +58,8 @@ export interface Fixtures {
   testkitDsc: Uint8Array;
   /** ES256 over `data` with the testkit key, as DER (as JCA and OpenSSL give it). */
   signEs256Der(data: Uint8Array): Uint8Array;
+  /** ES256 (DER) by a fresh P-256 key that no DSC holds: for the wrong-key refusal. */
+  signEs256DerOtherKey(data: Uint8Array): Uint8Array;
   /** Verifies a 64-byte r||s ES256 signature with the testkit key. */
   verifyEs256Raw(data: Uint8Array, raw: Uint8Array): boolean;
   /** The PS256 testkit DSC, whose EKU allows test certificates only. */
@@ -366,7 +368,8 @@ export function runSuite(h: Hcert, f: Fixtures): Outcome[] {
   });
   run("STT-COS-006 finish refuses a signature from another key", () => {
     const p = h.issuer.prepare({ payloads: [{ tag: "dvc-min", val: newborn }], validity: { iat: TESTKIT_NOW, exp: TESTKIT_NOW + 86400n }, dscDer: f.testkitDsc, alg: "es256", allowDevelopmentSubclaims: true }, reg);
-    return thrownTag(() => h.issuer.finish(p, f.signEs256Der(new Uint8Array([9])))) === "bad-signature-format";
+    // A well-formed signature over the right bytes, by a key that is not the DSC's.
+    return thrownTag(() => h.issuer.finish(p, f.signEs256DerOtherKey(p.toBeSigned()))) === "bad-signature-format";
   });
 
   // OI-38: the assertions the Rust component's run left unnamed. Each one
