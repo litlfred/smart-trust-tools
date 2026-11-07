@@ -3,6 +3,7 @@
 title: 'OI-07: iss is a string in the spec but a Coding in the logical model'
 status: todo
 type: bug
+parent: smart-trust-tools-oiep
 priority: normal
 tags:
     - open-issue

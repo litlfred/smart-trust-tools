@@ -3,6 +3,7 @@
 title: 'OI-19: Upstream home for the CDDL and JSON-LD artefacts'
 status: todo
 type: bug
+parent: smart-trust-tools-oiep
 priority: normal
 tags:
     - open-issue

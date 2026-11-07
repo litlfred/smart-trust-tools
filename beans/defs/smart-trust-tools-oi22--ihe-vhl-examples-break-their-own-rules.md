@@ -3,6 +3,7 @@
 title: 'OI-22: IHE VHL examples break their own rules'
 status: todo
 type: bug
+parent: smart-trust-tools-oiep
 priority: normal
 tags:
     - open-issue

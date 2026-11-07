@@ -3,6 +3,7 @@
 title: 'OI-27: No signed manifest in IHE VHL or SMART Health Links'
 status: todo
 type: bug
+parent: smart-trust-tools-oiep
 priority: normal
 tags:
     - open-issue

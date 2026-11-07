@@ -3,6 +3,7 @@
 title: 'OI-35: The trust list signer departs from JOSE and does not publish its contexts'
 status: todo
 type: bug
+parent: smart-trust-tools-oiep
 priority: normal
 tags:
     - open-issue

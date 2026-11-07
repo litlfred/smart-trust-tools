@@ -3,6 +3,7 @@
 title: 'OI-13: Mapping between GDHCN participant codes (alpha-3) and iss (alpha-2)'
 status: todo
 type: bug
+parent: smart-trust-tools-oiep
 priority: normal
 tags:
     - open-issue

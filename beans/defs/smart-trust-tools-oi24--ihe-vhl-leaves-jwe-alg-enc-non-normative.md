@@ -3,6 +3,7 @@
 title: 'OI-24: IHE VHL leaves JWE alg/enc non-normative'
 status: todo
 type: bug
+parent: smart-trust-tools-oiep
 priority: normal
 tags:
     - open-issue

@@ -3,6 +3,7 @@
 title: 'OI-12: Base64 variant of kid in the DID trustlist is unspecified'
 status: todo
 type: bug
+parent: smart-trust-tools-oiep
 priority: normal
 tags:
     - open-issue

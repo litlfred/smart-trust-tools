@@ -3,6 +3,7 @@
 title: 'OI-21: IHE ITI-YY3 puts a vhlink:/ string at HCERT key 5; ITI-YY4 reads an object'
 status: todo
 type: bug
+parent: smart-trust-tools-oiep
 priority: normal
 tags:
     - open-issue

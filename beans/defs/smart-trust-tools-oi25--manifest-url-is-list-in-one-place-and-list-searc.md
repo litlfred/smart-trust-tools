@@ -3,6 +3,7 @@
 title: 'OI-25: Manifest URL is List? in one place and List/_search? in another'
 status: todo
 type: bug
+parent: smart-trust-tools-oiep
 priority: normal
 tags:
     - open-issue

@@ -3,6 +3,7 @@
 title: 'OI-30: smart-trust states two different licences'
 status: todo
 type: bug
+parent: smart-trust-tools-oiep
 priority: normal
 tags:
     - open-issue

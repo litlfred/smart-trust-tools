@@ -3,6 +3,7 @@
 title: 'OI-26: IHE''s Content-Digest example is not RFC 9530 syntax'
 status: todo
 type: bug
+parent: smart-trust-tools-oiep
 priority: normal
 tags:
     - open-issue

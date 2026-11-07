@@ -3,6 +3,7 @@
 title: 'OI-28: How a receiver''s keyid, and a DID trust list entry, map to keys'
 status: todo
 type: bug
+parent: smart-trust-tools-oiep
 priority: normal
 tags:
     - open-issue

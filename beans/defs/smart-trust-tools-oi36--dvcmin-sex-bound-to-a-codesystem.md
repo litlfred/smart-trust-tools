@@ -3,6 +3,7 @@
 title: 'OI-36: DVCMin.s is bound to the administrative-gender CodeSystem, not a ValueSet'
 status: todo
 type: bug
+parent: smart-trust-tools-oiep
 priority: normal
 tags:
     - open-issue

@@ -2,7 +2,7 @@
 # smart-trust-tools-oi37
 title: 'OI-37: hcert-core has no browser target'
 status: completed
-type: feature
+type: task
 priority: normal
 tags:
     - open-issue

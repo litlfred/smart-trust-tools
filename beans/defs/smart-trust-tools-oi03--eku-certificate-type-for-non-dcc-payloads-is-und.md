@@ -3,6 +3,7 @@
 title: 'OI-03: EKU certificate type for non-DCC payloads is undefined'
 status: todo
 type: bug
+parent: smart-trust-tools-oiep
 priority: normal
 tags:
     - open-issue

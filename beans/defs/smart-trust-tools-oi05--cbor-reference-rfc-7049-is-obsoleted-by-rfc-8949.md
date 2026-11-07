@@ -3,6 +3,7 @@
 title: 'OI-05: CBOR reference RFC 7049 is obsoleted by RFC 8949'
 status: todo
 type: bug
+parent: smart-trust-tools-oiep
 priority: normal
 tags:
     - open-issue

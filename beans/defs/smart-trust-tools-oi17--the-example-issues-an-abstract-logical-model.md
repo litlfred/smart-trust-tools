@@ -3,6 +3,7 @@
 title: 'OI-17: The example issues an abstract logical model'
 status: todo
 type: bug
+parent: smart-trust-tools-oiep
 priority: normal
 tags:
     - open-issue

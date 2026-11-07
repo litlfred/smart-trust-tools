@@ -3,6 +3,7 @@
 title: 'OI-23: trust-phw Health Link payload types exp and v as strings and requires type'
 status: todo
 type: bug
+parent: smart-trust-tools-oiep
 priority: normal
 tags:
     - open-issue

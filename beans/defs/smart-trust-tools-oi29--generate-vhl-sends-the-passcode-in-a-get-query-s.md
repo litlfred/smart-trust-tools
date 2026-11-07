@@ -3,6 +3,7 @@
 title: 'OI-29: $generate-vhl sends the passcode in a GET query string'
 status: todo
 type: bug
+parent: smart-trust-tools-oiep
 priority: normal
 tags:
     - open-issue
