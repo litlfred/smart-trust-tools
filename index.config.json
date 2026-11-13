@@ -57,7 +57,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/cat-harness",
-          "ref": "026a6d919add39221387dd0fba0faccf998be9ac",
+          "ref": "eeca1a951fab3c4d47c451c3f517475692aeb2e8",
           "overrides": {
             "cat-harness": {
               "whole": true
@@ -73,8 +73,8 @@
             "consent": {
               "by": "litlfred",
               "on": "2026-11-13",
-              "ref": "026a6d919add39221387dd0fba0faccf998be9ac",
-              "evidence": "Owner litlfred, 2026-11-13 (session card 'Layer copies' option 1, opt-in per site): re-pin so the site carries only its own pages and links other layers (cat-harness-tools#1985); the same set as folio-assistant#3111's re-pin train, so lock-consistency holds."
+              "ref": "eeca1a951fab3c4d47c451c3f517475692aeb2e8",
+              "evidence": "Owner litlfred, 2026-11-13 (session card 'Layer copies' option 1, opt-in per site): re-pin to the merges of cat-harness#1304 and cat-harness-tools#2051, so the Tools catalogue writes this site's own layer page only and links the others. db3be0d contains 6d522ae (cat-harness-tools#2036)."
             }
           }
         }
@@ -85,7 +85,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/cat-harness-tools",
-          "ref": "6d522ae3886327f67c83521690d6d6ebd18e5f21",
+          "ref": "db3be0d3682957cac87c399fead4a4d5369b86ef",
           "overrides": {
             "cat-harness-tools": {
               "whole": true
@@ -98,8 +98,8 @@
             "consent": {
               "by": "litlfred",
               "on": "2026-11-13",
-              "ref": "6d522ae3886327f67c83521690d6d6ebd18e5f21",
-              "evidence": "Owner litlfred, 2026-11-13, in session https://claude.ai/code/session_01VQDpPcvPnp61vujPencah4 (Re-pin question, option 1 'Consent: re-pin now'): re-pin cat-harness-tools alone to the merge of cat-harness-tools#2036 (check:test-gherkin adapter fixes) so smart-trust-tools#68 can gate on the shared check:test-gherkin."
+              "ref": "db3be0d3682957cac87c399fead4a4d5369b86ef",
+              "evidence": "Owner litlfred, 2026-11-13 (session card 'Layer copies' option 1, opt-in per site): re-pin to the merges of cat-harness#1304 and cat-harness-tools#2051, so the Tools catalogue writes this site's own layer page only and links the others. db3be0d contains 6d522ae (cat-harness-tools#2036)."
             }
           }
         }
