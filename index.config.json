@@ -85,7 +85,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/cat-harness-tools",
-          "ref": "ed3c8eb404200c1d101c99893a67d22102815587",
+          "ref": "6d522ae3886327f67c83521690d6d6ebd18e5f21",
           "overrides": {
             "cat-harness-tools": {
               "whole": true
@@ -98,8 +98,8 @@
             "consent": {
               "by": "litlfred",
               "on": "2026-11-13",
-              "ref": "ed3c8eb404200c1d101c99893a67d22102815587",
-              "evidence": "Owner litlfred, 2026-11-13: bottom-up re-pin cascade (smart-ra#242 follow-on), Q-CONSENT-1 A, Q-CASCADE-FREEZE B: smart-trust-tools to folio-assistant#3103's frozen set so smart-ips-pilgrimage#66's lock-consistency holds."
+              "ref": "6d522ae3886327f67c83521690d6d6ebd18e5f21",
+              "evidence": "Owner litlfred, 2026-11-13, in session https://claude.ai/code/session_01VQDpPcvPnp61vujPencah4 (Re-pin question, option 1 'Consent: re-pin now'): re-pin cat-harness-tools alone to the merge of cat-harness-tools#2036 (check:test-gherkin adapter fixes) so smart-trust-tools#68 can gate on the shared check:test-gherkin."
             }
           }
         }
