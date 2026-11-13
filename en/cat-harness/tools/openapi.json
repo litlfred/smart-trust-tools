@@ -197,6 +197,9 @@
       "name": "kg-subgraph-layout"
     },
     {
+      "name": "kg-to-portal"
+    },
+    {
       "name": "l1-coverage"
     },
     {
@@ -237,9 +240,6 @@
     },
     {
       "name": "render-kg-to-cdn"
-    },
-    {
-      "name": "render-kg-to-github-pages"
     },
     {
       "name": "render-logging"
@@ -2541,7 +2541,7 @@
         "summary": "Publish bootstrap-tools' site",
         "description": "Dispatch bootstrap-tools' `pages.yml`: stage the README site and graph with `scripts/site.ts` and commit them onto `gh-pages`. Started with the standard GitHub CLI; the run is watched with `gh run watch`.",
         "tags": [
-          "render-kg-to-github-pages"
+          "kg-to-portal"
         ],
         "externalDocs": {
           "description": "The Tool's page",
@@ -2600,7 +2600,7 @@
           "network": true
         },
         "x-satisfies": [
-          "render-kg-to-github-pages"
+          "kg-to-portal"
         ],
         "x-selection": {
           "when": "Running the `pages.yml` workflow on demand instead of waiting for its trigger, or finding which workflow a CI step belongs to.",
@@ -2615,8 +2615,7 @@
         "summary": "Build and publish the platform docs site",
         "description": "Dispatch the index's `docs-site.yml`: security gate, regenerate, compose each layer's site, build, export the graph, verify, restore previews, publish to gh-pages, judge the built site. Started with the standard GitHub CLI; the run is watched with `gh run watch`.",
         "tags": [
-          "render-kg-to-cdn",
-          "docs-generation"
+          "render-kg-to-cdn"
         ],
         "externalDocs": {
           "description": "The Tool's page",
@@ -2675,8 +2674,7 @@
           "network": true
         },
         "x-satisfies": [
-          "render-kg-to-cdn",
-          "docs-generation"
+          "render-kg-to-cdn"
         ],
         "x-selection": {
           "when": "Running the `docs-site.yml` workflow on demand instead of waiting for its trigger, or finding which workflow a CI step belongs to.",
@@ -9307,7 +9305,7 @@
       "post": {
         "operationId": "l1-coverage",
         "summary": "L1 extraction coverage",
-        "description": "Of the normative sentences in a publication (the closed marker list of smart-kg's `docs/COVERAGE.md` §1), count how many an L1 extraction CAPTURED, how many are EXCLUDED for a fixed-list reason a person signed off, and how many are UNACCOUNTED — per page and in total. Writes the contract's §4 report and exits non-zero below 100% accounted-for.",
+        "description": "Of the normative sentences in a publication (the closed marker list of the methodology `l1-coverage` §1), count how many an L1 extraction CAPTURED, how many are EXCLUDED for a fixed-list reason a person signed off, and how many are UNACCOUNTED — per page and in total. Writes the contract's §4 report and exits non-zero below 100% accounted-for.",
         "tags": [
           "l1-coverage"
         ],
