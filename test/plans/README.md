@@ -75,9 +75,10 @@ The WHO-ITB cases have one Scenario per GITB test case, tagged
 runs them yet (bean OI-33).
 
 `tools/test-gherkin/check_test_gherkin.sh` (CI runs it) is the harness's
-`check:test-gherkin`, given this repository's TypeScript runner call
-(`run`) and the WHO-ITB test suites at the cited commit, fetched to a
-temporary directory. It fails when a `#[test]`, `@Test` or conformance
+`check:test-gherkin`, given the WHO-ITB test suites at the cited commit,
+fetched to a temporary directory. The TypeScript suites declare their runner
+in a comment, `@test-runner run`, so the check reads their `run(...)` calls as
+tests. It fails when a `#[test]`, `@Test` or conformance
 `run(...)` has no Scenario or two, a tag names no test, an `@itb:` tag names
 no GITB test case, or a test's title is computed.
 

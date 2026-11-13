@@ -3,6 +3,10 @@
 // api/generated/ts, the TypeScript that jco derives from the WIT contract, so
 // a call or a result that differs from the contract fails tsc before it runs.
 // The data comes from the shared vectors (STT-TST-005), passed in by run.mjs.
+//
+// Each run("STT-… title", …) is one test, named by one Gherkin Scenario in
+// test/features/ (check:test-gherkin reads this file's runner from this line):
+// @test-runner run
 // Verifies STT-TST-007 and STT-GEN-011: tsc type-checks it against api/generated/ts
 // for both packages before it runs.
 

@@ -4,8 +4,8 @@
 # repository's own.
 #
 #  - The TypeScript conformance suites run their tests through their own
-#    runner, run("STT-… title", …), in plain modules: declared with
-#    --js-test-call.
+#    runner, run("STT-… title", …), in plain modules; each declares it in a
+#    comment, `@test-runner run`, which the check reads.
 #  - The who-itb-agreement Scenarios bind WHO-ITB GITB test cases by
 #    @itb:<suite>/<testcase>. Those resolve against the WHO-ITB test suites
 #    at the commit references/who-itb cites, fetched here to a temporary
@@ -30,7 +30,4 @@ if [[ -z "$itb" ]]; then
   git -C "$itb" fetch -q --depth 1 --filter=blob:none "$repo.git" "$sha"
   git -C "$itb" checkout -q FETCH_HEAD -- testsuites
 fi
-exec bun run cat check:test-gherkin -- \
-  --js-test-call tools/conformance-ts/suite.ts=run \
-  --js-test-call tools/conformance-ts/cross.ts=run \
-  --itb "$itb" "$@"
+exec bun run cat check:test-gherkin -- --itb "$itb" "$@"

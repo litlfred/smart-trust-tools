@@ -3,6 +3,10 @@
 // must also build the same bytes from the same request: the Sig_structure to
 // sign, and the COSE_Sign1 once the same signature is attached. Type-checked
 // with suite.ts; cross.mjs passes in both implementations.
+//
+// Each run("STT-… title", …) is one test, named by one Gherkin Scenario in
+// test/features/ (check:test-gherkin reads this file's runner from this line):
+// @test-runner run
 
 import type { Hcert, Outcome } from "./suite.ts";
 import { L, OPTIONS, TESTKIT_NOW, hex, ihe, newborn } from "./suite.ts";

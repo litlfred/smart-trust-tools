@@ -85,7 +85,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/cat-harness-tools",
-          "ref": "4ac36f3f401b2f404f434e440c77d20290b46b3b",
+          "ref": "bfefdc4c2d1373819f4162c06df5bba63890abd6",
           "overrides": {
             "cat-harness-tools": {
               "whole": true
@@ -98,8 +98,8 @@
             "consent": {
               "by": "litlfred",
               "on": "2026-11-13",
-              "ref": "4ac36f3f401b2f404f434e440c77d20290b46b3b",
-              "evidence": "Owner litlfred, 2026-11-13 (session card 'Layer copies' option 1, opt-in per site): re-pin so the site carries only its own pages and links other layers (cat-harness-tools#1985); the same set as folio-assistant#3111's re-pin train, so lock-consistency holds."
+              "ref": "bfefdc4c2d1373819f4162c06df5bba63890abd6",
+              "evidence": "Owner litlfred, 2026-11-13 (this session): asked to work the todos and merge the upstream check:test-gherkin fix ('1'), so this repository can adopt it."
             }
           }
         }
