@@ -94,7 +94,20 @@
       "labelEnd": null,
       "words": 77,
       "summary": null,
-      "keywords": [],
+      "keywords": [
+        {
+          "term": "endpoints",
+          "heading": true
+        },
+        {
+          "term": "distribution",
+          "heading": true
+        },
+        {
+          "term": "trustlist",
+          "heading": true
+        }
+      ],
       "extract": "THe following are the endpoints for the GDHCN DID Trust List for each of development (DEV), user-acceptence testing (UAT) and production (PROD) **environment*s: Environment; Variant; URL DEV; Embedded; https://tng-cdn-dev.who.int/v2/trustlist/did.json DEV; Reference; https://tng-cdn-dev.who.int/v2/trustlist-ref/did.json UAT; Embedded; https://tng-cdn-uat.who.int/v2/trustlist/did.json UAT; Reference;",
       "extractCut": true
     },
@@ -109,7 +122,20 @@
       "labelEnd": null,
       "words": 47,
       "summary": null,
-      "keywords": [],
+      "keywords": [
+        {
+          "term": "network gateway",
+          "heading": true
+        },
+        {
+          "term": "trust network",
+          "heading": true
+        },
+        {
+          "term": "prod",
+          "heading": false
+        }
+      ],
       "extract": "THe following are the endpoints for the Trust Network Gateway for each of development (DEV), user-acceptence testing (UAT) and production (PROD) **environment*s: Environment; URL PROD; https://tng.who.int UAT; https://tng-uat.who.int DEV; https://tng-dev.who.int",
       "extractCut": false
     },
@@ -124,13 +150,52 @@
       "labelEnd": null,
       "words": 99,
       "summary": null,
-      "keywords": [],
+      "keywords": [
+        {
+          "term": "prod country",
+          "heading": false
+        },
+        {
+          "term": "uat country",
+          "heading": false
+        },
+        {
+          "term": "dev country",
+          "heading": false
+        }
+      ],
       "extract": "The following dashboards reflect the realtime status of key materials for each of development (DEV), user-acceptence testing (UAT) and production (PROD) **environment*s: Environment; Dashboard DEV; Country certificate expiry DEV; Country Onboarding Status DEV; Country Queries DEV; Gateway Availability Dashboard UAT; Country certificate expiry UAT; Country Queries UAT; Gateway Availability Dashboard PROD; Country",
       "extractCut": true
     }
   ],
   "checks": {},
   "withheld": false,
+  "keywords": [
+    {
+      "term": "prod country",
+      "heading": false
+    },
+    {
+      "term": "uat country",
+      "heading": false
+    },
+    {
+      "term": "dev country",
+      "heading": false
+    },
+    {
+      "term": "user-acceptence testing",
+      "heading": false
+    },
+    {
+      "term": "environment",
+      "heading": false
+    },
+    {
+      "term": "network gateway",
+      "heading": true
+    }
+  ],
   "links": {
     "repo": "litlfred/smart-trust-tools",
     "branch": "main",

@@ -1,18 +1,97 @@
 {
  "$schema": "process-task-panel/v1",
  "process": "Process_Review",
+ "markers": [
+  {
+   "id": "Task_ClassifyChange",
+   "name": "Classify what changed",
+   "left": 23.5,
+   "top": 27.5,
+   "box": {
+    "left": 16.32,
+    "top": 43.33,
+    "width": 2.38,
+    "height": 4
+   }
+  },
+  {
+   "id": "Call_NarrativeReview",
+   "name": "Narrative review",
+   "left": 58.14,
+   "top": 2.5,
+   "box": {
+    "left": 50.96,
+    "top": 18.33,
+    "width": 2.38,
+    "height": 4
+   }
+  },
+  {
+   "id": "Call_CodeReview",
+   "name": "Code node review",
+   "left": 58.14,
+   "top": 52.5,
+   "box": {
+    "left": 50.96,
+    "top": 68.33,
+    "width": 2.38,
+    "height": 4
+   }
+  },
+  {
+   "id": "Call_NarrativeCodeReview",
+   "name": "Prose and the code it describes",
+   "left": 58.14,
+   "top": 27.5,
+   "box": {
+    "left": 50.96,
+    "top": 43.33,
+    "width": 2.38,
+    "height": 4
+   }
+  },
+  {
+   "id": "Task_Consolidate",
+   "name": "Consolidate findings",
+   "left": 82.88,
+   "top": 27.5,
+   "box": {
+    "left": 75.7,
+    "top": 43.33,
+    "width": 2.38,
+    "height": 4
+   }
+  },
+  {
+   "id": "Task_EditorDecides",
+   "name": "Accept, or send back",
+   "left": 82.88,
+   "top": 76.67,
+   "box": {
+    "left": 75.7,
+    "top": 92.5,
+    "width": 2.38,
+    "height": 4
+   }
+  }
+ ],
+ "processHref": "review-task.html",
  "tasks": {
   "Task_ClassifyChange": {
    "id": "Task_ClassifyChange",
    "name": "Classify what changed",
    "type": "bpmn:Task",
+   "stepHref": "review-task.html#step-Task_ClassifyChange",
    "lane": "Reviewer / SME",
+   "laneHref": "review-task.html#lane-Lane_Reviewer",
    "skills": [
     {
-     "name": "content-review"
+     "name": "content-review",
+     "href": "../../../en/cat-harness/processes/skills/content-review.html"
     },
     {
-     "name": "staging-review"
+     "name": "staging-review",
+     "href": "../../../en/cat-harness/processes/skills/staging-review.html"
     }
    ],
    "role": {
@@ -21,19 +100,20 @@
     "title": "Reviewer / SME",
     "skills": [
      {
-      "name": "adjudication"
+      "name": "adjudication",
+      "href": "../../../en/cat-harness/processes/skills/adjudication.html"
      },
      {
-      "name": "content-feedback"
+      "name": "content-feedback",
+      "href": "../../../en/cat-harness/processes/skills/content-feedback.html"
      },
      {
-      "name": "content-review"
+      "name": "content-review",
+      "href": "../../../en/cat-harness/processes/skills/content-review.html"
      },
      {
-      "name": "decision-audit"
-     },
-     {
-      "name": "milnor-exposition-standard"
+      "name": "decision-audit",
+      "href": "../../../en/cat-harness/processes/skills/decision-audit.html"
      },
      {
       "name": "narrative-asserts-code"
@@ -42,16 +122,19 @@
       "name": "rendered-impact"
      },
      {
-      "name": "staging-review"
+      "name": "staging-review",
+      "href": "../../../en/cat-harness/processes/skills/staging-review.html"
      },
      {
-      "name": "translation-manager"
+      "name": "translation-manager",
+      "href": "../../../en/cat-harness/processes/skills/translation-manager.html"
      },
      {
       "name": "visual-diff"
      },
      {
-      "name": "voice-overlay-review"
+      "name": "voice-overlay-review",
+      "href": "../../../en/cat-harness/processes/skills/voice-overlay-review.html"
      }
     ]
    }
@@ -60,11 +143,14 @@
    "id": "Call_NarrativeReview",
    "name": "Narrative review",
    "type": "bpmn:CallActivity",
+   "stepHref": "review-task.html#step-Call_NarrativeReview",
    "lane": "Reviewer / SME",
+   "laneHref": "review-task.html#lane-Lane_Reviewer",
    "skills": [],
    "calls": {
     "name": "Narrative review",
-    "href": "review-narrative.html"
+    "href": "review-narrative.html",
+    "diagram": "review-narrative.html"
    },
    "role": {
     "name": "reviewer",
@@ -72,19 +158,20 @@
     "title": "Reviewer / SME",
     "skills": [
      {
-      "name": "adjudication"
+      "name": "adjudication",
+      "href": "../../../en/cat-harness/processes/skills/adjudication.html"
      },
      {
-      "name": "content-feedback"
+      "name": "content-feedback",
+      "href": "../../../en/cat-harness/processes/skills/content-feedback.html"
      },
      {
-      "name": "content-review"
+      "name": "content-review",
+      "href": "../../../en/cat-harness/processes/skills/content-review.html"
      },
      {
-      "name": "decision-audit"
-     },
-     {
-      "name": "milnor-exposition-standard"
+      "name": "decision-audit",
+      "href": "../../../en/cat-harness/processes/skills/decision-audit.html"
      },
      {
       "name": "narrative-asserts-code"
@@ -93,16 +180,19 @@
       "name": "rendered-impact"
      },
      {
-      "name": "staging-review"
+      "name": "staging-review",
+      "href": "../../../en/cat-harness/processes/skills/staging-review.html"
      },
      {
-      "name": "translation-manager"
+      "name": "translation-manager",
+      "href": "../../../en/cat-harness/processes/skills/translation-manager.html"
      },
      {
       "name": "visual-diff"
      },
      {
-      "name": "voice-overlay-review"
+      "name": "voice-overlay-review",
+      "href": "../../../en/cat-harness/processes/skills/voice-overlay-review.html"
      }
     ]
    }
@@ -111,11 +201,14 @@
    "id": "Call_CodeReview",
    "name": "Code node review",
    "type": "bpmn:CallActivity",
+   "stepHref": "review-task.html#step-Call_CodeReview",
    "lane": "Reviewer / SME",
+   "laneHref": "review-task.html#lane-Lane_Reviewer",
    "skills": [],
    "calls": {
     "name": "Code node review",
-    "href": "review-code.html"
+    "href": "review-code.html",
+    "diagram": "review-code.html"
    },
    "role": {
     "name": "reviewer",
@@ -123,19 +216,20 @@
     "title": "Reviewer / SME",
     "skills": [
      {
-      "name": "adjudication"
+      "name": "adjudication",
+      "href": "../../../en/cat-harness/processes/skills/adjudication.html"
      },
      {
-      "name": "content-feedback"
+      "name": "content-feedback",
+      "href": "../../../en/cat-harness/processes/skills/content-feedback.html"
      },
      {
-      "name": "content-review"
+      "name": "content-review",
+      "href": "../../../en/cat-harness/processes/skills/content-review.html"
      },
      {
-      "name": "decision-audit"
-     },
-     {
-      "name": "milnor-exposition-standard"
+      "name": "decision-audit",
+      "href": "../../../en/cat-harness/processes/skills/decision-audit.html"
      },
      {
       "name": "narrative-asserts-code"
@@ -144,16 +238,19 @@
       "name": "rendered-impact"
      },
      {
-      "name": "staging-review"
+      "name": "staging-review",
+      "href": "../../../en/cat-harness/processes/skills/staging-review.html"
      },
      {
-      "name": "translation-manager"
+      "name": "translation-manager",
+      "href": "../../../en/cat-harness/processes/skills/translation-manager.html"
      },
      {
       "name": "visual-diff"
      },
      {
-      "name": "voice-overlay-review"
+      "name": "voice-overlay-review",
+      "href": "../../../en/cat-harness/processes/skills/voice-overlay-review.html"
      }
     ]
    }
@@ -161,32 +258,31 @@
   "Call_NarrativeCodeReview": {
    "id": "Call_NarrativeCodeReview",
    "name": "Prose and the code it describes",
-   "type": "bpmn:CallActivity",
+   "type": "bpmn:Task",
+   "stepHref": "review-task.html#step-Call_NarrativeCodeReview",
    "lane": "Reviewer / SME",
+   "laneHref": "review-task.html#lane-Lane_Reviewer",
    "skills": [],
-   "calls": {
-    "name": "Prose and the code it describes",
-    "href": "narrative-code-review.html"
-   },
    "role": {
     "name": "reviewer",
     "href": "../../../cat-harness/auto-docs/index/roles/index.html#a-cat-harness-scenarios-roles-json-reviewer",
     "title": "Reviewer / SME",
     "skills": [
      {
-      "name": "adjudication"
+      "name": "adjudication",
+      "href": "../../../en/cat-harness/processes/skills/adjudication.html"
      },
      {
-      "name": "content-feedback"
+      "name": "content-feedback",
+      "href": "../../../en/cat-harness/processes/skills/content-feedback.html"
      },
      {
-      "name": "content-review"
+      "name": "content-review",
+      "href": "../../../en/cat-harness/processes/skills/content-review.html"
      },
      {
-      "name": "decision-audit"
-     },
-     {
-      "name": "milnor-exposition-standard"
+      "name": "decision-audit",
+      "href": "../../../en/cat-harness/processes/skills/decision-audit.html"
      },
      {
       "name": "narrative-asserts-code"
@@ -195,16 +291,19 @@
       "name": "rendered-impact"
      },
      {
-      "name": "staging-review"
+      "name": "staging-review",
+      "href": "../../../en/cat-harness/processes/skills/staging-review.html"
      },
      {
-      "name": "translation-manager"
+      "name": "translation-manager",
+      "href": "../../../en/cat-harness/processes/skills/translation-manager.html"
      },
      {
       "name": "visual-diff"
      },
      {
-      "name": "voice-overlay-review"
+      "name": "voice-overlay-review",
+      "href": "../../../en/cat-harness/processes/skills/voice-overlay-review.html"
      }
     ]
    }
@@ -213,10 +312,13 @@
    "id": "Task_Consolidate",
    "name": "Consolidate findings",
    "type": "bpmn:Task",
+   "stepHref": "review-task.html#step-Task_Consolidate",
    "lane": "Reviewer / SME",
+   "laneHref": "review-task.html#lane-Lane_Reviewer",
    "skills": [
     {
-     "name": "content-review"
+     "name": "content-review",
+     "href": "../../../en/cat-harness/processes/skills/content-review.html"
     }
    ],
    "role": {
@@ -225,19 +327,20 @@
     "title": "Reviewer / SME",
     "skills": [
      {
-      "name": "adjudication"
+      "name": "adjudication",
+      "href": "../../../en/cat-harness/processes/skills/adjudication.html"
      },
      {
-      "name": "content-feedback"
+      "name": "content-feedback",
+      "href": "../../../en/cat-harness/processes/skills/content-feedback.html"
      },
      {
-      "name": "content-review"
+      "name": "content-review",
+      "href": "../../../en/cat-harness/processes/skills/content-review.html"
      },
      {
-      "name": "decision-audit"
-     },
-     {
-      "name": "milnor-exposition-standard"
+      "name": "decision-audit",
+      "href": "../../../en/cat-harness/processes/skills/decision-audit.html"
      },
      {
       "name": "narrative-asserts-code"
@@ -246,16 +349,19 @@
       "name": "rendered-impact"
      },
      {
-      "name": "staging-review"
+      "name": "staging-review",
+      "href": "../../../en/cat-harness/processes/skills/staging-review.html"
      },
      {
-      "name": "translation-manager"
+      "name": "translation-manager",
+      "href": "../../../en/cat-harness/processes/skills/translation-manager.html"
      },
      {
       "name": "visual-diff"
      },
      {
-      "name": "voice-overlay-review"
+      "name": "voice-overlay-review",
+      "href": "../../../en/cat-harness/processes/skills/voice-overlay-review.html"
      }
     ]
    }
@@ -264,10 +370,13 @@
    "id": "Task_EditorDecides",
    "name": "Accept, or send back",
    "type": "bpmn:Task",
+   "stepHref": "review-task.html#step-Task_EditorDecides",
    "lane": "Editors + authoring agents",
+   "laneHref": "review-task.html#lane-Lane_EditorDecides",
    "skills": [
     {
-     "name": "content-validate"
+     "name": "content-validate",
+     "href": "../../../en/cat-harness/processes/skills/content-validate.html"
     }
    ],
    "role": {
@@ -276,33 +385,46 @@
     "title": "Editor",
     "skills": [
      {
-      "name": "content-author",
-      "via": "author"
-     },
-     {
-      "name": "content-plan",
+      "name": "bpmn-authoring",
+      "href": "../../../en/cat-harness/processes/skills/bpmn-authoring.html",
       "via": "author"
      },
      {
       "name": "content-review",
+      "href": "../../../en/cat-harness/processes/skills/content-review.html",
       "via": "author"
      },
      {
-      "name": "content-validate"
+      "name": "content-validate",
+      "href": "../../../en/cat-harness/processes/skills/content-validate.html"
      },
      {
       "name": "decision-audit",
+      "href": "../../../en/cat-harness/processes/skills/decision-audit.html",
+      "via": "author"
+     },
+     {
+      "name": "dmn-authoring",
+      "href": "../../../en/cat-harness/processes/skills/dmn-authoring.html",
       "via": "author"
      },
      {
       "name": "evidence-appraisal",
+      "href": "../../../en/cat-harness/processes/skills/evidence-appraisal.html",
       "via": "author"
      },
      {
-      "name": "milnor-exposition-standard"
+      "name": "kg-affordances",
+      "href": "../../../en/cat-harness/processes/skills/kg-affordances.html",
+      "via": "author"
      },
      {
       "name": "staging-review",
+      "href": "../../../en/cat-harness/processes/skills/staging-review.html",
+      "via": "author"
+     },
+     {
+      "name": "todo-manager",
       "via": "author"
      },
      {

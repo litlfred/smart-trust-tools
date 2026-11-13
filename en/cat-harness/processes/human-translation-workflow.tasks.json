@@ -1,15 +1,213 @@
 {
  "$schema": "process-task-panel/v1",
  "process": "Process_HumanTranslation",
+ "markers": [
+  {
+   "id": "Task_IdentifyContent",
+   "name": "Identify content and target locale",
+   "left": 21.06,
+   "top": 29.75,
+   "box": {
+    "left": 15.79,
+    "top": 41.77,
+    "width": 1.74,
+    "height": 3.04
+   }
+  },
+  {
+   "id": "Task_AssignTranslator",
+   "name": "Assign to qualified human translator",
+   "left": 33.03,
+   "top": 29.75,
+   "box": {
+    "left": 27.77,
+    "top": 41.77,
+    "width": 1.74,
+    "height": 3.04
+   }
+  },
+  {
+   "id": "Task_CheckCompleteness",
+   "name": "Check translation completeness",
+   "left": 46.1,
+   "top": 29.75,
+   "box": {
+    "left": 40.84,
+    "top": 41.77,
+    "width": 1.74,
+    "height": 3.04
+   }
+  },
+  {
+   "id": "Task_RequestMoreWork",
+   "name": "Request completion of remaining strings",
+   "left": 65.71,
+   "top": 29.75,
+   "box": {
+    "left": 60.44,
+    "top": 41.77,
+    "width": 1.74,
+    "height": 3.04
+   }
+  },
+  {
+   "id": "Task_ReceiveAssignment",
+   "name": "Receive assignment and materials",
+   "left": 24.32,
+   "top": 5.7,
+   "box": {
+    "left": 19.06,
+    "top": 17.72,
+    "width": 1.74,
+    "height": 3.04
+   }
+  },
+  {
+   "id": "Task_TranslateInTool",
+   "name": "Translate strings in preferred tool",
+   "left": 35.21,
+   "top": 5.7,
+   "box": {
+    "left": 29.95,
+    "top": 17.72,
+    "width": 1.74,
+    "height": 3.04
+   }
+  },
+  {
+   "id": "Task_SubmitPO",
+   "name": "Submit completed .po file",
+   "left": 46.1,
+   "top": 5.7,
+   "box": {
+    "left": 40.84,
+    "top": 17.72,
+    "width": 1.74,
+    "height": 3.04
+   }
+  },
+  {
+   "id": "Task_SMEReview",
+   "name": "Review translation for accuracy",
+   "left": 51.19,
+   "top": 77.85,
+   "box": {
+    "left": 45.92,
+    "top": 89.87,
+    "width": 1.74,
+    "height": 3.04
+   }
+  },
+  {
+   "id": "Task_ReturnForCorrection",
+   "name": "Return for correction with annotations",
+   "left": 70.79,
+   "top": 77.85,
+   "box": {
+    "left": 65.53,
+    "top": 89.87,
+    "width": 1.74,
+    "height": 3.04
+   }
+  },
+  {
+   "id": "Task_Signoff",
+   "name": "Sign off translation as official",
+   "left": 83.13,
+   "top": 77.85,
+   "box": {
+    "left": 77.87,
+    "top": 89.87,
+    "width": 1.74,
+    "height": 3.04
+   }
+  },
+  {
+   "id": "Task_ExtractPOT",
+   "name": "Extract the POT",
+   "left": 21.06,
+   "top": 54.43,
+   "box": {
+    "left": 15.79,
+    "top": 66.46,
+    "width": 1.74,
+    "height": 3.04
+   }
+  },
+  {
+   "id": "Task_PrepareGlossary",
+   "name": "Prepare domain glossary",
+   "left": 33.03,
+   "top": 54.43,
+   "box": {
+    "left": 27.77,
+    "top": 66.46,
+    "width": 1.74,
+    "height": 3.04
+   }
+  },
+  {
+   "id": "Task_InjectPO",
+   "name": "Inject the PO",
+   "left": 46.1,
+   "top": 54.43,
+   "box": {
+    "left": 40.84,
+    "top": 66.46,
+    "width": 1.74,
+    "height": 3.04
+   }
+  },
+  {
+   "id": "Task_RoundTripQA",
+   "name": "Round-trip translation QA",
+   "left": 57.36,
+   "top": 54.43,
+   "box": {
+    "left": 52.09,
+    "top": 66.46,
+    "width": 1.74,
+    "height": 3.04
+   }
+  },
+  {
+   "id": "Task_AppendDisclaimer",
+   "name": "Append WHO disclaimer (if DAK)",
+   "left": 79.86,
+   "top": 54.43,
+   "box": {
+    "left": 74.6,
+    "top": 66.46,
+    "width": 1.74,
+    "height": 3.04
+   }
+  },
+  {
+   "id": "Task_WriteStatus",
+   "name": "Write status.json (official)",
+   "left": 91.84,
+   "top": 54.43,
+   "box": {
+    "left": 86.58,
+    "top": 66.46,
+    "width": 1.74,
+    "height": 3.04
+   }
+  }
+ ],
+ "processHref": "human-translation-workflow.html",
  "tasks": {
   "Task_IdentifyContent": {
    "id": "Task_IdentifyContent",
    "name": "Identify content and target locale",
    "type": "bpmn:UserTask",
+   "stepHref": "human-translation-workflow.html#step-Task_IdentifyContent",
    "lane": "Translation Coordinator",
+   "laneHref": "human-translation-workflow.html#lane-Lane_Coordinator",
    "skills": [
     {
-     "name": "translation-manager"
+     "name": "translation-manager",
+     "href": "../../../en/cat-harness/processes/skills/translation-manager.html"
     }
    ],
    "role": {
@@ -18,7 +216,8 @@
     "title": "Translation coordinator",
     "skills": [
      {
-      "name": "translation-manager"
+      "name": "translation-manager",
+      "href": "../../../en/cat-harness/processes/skills/translation-manager.html"
      }
     ]
    }
@@ -27,10 +226,13 @@
    "id": "Task_AssignTranslator",
    "name": "Assign to qualified human translator",
    "type": "bpmn:UserTask",
+   "stepHref": "human-translation-workflow.html#step-Task_AssignTranslator",
    "lane": "Translation Coordinator",
+   "laneHref": "human-translation-workflow.html#lane-Lane_Coordinator",
    "skills": [
     {
-     "name": "translation-manager"
+     "name": "translation-manager",
+     "href": "../../../en/cat-harness/processes/skills/translation-manager.html"
     }
    ],
    "role": {
@@ -39,7 +241,8 @@
     "title": "Translation coordinator",
     "skills": [
      {
-      "name": "translation-manager"
+      "name": "translation-manager",
+      "href": "../../../en/cat-harness/processes/skills/translation-manager.html"
      }
     ]
    }
@@ -48,10 +251,13 @@
    "id": "Task_CheckCompleteness",
    "name": "Check translation completeness",
    "type": "bpmn:UserTask",
+   "stepHref": "human-translation-workflow.html#step-Task_CheckCompleteness",
    "lane": "Translation Coordinator",
+   "laneHref": "human-translation-workflow.html#lane-Lane_Coordinator",
    "skills": [
     {
-     "name": "translation-manager"
+     "name": "translation-manager",
+     "href": "../../../en/cat-harness/processes/skills/translation-manager.html"
     }
    ],
    "role": {
@@ -60,7 +266,8 @@
     "title": "Translation coordinator",
     "skills": [
      {
-      "name": "translation-manager"
+      "name": "translation-manager",
+      "href": "../../../en/cat-harness/processes/skills/translation-manager.html"
      }
     ]
    }
@@ -69,10 +276,13 @@
    "id": "Task_RequestMoreWork",
    "name": "Request completion of remaining strings",
    "type": "bpmn:UserTask",
+   "stepHref": "human-translation-workflow.html#step-Task_RequestMoreWork",
    "lane": "Translation Coordinator",
+   "laneHref": "human-translation-workflow.html#lane-Lane_Coordinator",
    "skills": [
     {
-     "name": "translation-manager"
+     "name": "translation-manager",
+     "href": "../../../en/cat-harness/processes/skills/translation-manager.html"
     }
    ],
    "role": {
@@ -81,7 +291,8 @@
     "title": "Translation coordinator",
     "skills": [
      {
-      "name": "translation-manager"
+      "name": "translation-manager",
+      "href": "../../../en/cat-harness/processes/skills/translation-manager.html"
      }
     ]
    }
@@ -90,16 +301,21 @@
    "id": "Task_ReceiveAssignment",
    "name": "Receive assignment and materials",
    "type": "bpmn:UserTask",
+   "stepHref": "human-translation-workflow.html#step-Task_ReceiveAssignment",
    "lane": "Human Translator",
+   "laneHref": "human-translation-workflow.html#lane-Lane_Translator",
    "skills": [
     {
-     "name": "translation-manager"
+     "name": "translation-manager",
+     "href": "../../../en/cat-harness/processes/skills/translation-manager.html"
     },
     {
-     "name": "translation-manager"
+     "name": "translation-manager",
+     "href": "../../../en/cat-harness/processes/skills/translation-manager.html"
     },
     {
-     "name": "translation-manager"
+     "name": "translation-manager",
+     "href": "../../../en/cat-harness/processes/skills/translation-manager.html"
     }
    ],
    "role": {
@@ -108,7 +324,8 @@
     "title": "Human translator",
     "skills": [
      {
-      "name": "translation-manager"
+      "name": "translation-manager",
+      "href": "../../../en/cat-harness/processes/skills/translation-manager.html"
      }
     ]
    }
@@ -117,10 +334,13 @@
    "id": "Task_TranslateInTool",
    "name": "Translate strings in preferred tool",
    "type": "bpmn:UserTask",
+   "stepHref": "human-translation-workflow.html#step-Task_TranslateInTool",
    "lane": "Human Translator",
+   "laneHref": "human-translation-workflow.html#lane-Lane_Translator",
    "skills": [
     {
-     "name": "translation-manager"
+     "name": "translation-manager",
+     "href": "../../../en/cat-harness/processes/skills/translation-manager.html"
     }
    ],
    "role": {
@@ -129,7 +349,8 @@
     "title": "Human translator",
     "skills": [
      {
-      "name": "translation-manager"
+      "name": "translation-manager",
+      "href": "../../../en/cat-harness/processes/skills/translation-manager.html"
      }
     ]
    }
@@ -138,16 +359,21 @@
    "id": "Task_SubmitPO",
    "name": "Submit completed .po file",
    "type": "bpmn:UserTask",
+   "stepHref": "human-translation-workflow.html#step-Task_SubmitPO",
    "lane": "Human Translator",
+   "laneHref": "human-translation-workflow.html#lane-Lane_Translator",
    "skills": [
     {
-     "name": "translation-manager"
+     "name": "translation-manager",
+     "href": "../../../en/cat-harness/processes/skills/translation-manager.html"
     },
     {
-     "name": "translation-manager"
+     "name": "translation-manager",
+     "href": "../../../en/cat-harness/processes/skills/translation-manager.html"
     },
     {
-     "name": "translation-manager"
+     "name": "translation-manager",
+     "href": "../../../en/cat-harness/processes/skills/translation-manager.html"
     }
    ],
    "role": {
@@ -156,7 +382,8 @@
     "title": "Human translator",
     "skills": [
      {
-      "name": "translation-manager"
+      "name": "translation-manager",
+      "href": "../../../en/cat-harness/processes/skills/translation-manager.html"
      }
     ]
    }
@@ -165,16 +392,21 @@
    "id": "Task_SMEReview",
    "name": "Review translation for accuracy",
    "type": "bpmn:UserTask",
+   "stepHref": "human-translation-workflow.html#step-Task_SMEReview",
    "lane": "Subject-Matter Expert / Reviewer",
+   "laneHref": "human-translation-workflow.html#lane-Lane_Reviewer",
    "skills": [
     {
-     "name": "translation-manager"
+     "name": "translation-manager",
+     "href": "../../../en/cat-harness/processes/skills/translation-manager.html"
     },
     {
-     "name": "translation-manager"
+     "name": "translation-manager",
+     "href": "../../../en/cat-harness/processes/skills/translation-manager.html"
     },
     {
-     "name": "translation-manager"
+     "name": "translation-manager",
+     "href": "../../../en/cat-harness/processes/skills/translation-manager.html"
     }
    ],
    "role": {
@@ -183,19 +415,20 @@
     "title": "Reviewer / SME",
     "skills": [
      {
-      "name": "adjudication"
+      "name": "adjudication",
+      "href": "../../../en/cat-harness/processes/skills/adjudication.html"
      },
      {
-      "name": "content-feedback"
+      "name": "content-feedback",
+      "href": "../../../en/cat-harness/processes/skills/content-feedback.html"
      },
      {
-      "name": "content-review"
+      "name": "content-review",
+      "href": "../../../en/cat-harness/processes/skills/content-review.html"
      },
      {
-      "name": "decision-audit"
-     },
-     {
-      "name": "milnor-exposition-standard"
+      "name": "decision-audit",
+      "href": "../../../en/cat-harness/processes/skills/decision-audit.html"
      },
      {
       "name": "narrative-asserts-code"
@@ -204,16 +437,19 @@
       "name": "rendered-impact"
      },
      {
-      "name": "staging-review"
+      "name": "staging-review",
+      "href": "../../../en/cat-harness/processes/skills/staging-review.html"
      },
      {
-      "name": "translation-manager"
+      "name": "translation-manager",
+      "href": "../../../en/cat-harness/processes/skills/translation-manager.html"
      },
      {
       "name": "visual-diff"
      },
      {
-      "name": "voice-overlay-review"
+      "name": "voice-overlay-review",
+      "href": "../../../en/cat-harness/processes/skills/voice-overlay-review.html"
      }
     ]
    }
@@ -222,10 +458,13 @@
    "id": "Task_ReturnForCorrection",
    "name": "Return for correction with annotations",
    "type": "bpmn:UserTask",
+   "stepHref": "human-translation-workflow.html#step-Task_ReturnForCorrection",
    "lane": "Subject-Matter Expert / Reviewer",
+   "laneHref": "human-translation-workflow.html#lane-Lane_Reviewer",
    "skills": [
     {
-     "name": "translation-manager"
+     "name": "translation-manager",
+     "href": "../../../en/cat-harness/processes/skills/translation-manager.html"
     }
    ],
    "role": {
@@ -234,19 +473,20 @@
     "title": "Reviewer / SME",
     "skills": [
      {
-      "name": "adjudication"
+      "name": "adjudication",
+      "href": "../../../en/cat-harness/processes/skills/adjudication.html"
      },
      {
-      "name": "content-feedback"
+      "name": "content-feedback",
+      "href": "../../../en/cat-harness/processes/skills/content-feedback.html"
      },
      {
-      "name": "content-review"
+      "name": "content-review",
+      "href": "../../../en/cat-harness/processes/skills/content-review.html"
      },
      {
-      "name": "decision-audit"
-     },
-     {
-      "name": "milnor-exposition-standard"
+      "name": "decision-audit",
+      "href": "../../../en/cat-harness/processes/skills/decision-audit.html"
      },
      {
       "name": "narrative-asserts-code"
@@ -255,16 +495,19 @@
       "name": "rendered-impact"
      },
      {
-      "name": "staging-review"
+      "name": "staging-review",
+      "href": "../../../en/cat-harness/processes/skills/staging-review.html"
      },
      {
-      "name": "translation-manager"
+      "name": "translation-manager",
+      "href": "../../../en/cat-harness/processes/skills/translation-manager.html"
      },
      {
       "name": "visual-diff"
      },
      {
-      "name": "voice-overlay-review"
+      "name": "voice-overlay-review",
+      "href": "../../../en/cat-harness/processes/skills/voice-overlay-review.html"
      }
     ]
    }
@@ -273,10 +516,13 @@
    "id": "Task_Signoff",
    "name": "Sign off translation as official",
    "type": "bpmn:UserTask",
+   "stepHref": "human-translation-workflow.html#step-Task_Signoff",
    "lane": "Subject-Matter Expert / Reviewer",
+   "laneHref": "human-translation-workflow.html#lane-Lane_Reviewer",
    "skills": [
     {
-     "name": "translation-manager"
+     "name": "translation-manager",
+     "href": "../../../en/cat-harness/processes/skills/translation-manager.html"
     }
    ],
    "role": {
@@ -285,19 +531,20 @@
     "title": "Reviewer / SME",
     "skills": [
      {
-      "name": "adjudication"
+      "name": "adjudication",
+      "href": "../../../en/cat-harness/processes/skills/adjudication.html"
      },
      {
-      "name": "content-feedback"
+      "name": "content-feedback",
+      "href": "../../../en/cat-harness/processes/skills/content-feedback.html"
      },
      {
-      "name": "content-review"
+      "name": "content-review",
+      "href": "../../../en/cat-harness/processes/skills/content-review.html"
      },
      {
-      "name": "decision-audit"
-     },
-     {
-      "name": "milnor-exposition-standard"
+      "name": "decision-audit",
+      "href": "../../../en/cat-harness/processes/skills/decision-audit.html"
      },
      {
       "name": "narrative-asserts-code"
@@ -306,64 +553,76 @@
       "name": "rendered-impact"
      },
      {
-      "name": "staging-review"
+      "name": "staging-review",
+      "href": "../../../en/cat-harness/processes/skills/staging-review.html"
      },
      {
-      "name": "translation-manager"
+      "name": "translation-manager",
+      "href": "../../../en/cat-harness/processes/skills/translation-manager.html"
      },
      {
       "name": "visual-diff"
      },
      {
-      "name": "voice-overlay-review"
+      "name": "voice-overlay-review",
+      "href": "../../../en/cat-harness/processes/skills/voice-overlay-review.html"
      }
     ]
    }
   },
   "Task_ExtractPOT": {
    "id": "Task_ExtractPOT",
-   "name": "Extract POT (translatable strings)",
-   "type": "bpmn:ServiceTask",
+   "name": "Extract the POT",
+   "type": "bpmn:Task",
+   "stepHref": "human-translation-workflow.html#step-Task_ExtractPOT",
    "lane": "Automated Pipeline",
+   "laneHref": "human-translation-workflow.html#lane-Lane_Pipeline",
    "skills": [
     {
-     "name": "translation-manager"
+     "name": "translation-manager",
+     "href": "../../../en/cat-harness/processes/skills/translation-manager.html"
     }
    ],
+   "shared": {
+    "id": "GT_ExtractPot",
+    "type": "bpmn:GlobalTask"
+   },
    "role": {
     "name": "build-pipeline",
     "href": "../../../cat-harness/auto-docs/index/roles/index.html#a-cat-harness-scenarios-roles-json-build-pipeline",
     "title": "Build pipeline",
     "skills": [
      {
-      "name": "ci-health"
+      "name": "ci-health",
+      "href": "../../../en/cat-harness/processes/skills/ci-health.html"
      },
      {
-      "name": "compiled-artefact-cache"
+      "name": "compiled-artefact-cache",
+      "href": "../../../en/cat-harness/processes/skills/compiled-artefact-cache.html"
      },
      {
-      "name": "content-publish"
+      "name": "content-test",
+      "href": "../../../en/cat-harness/processes/skills/content-test.html"
      },
      {
-      "name": "content-test"
+      "name": "content-validate",
+      "href": "../../../en/cat-harness/processes/skills/content-validate.html"
      },
      {
-      "name": "content-validate"
+      "name": "feature-staging",
+      "href": "../../../en/cat-harness/processes/skills/feature-staging.html"
      },
      {
-      "name": "feature-staging"
+      "name": "harness-projections",
+      "href": "../../../en/cat-harness/processes/skills/harness-projections.html"
      },
      {
-      "name": "harness-projections"
+      "name": "kg-separation",
+      "href": "../../../en/cat-harness/processes/skills/kg-separation.html"
      },
      {
-      "name": "ig-ast-delta"
-     },
-     {
-      "name": "kg-separation"
-     },
-     {
-      "name": "platform-gates"
+      "name": "platform-gates",
+      "href": "../../../en/cat-harness/processes/skills/platform-gates.html"
      },
      {
       "name": "prepare-merge"
@@ -375,22 +634,27 @@
       "name": "qa-reports"
      },
      {
-      "name": "remote-mount"
+      "name": "remote-mount",
+      "href": "../../../en/cat-harness/processes/skills/remote-mount.html"
      },
      {
-      "name": "render-kg-to-cdn"
+      "name": "render-kg-to-cdn",
+      "href": "../../../en/cat-harness/processes/skills/render-kg-to-cdn.html"
      },
      {
-      "name": "sub-kg-lifecycle"
+      "name": "sub-kg-lifecycle",
+      "href": "../../../en/cat-harness/processes/skills/sub-kg-lifecycle.html"
      },
      {
       "name": "todo-manager"
      },
      {
-      "name": "translation-manager"
+      "name": "translation-manager",
+      "href": "../../../en/cat-harness/processes/skills/translation-manager.html"
      },
      {
-      "name": "upstream-version-adoption"
+      "name": "upstream-version-adoption",
+      "href": "../../../en/cat-harness/processes/skills/upstream-version-adoption.html"
      },
      {
       "name": "watch"
@@ -402,10 +666,13 @@
    "id": "Task_PrepareGlossary",
    "name": "Prepare domain glossary",
    "type": "bpmn:ServiceTask",
+   "stepHref": "human-translation-workflow.html#step-Task_PrepareGlossary",
    "lane": "Automated Pipeline",
+   "laneHref": "human-translation-workflow.html#lane-Lane_Pipeline",
    "skills": [
     {
-     "name": "translation-manager"
+     "name": "translation-manager",
+     "href": "../../../en/cat-harness/processes/skills/translation-manager.html"
     }
    ],
    "role": {
@@ -414,34 +681,36 @@
     "title": "Build pipeline",
     "skills": [
      {
-      "name": "ci-health"
+      "name": "ci-health",
+      "href": "../../../en/cat-harness/processes/skills/ci-health.html"
      },
      {
-      "name": "compiled-artefact-cache"
+      "name": "compiled-artefact-cache",
+      "href": "../../../en/cat-harness/processes/skills/compiled-artefact-cache.html"
      },
      {
-      "name": "content-publish"
+      "name": "content-test",
+      "href": "../../../en/cat-harness/processes/skills/content-test.html"
      },
      {
-      "name": "content-test"
+      "name": "content-validate",
+      "href": "../../../en/cat-harness/processes/skills/content-validate.html"
      },
      {
-      "name": "content-validate"
+      "name": "feature-staging",
+      "href": "../../../en/cat-harness/processes/skills/feature-staging.html"
      },
      {
-      "name": "feature-staging"
+      "name": "harness-projections",
+      "href": "../../../en/cat-harness/processes/skills/harness-projections.html"
      },
      {
-      "name": "harness-projections"
+      "name": "kg-separation",
+      "href": "../../../en/cat-harness/processes/skills/kg-separation.html"
      },
      {
-      "name": "ig-ast-delta"
-     },
-     {
-      "name": "kg-separation"
-     },
-     {
-      "name": "platform-gates"
+      "name": "platform-gates",
+      "href": "../../../en/cat-harness/processes/skills/platform-gates.html"
      },
      {
       "name": "prepare-merge"
@@ -453,22 +722,27 @@
       "name": "qa-reports"
      },
      {
-      "name": "remote-mount"
+      "name": "remote-mount",
+      "href": "../../../en/cat-harness/processes/skills/remote-mount.html"
      },
      {
-      "name": "render-kg-to-cdn"
+      "name": "render-kg-to-cdn",
+      "href": "../../../en/cat-harness/processes/skills/render-kg-to-cdn.html"
      },
      {
-      "name": "sub-kg-lifecycle"
+      "name": "sub-kg-lifecycle",
+      "href": "../../../en/cat-harness/processes/skills/sub-kg-lifecycle.html"
      },
      {
       "name": "todo-manager"
      },
      {
-      "name": "translation-manager"
+      "name": "translation-manager",
+      "href": "../../../en/cat-harness/processes/skills/translation-manager.html"
      },
      {
-      "name": "upstream-version-adoption"
+      "name": "upstream-version-adoption",
+      "href": "../../../en/cat-harness/processes/skills/upstream-version-adoption.html"
      },
      {
       "name": "watch"
@@ -478,48 +752,57 @@
   },
   "Task_InjectPO": {
    "id": "Task_InjectPO",
-   "name": "Inject PO → translated Markdown",
-   "type": "bpmn:ServiceTask",
+   "name": "Inject the PO",
+   "type": "bpmn:Task",
+   "stepHref": "human-translation-workflow.html#step-Task_InjectPO",
    "lane": "Automated Pipeline",
+   "laneHref": "human-translation-workflow.html#lane-Lane_Pipeline",
    "skills": [
     {
-     "name": "translation-manager"
+     "name": "translation-manager",
+     "href": "../../../en/cat-harness/processes/skills/translation-manager.html"
     }
    ],
+   "shared": {
+    "id": "GT_InjectPo",
+    "type": "bpmn:GlobalTask"
+   },
    "role": {
     "name": "build-pipeline",
     "href": "../../../cat-harness/auto-docs/index/roles/index.html#a-cat-harness-scenarios-roles-json-build-pipeline",
     "title": "Build pipeline",
     "skills": [
      {
-      "name": "ci-health"
+      "name": "ci-health",
+      "href": "../../../en/cat-harness/processes/skills/ci-health.html"
      },
      {
-      "name": "compiled-artefact-cache"
+      "name": "compiled-artefact-cache",
+      "href": "../../../en/cat-harness/processes/skills/compiled-artefact-cache.html"
      },
      {
-      "name": "content-publish"
+      "name": "content-test",
+      "href": "../../../en/cat-harness/processes/skills/content-test.html"
      },
      {
-      "name": "content-test"
+      "name": "content-validate",
+      "href": "../../../en/cat-harness/processes/skills/content-validate.html"
      },
      {
-      "name": "content-validate"
+      "name": "feature-staging",
+      "href": "../../../en/cat-harness/processes/skills/feature-staging.html"
      },
      {
-      "name": "feature-staging"
+      "name": "harness-projections",
+      "href": "../../../en/cat-harness/processes/skills/harness-projections.html"
      },
      {
-      "name": "harness-projections"
+      "name": "kg-separation",
+      "href": "../../../en/cat-harness/processes/skills/kg-separation.html"
      },
      {
-      "name": "ig-ast-delta"
-     },
-     {
-      "name": "kg-separation"
-     },
-     {
-      "name": "platform-gates"
+      "name": "platform-gates",
+      "href": "../../../en/cat-harness/processes/skills/platform-gates.html"
      },
      {
       "name": "prepare-merge"
@@ -531,22 +814,27 @@
       "name": "qa-reports"
      },
      {
-      "name": "remote-mount"
+      "name": "remote-mount",
+      "href": "../../../en/cat-harness/processes/skills/remote-mount.html"
      },
      {
-      "name": "render-kg-to-cdn"
+      "name": "render-kg-to-cdn",
+      "href": "../../../en/cat-harness/processes/skills/render-kg-to-cdn.html"
      },
      {
-      "name": "sub-kg-lifecycle"
+      "name": "sub-kg-lifecycle",
+      "href": "../../../en/cat-harness/processes/skills/sub-kg-lifecycle.html"
      },
      {
       "name": "todo-manager"
      },
      {
-      "name": "translation-manager"
+      "name": "translation-manager",
+      "href": "../../../en/cat-harness/processes/skills/translation-manager.html"
      },
      {
-      "name": "upstream-version-adoption"
+      "name": "upstream-version-adoption",
+      "href": "../../../en/cat-harness/processes/skills/upstream-version-adoption.html"
      },
      {
       "name": "watch"
@@ -557,47 +845,56 @@
   "Task_RoundTripQA": {
    "id": "Task_RoundTripQA",
    "name": "Round-trip translation QA",
-   "type": "bpmn:ServiceTask",
+   "type": "bpmn:Task",
+   "stepHref": "human-translation-workflow.html#step-Task_RoundTripQA",
    "lane": "Automated Pipeline",
+   "laneHref": "human-translation-workflow.html#lane-Lane_Pipeline",
    "skills": [
     {
-     "name": "translation-manager"
+     "name": "translation-manager",
+     "href": "../../../en/cat-harness/processes/skills/translation-manager.html"
     }
    ],
+   "shared": {
+    "id": "GT_RoundTripQa",
+    "type": "bpmn:GlobalTask"
+   },
    "role": {
     "name": "build-pipeline",
     "href": "../../../cat-harness/auto-docs/index/roles/index.html#a-cat-harness-scenarios-roles-json-build-pipeline",
     "title": "Build pipeline",
     "skills": [
      {
-      "name": "ci-health"
+      "name": "ci-health",
+      "href": "../../../en/cat-harness/processes/skills/ci-health.html"
      },
      {
-      "name": "compiled-artefact-cache"
+      "name": "compiled-artefact-cache",
+      "href": "../../../en/cat-harness/processes/skills/compiled-artefact-cache.html"
      },
      {
-      "name": "content-publish"
+      "name": "content-test",
+      "href": "../../../en/cat-harness/processes/skills/content-test.html"
      },
      {
-      "name": "content-test"
+      "name": "content-validate",
+      "href": "../../../en/cat-harness/processes/skills/content-validate.html"
      },
      {
-      "name": "content-validate"
+      "name": "feature-staging",
+      "href": "../../../en/cat-harness/processes/skills/feature-staging.html"
      },
      {
-      "name": "feature-staging"
+      "name": "harness-projections",
+      "href": "../../../en/cat-harness/processes/skills/harness-projections.html"
      },
      {
-      "name": "harness-projections"
+      "name": "kg-separation",
+      "href": "../../../en/cat-harness/processes/skills/kg-separation.html"
      },
      {
-      "name": "ig-ast-delta"
-     },
-     {
-      "name": "kg-separation"
-     },
-     {
-      "name": "platform-gates"
+      "name": "platform-gates",
+      "href": "../../../en/cat-harness/processes/skills/platform-gates.html"
      },
      {
       "name": "prepare-merge"
@@ -609,22 +906,27 @@
       "name": "qa-reports"
      },
      {
-      "name": "remote-mount"
+      "name": "remote-mount",
+      "href": "../../../en/cat-harness/processes/skills/remote-mount.html"
      },
      {
-      "name": "render-kg-to-cdn"
+      "name": "render-kg-to-cdn",
+      "href": "../../../en/cat-harness/processes/skills/render-kg-to-cdn.html"
      },
      {
-      "name": "sub-kg-lifecycle"
+      "name": "sub-kg-lifecycle",
+      "href": "../../../en/cat-harness/processes/skills/sub-kg-lifecycle.html"
      },
      {
       "name": "todo-manager"
      },
      {
-      "name": "translation-manager"
+      "name": "translation-manager",
+      "href": "../../../en/cat-harness/processes/skills/translation-manager.html"
      },
      {
-      "name": "upstream-version-adoption"
+      "name": "upstream-version-adoption",
+      "href": "../../../en/cat-harness/processes/skills/upstream-version-adoption.html"
      },
      {
       "name": "watch"
@@ -636,10 +938,13 @@
    "id": "Task_AppendDisclaimer",
    "name": "Append WHO disclaimer (if DAK)",
    "type": "bpmn:ServiceTask",
+   "stepHref": "human-translation-workflow.html#step-Task_AppendDisclaimer",
    "lane": "Automated Pipeline",
+   "laneHref": "human-translation-workflow.html#lane-Lane_Pipeline",
    "skills": [
     {
-     "name": "translation-manager"
+     "name": "translation-manager",
+     "href": "../../../en/cat-harness/processes/skills/translation-manager.html"
     }
    ],
    "role": {
@@ -648,34 +953,36 @@
     "title": "Build pipeline",
     "skills": [
      {
-      "name": "ci-health"
+      "name": "ci-health",
+      "href": "../../../en/cat-harness/processes/skills/ci-health.html"
      },
      {
-      "name": "compiled-artefact-cache"
+      "name": "compiled-artefact-cache",
+      "href": "../../../en/cat-harness/processes/skills/compiled-artefact-cache.html"
      },
      {
-      "name": "content-publish"
+      "name": "content-test",
+      "href": "../../../en/cat-harness/processes/skills/content-test.html"
      },
      {
-      "name": "content-test"
+      "name": "content-validate",
+      "href": "../../../en/cat-harness/processes/skills/content-validate.html"
      },
      {
-      "name": "content-validate"
+      "name": "feature-staging",
+      "href": "../../../en/cat-harness/processes/skills/feature-staging.html"
      },
      {
-      "name": "feature-staging"
+      "name": "harness-projections",
+      "href": "../../../en/cat-harness/processes/skills/harness-projections.html"
      },
      {
-      "name": "harness-projections"
+      "name": "kg-separation",
+      "href": "../../../en/cat-harness/processes/skills/kg-separation.html"
      },
      {
-      "name": "ig-ast-delta"
-     },
-     {
-      "name": "kg-separation"
-     },
-     {
-      "name": "platform-gates"
+      "name": "platform-gates",
+      "href": "../../../en/cat-harness/processes/skills/platform-gates.html"
      },
      {
       "name": "prepare-merge"
@@ -687,22 +994,27 @@
       "name": "qa-reports"
      },
      {
-      "name": "remote-mount"
+      "name": "remote-mount",
+      "href": "../../../en/cat-harness/processes/skills/remote-mount.html"
      },
      {
-      "name": "render-kg-to-cdn"
+      "name": "render-kg-to-cdn",
+      "href": "../../../en/cat-harness/processes/skills/render-kg-to-cdn.html"
      },
      {
-      "name": "sub-kg-lifecycle"
+      "name": "sub-kg-lifecycle",
+      "href": "../../../en/cat-harness/processes/skills/sub-kg-lifecycle.html"
      },
      {
       "name": "todo-manager"
      },
      {
-      "name": "translation-manager"
+      "name": "translation-manager",
+      "href": "../../../en/cat-harness/processes/skills/translation-manager.html"
      },
      {
-      "name": "upstream-version-adoption"
+      "name": "upstream-version-adoption",
+      "href": "../../../en/cat-harness/processes/skills/upstream-version-adoption.html"
      },
      {
       "name": "watch"
@@ -713,47 +1025,59 @@
   "Task_WriteStatus": {
    "id": "Task_WriteStatus",
    "name": "Write status.json (official)",
-   "type": "bpmn:ServiceTask",
+   "type": "bpmn:Task",
+   "stepHref": "human-translation-workflow.html#step-Task_WriteStatus",
    "lane": "Automated Pipeline",
+   "laneHref": "human-translation-workflow.html#lane-Lane_Pipeline",
    "skills": [
     {
-     "name": "translation-manager"
+     "name": "translation-manager",
+     "href": "../../../en/cat-harness/processes/skills/translation-manager.html"
     }
    ],
+   "shared": {
+    "id": "GT_WriteTranslationStatus",
+    "type": "bpmn:GlobalTask",
+    "inputs": {
+     "official": "true"
+    }
+   },
    "role": {
     "name": "build-pipeline",
     "href": "../../../cat-harness/auto-docs/index/roles/index.html#a-cat-harness-scenarios-roles-json-build-pipeline",
     "title": "Build pipeline",
     "skills": [
      {
-      "name": "ci-health"
+      "name": "ci-health",
+      "href": "../../../en/cat-harness/processes/skills/ci-health.html"
      },
      {
-      "name": "compiled-artefact-cache"
+      "name": "compiled-artefact-cache",
+      "href": "../../../en/cat-harness/processes/skills/compiled-artefact-cache.html"
      },
      {
-      "name": "content-publish"
+      "name": "content-test",
+      "href": "../../../en/cat-harness/processes/skills/content-test.html"
      },
      {
-      "name": "content-test"
+      "name": "content-validate",
+      "href": "../../../en/cat-harness/processes/skills/content-validate.html"
      },
      {
-      "name": "content-validate"
+      "name": "feature-staging",
+      "href": "../../../en/cat-harness/processes/skills/feature-staging.html"
      },
      {
-      "name": "feature-staging"
+      "name": "harness-projections",
+      "href": "../../../en/cat-harness/processes/skills/harness-projections.html"
      },
      {
-      "name": "harness-projections"
+      "name": "kg-separation",
+      "href": "../../../en/cat-harness/processes/skills/kg-separation.html"
      },
      {
-      "name": "ig-ast-delta"
-     },
-     {
-      "name": "kg-separation"
-     },
-     {
-      "name": "platform-gates"
+      "name": "platform-gates",
+      "href": "../../../en/cat-harness/processes/skills/platform-gates.html"
      },
      {
       "name": "prepare-merge"
@@ -765,22 +1089,27 @@
       "name": "qa-reports"
      },
      {
-      "name": "remote-mount"
+      "name": "remote-mount",
+      "href": "../../../en/cat-harness/processes/skills/remote-mount.html"
      },
      {
-      "name": "render-kg-to-cdn"
+      "name": "render-kg-to-cdn",
+      "href": "../../../en/cat-harness/processes/skills/render-kg-to-cdn.html"
      },
      {
-      "name": "sub-kg-lifecycle"
+      "name": "sub-kg-lifecycle",
+      "href": "../../../en/cat-harness/processes/skills/sub-kg-lifecycle.html"
      },
      {
       "name": "todo-manager"
      },
      {
-      "name": "translation-manager"
+      "name": "translation-manager",
+      "href": "../../../en/cat-harness/processes/skills/translation-manager.html"
      },
      {
-      "name": "upstream-version-adoption"
+      "name": "upstream-version-adoption",
+      "href": "../../../en/cat-harness/processes/skills/upstream-version-adoption.html"
      },
      {
       "name": "watch"

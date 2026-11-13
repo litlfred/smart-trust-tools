@@ -19,7 +19,24 @@
       "labelEnd": null,
       "words": 121,
       "summary": null,
-      "keywords": [],
+      "keywords": [
+        {
+          "term": "gdhcn",
+          "heading": true
+        },
+        {
+          "term": "trustlists",
+          "heading": true
+        },
+        {
+          "term": "version",
+          "heading": false
+        },
+        {
+          "term": "core",
+          "heading": false
+        }
+      ],
       "extract": "This specification describes the publication of Global Digital Health Certification Network (GDHCN) key material as Decentralized Identifier (DID) documents. DIDs are specified by the W3C DID Core Specification. The DID concept summarizes the core drivers and usage of the DID format in scope of GDHCN. A key to real interoperability among existing trust networks is to find alignment on trust list formats. Version;",
       "extractCut": true
     },
@@ -34,7 +51,28 @@
       "labelEnd": null,
       "words": 187,
       "summary": null,
-      "keywords": [],
+      "keywords": [
+        {
+          "term": "trustlists",
+          "heading": true
+        },
+        {
+          "term": "reference type",
+          "heading": false
+        },
+        {
+          "term": "key material",
+          "heading": false
+        },
+        {
+          "term": "prod",
+          "heading": false
+        },
+        {
+          "term": "uat",
+          "heading": false
+        }
+      ],
       "extract": "Version 2.0.0 introduces two variants of the trust lists - embedded and by reference. <img src=\"did-trustlist-types.png\" alt=\"Types of DID trustlists\" style=\"width:300px; float:none; margin: 0px 0px 0px 0px;\"/> For each of development (DEV), user-acceptence testing (UAT) and production (PROD) environments there is a trust list according to the following table: Environment; Variant; URL DEV; Embedded;",
       "extractCut": true
     },
@@ -49,7 +87,40 @@
       "labelEnd": null,
       "words": 499,
       "summary": null,
-      "keywords": [],
+      "keywords": [
+        {
+          "term": "domain participant",
+          "heading": false
+        },
+        {
+          "term": "trustlist domain",
+          "heading": false
+        },
+        {
+          "term": "participant usage",
+          "heading": false
+        },
+        {
+          "term": "usage types",
+          "heading": false
+        },
+        {
+          "term": "json matches",
+          "heading": false
+        },
+        {
+          "term": "key usage",
+          "heading": false
+        },
+        {
+          "term": "json contains",
+          "heading": false
+        },
+        {
+          "term": "trustlists structure",
+          "heading": true
+        }
+      ],
       "extract": "Version 2.0.0 introduces a hierarchical structure for DID documents, to support more fine grained resolution and discovery of key material. These DID documents are parameterized by the following according to the levels in the following table. Level; Description root; A fixed parameter for all trusted key material or trusted DID references of GDHCN. $domain; Contains trusted key material or DID references of GDHCN",
       "extractCut": true
     },
@@ -64,7 +135,20 @@
       "labelEnd": null,
       "words": 155,
       "summary": null,
-      "keywords": [],
+      "keywords": [
+        {
+          "term": "usage type",
+          "heading": false
+        },
+        {
+          "term": "embedded trustlist",
+          "heading": false
+        },
+        {
+          "term": "key usage",
+          "heading": false
+        }
+      ],
       "extract": "Reference type DID document linking the embedded trustlist for $domain: DCC, $participant: XXA and key $usage type: DSC. { \"@context\": [ \"https://www.w3.org/ns/did/v1\", \"https://w3id.org/security/suites/jws-2020/v1\" ], \"id\": \"did:web:worldhealthorganization.github.io:tng-cdn-dev:v2:trustlist-ref:DCC:XXA:DSC\", \"controller\": \"did:web:worldhealthorganization.github.io:tng-cdn-dev:v2:trustlist-ref:DCC:XXA\",",
       "extractCut": true
     },
@@ -101,6 +185,56 @@
   ],
   "checks": {},
   "withheld": false,
+  "keywords": [
+    {
+      "term": "trustlist domain",
+      "heading": false
+    },
+    {
+      "term": "trustlist participant",
+      "heading": false
+    },
+    {
+      "term": "participant usage",
+      "heading": false
+    },
+    {
+      "term": "type trustlist",
+      "heading": false
+    },
+    {
+      "term": "embedded trustlist",
+      "heading": false
+    },
+    {
+      "term": "key usage",
+      "heading": false
+    },
+    {
+      "term": "reference type",
+      "heading": false
+    },
+    {
+      "term": "key material",
+      "heading": false
+    },
+    {
+      "term": "trust domain",
+      "heading": false
+    },
+    {
+      "term": "matches key",
+      "heading": false
+    },
+    {
+      "term": "selected domain",
+      "heading": false
+    },
+    {
+      "term": "json contains",
+      "heading": false
+    }
+  ],
   "links": {
     "repo": "litlfred/smart-trust-tools",
     "branch": "main",

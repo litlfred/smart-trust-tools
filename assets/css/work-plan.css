@@ -534,7 +534,8 @@ a.fa-workplan-bean-link { text-decoration: underline; text-underline-offset: 0.1
   grid-template-areas:
     "label value"
     "track track"
-    "note  note";
+    "note  note"
+    "spark spark";
   align-items: baseline;
   gap: 0.2rem 0.6rem;
   padding: 0.35rem 0 0.5rem;
@@ -561,6 +562,12 @@ button.fa-workplan-bar-label:focus-visible { outline: 2px solid var(--fa-wp-seri
 .fa-workplan-bar-row--progress .fa-workplan-bar-track { grid-area: track; }
 .fa-workplan-bar-row--progress .fa-workplan-bar-value { grid-area: value; }
 .fa-workplan-bar-row--progress .fa-workplan-bar-note { grid-area: note; }
+.fa-workplan-bar-row--progress .fa-workplan-bar-burndown { grid-area: spark; }
+
+/* The burn-down line (bean hf2q slice 4): open beans beneath a goal per day. */
+.fa-workplan-burndown { display: block; max-width: 100%; height: auto; overflow: visible; }
+.fa-workplan-burndown-line { fill: none; stroke: var(--fa-wp-series); stroke-width: 1.5; stroke-linejoin: round; stroke-linecap: round; }
+.fa-workplan-burndown-dot { fill: var(--fa-wp-series); }
 
 .fa-workplan-bar-note {
   font-size: 0.75rem;
@@ -661,4 +668,34 @@ summary.fa-workplan-tree-row:focus-visible,
 @media (max-width: 40rem) {
   .fa-workplan-tree-type, .fa-workplan-tree-row .fa-workplan-bean-status { min-width: 0; }
   .fa-workplan-tree { padding-left: 0.7rem; }
+}
+
+/* A work plan's marker (work item folio-assistant-exrp): an epic or milestone
+   that names the process it runs. Quiet, so the tree still reads as a tree. */
+.fa-workplan-plan {
+  /* Its own line under the title, after the counts, so the row's right-hand
+     column (counts, "Only this") stays where the other rows have it. */
+  flex: 1 0 100%;
+  order: 99;
+  padding-left: 1.6rem;
+  font-size: 0.72rem;
+  color: var(--fa-wp-muted);
+  min-width: 0;
+  box-sizing: border-box;
+  overflow-wrap: anywhere;
+}
+.fa-workplan-plan-label {
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  font-weight: 600;
+}
+.fa-workplan-plan code {
+  font-size: inherit;
+}
+.fa-workplan-plan-proposal-link {
+  color: inherit;
+}
+.fa-workplan-plan-items {
+  margin-left: 0.5rem;
+  font-size: inherit;
 }

@@ -71,7 +71,7 @@
   var WORKPLAN_FINDING = {
     "blocker-closed": { role: "serious", label: "Block never lifted" },
     "blocked-without-expiry": { role: "warning", label: "No expiry" },
-    "blocking-unknown": { role: "critical", label: "Unknown bean" },
+    "blocking-unknown": { role: "critical", label: "Unknown work item" },
     "stale-in-progress": { role: "warning", label: "Untouched" }
   };
 
@@ -113,7 +113,7 @@
    * reading "task" beside a process diagram reads as one (owner, 2026-10-16).
    * Display only — the front matter keeps `type: task`.
    */
-  var TYPE_LABEL = { task: "story" };
+  var TYPE_LABEL = { task: "story", plan: "work plan" };
   function typeLabel(t) { return TYPE_LABEL[t] || t; }
 
   /**
@@ -350,7 +350,7 @@
       var b = beans[i];
       if (under && !under[b.id]) continue;
       // Type scope: only beans of the selected type
-      if (TYPE_SCOPE && b.type !== TYPE_SCOPE) continue;
+      if (!typeOk(b)) continue;
       if (QUERY && !matchesQuery(b)) continue;
       out.push(b);
     }
@@ -374,13 +374,101 @@
    */
   function matchesQuery(b) {
     if (b._hay === undefined) {
-      b._hay = [b.id, b.title, b.status, b.type, b.preview || ""].join(" ").toLowerCase();
+      b._hay = [b.id, b.title, b.status, b.type, b.preview || "", planHay(b)].join(" ").toLowerCase();
     }
     var terms = getQueryTerms();
     for (var i = 0; i < terms.length; i++) {
       if (b._hay.indexOf(terms[i]) === -1) return false;
     }
     return true;
+  }
+
+  /**
+   * The plan a work item sits under: itself if it is one, else its nearest
+   * ancestor that is. Searching for a proposal therefore finds the plan it
+   * seeded AND every work item under that plan (owner, 2026-11-05: epics are
+   * tied to proposals, so a proposal finds the work done for it).
+   */
+  var BY_ID = null;
+  function planOf(b) {
+    if (!BY_ID) {
+      BY_ID = Object.create(null);
+      for (var i = 0; i < ALL_BEANS.length; i++) BY_ID[ALL_BEANS[i].id] = ALL_BEANS[i];
+    }
+    for (var c = b, guard = 0; c && guard < 64; c = BY_ID[c.parent], guard++) {
+      if (c.plan) return c;
+    }
+    return null;
+  }
+
+  /** The words of a work item's plan a search may match: proposal and processes. */
+  function planHay(b) {
+    var p = planOf(b);
+    if (!p) return "";
+    return [p.plan.proposal || ""].concat(p.plan.processes || []).join(" ");
+  }
+
+  /** Does `b` pass the type filter? "plan" is the work-plan filter, not a type. */
+  function typeOk(b) {
+    if (!TYPE_SCOPE) return true;
+    return TYPE_SCOPE === "plan" ? !!b.plan : b.type === TYPE_SCOPE;
+  }
+
+  /**
+   * A work plan's marker: the process it runs, the proposal it came from, and
+   * how many instances are running under it (work item folio-assistant-exrp,
+   * owner 2026-11-05: "Epic is the plan"). Read off the projection's `plan`,
+   * which only a plan carries. `runs: null` means the instance store could not
+   * be read, which is said rather than shown as "0 running".
+   */
+  function planMarker(plan, id, hasItems) {
+    var box = el("span", { class: "fa-workplan-plan" });
+    box.appendChild(el("span", { class: "fa-workplan-plan-label" }, "work plan"));
+    box.appendChild(document.createTextNode(" runs "));
+    for (var i = 0; i < plan.processes.length; i++) {
+      if (i > 0) box.appendChild(document.createTextNode(", "));
+      box.appendChild(el("code", { class: "fa-workplan-plan-process" }, plan.processes[i]));
+    }
+    if (plan.proposal) {
+      box.appendChild(document.createTextNode(" · from "));
+      var prop = el("code", { class: "fa-workplan-plan-proposal" }, plan.proposal);
+      // The projection resolves the link to the repository that holds the
+      // proposal; `viewHref` (the store's own repository) is the fallback
+      // for an index written before it did.
+      var propHref = plan.proposalHref || viewHref(plan.proposal);
+      if (propHref) {
+        var a = el("a", { href: propHref, class: "fa-workplan-plan-proposal-link",
+                          title: "Open the proposal this plan came from" });
+        a.appendChild(prop);
+        box.appendChild(a);
+      } else {
+        box.appendChild(prop);
+      }
+    }
+    var runs = plan.runs;
+    var running = 0;
+    var where = [];
+    if (runs) {
+      for (var r = 0; r < runs.length; r++) {
+        if (runs[r].status === "running") {
+          running++;
+          where.push(runs[r].id + (runs[r].at && runs[r].at.length ? " at " + runs[r].at.join(", ") : ""));
+        }
+      }
+    }
+    var text = runs === null || runs === undefined
+      ? " · runs not read in this build"
+      : " · " + running + " running" + (runs.length > running ? ", " + (runs.length - running) + " finished" : "");
+    var count = el("span", { class: "fa-workplan-plan-runs" }, text);
+    if (where.length) count.setAttribute("title", where.join("\n"));
+    box.appendChild(count);
+    if (hasItems && SCOPE !== id) {
+      var items = el("button", { type: "button", class: "fa-workplan-action fa-workplan-plan-items",
+                                 title: "Show only the work items of this plan" }, "Its work items");
+      items.setAttribute("data-scope", id);
+      box.appendChild(items);
+    }
+    return box;
   }
 
   /** One bean, as a row inside an expanded epic — or a search result, with its id. */
@@ -423,7 +511,7 @@
     }
     var href = blocker ? viewHref(blocker.file) : null;
     if (!blocker) {
-      return el("span", { class: "fa-workplan-block-edge is-dangling", title: id + " — not a bean in this store" },
+      return el("span", { class: "fa-workplan-block-edge is-dangling", title: id + " — not a work item in this store" },
                 short + " (unknown)");
     }
     return href
@@ -471,7 +559,7 @@
   /** Does `b` pass the type filter, the search, and the open/closed switch? */
   function treeMatch(b) {
     if (!SHOW_CLOSED && !WORKPLAN_OPEN[b.status]) return false;
-    if (TYPE_SCOPE && b.type !== TYPE_SCOPE) return false;
+    if (!typeOk(b)) return false;
     if (QUERY && !matchesQuery(b)) return false;
     return true;
   }
@@ -524,6 +612,7 @@
       if (filtering && matched[b.id]) row.className += " is-match";
       var type = el("span", { class: "fa-workplan-tree-type is-" + b.type }, typeLabel(b.type));
       row.insertBefore(type, row.firstChild);
+      if (b.plan) row.appendChild(planMarker(b.plan, b.id, (kids[b.id] || []).length > 0));
       while (row.firstChild) target.appendChild(row.firstChild);
       if (filtering && matched[b.id]) target.className += " is-match";
     }
@@ -547,7 +636,7 @@
       var t = total(b.id, 0);
       row.appendChild(el("span", { class: "fa-workplan-tree-count" },
                          t.open + " open · " + t.closed + " closed"));
-      if (SCOPE !== b.id) {
+      if (SCOPE !== b.id && !b.plan) {
         var focus = el("button", { type: "button", class: "fa-workplan-action fa-workplan-tree-focus",
                                    title: "Show only this branch" }, "Only this");
         focus.setAttribute("data-scope", b.id);
@@ -578,12 +667,12 @@
     var sec = el("section", { class: "fa-workplan-panel fa-workplan-panel--wide" });
     var head = el("div", { class: "fa-workplan-tree-head" });
     head.appendChild(el("h2", { class: "fa-workplan-chart-title", id: "fa-workplan-tree-title" },
-                        "Work plan — goal → epic → feature → story"));
+                        "Plans and work — goal → epic → feature → story"));
     var lab = el("label", { class: "fa-workplan-tree-closed" });
     var box = el("input", { type: "checkbox", "data-fa-workplan-closed": "" });
     box.checked = SHOW_CLOSED;
     lab.appendChild(box);
-    lab.appendChild(document.createTextNode(" Show closed beans"));
+    lab.appendChild(document.createTextNode(" Show closed work items"));
     head.appendChild(lab);
     sec.appendChild(head);
 
@@ -611,7 +700,7 @@
       var li = el("li", { class: "fa-workplan-tree-item" });
       var det = el("details", { class: "fa-workplan-tree-branch is-loose" });
       det.appendChild(el("summary", { class: "fa-workplan-tree-row" },
-                         "Under no goal — " + loose.length + (loose.length === 1 ? " bean" : " beans")));
+                         "Under no goal — " + loose.length + (loose.length === 1 ? " work item" : " work items")));
       var ul = el("ul", { class: "fa-workplan-tree" });
       for (i = 0; i < loose.length; i++) ul.appendChild(node(loose[i], 1));
       det.appendChild(ul);
@@ -621,7 +710,7 @@
     }
     if (!list.childNodes.length) {
       sec.appendChild(el("p", { class: "fa-workplan-empty" },
-                         filtering ? "No bean matches this filter." : "No open beans."));
+                         filtering ? "No work item matches this filter." : "No open work items."));
     } else {
       sec.appendChild(list);
     }
@@ -748,7 +837,7 @@
 
     var section = el("section", { class: "fa-workplan-panel" });
     section.appendChild(el("h2", { class: "fa-workplan-panel-title" },
-                            "Beans — the agent work plan"));
+                            "Work items — the agent work plan"));
     var row = el("dl", { class: "fa-workplan-counts" });
     row.appendChild(countItem("open", open, true));
     row.appendChild(countItem("draft", status["draft"] || 0));
@@ -856,6 +945,7 @@
     // Collect the types that actually appear in the (possibly epic-scoped) set
     var typeCounts = {};
     var totalOpen = 0;
+    var plans = 0;
     var under = SCOPE ? subtreeIds(beans, SCOPE) : null;
     for (var i = 0; i < beans.length; i++) {
       var b = beans[i];
@@ -864,6 +954,7 @@
       if (under && !under[b.id]) continue;
       var t = b.type || "other";
       typeCounts[t] = (typeCounts[t] || 0) + 1;
+      if (b.plan) plans++;
       totalOpen++;
     }
     // Stable order: the types we know, then anything else
@@ -902,6 +993,17 @@
       btn.textContent = typeLabel(t) + " (" + typeCounts[t] + ")";
       bar.appendChild(btn);
     }
+    // Work plans: not a type but a role an epic or milestone takes on by
+    // naming its process. Shown only when some open item is one.
+    if (plans) {
+      var planBtn = el("button", {
+        type: "button",
+        class: "fa-workplan-type-btn" + (TYPE_SCOPE === "plan" ? " is-active" : "")
+      });
+      planBtn.setAttribute("data-type-scope", "plan");
+      planBtn.textContent = "Work plans (" + plans + ")";
+      bar.appendChild(planBtn);
+    }
     return bar;
   }
 
@@ -909,6 +1011,102 @@
    * Build the board for the current SCOPE. Re-entrant: a scope change calls
    * this again over the same data rather than refetching.
    */
+  /**
+   * The burn-down feed (bean `hf2q` slice 4), `assets/beans/burndown.json`.
+   *
+   * Written only by a publish build (`gen-docs-pages.ts --burndown-history`,
+   * cat-harness-tools `bean-burndown-feed.ts`), so three states, never two:
+   * `undefined` is not yet asked or still loading, `null` is "this build
+   * carries no history" (the file is absent or unreadable), and an object is
+   * the feed itself, which may say `available: false` with its reason.
+   * The board DRAWS the series and computes nothing from them.
+   */
+  var BURNDOWN = undefined;
+
+  var SVG_NS = "http://www.w3.org/2000/svg";
+
+  function svgEl(name, attrs) {
+    var n = document.createElementNS(SVG_NS, name);
+    for (var k in attrs) if (Object.prototype.hasOwnProperty.call(attrs, k)) n.setAttribute(k, String(attrs[k]));
+    return n;
+  }
+
+  /** The series for bean `id`, or null when the feed has none for it. */
+  function burndownSeries(id) {
+    if (!BURNDOWN || BURNDOWN.available !== true || !Array.isArray(BURNDOWN.series)) return null;
+    for (var i = 0; i < BURNDOWN.series.length; i++) {
+      if (BURNDOWN.series[i].id === id) return BURNDOWN.series[i];
+    }
+    return null;
+  }
+
+  /**
+   * One milestone's open count over the feed's days, as a small line.
+   *
+   * A day before the bean existed is `null` in the feed, and is a GAP here,
+   * never a point at zero: no data is not zero. The line's scale is its own
+   * (0 to its own peak), so a reader compares shapes between rows, and the
+   * label gives the figures.
+   */
+  function sparkline(series, days) {
+    var open = series.open || [];
+    var W = 160, H = 28, PAD = 2;
+    var max = 0, first = null, last = null, firstDay = "", lastDay = "";
+    for (var i = 0; i < open.length; i++) {
+      var v = open[i];
+      if (typeof v !== "number") continue;
+      if (v > max) max = v;
+      if (first === null) { first = v; firstDay = days[i] || ""; }
+      last = v; lastDay = days[i] || "";
+    }
+    if (first === null) return null;
+    var n = Math.max(1, open.length - 1);
+    var x = function (j) { return PAD + (W - 2 * PAD) * (open.length === 1 ? 1 : j / n); };
+    var y = function (v) { return H - PAD - (H - 2 * PAD) * (max === 0 ? 0 : v / max); };
+    var label = "Open work items under " + series.title + ": " + first + " on " + firstDay
+      + ", " + last + " on " + lastDay + " (peak " + max + ").";
+    var svg = svgEl("svg", { class: "fa-workplan-burndown", viewBox: "0 0 " + W + " " + H,
+                             width: W, height: H, role: "img", "aria-label": label, focusable: "false" });
+    var t = svgEl("title", {});
+    t.textContent = label;
+    svg.appendChild(t);
+    var pts = [];
+    var flush = function () {
+      if (pts.length === 1) {
+        svg.appendChild(svgEl("circle", { cx: pts[0][0], cy: pts[0][1], r: 1.5, class: "fa-workplan-burndown-dot" }));
+      } else if (pts.length > 1) {
+        svg.appendChild(svgEl("polyline", { points: pts.map(function (p) { return p[0].toFixed(1) + "," + p[1].toFixed(1); }).join(" "),
+                                            class: "fa-workplan-burndown-line" }));
+      }
+      pts = [];
+    };
+    for (var j = 0; j < open.length; j++) {
+      if (typeof open[j] !== "number") { flush(); continue; }
+      pts.push([x(j), y(open[j])]);
+    }
+    flush();
+    return svg;
+  }
+
+  /** The line under the bars that says what the burn-down column is, or why it is empty. */
+  function burndownNote() {
+    if (BURNDOWN === undefined) return null;
+    if (BURNDOWN === null) {
+      return el("p", { class: "fa-workplan-chart-note" },
+                "No burn-down history in this build: only a publish build reads the work plan's past.");
+    }
+    if (BURNDOWN.available !== true) {
+      return el("p", { class: "fa-workplan-chart-note" },
+                "No burn-down history in this build: " + (BURNDOWN.reason || "the feed gave no reason") + ".");
+    }
+    var days = BURNDOWN.days || [];
+    return el("p", { class: "fa-workplan-chart-note" },
+              "Each line is the count of open work items beneath that goal, on each of the "
+              + days.length + " day(s) the store changed"
+              + (days.length ? " from " + days[0] + " to " + days[days.length - 1] : "")
+              + ", read from " + (BURNDOWN.branch || "the work plan's branch") + ". Each line has its own scale.");
+  }
+
   /**
    * The declared milestones, as a part-to-whole bar each.
    *
@@ -924,9 +1122,10 @@
    */
   function milestonePanel(plan) {
     var sec = el("section", { class: "fa-workplan-panel fa-workplan-panel--wide" });
+    sec.setAttribute("data-fa-milestones", "");
     var fig = el("figure", { class: "fa-workplan-chart" });
     fig.appendChild(el("figcaption", { class: "fa-workplan-chart-title" },
-                       "Declared milestones — share of the beans beneath each that are closed"));
+                       "Declared milestones — share of the work items beneath each that are closed"));
     if (!plan || !plan.milestones) {
       // Never zero bars: "this projection carries no plan" and "no milestone
       // has progress" are different answers.
@@ -937,7 +1136,7 @@
     }
     if (plan.milestones.length === 0) {
       fig.appendChild(el("p", { class: "fa-workplan-empty" },
-                          "No bean in this store is typed milestone."));
+                          "No work item in this store is typed milestone."));
       sec.appendChild(fig);
       return sec;
     }
@@ -984,6 +1183,13 @@
         li.appendChild(el("span", { class: "fa-workplan-bean-blocked" },
                           m.unclassified + " in neither status set"));
       }
+      var series = burndownSeries(m.id);
+      var spark = series ? sparkline(series, BURNDOWN.days || []) : null;
+      if (spark) {
+        var cell = el("span", { class: "fa-workplan-bar-burndown" });
+        cell.appendChild(spark);
+        li.appendChild(cell);
+      }
       list.appendChild(li);
     }
     fig.appendChild(list);
@@ -996,12 +1202,14 @@
       // board showed both numbers before the rollup reconciled them.
       fig.appendChild(el("p", { class: "fa-workplan-chart-note" },
                           "These bars cover " + plan.coveredOpen + " of " + plan.openTotal
-                          + " open beans. The other " + plan.orphanOpen
+                          + " open work items. The other " + plan.orphanOpen
                           + " sit under no milestone, so the shares above are not a figure for the whole work plan."));
     }
+    var bnote = burndownNote();
+    if (bnote) fig.appendChild(bnote);
     if (plan.duplicateIds > 0) {
       fig.appendChild(el("p", { class: "fa-workplan-chart-note" },
-                          plan.duplicateIds + " bean id(s) are held by more than one file, and are counted once each here."));
+                          plan.duplicateIds + " work item id(s) are held by more than one file, and are counted once each here."));
     }
     sec.appendChild(fig);
     return sec;
@@ -1013,12 +1221,12 @@
    */
   function searchBar() {
     var wrap = el("div", { class: "fa-workplan-search", role: "search" });
-    wrap.appendChild(el("label", { for: "fa-workplan-q" }, "Search beans"));
+    wrap.appendChild(el("label", { for: "fa-workplan-q" }, "Search work items"));
     var input = el("input", {
       type: "search",
       id: "fa-workplan-q",
       class: "fa-workplan-search-input",
-      placeholder: "id, title, status, type or text",
+      placeholder: "id, title, status, type, text or proposal",
       autocomplete: "off",
       "data-fa-workplan-q": "",
     });
@@ -1037,8 +1245,8 @@
     var sec = el("section", { class: "fa-workplan-panel fa-workplan-panel--wide fa-workplan-results" });
     var n = found.length;
     sec.appendChild(el("h2", { class: "fa-workplan-chart-title", id: "fa-workplan-results-title" },
-      n === 0 ? "No bean matches “" + QUERY + "”"
-        : n + (n === 1 ? " bean matches" : " beans match") + " “" + QUERY + "”"
+      n === 0 ? "No work item matches “" + QUERY + "”"
+        : n + (n === 1 ? " work item matches" : " work items match") + " “" + QUERY + "”"
           + (n > RESULT_CAP ? " — the first " + RESULT_CAP + " are listed" : "")));
     if (n === 0) return sec;
     var list = el("ul", { class: "fa-workplan-bean-list", "aria-labelledby": "fa-workplan-results-title" });
@@ -1313,6 +1521,24 @@
     } catch (_e) { /* a file:// page or no history API — the search still works */ }
   }
 
+  /**
+   * Fetch the burn-down feed beside the bean index and redraw ONLY the
+   * milestone panel, so a late answer never resets the tree a reader has
+   * already opened. Absent or unreadable is `null`: "no history in this
+   * build", which is what an ordinary (non-publish) build is.
+   */
+  function loadBurndown(host, beanUrl) {
+    var url;
+    try { url = new URL("burndown.json", new URL(beanUrl, document.baseURI)).href; } catch (_e) { return; }
+    fetchJson(url)
+      .then(function (doc) { BURNDOWN = doc && typeof doc === "object" ? doc : null; })
+      .catch(function () { BURNDOWN = null; })
+      .then(function () {
+        var old = host.querySelector("[data-fa-milestones]");
+        if (old && BOARD) old.replaceWith(milestonePanel(BOARD.plan));
+      });
+  }
+
   function mountWorkPlan() {
     var host = document.querySelector("[data-fa-workplan]");
     if (!host) return;
@@ -1357,6 +1583,7 @@
         // todo panel alone. The bean panels are NOT stubbed out with zeros:
         // this page was never asked about beans, and a zero is an answer.
         ALL_BEANS = beanDoc ? beanDoc.items : [];
+        BY_ID = null;
         BOARD = {
           beans: beanDoc ? beanDoc.items : null,
           todos: todoItems,
@@ -1371,6 +1598,7 @@
         renderBoard(host);
         mountStamp(host);
         wireBoard(host);
+        if (beanDoc && beanUrl) loadBurndown(host, beanUrl);
       });
     });
   }

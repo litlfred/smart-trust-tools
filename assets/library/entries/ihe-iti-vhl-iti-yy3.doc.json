@@ -19,7 +19,20 @@
       "labelEnd": null,
       "words": 36,
       "summary": null,
-      "keywords": [],
+      "keywords": [
+        {
+          "term": "assign",
+          "heading": false
+        },
+        {
+          "term": "site",
+          "heading": false
+        },
+        {
+          "term": "reqgeneratevhlrequest",
+          "heading": false
+        }
+      ],
       "extract": "{% assign linkvhlh = '<a href=\"ActorDefinition-VHLHolder.html\">VHL Holder</a>' %} {% assign linkvhls = '<a href=\"ActorDefinition-VHLSharer.html\">VHL Sharer</a>' %} {% assign linkvhlr = '<a href=\"ActorDefinition-VHLReceiver.html\">VHL Receiver</a>' %} {% assign reqGenerateVHLRequest = site.data.Requirements-InitiateVHLGenerationRequest %} {% assign reqGenerateVHLResponse =",
       "extractCut": true
     },
@@ -34,7 +47,36 @@
       "labelEnd": null,
       "words": 247,
       "summary": null,
-      "keywords": [],
+      "keywords": [
+        {
+          "term": "extension",
+          "heading": false
+        },
+        {
+          "term": "downstream",
+          "heading": false
+        },
+        {
+          "term": "reqgeneratevhlrequest",
+          "heading": false
+        },
+        {
+          "term": "assign",
+          "heading": false
+        },
+        {
+          "term": "caller",
+          "heading": false
+        },
+        {
+          "term": "reqgeneratevhlresponse",
+          "heading": false
+        },
+        {
+          "term": "url",
+          "heading": false
+        }
+      ],
       "extract": "{% assign reqGenerateVHLRequestTitle = reqGenerateVHLRequest.extension | where: \"url\", \"http://hl7.org/fhir/5.0/StructureDefinition/extension-Requirements.title\" | first %} {% assign reqGenerateVHLResponseTitle = reqGenerateVHLResponse.extension | where: \"url\", \"http://hl7.org/fhir/5.0/StructureDefinition/extension-Requirements.title\" | first %} {% assign reqGenerateVHLRequestDescription =",
       "extractCut": true
     },
@@ -64,7 +106,28 @@
       "labelEnd": null,
       "words": 120,
       "summary": null,
-      "keywords": [],
+      "keywords": [
+        {
+          "term": "json web",
+          "heading": false
+        },
+        {
+          "term": "data integrity",
+          "heading": false
+        },
+        {
+          "term": "w3c data",
+          "heading": false
+        },
+        {
+          "term": "smart health",
+          "heading": false
+        },
+        {
+          "term": "health links",
+          "heading": false
+        }
+      ],
       "extract": "SMART Health Links Specification: SMART Health Links and SMART Health Cards RFC 4648: Base64url Encoding RFC 7515: JSON Web Signature (JWS) ISO/IEC 18004:2015: QR Code specification FHIR R4: HL7 FHIR Release 4 OAuth with SSRAA (Optional): RFC 7519: JSON Web Token (JWT) HL7 Security for Scalable Registration, Authentication, and Authorization IG: SSRAA — used by the VHL Receiver to perform UDAP Discovery and Dynamic",
       "extractCut": true
     },
@@ -94,7 +157,20 @@
       "labelEnd": null,
       "words": 37,
       "summary": null,
-      "keywords": [],
+      "keywords": [
+        {
+          "term": "message",
+          "heading": true
+        },
+        {
+          "term": "generate",
+          "heading": true
+        },
+        {
+          "term": "operation",
+          "heading": false
+        }
+      ],
       "extract": "This message is implemented as an HTTP GET operation from the client app used by the Holder to the VHL Sharer using the FHIR $generate-vhl operation described in 2:3.YY3.4.1.2 Message Semantics.",
       "extractCut": false
     },
@@ -139,7 +215,40 @@
       "labelEnd": null,
       "words": 308,
       "summary": null,
-      "keywords": [],
+      "keywords": [
+        {
+          "term": "carrier",
+          "heading": true
+        },
+        {
+          "term": "output",
+          "heading": true
+        },
+        {
+          "term": "enveloped vhl",
+          "heading": false
+        },
+        {
+          "term": "vhl option",
+          "heading": false
+        },
+        {
+          "term": "vhl payload",
+          "heading": false
+        },
+        {
+          "term": "same vhl",
+          "heading": false
+        },
+        {
+          "term": "expected actions",
+          "heading": false
+        },
+        {
+          "term": "populated",
+          "heading": false
+        }
+      ],
       "extract": "The format request parameter selects one of two carriers for the returned VHL. Both carriers convey the same VHL payload (manifest URL, decryption key, flags, label, expiration, optional extension); they differ only in encoding, signature format, and the trust chain used for verification. On a successful response, exactly one of the response output parameters qrcode or verifiableCredential (see 2:3.YY3.4.2.2 Message",
       "extractCut": true
     },
@@ -154,7 +263,40 @@
       "labelEnd": null,
       "words": 1135,
       "summary": null,
-      "keywords": [],
+      "keywords": [
+        {
+          "term": "payload construction",
+          "heading": false
+        },
+        {
+          "term": "vhl payload",
+          "heading": false
+        },
+        {
+          "term": "linkvhls supports",
+          "heading": false
+        },
+        {
+          "term": "manifest url",
+          "heading": false
+        },
+        {
+          "term": "document encryption",
+          "heading": false
+        },
+        {
+          "term": "document binaries",
+          "heading": false
+        },
+        {
+          "term": "steps above",
+          "heading": false
+        },
+        {
+          "term": "encryption key",
+          "heading": false
+        }
+      ],
       "extract": "{{ reqGenerateVHLResponseDescription.valueMarkdown }} {% include requirements-list-statements.liquid req=reqGenerateVHLResponse site=site %} Based on the requested format, the {{ linkvhls }} generates the VHL as either a QR code (HCERT/CWT-encoded per the WHO SMART Trust HCERT specification, with the VHL payload embedded at claim key 5) or a Verifiable Credential (JSON-LD per the W3C VC Data Model v2, with the VHL",
       "extractCut": true
     },
@@ -199,7 +341,32 @@
       "labelEnd": null,
       "words": 240,
       "summary": null,
-      "keywords": [],
+      "keywords": [
+        {
+          "term": "response message",
+          "heading": false
+        },
+        {
+          "term": "output",
+          "heading": false
+        },
+        {
+          "term": "enveloped vhl",
+          "heading": false
+        },
+        {
+          "term": "hcert claim",
+          "heading": false
+        },
+        {
+          "term": "claim key",
+          "heading": false
+        },
+        {
+          "term": "vhl payload",
+          "heading": false
+        }
+      ],
       "extract": "See ITI TF-2: Appendix Z.6 for more details on response format handling. The response message is a FHIR operation response (<http://hl7.org/fhir/operations.html#response>). On Failure, the response message is an HTTP status code of 4xx or 5xx indicates an error, and an OperationOutcome Resource shall be returned with details. Success Response: The response SHALL include exactly one of the following output",
       "extractCut": true
     },
@@ -214,7 +381,20 @@
       "labelEnd": null,
       "words": 95,
       "summary": null,
-      "keywords": [],
+      "keywords": [
+        {
+          "term": "vhl receivers",
+          "heading": false
+        },
+        {
+          "term": "vhl holder",
+          "heading": false
+        },
+        {
+          "term": "passcode",
+          "heading": false
+        }
+      ],
       "extract": "The VHL Holder SHALL: Display or print the QR code for scanning by VHL Receivers Cache the encryption key securely (extracted from VHL payload) for future document decryption If a passcode was provided during generation: Securely store the plaintext passcode separately from the QR code Provide the passcode to authorized VHL Receivers for manifest retrieval (ITI-YY5) Use secure transmission methods when sharing the",
       "extractCut": true
     },
@@ -244,7 +424,20 @@
       "labelEnd": null,
       "words": 73,
       "summary": null,
-      "keywords": [],
+      "keywords": [
+        {
+          "term": "encryption key",
+          "heading": true
+        },
+        {
+          "term": "kept",
+          "heading": false
+        },
+        {
+          "term": "random",
+          "heading": false
+        }
+      ],
       "extract": "The 32-byte encryption key SHALL be generated using a cryptographically secure random number generator The key is embedded in the VHL payload within the QR code and SHALL be kept confidential Loss of the key means loss of access to encrypted documents The encryption key is not directly visible in the QR code as it is embedded within the signed and compressed HCERT structure",
       "extractCut": false
     },
@@ -259,7 +452,20 @@
       "labelEnd": null,
       "words": 61,
       "summary": null,
-      "keywords": [],
+      "keywords": [
+        {
+          "term": "codes",
+          "heading": false
+        },
+        {
+          "term": "consider",
+          "heading": false
+        },
+        {
+          "term": "copied",
+          "heading": false
+        }
+      ],
       "extract": "QR codes contain the complete VHL including the encryption key QR codes can be photographed or copied - use time-limited expiration QR codes SHALL be encoded as HCERT with digital signatures for authenticity Display QR codes in controlled environments when possible Consider short expiration times (minutes to hours) for high-security scenarios",
       "extractCut": false
     },
@@ -274,7 +480,20 @@
       "labelEnd": null,
       "words": 98,
       "summary": null,
-      "keywords": [],
+      "keywords": [
+        {
+          "term": "plaintext passcode",
+          "heading": false
+        },
+        {
+          "term": "vhl sharer",
+          "heading": false
+        },
+        {
+          "term": "stored",
+          "heading": false
+        }
+      ],
       "extract": "If a passcode is provided, it SHALL be securely hashed before storage using industry-standard algorithms (bcrypt, Argon2, PBKDF2) The plaintext passcode SHALL NOT be included in the VHL URL or QR code The plaintext passcode SHALL NOT be stored by the VHL Sharer The VHL Holder SHOULD securely store the plaintext passcode for sharing with authorized VHL Receivers During ITI-YY5 Retrieve Manifest, the VHL Receiver",
       "extractCut": true
     },
@@ -289,7 +508,20 @@
       "labelEnd": null,
       "words": 45,
       "summary": null,
-      "keywords": [],
+      "keywords": [
+        {
+          "term": "manifest url",
+          "heading": true
+        },
+        {
+          "term": "construction",
+          "heading": true
+        },
+        {
+          "term": "mandatory",
+          "heading": false
+        }
+      ],
       "extract": "The manifest URL SHALL include all mandatory FHIR search parameters The _include parameter SHOULD only be included if the VHL Sharer supports the Include DocumentReference Option This ensures VHL Receivers can successfully retrieve the manifest using ITI-YY5",
       "extractCut": false
     },
@@ -304,7 +536,24 @@
       "labelEnd": null,
       "words": 141,
       "summary": null,
-      "keywords": [],
+      "keywords": [
+        {
+          "term": "base url",
+          "heading": true
+        },
+        {
+          "term": "ssraa option",
+          "heading": true
+        },
+        {
+          "term": "fhir base",
+          "heading": true
+        },
+        {
+          "term": "udap discovery",
+          "heading": false
+        }
+      ],
       "extract": "When the {{ linkvhls }} supports the OAuth with SSRAA Option, it SHALL include extension.fhirBaseUrl in the VHL payload: The fhirBaseUrl value SHALL be the canonical FHIR base URL of the {{ linkvhls }} (e.g., https://vhl-sharer.example.org) This URL is used by the {{ linkvhlr }} to perform UDAP Discovery ({fhirBaseUrl}/.well-known/udap) and, if not already registered, Dynamic Client Registration with the {{ linkvhls",
       "extractCut": true
     },
@@ -319,13 +568,76 @@
       "labelEnd": null,
       "words": 83,
       "summary": null,
-      "keywords": [],
+      "keywords": [
+        {
+          "term": "vhl",
+          "heading": true
+        },
+        {
+          "term": "enveloped",
+          "heading": true
+        },
+        {
+          "term": "equivalent",
+          "heading": false
+        }
+      ],
       "extract": "The VC's DataIntegrityProof SHALL chain to a trust anchor in the trust list (same framework used for HCERT/CWT verification). The VC expirationDate SHOULD be consistent with the VHL payload exp; the VHL Receiver SHALL reject the VHL if either has passed. Confidentiality considerations are equivalent to the QR form: the VC carries the key and MUST be treated as sensitive. VHL Sharers MAY issue single-use VCs; short",
       "extractCut": true
     }
   ],
   "checks": {},
   "withheld": false,
+  "keywords": [
+    {
+      "term": "vhl url",
+      "heading": false
+    },
+    {
+      "term": "vhl payload",
+      "heading": false
+    },
+    {
+      "term": "vhl option",
+      "heading": true
+    },
+    {
+      "term": "enveloped vhl",
+      "heading": true
+    },
+    {
+      "term": "vhl carrier",
+      "heading": false
+    },
+    {
+      "term": "vhl sharer",
+      "heading": false
+    },
+    {
+      "term": "generate vhl",
+      "heading": true
+    },
+    {
+      "term": "vhl receiver",
+      "heading": false
+    },
+    {
+      "term": "same vhl",
+      "heading": false
+    },
+    {
+      "term": "vhl holder",
+      "heading": false
+    },
+    {
+      "term": "authorized vhl",
+      "heading": false
+    },
+    {
+      "term": "manifest url",
+      "heading": true
+    }
+  ],
   "links": {
     "repo": "litlfred/smart-trust-tools",
     "branch": "main",

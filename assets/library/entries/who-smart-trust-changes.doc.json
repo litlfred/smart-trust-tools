@@ -79,7 +79,20 @@
       "labelEnd": null,
       "words": 46,
       "summary": null,
-      "keywords": [],
+      "keywords": [
+        {
+          "term": "added",
+          "heading": false
+        },
+        {
+          "term": "release",
+          "heading": true
+        },
+        {
+          "term": "dashboard",
+          "heading": false
+        }
+      ],
       "extract": "HCert Logical Model and specification updated with subclaim details and notes Rapid assessment template for proposing new trust domains added Content Profiles include details about Trust Domain FAQ page added Link to country participation dashboard added",
       "extractCut": false
     },
@@ -94,7 +107,20 @@
       "labelEnd": null,
       "words": 32,
       "summary": null,
-      "keywords": [],
+      "keywords": [
+        {
+          "term": "updated",
+          "heading": false
+        },
+        {
+          "term": "release",
+          "heading": true
+        },
+        {
+          "term": "onboarding",
+          "heading": false
+        }
+      ],
       "extract": "HCert Logical Model updated with subclaim for DVC Onboarding Checklist updated Onboarding process revised to remove Transitive processes Latest country participation status updated",
       "extractCut": false
     },
@@ -124,7 +150,20 @@
       "labelEnd": null,
       "words": 71,
       "summary": null,
-      "keywords": [],
+      "keywords": [
+        {
+          "term": "prod environments",
+          "heading": false
+        },
+        {
+          "term": "added",
+          "heading": false
+        },
+        {
+          "term": "trustlist",
+          "heading": false
+        }
+      ],
       "extract": "Upgraded to FHIR 5.0.0 IPS Pilgrimage trust domain added PH4H Letters of Application added (English and Spanish) DAK API Documentation Hub added TNG Endpoints page added covering DEV, UAT, and PROD environments Participant ValueSets for DEV, UAT, and PROD environments introduced with automated nightly generation DID Trustlist v2 added (multiple DID files per key type); DID Trustlist v1 deprecated",
       "extractCut": false
     },
@@ -154,7 +193,20 @@
       "labelEnd": null,
       "words": 32,
       "summary": null,
-      "keywords": [],
+      "keywords": [
+        {
+          "term": "instructions",
+          "heading": false
+        },
+        {
+          "term": "release",
+          "heading": true
+        },
+        {
+          "term": "updated",
+          "heading": false
+        }
+      ],
       "extract": "Onboarding Checklist updated with detailed curl command validation instructions Windows-specific curl instructions added (OpenSSL-based build required) IOM country mapping added Participant lists updated",
       "extractCut": false
     },
@@ -169,7 +221,20 @@
       "labelEnd": null,
       "words": 47,
       "summary": null,
-      "keywords": [],
+      "keywords": [
+        {
+          "term": "english",
+          "heading": false
+        },
+        {
+          "term": "release",
+          "heading": true
+        },
+        {
+          "term": "added",
+          "heading": false
+        }
+      ],
       "extract": "C.L.38.2023 (Global Digital Health Certification Network) circular letter references added to Overview (Arabic, Chinese, English, French, Russian) Trust Network Gateway Letters of Application added for all languages (English, Arabic, French, Mandarin, Russian, Spanish) and PH4H Updated Participant onboarding list",
       "extractCut": false
     },
@@ -184,7 +249,20 @@
       "labelEnd": null,
       "words": 55,
       "summary": null,
-      "keywords": [],
+      "keywords": [
+        {
+          "term": "participant generation",
+          "heading": false
+        },
+        {
+          "term": "updates",
+          "heading": false
+        },
+        {
+          "term": "fixed",
+          "heading": false
+        }
+      ],
       "extract": "Nightly participant generation fixes: Fixed GitHub API rate limiting in the nightly participant generation workflow Fixed missing Participants CodeSystem updates Additional updates: Clarified that the HCERT CWT must include the signature for validation Updated FSH model definitions for cardinality on CWT, and HCERT configuration",
       "extractCut": false
     },
@@ -199,7 +277,20 @@
       "labelEnd": null,
       "words": 36,
       "summary": null,
-      "keywords": [],
+      "keywords": [
+        {
+          "term": "participant generation",
+          "heading": false
+        },
+        {
+          "term": "fixed",
+          "heading": false
+        },
+        {
+          "term": "release",
+          "heading": true
+        }
+      ],
       "extract": "Nightly participant generation fixes: Fixed GitHub API rate limiting in the nightly participant generation workflow Fixed missing Participants Added MedicationOverviewMin as a new payload type in HCERT",
       "extractCut": false
     },
@@ -244,7 +335,20 @@
       "labelEnd": null,
       "words": 38,
       "summary": null,
-      "keywords": [],
+      "keywords": [
+        {
+          "term": "gdhcn administrative",
+          "heading": false
+        },
+        {
+          "term": "updated gdhcn",
+          "heading": false
+        },
+        {
+          "term": "operational framework",
+          "heading": false
+        }
+      ],
       "extract": "Added GDHCN Administrative and Operational Framework as a top-level menu item next to Home Updated GDHCN Administrative and Operational Framework document Updated GDHCN Participants onboarding status Participant lists updated",
       "extractCut": false
     },
@@ -274,13 +378,76 @@
       "labelEnd": null,
       "words": 89,
       "summary": null,
-      "keywords": [],
+      "keywords": [
+        {
+          "term": "logical model",
+          "heading": false
+        },
+        {
+          "term": "worked",
+          "heading": false
+        },
+        {
+          "term": "dvc",
+          "heading": false
+        }
+      ],
       "extract": "QR Code Generation page added, with step-by-step HCERT encoding, signing and decoding instructions, worked through with a DVC payload Worked DVC example added, covering a newborn birth-dose certificate issued by GDHCN DEV participant XXR and signed with a key onboarded to the DEV trust network, using WHO PreQual product identifiers CWT Payload logical model updated to allow more than one health certificate under the",
       "extractCut": true
     }
   ],
   "checks": {},
   "withheld": false,
+  "keywords": [
+    {
+      "term": "page added",
+      "heading": false
+    },
+    {
+      "term": "application added",
+      "heading": false
+    },
+    {
+      "term": "participant generation",
+      "heading": false
+    },
+    {
+      "term": "model updated",
+      "heading": false
+    },
+    {
+      "term": "checklist updated",
+      "heading": false
+    },
+    {
+      "term": "updated gdhcn",
+      "heading": false
+    },
+    {
+      "term": "lists updated",
+      "heading": false
+    },
+    {
+      "term": "release hcert",
+      "heading": false
+    },
+    {
+      "term": "onboarding checklist",
+      "heading": false
+    },
+    {
+      "term": "hcert logical",
+      "heading": false
+    },
+    {
+      "term": "generation fixes",
+      "heading": false
+    },
+    {
+      "term": "generation workflow",
+      "heading": false
+    }
+  ],
   "links": {
     "repo": "litlfred/smart-trust-tools",
     "branch": "main",

@@ -19,7 +19,20 @@
       "labelEnd": null,
       "words": 113,
       "summary": null,
-      "keywords": [],
+      "keywords": [
+        {
+          "term": "generating",
+          "heading": true
+        },
+        {
+          "term": "hcert specification",
+          "heading": false
+        },
+        {
+          "term": "code",
+          "heading": true
+        }
+      ],
       "extract": "This page is a step-by-step, implementer-facing walkthrough of how a signed health certificate becomes a QR code on a piece of paper or a phone screen, and how a verifier turns that QR code back into trustworthy data. The container, the signature and the transport encoding are the same for every GDHCN trust domain, and are specified normatively in the HCERT Specification. What changes from one use case to the next",
       "extractCut": true
     },
@@ -49,7 +62,32 @@
       "labelEnd": null,
       "words": 213,
       "summary": null,
-      "keywords": [],
+      "keywords": [
+        {
+          "term": "payload",
+          "heading": true
+        },
+        {
+          "term": "trust domains",
+          "heading": false
+        },
+        {
+          "term": "step",
+          "heading": true
+        },
+        {
+          "term": "subclaims",
+          "heading": false
+        },
+        {
+          "term": "select",
+          "heading": true
+        },
+        {
+          "term": "logical model",
+          "heading": false
+        }
+      ],
       "extract": "A payload is identified by a subclaim inside the hcert claim (-260). The subclaims, and the logical model each one carries, are enumerated in the HCert logical model; section 3.2.7.1 of the HCERT Specification is authoritative for which are assigned. The registered trust domains are listed in the GDHCN Trust Domain value set and described under Trust Domains. Two things are worth knowing before picking a number.",
       "extractCut": true
     },
@@ -64,7 +102,28 @@
       "labelEnd": null,
       "words": 215,
       "summary": null,
-      "keywords": [],
+      "keywords": [
+        {
+          "term": "vaccine",
+          "heading": false
+        },
+        {
+          "term": "product",
+          "heading": false
+        },
+        {
+          "term": "administered",
+          "heading": false
+        },
+        {
+          "term": "prequal",
+          "heading": false
+        },
+        {
+          "term": "payload",
+          "heading": true
+        }
+      ],
       "extract": "Populate the logical model for the payload type you selected. For a DVC that is DVCMinPreQual, whose vaccine details are DVCMinVaccineDetailsPreQual. Follow those definitions for the element list, cardinalities and bindings rather than any copy of them. DVCMinPreQual is the concrete model: its parent DVCMin is abstract, as is DVCMinVaccineDetails, so neither can be instantiated directly. The element names are two",
       "extractCut": true
     },
@@ -79,7 +138,20 @@
       "labelEnd": null,
       "words": 109,
       "summary": null,
-      "keywords": [],
+      "keywords": [
+        {
+          "term": "cwt claim",
+          "heading": true
+        },
+        {
+          "term": "validity period",
+          "heading": false
+        },
+        {
+          "term": "build",
+          "heading": true
+        }
+      ],
       "extract": "Place the payload under its subclaim, inside the hcert claim, inside a CWT claim set — see that model for the claim keys and types, and section 3.2 of the specification for their normative definitions. exp deserves attention because it is the only revocation mechanism this specification offers: certificates cannot be reliably revoked once issued, so the validity period must be chosen to bound the damage from a",
       "extractCut": true
     },
@@ -94,7 +166,20 @@
       "labelEnd": null,
       "words": 61,
       "summary": null,
-      "keywords": [],
+      "keywords": [
+        {
+          "term": "cbor",
+          "heading": true
+        },
+        {
+          "term": "serialise",
+          "heading": true
+        },
+        {
+          "term": "step",
+          "heading": true
+        }
+      ],
       "extract": "Encode the claim set as CBOR (RFC 7049). The JSON shown on this page and in the logical models is schema notation only — the wire format is CBOR, and an implementation need never produce the JSON form at all. Strings SHOULD be NFC-normalised. Decoders SHOULD be permissive about input that is not.",
       "extractCut": false
     },
@@ -109,7 +194,28 @@
       "labelEnd": null,
       "words": 229,
       "summary": null,
-      "keywords": [],
+      "keywords": [
+        {
+          "term": "sign",
+          "heading": true
+        },
+        {
+          "term": "cose",
+          "heading": true
+        },
+        {
+          "term": "der encoding",
+          "heading": false
+        },
+        {
+          "term": "bytes",
+          "heading": false
+        },
+        {
+          "term": "secondary",
+          "heading": false
+        }
+      ],
       "extract": "Wrap the CBOR payload in a single-signer COSE structure (RFC 8152), CBOR tag 18, with alg (label 1) and kid (label 4) in the protected header. ES256 is the primary algorithm (alg -7) and PS256 the secondary (-37). Both MUST be implemented even though only one signs any given certificate; the secondary exists so that a break in the primary does not strand the whole network. kid MAY instead sit in the unprotected",
       "extractCut": true
     },
@@ -139,7 +245,20 @@
       "labelEnd": null,
       "words": 38,
       "summary": null,
-      "keywords": [],
+      "keywords": [
+        {
+          "term": "encode",
+          "heading": true
+        },
+        {
+          "term": "base",
+          "heading": true
+        },
+        {
+          "term": "character",
+          "heading": false
+        }
+      ],
       "extract": "Encode the compressed bytes with Base45. Base45 exists for one reason: its 45-character alphabet is exactly the QR Alphanumeric character set, which stores data far more densely than byte mode.",
       "extractCut": false
     },
@@ -154,7 +273,20 @@
       "labelEnd": null,
       "words": 45,
       "summary": null,
-      "keywords": [],
+      "keywords": [
+        {
+          "term": "prefix",
+          "heading": true
+        },
+        {
+          "term": "identifier",
+          "heading": true
+        },
+        {
+          "term": "context",
+          "heading": true
+        }
+      ],
       "extract": "Prefix the Base45 string with HC1:. Verifiers use this to recognise what they have scanned and which decoding scheme to apply. A future backwards-incompatible revision will use a new identifier, incrementing through [1-9] and then [A-Z].",
       "extractCut": false
     },
@@ -169,7 +301,20 @@
       "labelEnd": null,
       "words": 103,
       "summary": null,
-      "keywords": [],
+      "keywords": [
+        {
+          "term": "rendered",
+          "heading": false
+        },
+        {
+          "term": "code",
+          "heading": true
+        },
+        {
+          "term": "step",
+          "heading": true
+        }
+      ],
       "extract": "Property; Requirement Symbology; QR Code, ISO/IEC 18004:2015 — SHALL Encoding mode; Alphanumeric (Mode 2, symbols 0010) — MUST, in conjunction with Base45 Error correction; Level Q, approximately 25% — RECOMMENDED Rendered size; 35 mm to 60 mm diagonal — RECOMMENDED If you are printing below 300 dpi, make sure each module is rendered as an exact square. Non-proportional scaling turns modules into rectangles and is a",
       "extractCut": true
     },
@@ -184,7 +329,28 @@
       "labelEnd": null,
       "words": 188,
       "summary": null,
-      "keywords": [],
+      "keywords": [
+        {
+          "term": "verifying",
+          "heading": true
+        },
+        {
+          "term": "protected header",
+          "heading": false
+        },
+        {
+          "term": "key usage",
+          "heading": false
+        },
+        {
+          "term": "steps",
+          "heading": true
+        },
+        {
+          "term": "check",
+          "heading": false
+        }
+      ],
       "extract": "1. Confirm the HC1: prefix and strip it. 2. Base45-decode, then ZLIB-decompress. 3. Parse the COSE_Sign1 and read alg and kid from the protected header. 4. Validate the input before trusting it. Parsing the protected header necessarily happens before signature verification, which makes it an attack surface; check types and lengths defensively. See section 6.3. 5. Look the kid up on the trust list, retrieving every",
       "extractCut": true
     },
@@ -214,7 +380,28 @@
       "labelEnd": null,
       "words": 191,
       "summary": null,
-      "keywords": [],
+      "keywords": [
+        {
+          "term": "scenario",
+          "heading": true
+        },
+        {
+          "term": "newborn",
+          "heading": false
+        },
+        {
+          "term": "schedule",
+          "heading": false
+        },
+        {
+          "term": "paper",
+          "heading": false
+        },
+        {
+          "term": "country",
+          "heading": false
+        }
+      ],
       "extract": "A family from the Lao People's Democratic Republic is visiting relatives abroad when the mother delivers. The newborn receives the routine birth-dose vaccinations of the host country's national childhood immunization schedule before discharge. The clinic records the doses and issues a signed certificate; the family has one shared phone between them, so the clinic prints a paper card with the QR code and offers",
       "extractCut": true
     },
@@ -229,7 +416,20 @@
       "labelEnd": null,
       "words": 77,
       "summary": null,
-      "keywords": [],
+      "keywords": [
+        {
+          "term": "schedule",
+          "heading": true
+        },
+        {
+          "term": "birth",
+          "heading": false
+        },
+        {
+          "term": "hours",
+          "heading": false
+        }
+      ],
       "extract": "Thailand's Expanded Programme on Immunization gives two vaccines at birth: **BCG as soon as possible after birth, and the first dose of hepatitis B vaccine within 24 hours of birth**. The DTP-HepB and OPV series begin later, at 2, 4 and 6 months. A birth visit in Thailand therefore produces exactly the two certificates modelled here. Implementers should confirm the current schedule against the national authority",
       "extractCut": true
     },
@@ -244,7 +444,24 @@
       "labelEnd": null,
       "words": 130,
       "summary": null,
-      "keywords": [],
+      "keywords": [
+        {
+          "term": "gdhcn dev",
+          "heading": false
+        },
+        {
+          "term": "dev trust",
+          "heading": false
+        },
+        {
+          "term": "attribute",
+          "heading": false
+        },
+        {
+          "term": "onboarded",
+          "heading": false
+        }
+      ],
       "extract": "The example is issued by GDHCN DEV participant XXR, not by any Member State. GDHCN participant codes are ISO 3166-1 alpha-3, while the CWT iss claim and the X.509 country attribute take the alpha-2 form — here XR, matching the C=XR attribute of the Document Signing Certificate subject. Signing uses a key whose public key is onboarded to the GDHCN DEV trust network, so the example verifies against the DEV trust list.",
       "extractCut": true
     },
@@ -259,7 +476,20 @@
       "labelEnd": null,
       "words": 117,
       "summary": null,
-      "keywords": [],
+      "keywords": [
+        {
+          "term": "prequal product",
+          "heading": false
+        },
+        {
+          "term": "bcg",
+          "heading": false
+        },
+        {
+          "term": "hepatitis",
+          "heading": false
+        }
+      ],
       "extract": "Hepatitis B birth dose, hcert subclaim -6, shown in JSON notation. vp carries the PreQual product identifier of the product actually administered: { \"n\": \"Chanthala SOUVANNALATH\", \"dob\": \"2026-10-21\", \"s\": \"female\", \"nt\": \"LAO\", \"gn\": \"Mali SOUVANNALATH\", \"vx\": { \"vp\": \"a3K3X000006MiiXUAS\", \"dv\": \"2026-10-21\", \"cn\": \"Dr Pimchanok WATTANA\", \"is\": \"org-xxr-provincial-hospital\", \"bo\": \"HEPB-2026-0914\" }, \"v\": \"1.0.0\" }",
       "extractCut": true
     },
@@ -274,7 +504,20 @@
       "labelEnd": null,
       "words": 113,
       "summary": null,
-      "keywords": [],
+      "keywords": [
+        {
+          "term": "size",
+          "heading": true
+        },
+        {
+          "term": "bytes",
+          "heading": false
+        },
+        {
+          "term": "cryptography",
+          "heading": false
+        }
+      ],
       "extract": "For the hepatitis B certificate: Stage; Size CWT claim set, CBOR; 222 bytes COSE_Sign1, signed; 307 bytes ZLIB/Deflate compressed; 293 bytes Base45 + HC1: prefix; 444 characters QR symbol; Version 16, error correction Q, Alphanumeric mode The signature and its headers account for 85 of the 307 bytes — on payloads this small, the cryptography costs more than the clinical data. This is why the minimal models use",
       "extractCut": true
     },
@@ -289,13 +532,80 @@
       "labelEnd": null,
       "words": 174,
       "summary": null,
-      "keywords": [],
+      "keywords": [
+        {
+          "term": "signing certificate",
+          "heading": false
+        },
+        {
+          "term": "trust list",
+          "heading": false
+        },
+        {
+          "term": "endpoints",
+          "heading": false
+        },
+        {
+          "term": "dev",
+          "heading": false
+        }
+      ],
       "extract": "Hepatitis B birth dose: <div style=\"display:block\"> <img src=\"dvc-qr-example-hepb1-XXR.png\" alt=\"DVC QR code, Hepatitis B birth dose, GDHCN DEV participant XXR\" width=\"300\" /> </div> HC1:NCFOXN%TSMAHN-HHPC*8W$BM70GZW8WI47X5JU9V21HJI.OR.6J:X90$TZIPAN9I6TSQLMN2SRPOK62YU%E6SOEGW2Z0W/TO+4W3R3ZP3XQ7KUHMQQTOE2QERM2ZGA2:UG%UBPISWUO FFPEUCAQZ4K%I7YV4SVO*I1R5LK90DQK7E$BESW6846OVQICMKR6PK96M53A5/41B$P6",
       "extractCut": true
     }
   ],
   "checks": {},
   "withheld": false,
+  "keywords": [
+    {
+      "term": "hepatitis vaccine",
+      "heading": false
+    },
+    {
+      "term": "hepatitis birth",
+      "heading": false
+    },
+    {
+      "term": "cbor payload",
+      "heading": false
+    },
+    {
+      "term": "birth dose",
+      "heading": true
+    },
+    {
+      "term": "birth visit",
+      "heading": false
+    },
+    {
+      "term": "cwt claim",
+      "heading": true
+    },
+    {
+      "term": "logical model",
+      "heading": false
+    },
+    {
+      "term": "signing certificate",
+      "heading": false
+    },
+    {
+      "term": "gdhcn dev",
+      "heading": false
+    },
+    {
+      "term": "prequal product",
+      "heading": false
+    },
+    {
+      "term": "gdhcn trust",
+      "heading": false
+    },
+    {
+      "term": "health certificate",
+      "heading": false
+    }
+  ],
   "links": {
     "repo": "litlfred/smart-trust-tools",
     "branch": "main",

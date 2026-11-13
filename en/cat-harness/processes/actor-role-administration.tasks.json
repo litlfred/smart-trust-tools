@@ -1,15 +1,93 @@
 {
  "$schema": "process-task-panel/v1",
  "process": "Process_ActorRoleAdministration",
+ "markers": [
+  {
+   "id": "Task_AddActor",
+   "name": "Add an actor, and declare its kind",
+   "left": 42.48,
+   "top": 6.41,
+   "box": {
+    "left": 37.03,
+    "top": 18.59,
+    "width": 1.8,
+    "height": 3.08
+   }
+  },
+  {
+   "id": "Task_AssignRoles",
+   "name": "Open or close a role to an actor",
+   "left": 42.48,
+   "top": 24.36,
+   "box": {
+    "left": 37.03,
+    "top": 36.54,
+    "width": 1.8,
+    "height": 3.08
+   }
+  },
+  {
+   "id": "Task_GrantOrRevoke",
+   "name": "Grant or revoke a permission",
+   "left": 42.48,
+   "top": 42.31,
+   "box": {
+    "left": 37.03,
+    "top": 54.49,
+    "width": 1.8,
+    "height": 3.08
+   }
+  },
+  {
+   "id": "Task_RetireActor",
+   "name": "Retire an actor — never delete one",
+   "left": 42.48,
+   "top": 60.26,
+   "box": {
+    "left": 37.03,
+    "top": 72.44,
+    "width": 1.8,
+    "height": 3.08
+   }
+  },
+  {
+   "id": "CallActivity_CodeChangeReview",
+   "name": "Branch, gates, PR and review",
+   "left": 68.05,
+   "top": 32.69,
+   "box": {
+    "left": 62.59,
+    "top": 44.87,
+    "width": 1.8,
+    "height": 3.08
+   }
+  },
+  {
+   "id": "Task_RunKgAudit",
+   "name": "Audit the graph",
+   "left": 68.05,
+   "top": 82.05,
+   "box": {
+    "left": 62.59,
+    "top": 94.23,
+    "width": 1.8,
+    "height": 3.08
+   }
+  }
+ ],
+ "processHref": "actor-role-administration.html",
  "tasks": {
   "Task_AddActor": {
    "id": "Task_AddActor",
    "name": "Add an actor, and declare its kind",
    "type": "bpmn:UserTask",
+   "stepHref": "actor-role-administration.html#step-Task_AddActor",
    "lane": "Administrator",
+   "laneHref": "actor-role-administration.html#lane-Lane_Administrator",
    "skills": [
     {
-     "name": "role-model"
+     "name": "role-model",
+     "href": "../../../en/cat-harness/processes/skills/role-model.html"
     }
    ],
    "role": {
@@ -18,25 +96,40 @@
     "title": "Administrator",
     "skills": [
      {
-      "name": "confirmation-waiver"
+      "name": "bpmn-authoring",
+      "href": "../../../en/cat-harness/processes/skills/bpmn-authoring.html"
      },
      {
-      "name": "deletion-requires-confirmation"
+      "name": "confirmation-waiver",
+      "href": "../../../en/cat-harness/processes/skills/confirmation-waiver.html"
      },
      {
-      "name": "kg-separation"
+      "name": "deletion-requires-confirmation",
+      "href": "../../../en/cat-harness/processes/skills/deletion-requires-confirmation.html"
      },
      {
-      "name": "role-model"
+      "name": "dmn-authoring",
+      "href": "../../../en/cat-harness/processes/skills/dmn-authoring.html"
      },
      {
-      "name": "sub-kg-lifecycle"
+      "name": "kg-separation",
+      "href": "../../../en/cat-harness/processes/skills/kg-separation.html"
      },
      {
-      "name": "swimlane-glossary"
+      "name": "role-model",
+      "href": "../../../en/cat-harness/processes/skills/role-model.html"
      },
      {
-      "name": "task-authorization"
+      "name": "sub-kg-lifecycle",
+      "href": "../../../en/cat-harness/processes/skills/sub-kg-lifecycle.html"
+     },
+     {
+      "name": "swimlane-glossary",
+      "href": "../../../en/cat-harness/processes/skills/swimlane-glossary.html"
+     },
+     {
+      "name": "task-authorization",
+      "href": "../../../en/cat-harness/processes/skills/task-authorization.html"
      }
     ]
    }
@@ -45,10 +138,13 @@
    "id": "Task_AssignRoles",
    "name": "Open or close a role to an actor",
    "type": "bpmn:UserTask",
+   "stepHref": "actor-role-administration.html#step-Task_AssignRoles",
    "lane": "Administrator",
+   "laneHref": "actor-role-administration.html#lane-Lane_Administrator",
    "skills": [
     {
-     "name": "role-model"
+     "name": "role-model",
+     "href": "../../../en/cat-harness/processes/skills/role-model.html"
     }
    ],
    "role": {
@@ -57,25 +153,40 @@
     "title": "Administrator",
     "skills": [
      {
-      "name": "confirmation-waiver"
+      "name": "bpmn-authoring",
+      "href": "../../../en/cat-harness/processes/skills/bpmn-authoring.html"
      },
      {
-      "name": "deletion-requires-confirmation"
+      "name": "confirmation-waiver",
+      "href": "../../../en/cat-harness/processes/skills/confirmation-waiver.html"
      },
      {
-      "name": "kg-separation"
+      "name": "deletion-requires-confirmation",
+      "href": "../../../en/cat-harness/processes/skills/deletion-requires-confirmation.html"
      },
      {
-      "name": "role-model"
+      "name": "dmn-authoring",
+      "href": "../../../en/cat-harness/processes/skills/dmn-authoring.html"
      },
      {
-      "name": "sub-kg-lifecycle"
+      "name": "kg-separation",
+      "href": "../../../en/cat-harness/processes/skills/kg-separation.html"
      },
      {
-      "name": "swimlane-glossary"
+      "name": "role-model",
+      "href": "../../../en/cat-harness/processes/skills/role-model.html"
      },
      {
-      "name": "task-authorization"
+      "name": "sub-kg-lifecycle",
+      "href": "../../../en/cat-harness/processes/skills/sub-kg-lifecycle.html"
+     },
+     {
+      "name": "swimlane-glossary",
+      "href": "../../../en/cat-harness/processes/skills/swimlane-glossary.html"
+     },
+     {
+      "name": "task-authorization",
+      "href": "../../../en/cat-harness/processes/skills/task-authorization.html"
      }
     ]
    }
@@ -84,10 +195,13 @@
    "id": "Task_GrantOrRevoke",
    "name": "Grant or revoke a permission",
    "type": "bpmn:UserTask",
+   "stepHref": "actor-role-administration.html#step-Task_GrantOrRevoke",
    "lane": "Administrator",
+   "laneHref": "actor-role-administration.html#lane-Lane_Administrator",
    "skills": [
     {
-     "name": "role-model"
+     "name": "role-model",
+     "href": "../../../en/cat-harness/processes/skills/role-model.html"
     }
    ],
    "role": {
@@ -96,25 +210,40 @@
     "title": "Administrator",
     "skills": [
      {
-      "name": "confirmation-waiver"
+      "name": "bpmn-authoring",
+      "href": "../../../en/cat-harness/processes/skills/bpmn-authoring.html"
      },
      {
-      "name": "deletion-requires-confirmation"
+      "name": "confirmation-waiver",
+      "href": "../../../en/cat-harness/processes/skills/confirmation-waiver.html"
      },
      {
-      "name": "kg-separation"
+      "name": "deletion-requires-confirmation",
+      "href": "../../../en/cat-harness/processes/skills/deletion-requires-confirmation.html"
      },
      {
-      "name": "role-model"
+      "name": "dmn-authoring",
+      "href": "../../../en/cat-harness/processes/skills/dmn-authoring.html"
      },
      {
-      "name": "sub-kg-lifecycle"
+      "name": "kg-separation",
+      "href": "../../../en/cat-harness/processes/skills/kg-separation.html"
      },
      {
-      "name": "swimlane-glossary"
+      "name": "role-model",
+      "href": "../../../en/cat-harness/processes/skills/role-model.html"
      },
      {
-      "name": "task-authorization"
+      "name": "sub-kg-lifecycle",
+      "href": "../../../en/cat-harness/processes/skills/sub-kg-lifecycle.html"
+     },
+     {
+      "name": "swimlane-glossary",
+      "href": "../../../en/cat-harness/processes/skills/swimlane-glossary.html"
+     },
+     {
+      "name": "task-authorization",
+      "href": "../../../en/cat-harness/processes/skills/task-authorization.html"
      }
     ]
    }
@@ -123,13 +252,17 @@
    "id": "Task_RetireActor",
    "name": "Retire an actor — never delete one",
    "type": "bpmn:UserTask",
+   "stepHref": "actor-role-administration.html#step-Task_RetireActor",
    "lane": "Administrator",
+   "laneHref": "actor-role-administration.html#lane-Lane_Administrator",
    "skills": [
     {
-     "name": "deletion-requires-confirmation"
+     "name": "deletion-requires-confirmation",
+     "href": "../../../en/cat-harness/processes/skills/deletion-requires-confirmation.html"
     },
     {
-     "name": "role-model"
+     "name": "role-model",
+     "href": "../../../en/cat-harness/processes/skills/role-model.html"
     }
    ],
    "role": {
@@ -138,25 +271,40 @@
     "title": "Administrator",
     "skills": [
      {
-      "name": "confirmation-waiver"
+      "name": "bpmn-authoring",
+      "href": "../../../en/cat-harness/processes/skills/bpmn-authoring.html"
      },
      {
-      "name": "deletion-requires-confirmation"
+      "name": "confirmation-waiver",
+      "href": "../../../en/cat-harness/processes/skills/confirmation-waiver.html"
      },
      {
-      "name": "kg-separation"
+      "name": "deletion-requires-confirmation",
+      "href": "../../../en/cat-harness/processes/skills/deletion-requires-confirmation.html"
      },
      {
-      "name": "role-model"
+      "name": "dmn-authoring",
+      "href": "../../../en/cat-harness/processes/skills/dmn-authoring.html"
      },
      {
-      "name": "sub-kg-lifecycle"
+      "name": "kg-separation",
+      "href": "../../../en/cat-harness/processes/skills/kg-separation.html"
      },
      {
-      "name": "swimlane-glossary"
+      "name": "role-model",
+      "href": "../../../en/cat-harness/processes/skills/role-model.html"
      },
      {
-      "name": "task-authorization"
+      "name": "sub-kg-lifecycle",
+      "href": "../../../en/cat-harness/processes/skills/sub-kg-lifecycle.html"
+     },
+     {
+      "name": "swimlane-glossary",
+      "href": "../../../en/cat-harness/processes/skills/swimlane-glossary.html"
+     },
+     {
+      "name": "task-authorization",
+      "href": "../../../en/cat-harness/processes/skills/task-authorization.html"
      }
     ]
    }
@@ -164,57 +312,71 @@
   "CallActivity_CodeChangeReview": {
    "id": "CallActivity_CodeChangeReview",
    "name": "Branch, gates, PR and review",
-   "type": "bpmn:CallActivity",
+   "type": "bpmn:Task",
+   "stepHref": "actor-role-administration.html#step-CallActivity_CodeChangeReview",
    "lane": "Administrator",
+   "laneHref": "actor-role-administration.html#lane-Lane_Administrator",
    "skills": [
     {
-     "name": "prepare-merge"
-    },
-    {
-     "name": "continual-progress"
+     "name": "continual-progress",
+     "href": "../../../en/cat-harness/processes/skills/continual-progress.html"
     }
    ],
-   "calls": {
-    "name": "Code change and review",
-    "href": "code-change-review.html"
-   },
    "role": {
     "name": "administrator",
     "href": "../../../cat-harness/auto-docs/index/roles/index.html#a-cat-harness-scenarios-roles-json-administrator",
     "title": "Administrator",
     "skills": [
      {
-      "name": "confirmation-waiver"
+      "name": "bpmn-authoring",
+      "href": "../../../en/cat-harness/processes/skills/bpmn-authoring.html"
      },
      {
-      "name": "deletion-requires-confirmation"
+      "name": "confirmation-waiver",
+      "href": "../../../en/cat-harness/processes/skills/confirmation-waiver.html"
      },
      {
-      "name": "kg-separation"
+      "name": "deletion-requires-confirmation",
+      "href": "../../../en/cat-harness/processes/skills/deletion-requires-confirmation.html"
      },
      {
-      "name": "role-model"
+      "name": "dmn-authoring",
+      "href": "../../../en/cat-harness/processes/skills/dmn-authoring.html"
      },
      {
-      "name": "sub-kg-lifecycle"
+      "name": "kg-separation",
+      "href": "../../../en/cat-harness/processes/skills/kg-separation.html"
      },
      {
-      "name": "swimlane-glossary"
+      "name": "role-model",
+      "href": "../../../en/cat-harness/processes/skills/role-model.html"
      },
      {
-      "name": "task-authorization"
+      "name": "sub-kg-lifecycle",
+      "href": "../../../en/cat-harness/processes/skills/sub-kg-lifecycle.html"
+     },
+     {
+      "name": "swimlane-glossary",
+      "href": "../../../en/cat-harness/processes/skills/swimlane-glossary.html"
+     },
+     {
+      "name": "task-authorization",
+      "href": "../../../en/cat-harness/processes/skills/task-authorization.html"
      }
     ]
    }
   },
   "Task_RunKgAudit": {
    "id": "Task_RunKgAudit",
-   "name": "Audit the graph [kg:audit]",
+   "name": "Audit the graph",
    "type": "bpmn:ServiceTask",
+   "stepHref": "actor-role-administration.html#step-Task_RunKgAudit",
    "lane": "Graph audit (system)",
+   "laneHref": "actor-role-administration.html#lane-Lane_Audit",
    "skills": [
     {
-     "name": "role-model"
+     "name": "role-model",
+     "href": "../../../en/cat-harness/processes/skills/role-model.html"
     }
    ],
    "role": {
@@ -223,34 +385,36 @@
     "title": "Build pipeline",
     "skills": [
      {
-      "name": "ci-health"
+      "name": "ci-health",
+      "href": "../../../en/cat-harness/processes/skills/ci-health.html"
      },
      {
-      "name": "compiled-artefact-cache"
+      "name": "compiled-artefact-cache",
+      "href": "../../../en/cat-harness/processes/skills/compiled-artefact-cache.html"
      },
      {
-      "name": "content-publish"
+      "name": "content-test",
+      "href": "../../../en/cat-harness/processes/skills/content-test.html"
      },
      {
-      "name": "content-test"
+      "name": "content-validate",
+      "href": "../../../en/cat-harness/processes/skills/content-validate.html"
      },
      {
-      "name": "content-validate"
+      "name": "feature-staging",
+      "href": "../../../en/cat-harness/processes/skills/feature-staging.html"
      },
      {
-      "name": "feature-staging"
+      "name": "harness-projections",
+      "href": "../../../en/cat-harness/processes/skills/harness-projections.html"
      },
      {
-      "name": "harness-projections"
+      "name": "kg-separation",
+      "href": "../../../en/cat-harness/processes/skills/kg-separation.html"
      },
      {
-      "name": "ig-ast-delta"
-     },
-     {
-      "name": "kg-separation"
-     },
-     {
-      "name": "platform-gates"
+      "name": "platform-gates",
+      "href": "../../../en/cat-harness/processes/skills/platform-gates.html"
      },
      {
       "name": "prepare-merge"
@@ -262,22 +426,27 @@
       "name": "qa-reports"
      },
      {
-      "name": "remote-mount"
+      "name": "remote-mount",
+      "href": "../../../en/cat-harness/processes/skills/remote-mount.html"
      },
      {
-      "name": "render-kg-to-cdn"
+      "name": "render-kg-to-cdn",
+      "href": "../../../en/cat-harness/processes/skills/render-kg-to-cdn.html"
      },
      {
-      "name": "sub-kg-lifecycle"
+      "name": "sub-kg-lifecycle",
+      "href": "../../../en/cat-harness/processes/skills/sub-kg-lifecycle.html"
      },
      {
       "name": "todo-manager"
      },
      {
-      "name": "translation-manager"
+      "name": "translation-manager",
+      "href": "../../../en/cat-harness/processes/skills/translation-manager.html"
      },
      {
-      "name": "upstream-version-adoption"
+      "name": "upstream-version-adoption",
+      "href": "../../../en/cat-harness/processes/skills/upstream-version-adoption.html"
      },
      {
       "name": "watch"
