@@ -148,7 +148,11 @@ export const ihe: VhlPayload = {
 export function runSuite(h: Hcert, f: Fixtures): Outcome[] {
   const out: Outcome[] = [];
   const check = (name: string, ok: boolean, detail?: string) => out.push({ name, ok, detail });
-  const run = (name: string, body: () => boolean | [boolean, string]) => {
+  // A test's title is fixed, so its Gherkin tag can name it; a test run once
+  // per case passes the case as `each`, and its outcome is reported as
+  // `<title> [<each>]`.
+  const run = (title: string, body: () => boolean | [boolean, string], each?: string) => {
+    const name = each === undefined ? title : `${title} [${each}]`;
     try {
       const r = body();
       Array.isArray(r) ? check(name, r[0], r[1]) : check(name, r);
@@ -327,10 +331,10 @@ export function runSuite(h: Hcert, f: Fixtures): Outcome[] {
   const store = new h.trust.TrustStore();
   store.addPem(f.pr129Pem);
   for (const [name, c] of Object.entries(f.pr129.certificates)) {
-    run(`STT-TST-001 STT-VER-001 the PR 129 ${name} certificate verifies as published`, () => {
+    run("STT-TST-001 STT-VER-001 each PR 129 certificate verifies as published", () => {
       const r = h.verifier.verify(c.hc1, store, reg, NOW, OPTIONS);
       return r.tag === "verified" && r.val.iss === "XX" && r.val.entries.length === 1 && r.val.entries[0]!.subclaim === -6 && r.val.entries[0]!.payload.tag === "dvc-min" && r.val.entries[0]!.payload.val.n === c.payload.n && r.val.dsc.notBefore < NOW;
-    });
+    }, name);
   }
   run("STT-VER-011 read-unverified decodes and says it is not verified", () => {
     const u = h.verifier.readUnverified(hepb1, reg, L);
@@ -338,7 +342,7 @@ export function runSuite(h: Hcert, f: Fixtures): Outcome[] {
   });
   const negative = f.negative;
   for (const c of negative.cases) {
-    run(`STT-TST-004 STT-TST-005 STT-VER-008 negative vector ${c.id} stops at ${c.expect.step} ${c.expect.reason}`, () => {
+    run("STT-TST-004 STT-TST-005 STT-VER-008 each negative vector stops at its named step and reason", () => {
       const st = new h.trust.TrustStore();
       for (const p of c.trust ?? negative.defaults.trust) st.addPem(f.pem[p]!);
       const now = BigInt(c.now ?? negative.defaults.now);
@@ -346,7 +350,7 @@ export function runSuite(h: Hcert, f: Fixtures): Outcome[] {
       const r: VerificationResult = c.coseHex ? h.verifier.verifyCose(fromHex(c.coseHex), st, reg, now, options) : h.verifier.verify(c.hc1!, st, reg, now, options);
       const want = [c.expect.step, c.expect.reason].map((x) => x.toLowerCase().replace(/_/g, "-"));
       return r.tag === "failed" ? [r.val.step === want[0] && r.val.reason === want[1], `${r.val.step} ${r.val.reason}`] : [false, "verified"];
-    });
+    }, `${c.id}: ${c.expect.step} ${c.expect.reason}`);
   }
 
   // issuer (two-phase, the host signs)

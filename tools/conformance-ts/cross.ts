@@ -24,7 +24,10 @@ const canon = (x: unknown) => JSON.stringify(x, (_, v) => (typeof v === "bigint"
 export function runCross(impls: Record<string, Hcert>, f: CrossFixtures): Outcome[] {
   const out: Outcome[] = [];
   const [[aName, a], [bName, b]] = Object.entries(impls) as [[string, Hcert], [string, Hcert]];
-  const run = (name: string, body: () => boolean | [boolean, string]) => {
+  // A fixed title, so its Gherkin tag can name it; a test run once per case
+  // passes the case as `each`, reported as `<title> [<each>]`.
+  const run = (title: string, body: () => boolean | [boolean, string], each?: string) => {
+    const name = each === undefined ? title : `${title} [${each}]`;
     try {
       const r = body();
       const [ok, detail] = Array.isArray(r) ? r : [r, undefined];
@@ -48,7 +51,7 @@ export function runCross(impls: Record<string, Hcert>, f: CrossFixtures): Outcom
     for (const [label, list] of payloads) {
       const req: IssueRequest = { payloads: list, iss: "XX", validity: { iat: TESTKIT_NOW, exp: TESTKIT_NOW + 86400n }, dscDer: dsc, alg, allowDevelopmentSubclaims: true };
       for (const [iName, issuer, vName, verifier] of [[aName, a, bName, b], [bName, b, aName, a]] as const) {
-        run(`STT-TST-003 STT-GEN-006 ${alg.toUpperCase()} ${label} issued by ${iName} verifies in ${vName}, from the same bytes`, () => {
+        run("STT-TST-003 STT-GEN-006 each library's certificate verifies in the other, from the same bytes", () => {
           const regI = new issuer.subclaims.Registry();
           const regV = new verifier.subclaims.Registry();
           const pI = issuer.issuer.prepare(req, regI);
@@ -78,12 +81,12 @@ export function runCross(impls: Record<string, Hcert>, f: CrossFixtures): Outcom
           const want = [...list].sort((x, y) => (x.tag === "vhl" ? -1 : 1) - (y.tag === "vhl" ? -1 : 1))
             .map((p) => ({ subclaim: p.tag === "vhl" ? 5 : -6, payload: p, keyUsageAuthorised: !(alg === "ps256" && p.tag === "dvc-min") }));
           return [canon(r.val.entries) === canon(want), canon(r.val.entries)];
-        });
+        }, `${alg.toUpperCase()} ${label}, issued by ${iName}, verified in ${vName}`);
       }
     }
   }
 
-  run(`STT-TST-003 a signature over ${aName}'s bytes, attached by ${bName} to a different payload, is refused`, () => {
+  run("STT-TST-003 a signature over one library's bytes, attached by the other to a different payload, is refused", () => {
     const reg = new a.subclaims.Registry();
     const pA = a.issuer.prepare({ payloads: [{ tag: "dvc-min", val: newborn }], iss: "XX", validity: { iat: TESTKIT_NOW, exp: TESTKIT_NOW + 86400n }, dscDer: f.testkitDsc, alg: "es256", allowDevelopmentSubclaims: true }, reg);
     const sig = f.signEs256Der(pA.toBeSigned());
@@ -96,6 +99,6 @@ export function runCross(impls: Record<string, Hcert>, f: CrossFixtures): Outcom
     } catch (e) {
       return [(e as { payload?: { tag?: string } }).payload?.tag === "bad-signature-format", String((e as { payload?: { tag?: string } }).payload?.tag)];
     }
-  });
+  }, `${aName}'s bytes, attached by ${bName}`);
   return out;
 }
