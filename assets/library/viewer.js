@@ -190,6 +190,9 @@ var COLS = [
   { k:"upload",   t:"source",   n:false, c:"t-source", f:function(e){ var s=uploadState(e);
       var name = '<span class="slug" style="font-size:.72rem;color:var(--muted)">'+esc(e.sourceFile)+"</span>";
       if (e.sourceFile && e.viewable) name = '<a class="src lib-src" href="'+esc(entryHref(e))+'#lib-view" target="_blank" rel="noopener">'+esc(e.sourceFile)+"</a>";
+      /* Owner, 2026-11-13: every source file name is a link. One not viewable
+         here opens its entry page, which says where the file is held. */
+      else if (e.sourceFile) name = '<a class="src lib-src" href="'+esc(entryHref(e))+'">'+esc(e.sourceFile)+"</a>";
       return '<span class="pill '+s.cls+'">'+esc(s.label)+"</span>"+(e.sourceFile?"<br>"+name:""); } }
 ];
 
@@ -292,24 +295,6 @@ function renderDesk(){
   }).join("") || '<p class="empty">Nothing matches.</p>';
 }
 
-function renderQueue(){
-  var h = "<table><thead><tr><th>unit</th><th>queue</th><th>kind</th><th>size</th><th>state</th></tr></thead><tbody>";
-  h += G.uploads.filter(inScope).map(function(u){
-    /* An intake is ONE queued document however many files it declares, and
-       the row says so — otherwise a four-file capture reads as four things
-       waiting. The count comes from the intake's own declared file list. */
-    var kind = u.kind === "intake"
-      ? '<span class="pill info">intake · ' + u.declaredFiles + " file" + (u.declaredFiles === 1 ? "" : "s") + "</span>"
-      : esc(u.ext || "—");
-    var label = esc(u.file) + (u.kind === "intake" && u.title
-      ? '<br><span style="font-family:inherit;color:var(--muted);font-size:.78rem">' + esc(u.title) + "</span>" : "");
-    return '<tr><td class="slug" data-label="unit">' + label + '</td><td data-label="queue"><span class="pill">' + esc(u.instance) +
-      '</span></td><td data-label="kind">' + kind + '</td><td class="num" data-label="size">' + kb(u.bytes) + '</td><td data-label="state">' +
-      (u.ingestedBy ? '<span class="pill ok">ingested → ' + esc(u.ingestedBy) + "</span>"
-                    : '<span class="pill warn">uningested</span>') + "</td></tr>";
-  }).join("") || '<tr><td colspan="5"><p class="empty">No uploads queue for this subject.</p></td></tr>';
-  $("queue").innerHTML = h + "</tbody></table>";
-}
 
 function render(){ if (VIEW === "list") renderList(); else renderDesk(); }
 
@@ -2124,7 +2109,7 @@ fetch(DATA_HREF).then(function(r){
     renderList();
   });
   render();
-  renderQueue();
+  // The uploads queue has its own page (gen-uploads-viz.ts); the library page shows the corpus only (owner, 2026-11-13).
   honourAddress();
   window.addEventListener("hashchange", honourAddress);
 }).catch(function(e){

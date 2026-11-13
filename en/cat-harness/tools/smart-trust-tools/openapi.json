@@ -950,63 +950,6 @@
         }
       }
     },
-    "/tools/test-gherkin": {
-      "post": {
-        "operationId": "test-gherkin",
-        "summary": "Every test has a Gherkin Scenario",
-        "description": "Check test/features/*.feature against the suites: every Rust #[test], Kotlin @Test and TypeScript conformance run(...) has a Scenario tagged @test:<path>::<test>, every such tag names a test, WHO-ITB Scenarios carry @itb:<suite>/<testcase>, and every test-plan case names its feature file. Temporary, until cat-harness check:test-gherkin is pinned.",
-        "tags": [
-          "hcert-conformance-testing"
-        ],
-        "externalDocs": {
-          "description": "The Tool's page",
-          "url": "test-gherkin/"
-        },
-        "requestBody": {
-          "required": false,
-          "content": {
-            "application/json": {
-              "schema": {
-                "type": "object",
-                "properties": {
-                  "list": {
-                    "$ref": "#/components/schemas/Flag",
-                    "description": "Print each test's @test: tag and check nothing."
-                  }
-                },
-                "additionalProperties": false
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "The Tool declares no typed output."
-          }
-        },
-        "x-tool-iri": "https://litlfred.github.io/folio-assistant/smart-trust-tools/tools/test-gherkin.jsonld",
-        "x-invoke": {
-          "shell": "python3 tools/test-gherkin/check_test_gherkin.py"
-        },
-        "x-install": {
-          "none": true
-        },
-        "x-requires": {
-          "runtime": [
-            "python3"
-          ],
-          "network": false
-        },
-        "x-satisfies": [
-          "hcert-conformance-testing"
-        ],
-        "x-selection": {
-          "when": "A test or a feature file is added, renamed or removed, or CI checks they agree.",
-          "limits": "Checks the tags, not that the steps match the test's assertions: a reviewer reads that.",
-          "cost": "Under a second."
-        }
-      }
-    },
     "/tools/test-plan": {
       "post": {
         "operationId": "test-plan",
