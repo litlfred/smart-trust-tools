@@ -85,7 +85,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/cat-harness-tools",
-          "ref": "4ac36f3f401b2f404f434e440c77d20290b46b3b",
+          "ref": "6d522ae3886327f67c83521690d6d6ebd18e5f21",
           "overrides": {
             "cat-harness-tools": {
               "whole": true
@@ -98,8 +98,8 @@
             "consent": {
               "by": "litlfred",
               "on": "2026-11-13",
-              "ref": "4ac36f3f401b2f404f434e440c77d20290b46b3b",
-              "evidence": "Owner litlfred, 2026-11-13 (session card 'Layer copies' option 1, opt-in per site): re-pin so the site carries only its own pages and links other layers (cat-harness-tools#1985); the same set as folio-assistant#3111's re-pin train, so lock-consistency holds."
+              "ref": "6d522ae3886327f67c83521690d6d6ebd18e5f21",
+              "evidence": "Owner litlfred, 2026-11-13, in session https://claude.ai/code/session_01VQDpPcvPnp61vujPencah4 (Re-pin question, option 1 'Consent: re-pin now'): re-pin cat-harness-tools alone to the merge of cat-harness-tools#2036 (check:test-gherkin adapter fixes) so smart-trust-tools#68 can gate on the shared check:test-gherkin."
             }
           }
         }
