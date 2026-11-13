@@ -7,7 +7,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/fhir-harness",
-          "ref": "5e6f2972eefc01de60d0a455bb676ebeb7aeaf7a",
+          "ref": "346a04c9e29b4f5c9d51e7720b2a3818d3ebd7f2",
           "overrides": {
             "fhir-harness": {
               "whole": true
@@ -16,9 +16,9 @@
           "trust": {
             "consent": {
               "by": "litlfred",
-              "on": "2026-11-07",
-              "ref": "5e6f2972eefc01de60d0a455bb676ebeb7aeaf7a",
-              "evidence": "Owner litlfred, 2026-11-07 (after 05:30Z, this session): 'repin + merge open 12 hrs'."
+              "on": "2026-11-13",
+              "ref": "346a04c9e29b4f5c9d51e7720b2a3818d3ebd7f2",
+              "evidence": "Owner litlfred, 2026-11-13: bottom-up re-pin cascade (smart-ra#242 follow-on), Q-CONSENT-1 A, Q-CASCADE-FREEZE B: smart-trust-tools to folio-assistant#3103's frozen set so smart-ips-pilgrimage#66's lock-consistency holds."
             }
           }
         }
@@ -29,7 +29,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/folio-assistant-core",
-          "ref": "49496b4f3e0f4e8e1ec01c19a20d2f2ca6516230",
+          "ref": "437eee5e87bd8f87334b06a4682d3e25c5953943",
           "overrides": {
             "folio-assistant-core": {
               "whole": true
@@ -44,9 +44,9 @@
           "trust": {
             "consent": {
               "by": "litlfred",
-              "on": "2026-11-07",
-              "ref": "49496b4f3e0f4e8e1ec01c19a20d2f2ca6516230",
-              "evidence": "Owner litlfred, 2026-11-07 (after 05:30Z, this session): 'repin + merge open 12 hrs'."
+              "on": "2026-11-13",
+              "ref": "437eee5e87bd8f87334b06a4682d3e25c5953943",
+              "evidence": "Owner litlfred, 2026-11-13: bottom-up re-pin cascade (smart-ra#242 follow-on), Q-CONSENT-1 A, Q-CASCADE-FREEZE B: smart-trust-tools to folio-assistant#3103's frozen set so smart-ips-pilgrimage#66's lock-consistency holds."
             }
           }
         }
@@ -57,7 +57,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/cat-harness",
-          "ref": "99fb9499ed712f0adcb1940ba95b711f11a3c48d",
+          "ref": "a107d8ef4947d6ebcc937312b0a6000e59743d1d",
           "overrides": {
             "cat-harness": {
               "whole": true
@@ -72,9 +72,9 @@
           "trust": {
             "consent": {
               "by": "litlfred",
-              "on": "2026-11-07",
-              "ref": "99fb9499ed712f0adcb1940ba95b711f11a3c48d",
-              "evidence": "Owner litlfred, 2026-11-07 (after 05:30Z, this session): 'repin + merge open 12 hrs'."
+              "on": "2026-11-13",
+              "ref": "a107d8ef4947d6ebcc937312b0a6000e59743d1d",
+              "evidence": "Owner litlfred, 2026-11-13: bottom-up re-pin cascade (smart-ra#242 follow-on), Q-CONSENT-1 A, Q-CASCADE-FREEZE B: smart-trust-tools to folio-assistant#3103's frozen set so smart-ips-pilgrimage#66's lock-consistency holds."
             }
           }
         }
@@ -85,7 +85,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/cat-harness-tools",
-          "ref": "144f3d31f366958b81c0ca25edfc6db9cfa9646a",
+          "ref": "ed3c8eb404200c1d101c99893a67d22102815587",
           "overrides": {
             "cat-harness-tools": {
               "whole": true
@@ -97,9 +97,9 @@
           "trust": {
             "consent": {
               "by": "litlfred",
-              "on": "2026-11-07",
-              "ref": "144f3d31f366958b81c0ca25edfc6db9cfa9646a",
-              "evidence": "Owner litlfred, 2026-11-07 (after 05:30Z, this session): 'repin + merge open 12 hrs'."
+              "on": "2026-11-13",
+              "ref": "ed3c8eb404200c1d101c99893a67d22102815587",
+              "evidence": "Owner litlfred, 2026-11-13: bottom-up re-pin cascade (smart-ra#242 follow-on), Q-CONSENT-1 A, Q-CASCADE-FREEZE B: smart-trust-tools to folio-assistant#3103's frozen set so smart-ips-pilgrimage#66's lock-consistency holds."
             }
           }
         }
@@ -110,7 +110,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/bootstrap",
-          "ref": "12fa6d57dfad06ae73e234f116145dfc8d77ad50",
+          "ref": "17204fe9ed49e87b165bf0a8b626b6c69329a2a6",
           "overrides": {
             "bootstrap": {
               "whole": true
@@ -119,9 +119,9 @@
           "trust": {
             "consent": {
               "by": "litlfred",
-              "on": "2026-11-07",
-              "ref": "12fa6d57dfad06ae73e234f116145dfc8d77ad50",
-              "evidence": "Owner litlfred, 2026-11-07 (after 05:30Z, this session): 'repin + merge open 12 hrs'."
+              "on": "2026-11-13",
+              "ref": "17204fe9ed49e87b165bf0a8b626b6c69329a2a6",
+              "evidence": "Owner litlfred, 2026-11-13: bottom-up re-pin cascade (smart-ra#242 follow-on), Q-CONSENT-1 A, Q-CASCADE-FREEZE B: smart-trust-tools to folio-assistant#3103's frozen set so smart-ips-pilgrimage#66's lock-consistency holds."
             }
           }
         }
@@ -132,7 +132,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/bootstrap-tools",
-          "ref": "a668ea1f512b1081ac8f3958f92166f12ce684cb",
+          "ref": "0f88368db7560afac6d3e16fd905cbb974350f82",
           "overrides": {
             "bootstrap-tools": {
               "whole": true
@@ -144,9 +144,9 @@
           "trust": {
             "consent": {
               "by": "litlfred",
-              "on": "2026-11-07",
-              "ref": "a668ea1f512b1081ac8f3958f92166f12ce684cb",
-              "evidence": "Owner litlfred, 2026-11-07 (after 05:30Z, this session): 'repin + merge open 12 hrs'."
+              "on": "2026-11-13",
+              "ref": "0f88368db7560afac6d3e16fd905cbb974350f82",
+              "evidence": "Owner litlfred, 2026-11-13: bottom-up re-pin cascade (smart-ra#242 follow-on), Q-CONSENT-1 A, Q-CASCADE-FREEZE B: smart-trust-tools to folio-assistant#3103's frozen set so smart-ips-pilgrimage#66's lock-consistency holds."
             }
           }
         }
