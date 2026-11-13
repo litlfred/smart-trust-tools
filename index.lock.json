@@ -108,8 +108,20 @@
           "id": "*",
           "path": "cat-harness",
           "upstreamPath": ".",
-          "treeDigest": "f891736010ccdc96d48717ab50e7f40d984677fc88b8a875aad846a19c987b26",
-          "files": 12697
+          "treeDigest": "b37ced0c5720e3bde4f96dd63a698bacd5ce67ce763735537b9526a79c18cb10",
+          "files": 2605,
+          "except": [
+            "docs/proposals",
+            "docs/wireframes",
+            "editorial",
+            "integrations",
+            "kg-ops",
+            "library/corpus",
+            "platform-ui",
+            "research",
+            "sdlc",
+            "work-plan"
+          ]
         }
       ],
       "trust": {
