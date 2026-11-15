@@ -1,0 +1,189 @@
+{
+  "$schema": "translation-candidates/v1",
+  "locale": "zh",
+  "catalogue": "processes/hcert-contract-change",
+  "entries": [
+    {
+      "msgid": "A source specification changed",
+      "candidates": [
+        {
+          "text": "源码规格已更改",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-zh",
+            "at": "2026-11-15T07:41:29.941Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "A WHO or IHE specification changed, or an open issue (bean) was resolved: the maintainer amends the requirements and the WIT or CDDL, regenerates what is derived from them, tests both implementations against the shared vectors, and publishes the graph. A person or an agent may do each step.",
+      "candidates": [
+        {
+          "text": "世卫组织或IHE的规格已经改变,或一个未决问题(bean)已经解决:维护者修改要求,WIT或CDDL重新生成这些要求,对共享矢量进行实施测试,并公布图表。 一个人或代理人可以采取每一步骤。",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-zh",
+            "at": "2026-11-15T07:41:29.941Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "Amend the requirements within the architecture rules",
+      "candidates": [
+        {
+          "text": "修改建筑规则中的要求",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-zh",
+            "at": "2026-11-15T07:41:29.941Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "Change api/wit or api/cddl, then run wit2kotlin, gen-api-types and, if a logical model moved, fetch-lms and lm-derive. Nothing generated is edited by hand.",
+      "candidates": [
+        {
+          "text": "更改 pi/ wits 或 api/ cddl, 然后运行 why2kotlin, gen- api- type, 如果逻辑模型移动, 则会获取 lms 和 lm- derive 。 生成的东西不会用手编辑 。",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-zh",
+            "at": "2026-11-15T07:41:29.941Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "Change the library contract",
+      "candidates": [
+        {
+          "text": "更改图书馆合同",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-zh",
+            "at": "2026-11-15T07:41:29.941Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "Change the req: nodes in skills/requirements/ within the architecture rules (one contract, a synchronous core with no I/O, open standards only), citing the changed source by reference.",
+      "candidates": [
+        {
+          "text": "在架构规则(一个合同,一个不使用I/O的同步核心,仅使用开放标准)中,以参考方式引用已更改的源代码,更改req: 技能/要求/ 架构规则中的节点。",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-zh",
+            "at": "2026-11-15T07:41:29.941Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "Change the WIT or CDDL and regenerate its views",
+      "candidates": [
+        {
+          "text": "更改 WIT 或 CDDL 并重新生成其视图",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-zh",
+            "at": "2026-11-15T07:41:29.941Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "Check the graph and publish the site",
+      "candidates": [
+        {
+          "text": "检查图表并发布网站",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-zh",
+            "at": "2026-11-15T07:41:29.941Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "Contract published",
+      "candidates": [
+        {
+          "text": "合同已公布",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-zh",
+            "at": "2026-11-15T07:41:29.941Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "Library maintainer",
+      "candidates": [
+        {
+          "text": "图书馆维护器",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-zh",
+            "at": "2026-11-15T07:41:29.941Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "Run check-models and the hcert-core tests on the JVM and Node against the shared vectors.",
+      "candidates": [
+        {
+          "text": "在JVM和节点上对共享矢量进行检查模型和 Hcert-core 测试。",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-zh",
+            "at": "2026-11-15T07:41:29.941Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "Run check-req-nodes, then publish gh-pages with stage-local: main to the root, a branch to STAGING.",
+      "candidates": [
+        {
+          "text": "运行 check- req- nodes, 然后用 Sage- local 发布 gh- page : 主根, 树枝到 staging 。",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-zh",
+            "at": "2026-11-15T07:41:29.941Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "Test against the shared vectors",
+      "candidates": [
+        {
+          "text": "测试共享矢量",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-zh",
+            "at": "2026-11-15T07:41:29.941Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "The person or agent who keeps the contract, its generated artefacts, the conformance tests and the published graph current.",
+      "candidates": [
+        {
+          "text": "订立合同的个人或代理人、合同产生的工艺品、符合性测试和已公布的图表流。",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-zh",
+            "at": "2026-11-15T07:41:29.941Z"
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "$schema": "translation-node/v1",
+  "label": "trans:ar/processes/hcert-verification",
+  "locale": "ar",
+  "sourceFile": "processes/content/hcert-verification.bpmn",
+  "potFile": "translations/ar/processes/hcert-verification.pot",
+  "poFile": "translations/ar/processes/hcert-verification.po",
+  "status": {
+    "locale": "ar",
+    "official": false,
+    "generatedBy": "machine",
+    "generator": "Helsinki-NLP/opus-mt-en-ar",
+    "generatedAt": "2026-11-15T07:39:23.278Z"
+  }
+}

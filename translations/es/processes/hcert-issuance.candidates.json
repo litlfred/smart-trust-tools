@@ -1,0 +1,397 @@
+{
+  "$schema": "translation-candidates/v1",
+  "locale": "es",
+  "catalogue": "processes/hcert-issuance",
+  "entries": [
+    {
+      "msgid": "A certificate is to be issued",
+      "candidates": [
+        {
+          "text": "Se expedirá un certificado",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-es",
+            "at": "2026-11-15T07:39:41.961Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "Assemble and validate the payload",
+      "candidates": [
+        {
+          "text": "Montar y validar la carga útil",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-es",
+            "at": "2026-11-15T07:39:41.961Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "Attach the returned signature to make the COSE_Sign1, checking it is the length the algorithm gives (64 bytes for ES256, r||s).",
+      "candidates": [
+        {
+          "text": "Adjuntar la firma devuelta para hacer el COSE_Sign1, comprobando que es la longitud que el algoritmo da (64 bytes para ES256, rs).",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-es",
+            "at": "2026-11-15T07:39:41.961Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "Attach the signature as COSE_Sign1",
+      "candidates": [
+        {
+          "text": "Adjuntar la firma como COSE_Sign1",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-es",
+            "at": "2026-11-15T07:39:41.961Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "Build the COSE Sig_structure from the protected header (alg, kid = SHA-256 of the DSC, first 8 bytes) and the payload, and hand its bytes out to be signed.",
+      "candidates": [
+        {
+          "text": "Construye la estructura COSE Sig_ desde el encabezado protegido (alg, kid = SHA-256 del DSC, primeros 8 bytes) y la carga útil, y entrega sus bytes para ser firmados.",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-es",
+            "at": "2026-11-15T07:39:41.961Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "Build the CWT claim set",
+      "candidates": [
+        {
+          "text": "Construir el conjunto de reclamaciones CWT",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-es",
+            "at": "2026-11-15T07:39:41.961Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "Build the payload and validate it against its logical model (DVCMin, or the VHL payload), keeping elements the library does not know.",
+      "candidates": [
+        {
+          "text": "Construir la carga útil y validarla contra su modelo lógico (DVCMin, o la carga útil de VHL), manteniendo elementos que la biblioteca no conoce.",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-es",
+            "at": "2026-11-15T07:39:41.961Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "Choose the logical model and the hcert subclaim for the use case from the registry QR Code Generation 2 defines: a DVC (key -6) when the certificate must verify offline, a VHL (key 5) when the records are larger than a QR code holds.",
+      "candidates": [
+        {
+          "text": "Elija el modelo lógico y la subclaim hcert para el caso de uso del registro QR Code Generation 2 define: un DVC (key -6) cuando el certificado debe verificar fuera de línea, un VHL (key 5) cuando los registros son más grandes que un código QR mantiene.",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-es",
+            "at": "2026-11-15T07:39:41.961Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "Compress the COSE_Sign1 with ZLIB/DEFLATE, after signing, never before.",
+      "candidates": [
+        {
+          "text": "Compre el COSE_Sign1 con ZLIB/DEFLATE, después de firmar, nunca antes.",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-es",
+            "at": "2026-11-15T07:39:41.961Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "Compress with ZLIB",
+      "candidates": [
+        {
+          "text": "Comprimir con ZLIB",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-es",
+            "at": "2026-11-15T07:39:41.961Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "Encode as Base45",
+      "candidates": [
+        {
+          "text": "Codificar como base45",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-es",
+            "at": "2026-11-15T07:39:41.961Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "Encode the compressed bytes as RFC 9285 Base45, the alphabet QR Alphanumeric mode stores compactly.",
+      "candidates": [
+        {
+          "text": "Codifique los bytes comprimidos como RFC 9285 Base45, el modo alfanumérico QR del alfabeto almacena compactamente.",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-es",
+            "at": "2026-11-15T07:39:41.961Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "HCERT issuing system",
+      "candidates": [
+        {
+          "text": "Sistema de emisión HCERT",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-es",
+            "at": "2026-11-15T07:39:41.961Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "Issue an HCERT QR code",
+      "candidates": [
+        {
+          "text": "Emitir un código HCERT QR",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-es",
+            "at": "2026-11-15T07:39:41.961Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "Prefix HC1:",
+      "candidates": [
+        {
+          "text": "Prefijo HC1:",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-es",
+            "at": "2026-11-15T07:39:41.961Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "Prefix the context identifier HC1: to make the QR-ready string.",
+      "candidates": [
+        {
+          "text": "Prefija el identificador de contexto HC1: para hacer la cadena lista para QR.",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-es",
+            "at": "2026-11-15T07:39:41.961Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "Prepare the Sig_structure",
+      "candidates": [
+        {
+          "text": "Preparar la estructura Sig_",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-es",
+            "at": "2026-11-15T07:39:41.961Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "QR Code Generation steps 1 to 9, as the library and its host divide them: the issuing system runs every step; the key holder only signs the bytes prepare returns, so the private key never enters the library (STT-ISS-004, STT-COS-006).",
+      "candidates": [
+        {
+          "text": "QR Code Generation pasos 1 a 9, ya que la biblioteca y su host los dividen: el sistema de emisión se ejecuta en cada paso; el titular de la clave sólo firma los bytes preparados, por lo que la clave privada nunca entra en la biblioteca (STT-ISS-004, STT-COS-006).",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-es",
+            "at": "2026-11-15T07:39:41.961Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "QR-ready HC1 string",
+      "candidates": [
+        {
+          "text": "Cadena HC1 lista para QR",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-es",
+            "at": "2026-11-15T07:39:41.961Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "Render the QR code (Alphanumeric, EC Q)",
+      "candidates": [
+        {
+          "text": "Renderizar el código QR (Alphanumeric, CE Q)",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-es",
+            "at": "2026-11-15T07:39:41.961Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "Select the payload type and subclaim",
+      "candidates": [
+        {
+          "text": "Seleccione el tipo de carga útil y subclaim",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-es",
+            "at": "2026-11-15T07:39:41.961Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "Serialise as deterministic CBOR",
+      "candidates": [
+        {
+          "text": "Serialización como CBOR determinista",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-es",
+            "at": "2026-11-15T07:39:41.961Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "Serialise the claim set as RFC 8949 deterministic CBOR, so the same claims always give the same bytes.",
+      "candidates": [
+        {
+          "text": "Serializar la reclamación establecida como RFC 8949 CBOR determinista, por lo que las mismas afirmaciones siempre dan los mismos bytes.",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-es",
+            "at": "2026-11-15T07:39:41.961Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "Sign the bytes with the DSC key",
+      "candidates": [
+        {
+          "text": "Firma los bytes con la tecla DSC",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-es",
+            "at": "2026-11-15T07:39:41.961Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "Signing key holder",
+      "candidates": [
+        {
+          "text": "Titular de la clave de firma",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-es",
+            "at": "2026-11-15T07:39:41.961Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "The application renders the HC1 string as a QR code in Alphanumeric mode, error correction Q, with its own QR encoder.",
+      "candidates": [
+        {
+          "text": "La aplicación representa la cadena HC1 como un código QR en modo alfanumérico, corrección de errores Q, con su propio codificador QR.",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-es",
+            "at": "2026-11-15T07:39:41.961Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "The HCERT side of the VHL Sharer (smart-trust: Issuer): a clinic system or national portal that issues HCERT certificates, embedding the Kotlin or Rust library.",
+      "candidates": [
+        {
+          "text": "El lado HCERT del BVS Sharer (smart-trust: Emisor): un sistema clínico o portal nacional que emite certificados HCERT, incrustando la biblioteca Kotlin o Rust.",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-es",
+            "at": "2026-11-15T07:39:41.961Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "The HSM, KMS, Android Keystore or WebCrypto key of a Trust Network Participant that signs the bytes the issuing system prepares; the library never holds the private key.",
+      "candidates": [
+        {
+          "text": "El HSM, KMS, Android Keystore o WebCrypto clave de un participante de la red de confianza que firma los bytes del sistema de emisión prepara; la biblioteca nunca tiene la clave privada.",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-es",
+            "at": "2026-11-15T07:39:41.961Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "The key holder signs the Sig_structure bytes with the DSC private key (ES256, or PS256) and returns the raw signature. The key never leaves it.",
+      "candidates": [
+        {
+          "text": "El titular de la clave firma los bytes Sig_structure con la clave privada DSC (ES256, o PS256) y devuelve la firma en bruto. La clave nunca la deja.",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-es",
+            "at": "2026-11-15T07:39:41.961Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "Wrap the payload in a CWT claim set: iss, iat, exp inside the DSC's validity, and the payload at hcert (-260) under its subclaim.",
+      "candidates": [
+        {
+          "text": "Envuelva la carga útil en un conjunto de reclamaciones CWT: es, iat, exp dentro de la validez del DSC, y la carga útil en hcert (-260) bajo su subclaim.",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-es",
+            "at": "2026-11-15T07:39:41.961Z"
+          }
+        }
+      ]
+    }
+  ]
+}
