@@ -1,0 +1,189 @@
+{
+  "$schema": "translation-candidates/v1",
+  "locale": "zh",
+  "catalogue": "processes/hcert-verification",
+  "entries": [
+    {
+      "msgid": "An HC1 QR code is scanned",
+      "candidates": [
+        {
+          "text": "扫描了一个 HC1 QR 代码",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-zh",
+            "at": "2026-11-15T07:41:51.114Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "Check signature, key usage, CWT and time; dispatch the payload",
+      "candidates": [
+        {
+          "text": "检查签名、密钥使用、 CWT 和时间; 发送有效载荷",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-zh",
+            "at": "2026-11-15T07:41:51.114Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "Find every DSC in the host's trust list whose kid matches; more than one may, and each is tried.",
+      "candidates": [
+        {
+          "text": "查找东道方信任列表中每个孩子匹配的 DSC; 可能不止一个, 每个都尝试过 。",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-zh",
+            "at": "2026-11-15T07:41:51.114Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "Find every trusted DSC with the kid",
+      "candidates": [
+        {
+          "text": "找到每个信任的DSC和孩子",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-zh",
+            "at": "2026-11-15T07:41:51.114Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "HCERT verifying system",
+      "candidates": [
+        {
+          "text": "HCERT 核实系统",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-zh",
+            "at": "2026-11-15T07:41:51.114Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "Parse COSE_Sign1 and validate the protected header",
+      "candidates": [
+        {
+          "text": "分析 COSE_ ign1 并验证受保护信头",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-zh",
+            "at": "2026-11-15T07:41:51.114Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "Parse the COSE_Sign1 within depth and size limits and check the protected header: a known alg, and a kid of 8 bytes.",
+      "candidates": [
+        {
+          "text": "在深度和大小范围内分析COSE_Sign1, 检查受保护的页眉: 一个已知的藻类, 一个8字节的孩子 。",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-zh",
+            "at": "2026-11-15T07:41:51.114Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "QR Code Generation section 11 in the STT-VER-001 order. Every failure is a value naming its step and reason (STT-VER-008). A CHW device offline uses read-unverified instead, which stops before the trust lookup (STT-VER-011).",
+      "candidates": [
+        {
+          "text": "STT-VER-001号命令中的QR 代码生成第11节。 每一次失败都是一个数值, 标明其步骤和理由( STT- VER- 008)。 脱机的 CHW 设备则使用阅读统一验证, 在信任查询前停止( STT- VER-011 )。",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-zh",
+            "at": "2026-11-15T07:41:51.114Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "Strip HC1: (refusing any other context), Base45-decode strictly and inflate within a size limit.",
+      "candidates": [
+        {
+          "text": "条形 HC1: (重复任何其他上下文), Base45 解码严格, 且在大小限制内膨胀 。",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-zh",
+            "at": "2026-11-15T07:41:51.114Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "Strip HC1:, Base45-decode and inflate",
+      "candidates": [
+        {
+          "text": "条形 HC1:, Base45 解码和膨胀",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-zh",
+            "at": "2026-11-15T07:41:51.114Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "The HCERT side of the VHL Receiver (smart-trust: Receiver): a clinic EMR, border system or CHW app that verifies, or triage-reads, an HCERT.",
+      "candidates": [
+        {
+          "text": "VHL 接收器(智能信任:接收器)的 HCERT 方面:一个诊所EMR、边境系统或CHW 应用程序,用于核实或分级阅读 HCERT。",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-zh",
+            "at": "2026-11-15T07:41:51.114Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "Verification result",
+      "candidates": [
+        {
+          "text": "核实结果",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-zh",
+            "at": "2026-11-15T07:41:51.114Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "Verify an HCERT QR code",
+      "candidates": [
+        {
+          "text": "校验 HCERT QR 代码",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-zh",
+            "at": "2026-11-15T07:41:51.114Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "Verify the signature with each candidate, then the DSC's key usage for this payload type, the CWT's iat and exp against now, and dispatch the payload by subclaim. Every failure is a value naming its step and reason.",
+      "candidates": [
+        {
+          "text": "与每个候选者核对签名, 然后由 DSC 将关键用途用于这种有效载荷类型, 即 CWT 的 iat 和 explace , 然后通过子索赔发送有效载荷 。 每一次失败都是指定其步骤和理由的值 。",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-zh",
+            "at": "2026-11-15T07:41:51.114Z"
+          }
+        }
+      ]
+    }
+  ]
+}

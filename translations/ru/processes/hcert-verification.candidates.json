@@ -1,0 +1,189 @@
+{
+  "$schema": "translation-candidates/v1",
+  "locale": "ru",
+  "catalogue": "processes/hcert-verification",
+  "entries": [
+    {
+      "msgid": "An HC1 QR code is scanned",
+      "candidates": [
+        {
+          "text": "Сканируется код QR HC1",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-ru",
+            "at": "2026-11-15T07:41:12.739Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "Check signature, key usage, CWT and time; dispatch the payload",
+      "candidates": [
+        {
+          "text": "Проверьте подпись, использование ключа, ВВТ и время; отправка полезной нагрузки",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-ru",
+            "at": "2026-11-15T07:41:12.739Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "Find every DSC in the host's trust list whose kid matches; more than one may, and each is tried.",
+      "candidates": [
+        {
+          "text": "Найдите каждого DSC в списке доверия хозяина, чей ребенок совпадает; может быть более чем один, и каждый из них будет предан суду.",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-ru",
+            "at": "2026-11-15T07:41:12.739Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "Find every trusted DSC with the kid",
+      "candidates": [
+        {
+          "text": "Найдите каждого доверенного DSC с ребёнком.",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-ru",
+            "at": "2026-11-15T07:41:12.739Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "HCERT verifying system",
+      "candidates": [
+        {
+          "text": "Система проверки HCERT",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-ru",
+            "at": "2026-11-15T07:41:12.739Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "Parse COSE_Sign1 and validate the protected header",
+      "candidates": [
+        {
+          "text": "Оформить подпись COSE_1 и подтвердить защищенный заголовок",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-ru",
+            "at": "2026-11-15T07:41:12.739Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "Parse the COSE_Sign1 within depth and size limits and check the protected header: a known alg, and a kid of 8 bytes.",
+      "candidates": [
+        {
+          "text": "Проанализируйте COSE_Подпись1 в пределах глубины и размера и проверьте защищенный заголовок: известный альг и ребенок из 8 байтов.",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-ru",
+            "at": "2026-11-15T07:41:12.739Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "QR Code Generation section 11 in the STT-VER-001 order. Every failure is a value naming its step and reason (STT-VER-008). A CHW device offline uses read-unverified instead, which stops before the trust lookup (STT-VER-011).",
+      "candidates": [
+        {
+          "text": "Раздел 11 генерации QR в приказе STT-VER-001. Каждый отказ является значением, указывающим его ступеньку и причину (STT-VER-008).",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-ru",
+            "at": "2026-11-15T07:41:12.739Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "Strip HC1: (refusing any other context), Base45-decode strictly and inflate within a size limit.",
+      "candidates": [
+        {
+          "text": "Раздел HC1: (исключая любой другой контекст), код базы45 строго и накачивается в пределах предельного размера.",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-ru",
+            "at": "2026-11-15T07:41:12.739Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "Strip HC1:, Base45-decode and inflate",
+      "candidates": [
+        {
+          "text": "Раздел HC1: базовый код 45 и накачание",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-ru",
+            "at": "2026-11-15T07:41:12.739Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "The HCERT side of the VHL Receiver (smart-trust: Receiver): a clinic EMR, border system or CHW app that verifies, or triage-reads, an HCERT.",
+      "candidates": [
+        {
+          "text": "Сбоку от HCERT приемщика VHL (смарт-траст: приемщик): клиника EMR, пограничная система или приложение CHW, которая проверяет или сортирует HCERT.",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-ru",
+            "at": "2026-11-15T07:41:12.739Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "Verification result",
+      "candidates": [
+        {
+          "text": "Результаты проверки",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-ru",
+            "at": "2026-11-15T07:41:12.739Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "Verify an HCERT QR code",
+      "candidates": [
+        {
+          "text": "Проверка QR-кода HCERT",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-ru",
+            "at": "2026-11-15T07:41:12.739Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "Verify the signature with each candidate, then the DSC's key usage for this payload type, the CWT's iat and exp against now, and dispatch the payload by subclaim. Every failure is a value naming its step and reason.",
+      "candidates": [
+        {
+          "text": "Проверка подписи с каждым кандидатом, затем ключевого использования DSC для этого типа полезной нагрузки, iat и exp против сейчас, и отправка полезной нагрузки субпретензией. Каждый отказ является значением, указывающим ее шаг и причину.",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-ru",
+            "at": "2026-11-15T07:41:12.739Z"
+          }
+        }
+      ]
+    }
+  ]
+}

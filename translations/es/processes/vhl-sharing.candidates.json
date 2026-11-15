@@ -1,0 +1,241 @@
+{
+  "$schema": "translation-candidates/v1",
+  "locale": "es",
+  "catalogue": "processes/vhl-sharing",
+  "entries": [
+    {
+      "msgid": "A holder chooses records to share",
+      "candidates": [
+        {
+          "text": "Un titular elige registros para compartir",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-es",
+            "at": "2026-11-15T07:40:01.461Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "Build and sign the ITI-YY5 manifest request",
+      "candidates": [
+        {
+          "text": "Construir y firmar la solicitud de manifiesto ITI-YY5",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-es",
+            "at": "2026-11-15T07:40:01.461Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "Build the ITI-YY5 request: POST <url>/List/_search with the form body (passcode only when the P flag is set), its Content-Digest and its RFC 9421 HTTP Message Signature. The host sends it over mutual TLS.",
+      "candidates": [
+        {
+          "text": "Construir la petición ITI-YY5: POST <url>/List/_search con el cuerpo del formulario (código de paso sólo cuando se establece la bandera P), su Contenido-Digest y su RFC 9421 HTTP Message Signature.",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-es",
+            "at": "2026-11-15T07:40:01.461Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "Documents read",
+      "candidates": [
+        {
+          "text": "Documentos que deben leerse",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-es",
+            "at": "2026-11-15T07:40:01.461Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "Generate a 32-byte random key for the link and encrypt each document as JWE compact, dir / A256GCM.",
+      "candidates": [
+        {
+          "text": "Generar una clave aleatoria de 32 bytes para el enlace y cifrar cada documento como compacto JWE, dir / A256GCM.",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-es",
+            "at": "2026-11-15T07:40:01.461Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "Generate the link key and encrypt each document",
+      "candidates": [
+        {
+          "text": "Generar la clave de enlace y cifrar cada documento",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-es",
+            "at": "2026-11-15T07:40:01.461Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "Issue the VHL payload (url, key, exp, flag, label) as a CBOR map at HCERT key 5, signed like any HCERT.",
+      "candidates": [
+        {
+          "text": "Emitir la carga útil VHL (url, key, exp, flag, label) como un mapa CBOR en la tecla HCERT 5, firmado como cualquier HCERT.",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-es",
+            "at": "2026-11-15T07:40:01.461Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "Issue the VHL payload as an HCERT (key 5, CBOR map)",
+      "candidates": [
+        {
+          "text": "Emitir la carga útil de la BVS como HCERT (teclado 5, mapa CBOR)",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-es",
+            "at": "2026-11-15T07:40:01.461Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "Journeys J4.0 and J4.1: the sharer issues one passcode-protected VHL per family member; a clinic abroad verifies it, retrieves the manifest over mutual TLS (the host's HTTP) and decrypts the documents (IHE ITI-YY3 to ITI-YY5).",
+      "candidates": [
+        {
+          "text": "Journeys J4.0 y J4.1: el sharer emite una BVS protegida por código de paso por miembro de la familia; una clínica en el extranjero la verifica, recupera el manifiesto sobre TLS mutuo (el HTTP del anfitrión) y descifra los documentos (IHE ITI-YYY3 a ITI-YY5).",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-es",
+            "at": "2026-11-15T07:40:01.461Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "Read the manifest Bundle and decrypt each document",
+      "candidates": [
+        {
+          "text": "Lea el manifiesto Bundle y descifre cada documento",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-es",
+            "at": "2026-11-15T07:40:01.461Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "Read the searchset Bundle the sharer returns and decrypt each document with the link key, accepting zip DEF.",
+      "candidates": [
+        {
+          "text": "Lea el conjunto de búsquedas Agrupar el sharer devuelve y desencriptar cada documento con la clave de enlace, aceptando zip DEF.",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-es",
+            "at": "2026-11-15T07:40:01.461Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "Share records by Verifiable Health Link",
+      "candidates": [
+        {
+          "text": "Compartir registros por Verificable Health Link",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-es",
+            "at": "2026-11-15T07:40:01.461Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "The IHE ITI VHL Receiver side: scans a VHL, retrieves the manifest and reads the documents.",
+      "candidates": [
+        {
+          "text": "El lado receptor IHE ITI VHL: escanea una VHL, recupera el manifiesto y lee los documentos.",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-es",
+            "at": "2026-11-15T07:40:01.461Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "The IHE ITI VHL Sharer side: issues Verifiable Health Links and hosts their manifests.",
+      "candidates": [
+        {
+          "text": "El IHE ITI VHL Sharer lado: cuestiones Verificables Enlaces de salud y los anfitriones de sus manifiestos.",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-es",
+            "at": "2026-11-15T07:40:01.461Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "Verify the VHL as an HCERT, and refuse a link whose exp has passed.",
+      "candidates": [
+        {
+          "text": "Verificar la BVS como un HCERT, y rechazar un enlace cuya exp ha pasado.",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-es",
+            "at": "2026-11-15T07:40:01.461Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "Verify the VHL HCERT and its exp",
+      "candidates": [
+        {
+          "text": "Verificar la BVS HCERT y su exp",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-es",
+            "at": "2026-11-15T07:40:01.461Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "VHL receiver",
+      "candidates": [
+        {
+          "text": "Receptor VHL",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-es",
+            "at": "2026-11-15T07:40:01.461Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "VHL sharer",
+      "candidates": [
+        {
+          "text": "Compartidor de BVS",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-es",
+            "at": "2026-11-15T07:40:01.461Z"
+          }
+        }
+      ]
+    }
+  ]
+}

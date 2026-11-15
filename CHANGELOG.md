@@ -60,4 +60,6 @@ and the smart-trust implementation guide at 1.7.5 (STT-GEN-007).
   two libraries verifying each other's certificates (STT-TST-003,
   STT-TST-007).
 
+- BPMN process translation templates (`translations/processes/**/*.pot`) and OPUS-MT machine translation candidate catalogues (`ar`, `es`, `fr`, `ru`, `zh`) with blind round-trip verification (`cat-tools-pfng`).
+
 [0.1.0]: https://github.com/litlfred/smart-trust-tools/commits/main

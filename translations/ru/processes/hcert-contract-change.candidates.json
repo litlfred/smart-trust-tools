@@ -1,0 +1,189 @@
+{
+  "$schema": "translation-candidates/v1",
+  "locale": "ru",
+  "catalogue": "processes/hcert-contract-change",
+  "entries": [
+    {
+      "msgid": "A source specification changed",
+      "candidates": [
+        {
+          "text": "Спецификация источника изменена",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-ru",
+            "at": "2026-11-15T07:40:51.069Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "A WHO or IHE specification changed, or an open issue (bean) was resolved: the maintainer amends the requirements and the WIT or CDDL, regenerates what is derived from them, tests both implementations against the shared vectors, and publishes the graph. A person or an agent may do each step.",
+      "candidates": [
+        {
+          "text": "Спецификация WHO или IHE была изменена, или был решен открытый вопрос (bean): проводник вносит изменения в требования, а WIT или CDDL, регенерирует то, что происходит из них, проверяет обе реализации на основе общих векторов и публикует график. Лицо или агент может делать каждый шаг.",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-ru",
+            "at": "2026-11-15T07:40:51.069Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "Amend the requirements within the architecture rules",
+      "candidates": [
+        {
+          "text": "Изменить требования в рамках правил архитектуры",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-ru",
+            "at": "2026-11-15T07:40:51.069Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "Change api/wit or api/cddl, then run wit2kotlin, gen-api-types and, if a logical model moved, fetch-lms and lm-derive. Nothing generated is edited by hand.",
+      "candidates": [
+        {
+          "text": "Сменить api/wit или api/cdl, затем запустить Wit2kotlin, gen-api-type и, если логическая модель сдвинулась, получить-лмс и Im-direive. Ничего генерируемого не редактируется вручную.",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-ru",
+            "at": "2026-11-15T07:40:51.069Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "Change the library contract",
+      "candidates": [
+        {
+          "text": "Изменение библиотечного контракта",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-ru",
+            "at": "2026-11-15T07:40:51.069Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "Change the req: nodes in skills/requirements/ within the architecture rules (one contract, a synchronous core with no I/O, open standards only), citing the changed source by reference.",
+      "candidates": [
+        {
+          "text": "Изменить реквизит: узлы в области навыков/требований/в рамках архитектурных правил (один контракт, синхронное ядро, не имеющее I/O, только открытые стандарты) со ссылкой на измененный источник путем ссылки.",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-ru",
+            "at": "2026-11-15T07:40:51.069Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "Change the WIT or CDDL and regenerate its views",
+      "candidates": [
+        {
+          "text": "Измените WIT или CDDL и восстановите его взгляды",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-ru",
+            "at": "2026-11-15T07:40:51.069Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "Check the graph and publish the site",
+      "candidates": [
+        {
+          "text": "Проверьте график и опубликуйте сайт",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-ru",
+            "at": "2026-11-15T07:40:51.069Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "Contract published",
+      "candidates": [
+        {
+          "text": "Опубликованный контракт",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-ru",
+            "at": "2026-11-15T07:40:51.069Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "Library maintainer",
+      "candidates": [
+        {
+          "text": "Библиотечное обслуживание",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-ru",
+            "at": "2026-11-15T07:40:51.069Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "Run check-models and the hcert-core tests on the JVM and Node against the shared vectors.",
+      "candidates": [
+        {
+          "text": "Проверьте чековые модели и тесты hcert-core на JVM и узле против общих векторов.",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-ru",
+            "at": "2026-11-15T07:40:51.069Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "Run check-req-nodes, then publish gh-pages with stage-local: main to the root, a branch to STAGING.",
+      "candidates": [
+        {
+          "text": "Проверьте рег-ноды, а затем опубликуйте gh-pages со сценой-локально: основной к корню, ветвь к STAGING.",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-ru",
+            "at": "2026-11-15T07:40:51.069Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "Test against the shared vectors",
+      "candidates": [
+        {
+          "text": "Испытание на соответствие совместно используемым векторам",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-ru",
+            "at": "2026-11-15T07:40:51.069Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "The person or agent who keeps the contract, its generated artefacts, the conformance tests and the published graph current.",
+      "candidates": [
+        {
+          "text": "Лицо или агент, хранящее контракт, его генерированные артефакты, тесты на соответствие и опубликованный график течения.",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-ru",
+            "at": "2026-11-15T07:40:51.069Z"
+          }
+        }
+      ]
+    }
+  ]
+}

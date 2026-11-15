@@ -1,0 +1,189 @@
+{
+  "$schema": "translation-candidates/v1",
+  "locale": "fr",
+  "catalogue": "processes/hcert-verification",
+  "entries": [
+    {
+      "msgid": "An HC1 QR code is scanned",
+      "candidates": [
+        {
+          "text": "Un code QR HC1 est scanné",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-fr",
+            "at": "2026-11-15T07:40:32.908Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "Check signature, key usage, CWT and time; dispatch the payload",
+      "candidates": [
+        {
+          "text": "Vérifier la signature, l'utilisation des clés, le CWT et le temps; expédier la charge utile",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-fr",
+            "at": "2026-11-15T07:40:32.908Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "Find every DSC in the host's trust list whose kid matches; more than one may, and each is tried.",
+      "candidates": [
+        {
+          "text": "Trouvez chaque DSC dans la liste de confiance de l'hôte dont l'enfant correspond; plus d'un peut, et chacun est essayé.",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-fr",
+            "at": "2026-11-15T07:40:32.908Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "Find every trusted DSC with the kid",
+      "candidates": [
+        {
+          "text": "Trouvez chaque DSC de confiance avec le gamin",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-fr",
+            "at": "2026-11-15T07:40:32.908Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "HCERT verifying system",
+      "candidates": [
+        {
+          "text": "Système de vérification HCERT",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-fr",
+            "at": "2026-11-15T07:40:32.908Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "Parse COSE_Sign1 and validate the protected header",
+      "candidates": [
+        {
+          "text": "Parse COSE_Sign1 et valide l'en-tête protégé",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-fr",
+            "at": "2026-11-15T07:40:32.908Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "Parse the COSE_Sign1 within depth and size limits and check the protected header: a known alg, and a kid of 8 bytes.",
+      "candidates": [
+        {
+          "text": "Parcourez le COSE_Sign1 dans les limites de profondeur et de taille et vérifiez l'en-tête protégé: un alg connu, et un enfant de 8 octets.",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-fr",
+            "at": "2026-11-15T07:40:32.908Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "QR Code Generation section 11 in the STT-VER-001 order. Every failure is a value naming its step and reason (STT-VER-008). A CHW device offline uses read-unverified instead, which stops before the trust lookup (STT-VER-011).",
+      "candidates": [
+        {
+          "text": "QR Code Generation article 11 dans l'ordre STT-VER-001. Chaque échec est une valeur nommant son étape et sa raison (STT-VER-008). Un appareil CHW hors ligne utilise plutôt lecture-non-vérifié, qui s'arrête avant la recherche de confiance (STT-VER-011).",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-fr",
+            "at": "2026-11-15T07:40:32.908Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "Strip HC1: (refusing any other context), Base45-decode strictly and inflate within a size limit.",
+      "candidates": [
+        {
+          "text": "Strip HC1: (refusant tout autre contexte), Base45-décoder strictement et gonfler dans une limite de taille.",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-fr",
+            "at": "2026-11-15T07:40:32.908Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "Strip HC1:, Base45-decode and inflate",
+      "candidates": [
+        {
+          "text": "Bande HC1:, base45-décoder et gonfler",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-fr",
+            "at": "2026-11-15T07:40:32.908Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "The HCERT side of the VHL Receiver (smart-trust: Receiver): a clinic EMR, border system or CHW app that verifies, or triage-reads, an HCERT.",
+      "candidates": [
+        {
+          "text": "Le côté HCERT du récepteur VHL (smart-trust : Receveur) : une clinique EMR, un système frontalier ou une application CHW qui vérifie, ou trie, un HCERT.",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-fr",
+            "at": "2026-11-15T07:40:32.908Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "Verification result",
+      "candidates": [
+        {
+          "text": "Résultat de la vérification",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-fr",
+            "at": "2026-11-15T07:40:32.908Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "Verify an HCERT QR code",
+      "candidates": [
+        {
+          "text": "Vérifier un code QR HCERT",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-fr",
+            "at": "2026-11-15T07:40:32.908Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "Verify the signature with each candidate, then the DSC's key usage for this payload type, the CWT's iat and exp against now, and dispatch the payload by subclaim. Every failure is a value naming its step and reason.",
+      "candidates": [
+        {
+          "text": "Vérifiez la signature avec chaque candidat, puis l'utilisation clé du DSC pour ce type de charge utile, l'iat et exp du CWT contre maintenant, et expédiez la charge utile par sous-requête. Chaque échec est une valeur qui nomme son étape et sa raison.",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-fr",
+            "at": "2026-11-15T07:40:32.908Z"
+          }
+        }
+      ]
+    }
+  ]
+}

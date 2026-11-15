@@ -1,0 +1,189 @@
+{
+  "$schema": "translation-candidates/v1",
+  "locale": "ar",
+  "catalogue": "processes/hcert-contract-change",
+  "entries": [
+    {
+      "msgid": "A source specification changed",
+      "candidates": [
+        {
+          "text": "تغير مواصفات المصدر",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-ar",
+            "at": "2026-11-15T07:38:53.962Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "A WHO or IHE specification changed, or an open issue (bean) was resolved: the maintainer amends the requirements and the WIT or CDDL, regenerates what is derived from them, tests both implementations against the shared vectors, and publishes the graph. A person or an agent may do each step.",
+      "candidates": [
+        {
+          "text": "وقد تغيرت مواصفات منظمة الصحة العالمية أو الشبكة الدولية للصحة العامة، أو تم حل مسألة مفتوحة: يقوم المشرف بتعديل المتطلبات، أو نظام WIT أو CDDL، ويجدد ما يستمد منها، ويختبر كلا التنفيذين ضد المتجهات المشتركة، وينشر الرسم البياني. يمكن للشخص أو العامل أن يقوم بكل خطوة.",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-ar",
+            "at": "2026-11-15T07:38:53.962Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "Amend the requirements within the architecture rules",
+      "candidates": [
+        {
+          "text": "تعديل المتطلبات في إطار قواعد الهندسة المعمارية",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-ar",
+            "at": "2026-11-15T07:38:53.962Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "Change api/wit or api/cddl, then run wit2kotlin, gen-api-types and, if a logical model moved, fetch-lms and lm-derive. Nothing generated is edited by hand.",
+      "candidates": [
+        {
+          "text": "غيّر Api / head أو api/ cddl، ثمّ شغّل tek2kotlin، gen-api من النوع، وإذا تحرك نموذج منطقي، فاجلب اللغم و lm-derive. لا شيء يتم تحريره باليد.",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-ar",
+            "at": "2026-11-15T07:38:53.962Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "Change the library contract",
+      "candidates": [
+        {
+          "text": "تغيير عقد المكتبة",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-ar",
+            "at": "2026-11-15T07:38:53.962Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "Change the req: nodes in skills/requirements/ within the architecture rules (one contract, a synchronous core with no I/O, open standards only), citing the changed source by reference.",
+      "candidates": [
+        {
+          "text": "تغيير المرجع: العقد في المهارات/الاحتياجات/في إطار قواعد الهندسة المعمارية (عقد واحد، نواة متزامنة مع عدم وجود I/O، معايير مفتوحة فقط)، مع الإشارة إلى المصدر المتغير بالإشارة.",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-ar",
+            "at": "2026-11-15T07:38:53.962Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "Change the WIT or CDDL and regenerate its views",
+      "candidates": [
+        {
+          "text": "غيّر WIT أو CDDL وتجديد وجهات نظره",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-ar",
+            "at": "2026-11-15T07:38:53.962Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "Check the graph and publish the site",
+      "candidates": [
+        {
+          "text": "تحقق من الرسم البياني ونشر الموقع",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-ar",
+            "at": "2026-11-15T07:38:53.962Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "Contract published",
+      "candidates": [
+        {
+          "text": "العقد المنشور",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-ar",
+            "at": "2026-11-15T07:38:53.962Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "Library maintainer",
+      "candidates": [
+        {
+          "text": "المشرف على المكتبة",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-ar",
+            "at": "2026-11-15T07:38:53.962Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "Run check-models and the hcert-core tests on the JVM and Node against the shared vectors.",
+      "candidates": [
+        {
+          "text": "تشغيل نماذج الفحص واختبارات hcert-core على JVM وعقدة ضد المتجهات المشتركة.",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-ar",
+            "at": "2026-11-15T07:38:53.962Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "Run check-req-nodes, then publish gh-pages with stage-local: main to the root, a branch to STAGING.",
+      "candidates": [
+        {
+          "text": "تشغيل كشّف req-nodes، ثمّ نشر صفحات gh مع المرحلة محليّ: رئيسي إلى الجذر، a فرع إلى STAGING.",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-ar",
+            "at": "2026-11-15T07:38:53.962Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "Test against the shared vectors",
+      "candidates": [
+        {
+          "text": "اختبار ضد المتجهات المشتركة",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-ar",
+            "at": "2026-11-15T07:38:53.962Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "The person or agent who keeps the contract, its generated artefacts, the conformance tests and the published graph current.",
+      "candidates": [
+        {
+          "text": "الشخص أو الوكيل الذي يحتفظ بالعقد، ومصنوعاته اليدوية المتولدة، واختبارات المطابقة و تيار الرسم البياني المنشور.",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-ar",
+            "at": "2026-11-15T07:38:53.962Z"
+          }
+        }
+      ]
+    }
+  ]
+}

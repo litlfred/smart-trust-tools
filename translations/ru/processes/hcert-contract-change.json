@@ -1,0 +1,15 @@
+{
+  "$schema": "translation-node/v1",
+  "label": "trans:ru/processes/hcert-contract-change",
+  "locale": "ru",
+  "sourceFile": "processes/content/hcert-contract-change.bpmn",
+  "potFile": "translations/ru/processes/hcert-contract-change.pot",
+  "poFile": "translations/ru/processes/hcert-contract-change.po",
+  "status": {
+    "locale": "ru",
+    "official": false,
+    "generatedBy": "machine",
+    "generator": "Helsinki-NLP/opus-mt-en-ru",
+    "generatedAt": "2026-11-15T07:40:59.685Z"
+  }
+}

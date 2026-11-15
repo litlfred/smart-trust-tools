@@ -1,0 +1,15 @@
+{
+  "$schema": "translation-node/v1",
+  "label": "trans:zh/processes/vhl-sharing",
+  "locale": "zh",
+  "sourceFile": "processes/content/vhl-sharing.bpmn",
+  "potFile": "translations/zh/processes/vhl-sharing.pot",
+  "poFile": "translations/zh/processes/vhl-sharing.po",
+  "status": {
+    "locale": "zh",
+    "official": false,
+    "generatedBy": "machine",
+    "generator": "Helsinki-NLP/opus-mt-en-zh",
+    "generatedAt": "2026-11-15T07:42:09.369Z"
+  }
+}
