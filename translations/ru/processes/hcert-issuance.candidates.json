@@ -1,0 +1,397 @@
+{
+  "$schema": "translation-candidates/v1",
+  "locale": "ru",
+  "catalogue": "processes/hcert-issuance",
+  "entries": [
+    {
+      "msgid": "A certificate is to be issued",
+      "candidates": [
+        {
+          "text": "Сертификат подлежит выдаче",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-ru",
+            "at": "2026-11-15T07:40:59.686Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "Assemble and validate the payload",
+      "candidates": [
+        {
+          "text": "Собираем и проверяем полезную нагрузку",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-ru",
+            "at": "2026-11-15T07:40:59.686Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "Attach the returned signature to make the COSE_Sign1, checking it is the length the algorithm gives (64 bytes for ES256, r||s).",
+      "candidates": [
+        {
+          "text": "Прикрепить возвратную подпись, чтобы сделать COSE_Sign1, проверить, что это длина, которую дает алгоритм (64 байта для ES256, rась.",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-ru",
+            "at": "2026-11-15T07:40:59.686Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "Attach the signature as COSE_Sign1",
+      "candidates": [
+        {
+          "text": "Прикрепить подпись в качестве KOSE_Подпись1",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-ru",
+            "at": "2026-11-15T07:40:59.686Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "Build the COSE Sig_structure from the protected header (alg, kid = SHA-256 of the DSC, first 8 bytes) and the payload, and hand its bytes out to be signed.",
+      "candidates": [
+        {
+          "text": "Построить COSE Sig_структуру из защищенного заголовка (alg, ребёнок = SHA-256 DSC, первые 8 байтов) и полезной нагрузки и передать свои байты для подписания.",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-ru",
+            "at": "2026-11-15T07:40:59.686Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "Build the CWT claim set",
+      "candidates": [
+        {
+          "text": "Строить набор претензий в отношении ВВТ",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-ru",
+            "at": "2026-11-15T07:40:59.686Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "Build the payload and validate it against its logical model (DVCMin, or the VHL payload), keeping elements the library does not know.",
+      "candidates": [
+        {
+          "text": "Построить полезную нагрузку и подтвердить ее на основе ее логической модели (DVCMin, или VHL), сохраняя элементы, которые библиотека не знает.",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-ru",
+            "at": "2026-11-15T07:40:59.686Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "Choose the logical model and the hcert subclaim for the use case from the registry QR Code Generation 2 defines: a DVC (key -6) when the certificate must verify offline, a VHL (key 5) when the records are larger than a QR code holds.",
+      "candidates": [
+        {
+          "text": "Выберите логическую модель и субпретензию hcert для варианта использования из генерации 2 регистра QR: DVC (ключ - 6), когда сертификат должен проверить оффлайн, VHL (ключ 5), когда записи больше, чем удерживает код QR.",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-ru",
+            "at": "2026-11-15T07:40:59.686Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "Compress the COSE_Sign1 with ZLIB/DEFLATE, after signing, never before.",
+      "candidates": [
+        {
+          "text": "Сожмите COSE_Подпись1 с ZLIB/DEFLATE, после подписания, никогда раньше.",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-ru",
+            "at": "2026-11-15T07:40:59.686Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "Compress with ZLIB",
+      "candidates": [
+        {
+          "text": "Сжатие с ZLIB",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-ru",
+            "at": "2026-11-15T07:40:59.686Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "Encode as Base45",
+      "candidates": [
+        {
+          "text": "Код в качестве базы 45",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-ru",
+            "at": "2026-11-15T07:40:59.686Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "Encode the compressed bytes as RFC 9285 Base45, the alphabet QR Alphanumeric mode stores compactly.",
+      "candidates": [
+        {
+          "text": "Кодировать сжатые байты как RFC 9285 Base45, алфавит QR Alphlumeric Model сжимается компактно.",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-ru",
+            "at": "2026-11-15T07:40:59.686Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "HCERT issuing system",
+      "candidates": [
+        {
+          "text": "Система выпуска HCERT",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-ru",
+            "at": "2026-11-15T07:40:59.686Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "Issue an HCERT QR code",
+      "candidates": [
+        {
+          "text": "Выпустить QR-код HCERT",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-ru",
+            "at": "2026-11-15T07:40:59.686Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "Prefix HC1:",
+      "candidates": [
+        {
+          "text": "Префикс HC1:",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-ru",
+            "at": "2026-11-15T07:40:59.686Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "Prefix the context identifier HC1: to make the QR-ready string.",
+      "candidates": [
+        {
+          "text": "Префиксировать контекстный идентификатор HC1: для создания строки QR.",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-ru",
+            "at": "2026-11-15T07:40:59.686Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "Prepare the Sig_structure",
+      "candidates": [
+        {
+          "text": "Подготовить Sig_структуру",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-ru",
+            "at": "2026-11-15T07:40:59.686Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "QR Code Generation steps 1 to 9, as the library and its host divide them: the issuing system runs every step; the key holder only signs the bytes prepare returns, so the private key never enters the library (STT-ISS-004, STT-COS-006).",
+      "candidates": [
+        {
+          "text": "QR Code Generation steps 1-9, поскольку библиотека и ее организатор делят их: система выпуска работает на каждом шагу; владелец ключа только подписывает байты для подготовки возвратов, так что частный ключ никогда не входит в библиотеку (STT-ISS-004, STTT-COS-006).",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-ru",
+            "at": "2026-11-15T07:40:59.686Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "QR-ready HC1 string",
+      "candidates": [
+        {
+          "text": "Строка QR, готовая к выпуску HC1",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-ru",
+            "at": "2026-11-15T07:40:59.686Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "Render the QR code (Alphanumeric, EC Q)",
+      "candidates": [
+        {
+          "text": "Оформить код QR (Alphanumeric, EC Q)",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-ru",
+            "at": "2026-11-15T07:40:59.686Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "Select the payload type and subclaim",
+      "candidates": [
+        {
+          "text": "Выберите тип полезной нагрузки и подсказку",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-ru",
+            "at": "2026-11-15T07:40:59.686Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "Serialise as deterministic CBOR",
+      "candidates": [
+        {
+          "text": "В качестве детерминистского CBOR",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-ru",
+            "at": "2026-11-15T07:40:59.686Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "Serialise the claim set as RFC 8949 deterministic CBOR, so the same claims always give the same bytes.",
+      "candidates": [
+        {
+          "text": "Измените претензию, установленную как RFC 8949 детерминистский CBOR, так что одни и те же претензии всегда дают одни и те же байты.",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-ru",
+            "at": "2026-11-15T07:40:59.686Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "Sign the bytes with the DSC key",
+      "candidates": [
+        {
+          "text": "Подпиши байт с ключом DSC",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-ru",
+            "at": "2026-11-15T07:40:59.686Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "Signing key holder",
+      "candidates": [
+        {
+          "text": "Владелец ключа",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-ru",
+            "at": "2026-11-15T07:40:59.686Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "The application renders the HC1 string as a QR code in Alphanumeric mode, error correction Q, with its own QR encoder.",
+      "candidates": [
+        {
+          "text": "Приложение делает строки HC1 QR кодом в буквенно-цифровом режиме, коррекция ошибок Q, с собственным энкодером QR.",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-ru",
+            "at": "2026-11-15T07:40:59.686Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "The HCERT side of the VHL Sharer (smart-trust: Issuer): a clinic system or national portal that issues HCERT certificates, embedding the Kotlin or Rust library.",
+      "candidates": [
+        {
+          "text": "HCERT - сторона VHL Sharer (smart-trust: эмитент): система клиники или национальный портал, который выдает сертификаты HCERT, встроенный в библиотеку Котлин или Раст.",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-ru",
+            "at": "2026-11-15T07:40:59.686Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "The HSM, KMS, Android Keystore or WebCrypto key of a Trust Network Participant that signs the bytes the issuing system prepares; the library never holds the private key.",
+      "candidates": [
+        {
+          "text": "HSM, KMS, Android Keystore или WebCrypto ключ трастового участника сети, который подписывает байты, которые готовит система выпуска; библиотека никогда не имеет частного ключа.",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-ru",
+            "at": "2026-11-15T07:40:59.686Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "The key holder signs the Sig_structure bytes with the DSC private key (ES256, or PS256) and returns the raw signature. The key never leaves it.",
+      "candidates": [
+        {
+          "text": "Держатель ключа подписывает байт Sig_ Структуры с частным ключом DSC (ES256, или PS256) и возвращает сырую подпись. Ключ никогда не оставляет его.",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-ru",
+            "at": "2026-11-15T07:40:59.686Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "Wrap the payload in a CWT claim set: iss, iat, exp inside the DSC's validity, and the payload at hcert (-260) under its subclaim.",
+      "candidates": [
+        {
+          "text": "Заверните полезную нагрузку в набор претензий в отношении ВВТ: is, iat, exp в пределах действительности DSC, а полезную нагрузку на hcert (-260) в соответствии с его субпретензией.",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-ru",
+            "at": "2026-11-15T07:40:59.686Z"
+          }
+        }
+      ]
+    }
+  ]
+}

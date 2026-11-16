@@ -1,0 +1,241 @@
+{
+  "$schema": "translation-candidates/v1",
+  "locale": "ru",
+  "catalogue": "processes/vhl-sharing",
+  "entries": [
+    {
+      "msgid": "A holder chooses records to share",
+      "candidates": [
+        {
+          "text": "Держатель выбирает записи для обмена",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-ru",
+            "at": "2026-11-15T07:41:18.395Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "Build and sign the ITI-YY5 manifest request",
+      "candidates": [
+        {
+          "text": "Построить и подписать манифест ITI-Y5",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-ru",
+            "at": "2026-11-15T07:41:18.395Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "Build the ITI-YY5 request: POST <url>/List/_search with the form body (passcode only when the P flag is set), its Content-Digest and its RFC 9421 HTTP Message Signature. The host sends it over mutual TLS.",
+      "candidates": [
+        {
+          "text": "Построить запрос ITI-YY5: POST <url>/List/_search с кузовом формы (пассовой код только при установке флага P), его содержание-Digest и RFC 9421 HTTP Подпись сообщения.",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-ru",
+            "at": "2026-11-15T07:41:18.395Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "Documents read",
+      "candidates": [
+        {
+          "text": "Документы читать следующим образом:",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-ru",
+            "at": "2026-11-15T07:41:18.395Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "Generate a 32-byte random key for the link and encrypt each document as JWE compact, dir / A256GCM.",
+      "candidates": [
+        {
+          "text": "Создайте 32-байт случайный ключ для ссылки и зашифруйте каждый документ как JWE компакт, dir / A256GCM.",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-ru",
+            "at": "2026-11-15T07:41:18.395Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "Generate the link key and encrypt each document",
+      "candidates": [
+        {
+          "text": "Создать ключ ссылки и шифровать каждый документ",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-ru",
+            "at": "2026-11-15T07:41:18.395Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "Issue the VHL payload (url, key, exp, flag, label) as a CBOR map at HCERT key 5, signed like any HCERT.",
+      "candidates": [
+        {
+          "text": "Выдавать полезную нагрузку VHL (url, ключ, exp, флаг, ярлык) в качестве карты CBOR на ключе HCERT 5, подписанной как любой HCERT.",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-ru",
+            "at": "2026-11-15T07:41:18.395Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "Issue the VHL payload as an HCERT (key 5, CBOR map)",
+      "candidates": [
+        {
+          "text": "Выпуск полезной нагрузки VHL в качестве HCERT (карта ключа 5, CBOR)",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-ru",
+            "at": "2026-11-15T07:41:18.395Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "Journeys J4.0 and J4.1: the sharer issues one passcode-protected VHL per family member; a clinic abroad verifies it, retrieves the manifest over mutual TLS (the host's HTTP) and decrypts the documents (IHE ITI-YY3 to ITI-YY5).",
+      "candidates": [
+        {
+          "text": "Путешествия J4.0 и J4.1: акционер выпускает один защищенный паролем VHL на одного члена семьи; клиника за границей проверяет его, возвращает манифест по взаимной TLS (HTTP хозяина) и расшифровывает документы (IHE ITI-Y3-ITI-Y5).",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-ru",
+            "at": "2026-11-15T07:41:18.395Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "Read the manifest Bundle and decrypt each document",
+      "candidates": [
+        {
+          "text": "Прочитать манифест Бундле и расшифровать каждый документ",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-ru",
+            "at": "2026-11-15T07:41:18.395Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "Read the searchset Bundle the sharer returns and decrypt each document with the link key, accepting zip DEF.",
+      "candidates": [
+        {
+          "text": "Прочитай поисковую сетку Bundle, разделитель возвращает и расшифровывает каждый документ с ключом ссылки, принимая Zip DEF.",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-ru",
+            "at": "2026-11-15T07:41:18.395Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "Share records by Verifiable Health Link",
+      "candidates": [
+        {
+          "text": "Делиться записями с компанией Verimited Health Link",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-ru",
+            "at": "2026-11-15T07:41:18.395Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "The IHE ITI VHL Receiver side: scans a VHL, retrieves the manifest and reads the documents.",
+      "candidates": [
+        {
+          "text": "Приемник IHE ITI: сканирует VHL, забирает манифест и читает документы.",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-ru",
+            "at": "2026-11-15T07:41:18.395Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "The IHE ITI VHL Sharer side: issues Verifiable Health Links and hosts their manifests.",
+      "candidates": [
+        {
+          "text": "Со стороны IHE ITI VHL Sharer: выпускает поддающиеся проверке связи в области здравоохранения и носит их манифесты.",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-ru",
+            "at": "2026-11-15T07:41:18.395Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "Verify the VHL as an HCERT, and refuse a link whose exp has passed.",
+      "candidates": [
+        {
+          "text": "Проверьте VHL как HCERT, и откажитесь от связи, чей эксперт прошел.",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-ru",
+            "at": "2026-11-15T07:41:18.395Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "Verify the VHL HCERT and its exp",
+      "candidates": [
+        {
+          "text": "Проверка VHL HCERT и его экстраполяции",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-ru",
+            "at": "2026-11-15T07:41:18.395Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "VHL receiver",
+      "candidates": [
+        {
+          "text": "Приемник VHL",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-ru",
+            "at": "2026-11-15T07:41:18.395Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "VHL sharer",
+      "candidates": [
+        {
+          "text": "Разделитель VHL",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-ru",
+            "at": "2026-11-15T07:41:18.395Z"
+          }
+        }
+      ]
+    }
+  ]
+}

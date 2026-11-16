@@ -234,6 +234,14 @@
       "graphTypologies": [
         "glossary"
       ]
+    },
+    {
+      "id": "translations",
+      "path": "translations/",
+      "graphTypologies": [
+        "translation-sources"
+      ],
+      "description": "Gettext .pot templates extracted from the BPMN processes in processes/ and the .po catalogues and .candidates.json files translated from them across ar, es, fr, ru, zh."
     }
   ],
   "enableSubgraphs": [

@@ -1,0 +1,189 @@
+{
+  "$schema": "translation-candidates/v1",
+  "locale": "ar",
+  "catalogue": "processes/hcert-verification",
+  "entries": [
+    {
+      "msgid": "An HC1 QR code is scanned",
+      "candidates": [
+        {
+          "text": "تم مسح رمز QR HC1",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-ar",
+            "at": "2026-11-15T07:39:15.815Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "Check signature, key usage, CWT and time; dispatch the payload",
+      "candidates": [
+        {
+          "text": "التحقق من التوقيع، استخدام المفتاح، CWT والوقت؛ إرسال الحمولة",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-ar",
+            "at": "2026-11-15T07:39:15.815Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "Find every DSC in the host's trust list whose kid matches; more than one may, and each is tried.",
+      "candidates": [
+        {
+          "text": "اعثروا على كل دى إس سي في قائمة الثقة للمضيف الذي يطابق طفله، أكثر من واحد قد يُجرّب، وكل واحد يُجرّب.",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-ar",
+            "at": "2026-11-15T07:39:15.815Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "Find every trusted DSC with the kid",
+      "candidates": [
+        {
+          "text": "اعثر على كل دى إس سي موثوق به مع الطفل",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-ar",
+            "at": "2026-11-15T07:39:15.815Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "HCERT verifying system",
+      "candidates": [
+        {
+          "text": "نظام التحقق HCERT",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-ar",
+            "at": "2026-11-15T07:39:15.815Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "Parse COSE_Sign1 and validate the protected header",
+      "candidates": [
+        {
+          "text": "إعراب COSE_ Sign1 واثبات صحة الترويسة المحمية",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-ar",
+            "at": "2026-11-15T07:39:15.815Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "Parse the COSE_Sign1 within depth and size limits and check the protected header: a known alg, and a kid of 8 bytes.",
+      "candidates": [
+        {
+          "text": "تعبير COSE_Sign1 ضمن العمق والحجم حدود وفحص ترويسة محمية: a g المعروف، وولد من 8 بايت.",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-ar",
+            "at": "2026-11-15T07:39:15.815Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "QR Code Generation section 11 in the STT-VER-001 order. Every failure is a value naming its step and reason (STT-VER-008). A CHW device offline uses read-unverified instead, which stops before the trust lookup (STT-VER-011).",
+      "candidates": [
+        {
+          "text": "QR رمز جيل القسم 11 في ترتيب STT-VER-001. كل فشل هو قيمة تسمي خطوته وسببه (STT-VER-008). جهاز CHW خارج الانترنت يستخدم القراءة غير المتحقق منها بدلاً من ذلك، والتي تتوقف قبل البحث عن الثقة (STT-VER-011).",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-ar",
+            "at": "2026-11-15T07:39:15.815Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "Strip HC1: (refusing any other context), Base45-decode strictly and inflate within a size limit.",
+      "candidates": [
+        {
+          "text": "القطاع HC1: (إزالة أي سياق آخر)، الشفرة الأساسية-45 بدقة وتضخم ضمن حدود الحجم.",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-ar",
+            "at": "2026-11-15T07:39:15.815Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "Strip HC1:, Base45-decode and inflate",
+      "candidates": [
+        {
+          "text": "القطاع HC1: ، قاعدة 45 - فك التشفير والتضخم",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-ar",
+            "at": "2026-11-15T07:39:15.815Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "The HCERT side of the VHL Receiver (smart-trust: Receiver): a clinic EMR, border system or CHW app that verifies, or triage-reads, an HCERT.",
+      "candidates": [
+        {
+          "text": "الجانب HCERT من مستقبل VHL (الثقة الذكية: المستقبل): عيادة EMR أو نظام الحدود أو تطبيق CHW التي تحقق، أو فرز، قراءة HCERT.",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-ar",
+            "at": "2026-11-15T07:39:15.815Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "Verification result",
+      "candidates": [
+        {
+          "text": "نتيجة التحقق",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-ar",
+            "at": "2026-11-15T07:39:15.815Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "Verify an HCERT QR code",
+      "candidates": [
+        {
+          "text": "تحقق من رمز QR HCERT",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-ar",
+            "at": "2026-11-15T07:39:15.815Z"
+          }
+        }
+      ]
+    },
+    {
+      "msgid": "Verify the signature with each candidate, then the DSC's key usage for this payload type, the CWT's iat and exp against now, and dispatch the payload by subclaim. Every failure is a value naming its step and reason.",
+      "candidates": [
+        {
+          "text": "تحقق من التوقيع مع كل مرشح، ثم استخدام المفتاح DSC لهذا النوع من الحمولة، IT و EXP ضد الآن، وإرسال الحمولة عن طريق المطالبة الفرعية. كل فشل هو قيمة تسمية الخطوة والسبب.",
+          "source": {
+            "kind": "open-mt",
+            "id": "Helsinki-NLP/opus-mt-en-ar",
+            "at": "2026-11-15T07:39:15.815Z"
+          }
+        }
+      ]
+    }
+  ]
+}
